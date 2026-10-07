@@ -1,0 +1,134 @@
+### Limit comparison
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+And now I have one last bit on comparisons
+that I need to tell you about.
+And this is very much like what we
+did with integrals, which is a so-called limit comparison.
+The limit comparison says the following, if f of n
+is similar to g of n.
+We'll recall that that means f of n over g of n
+turns to 1 as n goes to infinity.
+And we're in the positive case, so let's just
+say g(n) is positive.
+Then-- that doesn't even, well-- then,
+sum f(n), sum g(n) either both-- same thing
+as above-- either both converge or both diverge.
+All right.
+This is just saying that if they behave
+the same way in the tail, which is all we really care about,
+then they have similar behavior.
+Similar convergence properties.
+And let me give you a couple examples.
+So here's one example.
+If you take the sum, 1 over n squared plus 1 square root.
+This is going to be replaced by something simpler,
+which is the main term here, which
+is 1 over the square root of n squared,
+which we recognize as sum 1 over n, which diverges.
+So this guy is one of the red guys on the red team.
+And now we have another example, which is, let's say,
+the square root of n, I don't know,
+to the 5th minus n squared.
+Now, if you have something where that's
+negative in the denominator, you kind of
+do have to watch out that the denominator makes sense;
+it isn't 0.
+So we're going to be careful and start this at n equals 2.
+In which case, the first term-- right.
+I don't like 1 over 0 as a term in my series.
+So I'm just going to be a little careful about how--
+I said I was kind of lazy here.
+I could have started this one to 0, for instance.
+All right.
+So here's the picture.
+Now this, I just replaced by its main term, which is 1 over n
+to the fifth square root, which is sum 1 over n
+to the 5/2, which converges.
+All right.
+The power is bigger than 1.
+1 is the divider for these things and it just misses.
+This one converges.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Limit comparison
+If
+where is finite,
+for all for some ,
+then and either both converge or both diverge.
+In other words, if and decay at the same rate as tends to then the series and converge or diverge together.
+This is analogous to limit comparison for improper integrals.
+Note: The condition as is equivalent to
+(3.14)
+### Limit comparison 1
+1 point possible (graded)
+Use limit comparison to determine if the following series converges or diverges.
+(3.15)
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by limit comparison.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Limit comparison 2
+1 point possible (graded)
+Use limit comparison to determine if the following series converges or diverges.
+(3.21)
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by limit comparison.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Limit comparison 3
+1 point possible (graded)
+Use limit comparison to determine if the following series converges or diverges.
+(3.24)
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by limit comparison.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

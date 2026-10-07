@@ -1,0 +1,48 @@
+Absolute convergence versus conditional convergence
+So far, we have focused on series whose terms are positive (with the exception of the geometric series and the divergence test). For general series, including series with both positive and negative terms, there are two notions of convergence.
+Consider the series
+(3.108)
+The series is absolutely convergent if converges.
+The series is conditionally convergent if it converges but is not absolutely convergent.
+Strange to say, an absolutely convergent series is not conditionally convergent.
+For series with only positive terms, absolute convergence is the same as convergence.
+In general, absolute convergence of a series implies convergence.
+### Absolute convergence implies convergence
+Convergence of a series means and the reason that absolute convergence of a series implies convergence is that
+(3.109)
+Hide
+Because absolute convergence concerns the convergence of we can apply all of the techniques we have learned to determine absolute convergence.
+Example
+Consider the series
+(3.110)
+Note that
+(3.111)
+Since converges for all is absolutely convergent for all
+Since diverges for all is not absolutely convergent for all We will see shortly that is conditionally convergent for all .
+### Quiz
+1 point possible (graded)
+Determine if the following series absolutely converges, conditionally converges, diverges.
+absolutely converges.
+conditionally converges.
+diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+A note on the ratio test and root test
+We can apply the ratio test and root test to series with negative terms by simply defining with absolute values.
+For a series let
+(3.112)
+Then for both tests, the conclusions are the same as before except stated in terms of absolute convergence:
+If then the series absolutely converges;
+If then the series diverges;
+If then there is no conclusion
+The additional information here is that when not only does diverge, the series without absolute signs also diverges. This is because when so by the divergence test, diverges.
+When we talk about Taylor series, we will use the ratio test (or the root test) to find what is known as the radius of convergence.

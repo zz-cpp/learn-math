@@ -1,0 +1,254 @@
+Video note
+In the video below, when Prof Miller discussed the radius of convergence of the Taylor series of , what he showed is that it is believable that the radius of convergence is . The complete proof is in text after video.
+### Taylor series of sine
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+OK, let's do a different example now.
+How about a trig function?
+The sine of x.
+We're going to compute the power series
+expansion for the sine of x, and I'm
+going to do it using Taylor's formula.
+So Taylor's formula says that I have
+to start computing derivatives of the sine of x.
+This sounds like it's going to be a lot of work.
+Let's see, the derivative of the sine is the cosine.
+And the derivative of the cosine,
+that's the second derivative of sine, is what?
+Remember the minus.
+It's minus sine of x.
+OK, now I want to take the third derivative of the sine, which
+is the derivative of sine prime prime,
+so it's the derivative of this.
+And we just decided the derivative of sine is cosine,
+so I get cosine but I have this minus sign in front.
+And now I want to differentiate again.
+So the cosine becomes a minus sine,
+and that minus sign cancels with this minus sign
+to give me sine of x.
+You follow that?
+A lot of minus ones canceling out there.
+So all of the sudden, I'm right back where I started.
+These two are the same and the pattern will now
+repeat forever and ever.
+Higher and higher derivatives of sines
+are just plus or minus sines and cosines.
+Now Taylor's formula says I should now
+substitute x equals 0 into this and see what happens.
+So let's do that.
+When x is equal to 0, the sine is 0, the cosine is 1.
+The sine is 0, so minus 0 is also 0.
+The cosine is 1, but now there's a minus 1.
+And now I'm back where I started.
+And so the pattern will repeat.
+OK?
+So the values of the derivatives are all 0's and plus and minus
+1's, and they go through that pattern, fourfold periodicity,
+over and over again.
+And so we can write out what the sine of x
+is using Taylor's formula.
+Using this formula.
+So I put in the value at 0, which is 0.
+Then I put in the derivative, which is 1 multiplied by x.
+Then I have the second derivative
+divided by 2 factorial, but the second derivative at 0
+is 0, so I'm going to drop that term out.
+Now I have the third derivative, which is minus 1,
+and remember the 3 factorial in the denominator,
+and that's the coefficient of x cubed.
+What's the fourth derivative?
+Well here we are.
+It's on the board; it's 0.
+So I dropped that term out.
+Go up to the fifth term, the fifth power of x.
+Its derivative is now 1.
+We've gone through the pattern.
+We're back at plus 1 as the value
+of the integrated derivative, so now I
+get 1 over 5 factorial times x to the fifth.
+And now, you tell me, have we done enough terms to see
+what the pattern is?
+I guess the next term will be a minus 1
+over 7 factorial, x to the seventh.
+And so let me write this out again,
+just so we have-- x cubed over 3 factorial.
+So it's x minus x cubed over 3 factorial plus x
+to the fifth over 5 factorial, you guessed it, and so on.
+That's the power series expansion for the sine of x.
+OK?
+And so the signs alternate, and these denominators
+get very big, don't they?
+Exponentials grow very fast.
+Let me make a remark.
+R is infinity here.
+The radius of convergence of this power series,
+again, is infinity, and let me just say why.
+The reason is that the term x to the, well,
+the general term is going to be like x to the 2n plus 1 divided
+by 2n plus 1 factorial, an odd number I
+can write as 2n plus 1.
+And what I want to say is that the size
+of this-- what happens to the size of this as n
+goes to infinity?
+So let's just think about this for a fixed x.
+Let's fix a number x.
+Look at powers of x and think about the size
+of this expression when n gets to be large.
+So let's just do that for a second.
+So x to the 2n plus 1 over 2n plus 1 factorial,
+I can write out like this.
+It's x over 1 times x over 2 times, sorry,
+times x over 3 times x over 2n plus 1.
+I've multiplied x by itself 2n plus 1 times in the numerator,
+and I've multiplied the numbers, 1, 2, 3, 4, and so
+on, by each other in the denominator,
+and that gives me the factorial.
+So I've just written this out like this.
+Now x is fixed.
+So maybe it's a million, OK?
+Big, but fixed.
+What happens to these numbers?
+Well, at first, they're pretty big.
+This is a million over 2, this is a million over 3,
+but when n gets to be, maybe, if n is a million,
+then this is about 1/2.
+If n is a billion, then this is about 1 over 2,000.
+Right?
+The denominators keep getting bigger and bigger,
+but the numerators stay the same.
+They're always x.
+So when they take the product, if I go far enough out,
+I'm going to be multiplying by very, very small numbers, more
+and more of them.
+And so, no matter what x is, these numbers
+will converge to 0.
+They'll get smaller and smaller as x gets to be bigger.
+That's the sign that x is inside of the radius of convergence.
+This is the sign for you that this series
+converges for that value of x.
+And because I could do this for any x, for any x, this works.
+This converges to 0 for any fixed x.
+That's what tells you that the radius of convergence
+is infinity.
+Because in the formula, in the fact
+this property that the radius of convergence talks about,
+if R is equal to infinity, this is no condition on x.
+Every number is less than infinity in absolute value.
+So if this convergence to 0 of the general term
+works for every x, then the radius of convergence
+is infinity.
+Well that was kind of fast, but I
+think that you heard something about that earlier, as well.
+Anyway, so we've got the sine function, a new function
+with its own power series.
+It's a way of computing the sine of x.
+If you take enough terms, you'll get a good evaluation
+of the sine of x for any x.
+This tells you a lot about the function sine of x,
+but not everything at all.
+For example, from this formula, it's
+very hard to see that the sine of x is periodic.
+Not obvious at all.
+Somewhere hidden away in this expression
+is the number pi, the half the period.
+But that's not clear from the power series at all.
+So the power series are very good for some things,
+but they hide other properties of functions.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Radius of convergence of Taylor series of sine
+In the video, we find the Taylor series of to be
+(3.198)
+(3.199)
+We now use the ratio test to find the radius of convergence :
+(3.200)
+(3.201)
+Hence, the Taylor series is absolutely convergent for all and the radius of convergence is .
+Remark: If we are concerned with only convergence but not absolute convergence, we can use the alternating series test at each to show that the Taylor series for converges for all Since for any ,
+decreases as increases,
+the alternating series converges for all .
+### Taylor series of cosine
+9 points possible (graded)
+We will use Taylor's formula to obtain the coefficients in the Taylor series of
+First, compute and for to . (Note that is the derivative, not the power, of . Type factorial(n) for .)
+unanswered
+unanswered
+unanswered
+unanswered
+unanswered
+unanswered
+unanswered
+unanswered
+Find the coefficient of in the Taylor series of . (Type factorial(n) for .)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

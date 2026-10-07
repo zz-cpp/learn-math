@@ -1,0 +1,327 @@
+### Taylor series of secant
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Hi.
+Welcome back to recitation.
+We've been talking about Taylor series
+for a number of functions and rules
+by which you can compute Taylor series.
+I have here an example that I don't think we did in lecture.
+So this is the function f of x equals secant of x.
+Now, unlike some of the other ones you've seen,
+there's not a really simple formula for the whole Taylor
+series of secant x.
+So what I'd like you to do is not
+to find the formula for the general term
+but rather just to use some of the tools
+that we've learned to compute the first few terms
+of the Taylor series for f of x equals secant x,
+say up through the x to the fourth term, if you wanted,
+or even a little further, if you were feeling ambitious.
+So why don't you pause the video, have a go at that.
+Come back and we can do it together.
+So welcome back.
+I asked you to compute the first few terms of a Taylor series.
+One thing you can always do in this case is you can go
+and you can apply the general formula that we
+have for Taylor series and use it
+to compute the series that way.
+So in order to do that, you just need
+to compute a few derivatives of your function.
+So remember that the general formula for a Taylor Series
+is the Taylor series for f of x is equal to the sum from n
+equals 0 to infinity of the nth derivative
+of f taken at 0 divided by n factorial times x to the n.
+And since we're only interested in the first few terms,
+this is f of 0 plus f prime of 0 x
+plus f double prime of 0 over 2 x squared plus dot dot dot.
+I'm not going to write out the next few terms.
+And if you wanted to apply this formula to secant
+of x, what you would have to do is
+you would have to compute these derivatives.
+And so we could try doing that.
+So in our case, f of x is equal to secant of x, so f of 0
+is secant of 0, which is just 1.
+So then we need to know f prime of x.
+So that's the derivative of secant of x.
+So this is one you should remember.
+This is equal to secant x times tan x.
+And when you plug in x equal to 0, well, the tan x is 0.
+So f prime of 0 is equal to 0.
+And then you could keep going.
+So you could compute f double prime of x.
+So we would have to compute the derivative of secant x tan x,
+and you would do that by the product rule.
+You take the derivative of secant of x, and that gives you
+secant x tan x times tan x plus--
+and then so you leave secant of x,
+and you multiply it by the derivative of the tangent,
+which is secant squared x.
+And now when you put in 0 here, you've
+got f double prime times 0.
+Well, OK, so this has a tan x in it,
+so that part's going to give you 0.
+And here we end up with secant of 0 times secant squared of 0.
+So that's 1 times 1 times 1.
+So that's just 1.
+So f double prime of 0 is 1.
+And you could keep doing this.
+Now, one thing you'll notice is that this is getting
+more and more complicated.
+We can simplify this expression a little bit.
+We could write it as secant x, tan
+squared x plus secant cubed x, and there
+are all sorts of trig manipulations
+you could do if you wanted to try and rewrite
+that in some simpler form.
+But fundamentally, it's more complicated
+than the first derivative was, and that's
+more complicated than the function.
+And it'll keep getting more complicated as you
+compute more derivatives.
+So we can do this.
+So far this shows us, by the way, that this is equal to 1
+plus 0 x plus x squared over 2 plus dot dot dot.
+And if you wanted to compute up through the fourth-degree term
+or something like this, that's something that's manageable.
+But I want to suggest that there are maybe some nicer ways
+to do it.
+So one thing to notice is that secant of x
+is closely related to the function cosine of x.
+And you know the Taylor series for cosine of x.
+So one thing you could think to do
+is to leverage the information that you have about cosine
+of x in order to use it to get some information about secant
+of x.
+So one simple way to do that is that you know that cosine of x
+is even.
+It's an even function.
+Cosine of minus x is equal to cosine of x.
+So that means secant of x is also even.
+Secant of x is an even function.
+And you've seen that even functions, their Taylor
+series, all the odd powers have coefficient 0.
+So what that means is without ever computing
+the third derivative, we can know already
+that the next term in this Taylor series
+is going to be 0 x cubed over 6.
+So that's nice.
+So the odd terms of the Taylor series for secant of x are 0.
+OK.
+So that's one thing you can get right away.
+If you like, that gives you half of the terms of the Taylor
+series.
+It's a little bit of a joke, but--
+So then you only need to figure out the even terms.
+That's one way we can leverage the relationship between secant
+and cosine.
+The other way is that we can remember
+that Taylor series multiply just like polynomials do.
+So if secant is 1 over cosine, that
+means secant times cosine is equal to 1.
+OK?
+Idea: secant of x times cosine of x is equal to 1.
+Now, that means that the Taylor series
+for secant of x times the Taylor series for cosine of x
+has to simplify just to 1.
+So we can write down that product
+as a product of two infinite polynomials,
+and we can start multiplying term by term.
+And that will allow us to solve for a bunch of terms
+just by solving some simple linear equations.
+So let me show you what I mean.
+Let me write it is as cosine times secant.
+So we know that cosine of x is 1 minus x squared over 2 plus x
+to the fourth over 24-- that's 4 factorial-- minus x
+to the sixth over 720-- which is 6 factorial-- plus dot dot dot.
+And so we know that if we multiply this
+by the series for secant of x-- well,
+what is the series for secant of x?
+Well, we've already computed a few terms.
+We know that it's 1 plus x squared over 2.
+We computed that already, and we know that the third-degree term
+is 0.
+So there is some fourth-degree coefficient a_4 x
+to the fourth over 4 factorial.
+And there's some-- well, we said it's even,
+so we know the fifth-degree coefficient is 0.
+So then the sixth-degree coefficient we don't know yet.
+So this is plus a sub 6 times x to the sixth over 6 factorial
+plus dot dot dot.
+So we know that when we multiply these two things together,
+it has to give us just 1.
+All the higher order terms have to cancel,
+because over here we have 1.
+So what you can do is you can actually try
+multiplying these things out.
+So it's easy to see, for example,
+that the constant term of this product is just 1 times 1,
+which is 1, which is good.
+So that's a check on what we've done so far.
+And there is no x term, because there are no x's.
+The x squared term here is 1 times
+x squared over 2 minus x squared over 2 times 1.
+Well, that gives us 0.
+So that's good.
+So this product is equal to 1 plus
+we saw 0 x plus 0 x squared.
+How about the x cubed term?
+Well, there are no odd terms in this product,
+so there's no x cubed.
+How about the x to the 4th term?
+Well, OK, so how do we get an x to the fourth?
+We could have an x to the 4th here times a constant.
+So that's x to the fourth over 24.
+Or we could have an x squared times an x squared.
+So in this case, that gives us minus x squared over 2 times
+x squared over 2, which is minus x to the fourth over 4.
+Or we could have a constant times an x to the fourth.
+So this is plus a_4 x to the fourth over 24.
+And then we'll have a sixth-degree term and so on.
+Notice that there is never any involvement
+from the higher order terms in the fourth power here, right?
+If you ever took an x to the sixth here,
+well then everything you multiply it by
+has at least the next to the sixth power.
+So we don't have to worry about that showing up
+in x to the fourth term.
+We know this is actually equal to 1.
+So we know that this thing has to be 0.
+This is the x to the fourth term.
+It has to be 0.
+So that means that 1 over 24 minus 1 over 4 plus a_4 over 24
+equals 0.
+So now you can multiply everything through by 24
+and rearrange to figure out that a_4 is equal to 5
+if I've done that correctly.
+And if then if you wanted, it would
+be fairly easy to go back up and then
+you look at the x to the sixth term.
+And from there, you could figure out
+that a_6 was equal to, say, 61 or something like that.
+I think 61.
+And you could keep doing this.
+So this is one way to compute more terms
+of the series for secant of x.
+Another thing you could do, which
+I'll just mention very briefly-- I'm
+not going to show you how to do it-- is that you can do
+long division on power series.
+So it actually it works out just like this.
+It's mathematically equivalent.
+The way you actually do it looks different.
+It looks like long division.
+When you do long division with polynomials,
+you start with the highest order term.
+Of course, power series don't have highest order terms.
+What you actually do with a power series
+is you start with the lowest order term.
+So to divide this into 1, you'd say, oh,
+you mean the factor of 1, and then you subtract off 1 times
+this.
+And that gives you an x squared plus 2 and so, OK,
+so you say I need a plus x squared plus 2 and so on.
+So that was too brief for you to understand it properly,
+but you can go and look up somewhere the method
+of long division on power series.
+So just to recap, we talked about three methods
+for computing the coefficients of a power series.
+There is the formula that you were given, which works
+and which you could use.
+In this case, it's a little complicated.
+Then there's the method of using a relationship
+between your power series and other known power series.
+In this case, we can use the relationship
+that we know our power series satisfies a certain product.
+We know that our power series times cosine of x equals to 1.
+And we can use that to solve for some of the coefficients.
+Or you can also, similarly, when you have that situation,
+you can also use long division to compute the coefficients.
+I'll end there.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+If
+(3.239)
+where are all power series, then we can find by solving the following equation of power series degree by degree:
+(3.240)
+The radius of convergence of is more difficult to track, since diverges whenever and .
+### Taylor series of tangent
+2 points possible (graded)
+Compute the Taylor series for up to degree by using
+(3.241)
+(Your answer should be of the form .)
+Up to degree
+unanswered
+Find an upper bound on the radius of convergence for this Taylor series:
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

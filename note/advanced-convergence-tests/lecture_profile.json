@@ -1,0 +1,8 @@
+{
+  "mode": "technical-slide",
+  "audience": "capable first-time reader",
+  "central_question": "给定一个无穷级数，读者如何选用合适的判别法判定其收敛或发散，并理解这些判别法为什么成立？",
+  "reader_outcome": "读者能对任意常见级数（正项/交错/含幂与阶乘）先做量级分析再选择判别法，给出收敛性结论与依据，并解释调和级数发散与积木悬挑实验的联系",
+  "visual_teaching_atoms": 12,
+  "formula_teaching_atoms": 52
+}

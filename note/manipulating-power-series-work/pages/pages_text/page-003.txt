@@ -1,0 +1,50 @@
+The degree n Taylor polynomial Pn (x) is the best fit degree n polynomial of
+f (x) at x = 0, in the sense that
+dk
+dk
+P
+(x)
+=
+f (x)
+n
+dxk
+dxk
+x=0
+
+for 0 < k ≤ n.
+
+Hence, the degree 1 and degree 2 Taylor polynomials for f (x), are the linear and
+quadratic approximations of f (x) respectively.
+Taylor polynomials are especially useful as for approximating functions, functions that cannot be expressed algebraically in terms of the elementary functions
+that we know, such as the error function. Often, numerical tools, such as the
+graphing tool on your calculator or computer, use Taylor polynomials to approximate these functions.
+We can use Taylor polynomials to approximate a function with arbitrarily high
+accuracy inside the radius of convergence of the Taylor series. But how do we
+know the degree of the Taylor polynomial needed to achieve a certain accuracy?
+The answer is in the Taylor remainder theorem below.
+
+Taylor remainder theorem
+Suppose the Taylor series of f (x) is
+f (x) = a0 + a1 x + a2 x2 + a3 x3 + · · ·
+
+for |x| < R,
+
+and let Pn (x) be the degree n Taylor polynomial of f (x):
+Pn (x) = a0 + a1 x + a2 x2 + · · · + an xn .
+Then, for any |x| < R,
+• if f (x), is n + 1 times differentiable on the open interval (0, x), that is,
+f (n+1) (x) and all lower derivatives f exist on (0, x), and
+• if f (n) is continuous on the closed interval [0, x],
+then there is a number c in (0, x) such that
+f (n+1) (c) n+1
+x .
+f (x) − Pn (x) =
+(n + 1)!
+This is the Taylor remainder theorem.
+Note that the n = 0 case is the Mean Value Theorem (MVT). As in the MVT,
+we do not know exactly where c is.
+Nevertheless, we can use the Taylor remainder theorem to find upper bounds
+on the error caused by approximating a function by a Taylor polynomial.
+3
+
+

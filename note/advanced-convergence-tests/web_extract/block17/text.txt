@@ -1,0 +1,74 @@
+Worked examples: root test
+Example 1: the geometric series
+The root test is another way to determine convergence of a geometric series. Consider
+(3.77)
+To use the root test, we first compute .
+(3.78)
+(3.79)
+(3.80)
+Therefore, the root test tells us that converges when , and diverges when . The root test does not give any information when even though we already know by the divergence test that diverges.
+Example 2
+We will use the root test to determine if the following series converges or diverges.
+(3.81)
+First, we compute .
+(3.82)
+(3.83)
+(3.84)
+(3.85)
+Therefore, since we conclude from the root test that the series converges.
+### Root test practice 1
+2 points possible (graded)
+Use the root test to determine if the following series converges or diverges.
+(3.86)
+First, compute .
+unanswered
+Now, use to determine if the series converges or diverges.
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by the root test.
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Root test practice 2
+2 points possible (graded)
+Use the root test to determine for which the following series converges.
+(3.93)
+First, compute .
+unanswered
+For which does the series converge? (Check all that apply).
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Root test practice 3
+2 points possible (graded)
+Use the root test to determine if each of the following series converges.
+Select an option inconclusive by the root test. converges. diverges.
+unanswered
+Select an option inconclusive by the root test. converges. diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 2 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

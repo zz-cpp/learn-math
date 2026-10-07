@@ -1,0 +1,74 @@
+Summary: Taylor Series and Power Series
+
+General power series
+A power series is an infinite series involving positive powers of a variable x:
+2
+
+3
+
+f (x) = a0 + a1 x + a2 x + a3 x + · · · =
+
+∞
+X
+
+an x n .
+
+n=0
+
+The radius of convergence R of the power series
+
+∞
+X
+
+an xn , is a real number
+
+n=0
+
+0 ≤ R < ∞ such that
+• for |x| < R, the power series
+
+∞
+X
+
+an xn converges (to a finite number);
+
+n=0
+
+• for |x| > R, the power series
+
+∞
+X
+
+an xn diverges;
+
+n=0
+
+• for |x| = R, the power series may converge or diverge. But we will mostly
+ignore what happens at the end points of the interval of convergence.
+Examples:
+2
+
+3
+
+• Geometric series: 1 + x + x + x + · · · =
+
+∞
+X
+
+xn , radius of convergence is 1.
+
+n=0
+
+• Polynomials: a0 + a1 x + a2 x2 + · · · aN xN =
+
+N
+X
+n=0
+
+∞. In other words, the sum converges for all x.
+
+1
+
+an xn , radius of convergence
+
+

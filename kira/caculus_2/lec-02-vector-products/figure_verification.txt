@@ -1,0 +1,361 @@
+=== 1. figures/fig_01_dot_def.png ===
+  page:       f_0008.png
+  source:     01:45
+  paragraph:  外力 F 所做的功 W 就等于 F 沿位移方向的分离大小，也就是 F 的模乘夹角余弦，再乘运动的路程 S 的模长
+  caption:    数量积的定义即由功的公式抽象而来：a·b = |a||b|cosθ
+  [OK]   figure file: figures/fig_01_dot_def.png
+  [OK]   source page: frames/f_0008.png
+  --- material context around this figure ---
+  >>> [1:44] 再乘夹角的余弦
+  >>> [1:46] 那除了弓
+  >>> [1:47] 这个还能怎么理解呢
+  >>> [1:42] 等于它们模长相乘
+  >>> [1:49] 事实上
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. figures/fig_02_projection.png ===
+  page:       f_0010.png
+  source:     02:15
+  paragraph:  B 的模乘 cos theta 这个部分在数学中是带身份的，叫向量 b 在向量 a 上的投影
+  caption:    投影的记号与线性运算法则：Prj_a(b+c) = Prj_a b + Prj_a c，Prj_a(λb) = λ·Prj_a b
+  [OK]   figure file: figures/fig_02_projection.png
+  [OK]   source page: frames/f_0010.png
+  --- material context around this figure ---
+  >>> [2:14] 就好比是一束垂直的光打下来
+  >>> [2:17] 头在A向量上就是这条黄线的这个长度
+      [2:09] 你呢过B的起点和终点分别向A去引垂线
+      [2:22] 就是B在A上的投影
+      [2:07] 这个向量B有个向量A
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. figures/fig_03_dot_applications.png ===
+  page:       f_0021.png
+  source:     05:00
+  paragraph:  高数中学数量积最主要的是以下这两个应用：第一个求两个向量夹角，第二个判垂直
+  caption:    数量积的两大应用：求夹角 cos<a,b> = (a·b)/(|a||b|) 与判垂直 a⊥b ⟺ a·b = 0
+  [OK]   figure file: figures/fig_03_dot_applications.png
+  [OK]   source page: frames/f_0021.png
+  --- material context around this figure ---
+  >>> [5:01] 是不是夹角余弦就等于他们两个的数量积
+  >>> [4:57] 那我如果是非零的向量诶
+  >>> [5:04] 在比上模长相乘
+      [4:54] A点乘B就等于模长相乘乘cos诶
+      [5:07] 这个公式不要现推啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. figures/fig_04_ex1_statement.png ===
+  page:       f_0024.png
+  source:     05:45
+  paragraph:  已知三点 M(1,1,1)、A(2,2,1)、B(2,1,2)，求角 AMB
+  caption:    【例1】数量积运算练习：已知三点 M(1,1,1)、A(2,2,1)、B(2,1,2)，求 ∠AMB
+  [OK]   figure file: figures/fig_04_ex1_statement.png
+  [OK]   source page: frames/f_0024.png
+  --- material context around this figure ---
+  >>> [5:45] 你就先求这个夹角的余弦
+  >>> [5:43] 那你要求MB这个夹角
+  >>> [5:47] 而这个夹角的余弦它其实还可以怎么表示呢
+  >>> [5:41] 用内积搞不就完了吗
+      [5:38] 那你就把它看成两个向量的夹角
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. figures/fig_05_dot_laws.png ===
+  page:       f_0028.png
+  source:     06:45
+  paragraph:  第一交换律……再看分配律，主要是会直接用两个向量先求和再做点乘，就等于点乘求和；最后一个数乘结合律
+  caption:    数量积的运算律：交换律 a·b = b·a、分配律 (a+b)·c = a·c + b·c、数乘结合律 (λa)·b = λ(a·b)
+  [OK]   figure file: figures/fig_05_dot_laws.png
+  [OK]   source page: frames/f_0028.png
+  --- material context around this figure ---
+  >>> [6:44] 因为点乘就是A模乘B模
+  >>> [6:47] 再乘夹角余弦
+  >>> [6:42] 这个呢也很好想
+  >>> [6:48] 那你反过来B模乘A模乘夹角余弦
+  >>> [6:41] 第一交换率
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. figures/fig_06_dot_results.png ===
+  page:       f_0036.png
+  source:     08:45
+  paragraph:  一个向量和它自己做内积等于模长的平方，换言之两边开算术平方根，|a| = √(a·a)
+  caption:    数量积的运算结论：a·a = |a|²、|a| = √(a·a)、0·a = 0
+  [OK]   figure file: figures/fig_06_dot_results.png
+  [OK]   source page: frames/f_0036.png
+  --- material context around this figure ---
+  >>> [8:43] 我们需要再复习一些跟向量计算有关的结论
+  >>> [8:47] 主要是这个一个向量和他自己做内积
+  >>> [8:41] 那为了化简这个形式
+      [8:50] 等于什么呀
+      [8:51] 根据公式就等于A的膜乘
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. figures/fig_07_dot_coord_app.png ===
+  page:       f_0044.png
+  source:     10:45
+  paragraph:  分子的内积呢我们会用对应分量相乘相加来算，分母的模等于根号下每个分量平方相加
+  caption:    数量积坐标形式的两大应用：求夹角与判垂直（写成坐标公式的完整版）
+  [OK]   figure file: figures/fig_07_dot_coord_app.png
+  [OK]   source page: frames/f_0044.png
+  --- material context around this figure ---
+  >>> [10:45] 最后结果呢就等于四以后
+  >>> [10:43] 对应坐标三乘以
+  >>> [10:47] 几乎所有的数量级都用这个公式来算了
+  >>> [10:41] 再加上第三个分量
+      [10:39] 对应坐标2×0
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. figures/fig_08_ex1_solution.png ===
+  page:       f_0051.png
+  source:     12:30
+  paragraph:  分子内积用坐标来做，对应分量相乘相加等于一；再比上各自的模长根号二乘根号二
+  caption:    【例1】解答：MA = (1,1,0)、MB = (1,0,1)，内积为 1，模都是 √2，故 cos∠AMB = 1/2，夹角为 π/3
+  [OK]   figure file: figures/fig_08_ex1_solution.png
+  [OK]   source page: frames/f_0051.png
+  --- material context around this figure ---
+  >>> [12:32] 它的cos值是12啊
+  >>> [12:27] 那么两个向量的夹角是零到派之间哪个角度
+      [12:35] 唉60度是吧
+      [12:36] 三分之派啊
+      [12:23] 这样算下来结果是1/2好
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 9. figures/fig_09_moment.png ===
+  page:       f_0058.png
+  source:     13:45
+  paragraph:  旋转猛不猛跟两件事有关：一个是切向力的大小，第二个是力臂的长度
+  caption:    力矩的物理来源：力臂越长、切向力越大，转动越快（真实杯子演示）
+  [OK]   figure file: figures/fig_09_moment.png
+  [OK]   source page: frames/f_0058.png
+  --- material context around this figure ---
+  >>> [13:45] 一个呢是我推这个杆儿的外力大小
+  >>> [13:43] 这个由两个因素决定
+  >>> [13:42] 它猛不猛
+  >>> [13:49] 准确说是垂
+      [13:40] 就是旋转的这个速度
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 10. figures/fig_10_moment_dir.png ===
+  page:       f_0064.png
+  source:     15:45
+  paragraph:  逆时针转，虽然力的方向不一样，但是力矩的方向、旋转的方向统一，这个力矩都向上
+  caption:    力矩方向的右手规定：四指顺着转动方向握，大拇指指向就是力矩向量的方向
+  [OK]   figure file: figures/fig_10_moment_dir.png
+  [OK]   source page: frames/f_0064.png
+  --- material context around this figure ---
+  >>> [15:45] 旋转的方向统一
+  >>> [15:43] 但是呢我力矩的方向
+  >>> [15:47] 这个例句都向上
+  >>> [15:48] 那位同学说
+  >>> [15:41] 虽然力的方向不一样
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 11. figures/fig_11_cross_def.png ===
+  page:       f_0068.png
+  source:     17:00
+  paragraph:  向量积的模等于两个模长相乘再乘夹角正弦，方向按右手规则从 OP 转向 F
+  caption:    向量积（叉积）定义：M = OP × F，模 |M| = |OP||F|sinθ，方向由右手规则确定
+  [OK]   figure file: figures/fig_11_cross_def.png
+  [OK]   source page: frames/f_0068.png
+  --- material context around this figure ---
+  >>> [17:00] 注意这是有先后顺序的
+  >>> [17:03] 显然叉乘的结果是个向量
+      [16:54] 向量就等于OP这个杆这个利弊差乘F
+      [17:06] 它有大小
+      [17:07] 模长呢等于两个模长相乘
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 12. figures/fig_12_cross_app.png ===
+  page:       f_0077.png
+  source:     19:00
+  paragraph:  求与 a、b 均垂直的向量；利用模长求以 a、b 为邻边的平行四边形面积；求三角形面积
+  caption:    向量积的三大应用：求同时垂直的向量、求平行四边形面积 |a×b|、求三角形面积 ½|a×b|
+  [OK]   figure file: figures/fig_12_cross_app.png
+  [OK]   source page: frames/f_0077.png
+  --- material context around this figure ---
+  >>> [19:01] A对应的就是这个对边H
+  >>> [19:04] 由此我们得到向量积的几何应用
+      [18:55] 那不就是B这条边三乘上sin西塔嘛
+      [18:54] 那你说H是谁呢
+      [19:08] 事实上我们在这儿学向量级
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 13. figures/fig_13_ex2_statement.png ===
+  page:       f_0082.png
+  source:     20:15
+  paragraph:  设 a = (2,1,-1)，b = (1,-1,2)，求与 a、b 均垂直的单位向量 e
+  caption:    【例2】向量积运算练习：设 a = (2,1,-1)、b = (1,-1,2)，求与 a、b 均垂直的单位向量 e
+  [OK]   figure file: figures/fig_13_ex2_statement.png
+  [OK]   source page: frames/f_0082.png
+  --- material context around this figure ---
+  >>> [20:14] 好下面做个立体试试
+  >>> [20:16] 给一个A向量坐标
+  >>> [20:18] B向量坐标求和ab都垂直的单位向量
+  >>> [20:11] 到这你是不是觉得自己已经什么都会了
+      [20:09] 它是膜的意思
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 14. figures/fig_14_cross_results.png ===
+  page:       f_0094.png
+  source:     23:15
+  paragraph:  a×a = 0；0×a = 0；a ∥ b ⟺ a×b = 0；b×a = -(a×b)；i×j = k、j×k = i、k×i = j
+  caption:    向量积的运算结论五条：自叉为零、零向量叉乘、平行判据、反交换律、以及 i,j,k 的循环走位
+  [OK]   figure file: figures/fig_14_cross_results.png
+  [OK]   source page: frames/f_0094.png
+  --- material context around this figure ---
+  >>> [23:15] 哎所以长度是零
+  >>> [23:16] 或者还可以怎么分析呢
+  >>> [23:18] 左边这个向量它是利弊
+      [23:20] 就它是那个杆儿
+      [23:09] 再乘他和他自己夹角的正弦sin0是零
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 15. figures/fig_15_determinant_rule.png ===
+  page:       f_0110.png
+  source:     27:15
+  paragraph:  a×b 的坐标可以写成三阶行列式：第一行 i,j,k，第二行写前一个向量的坐标，第三行写后一个向量的坐标
+  caption:    叉积坐标公式的行列式写法与口诀：前上后下写两遍、掐头去尾取中间、交叉相乘再相减
+  [OK]   figure file: figures/fig_15_determinant_rule.png
+  [OK]   source page: frames/f_0110.png
+  --- material context around this figure ---
+  >>> [27:14] 所以为了方便记忆呢
+  >>> [27:16] 教材中一般会引入线性代数中的行列式符号
+  >>> [27:12] 这谁能记得住哎
+  >>> [27:11] 这叫口算
+      [27:20] 在此我们一起学习
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 16. figures/fig_16_ex2_solution.png ===
+  page:       f_0135.png
+  source:     33:30
+  paragraph:  a×b = (1,-5,-3)，模等于 √35，于是单位向量 e = ±(1,-5,-3)/√35
+  caption:    【例2】解答：叉乘给出 (1,-5,-3)，模为 √35；与两向量均垂直的单位向量有正负两个方向，不能只写一个
+  [OK]   figure file: figures/fig_16_ex2_solution.png
+  [OK]   source page: frames/f_0135.png
+  --- material context around this figure ---
+  >>> [33:30] 第三个分量是这个二阶行列式
+  >>> [33:28] 二二得四
+  >>> [33:27] 减去负对角线
+  >>> [33:33] 它等于什么呢
+  >>> [33:34] 主对角线1×-2减负对角线1×-1
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 17. figures/fig_17_ex3_solution.png ===
+  page:       f_0148.png
+  source:     36:45
+  paragraph:  AB = (2,2,2)、AC = (1,2,4)，叉乘得 (4,-6,2)，面积等于二分之一模长
+  caption:    【例3】已知 A(1,2,3)、B(3,4,5)、C(2,4,7)，求三角形面积：S = ½|AB × AC| = ½√56 = √14
+  [OK]   figure file: figures/fig_17_ex3_solution.png
+  [OK]   source page: frames/f_0148.png
+  --- material context around this figure ---
+  >>> [36:46] 这个先写一个这个行列式
+  >>> [36:43] 但其实你会发现熟了之后就直接搞啊
+  >>> [36:48] 二四得八再减去二得四
+      [36:40] 第三行写后边这个向量124再来一遍吧
+      [36:51] 中间呢你再把它抄过来
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 18. figures/fig_18_mixed_props.png ===
+  page:       f_0169.png
+  source:     42:00
+  paragraph:  ① 轮换对称性 [abc] = [bca] = [cab]；② 两对换变号；③ 三向量共面 ⟺ [abc] = 0；④ 平行六面体体积为 |[abc]|
+  caption:    混合积的性质与结论四条：轮换对称、对换变号、共面判据、体积公式
+  [OK]   figure file: figures/fig_18_mixed_props.png
+  [OK]   source page: frames/f_0169.png
+  --- material context around this figure ---
+  >>> [41:59] 总结一下混合肌的性质和结论
+  >>> [42:01] 就可以直接做题了
+  >>> [42:02] 首先第一个呢叫轮换对称性
+  >>> [41:56] 等学完了再回来看就能看懂
+      [42:05] 什么意思呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 19. figures/fig_19_ex4_solution.png ===
+  page:       f_0187.png
+  source:     47:30
+  paragraph:  拆开后零项全部消掉，只剩 [abc] + [bca]，也就是 2 + 2 = 4
+  caption:    【例4】设 [abc] = 2，则 [(a+b)×(b+c)]·(c+a) = [abc] + [bca] = 4
+  [OK]   figure file: figures/fig_19_ex4_solution.png
+  [OK]   source page: frames/f_0187.png
+  --- material context around this figure ---
+  >>> [47:29] 前面讲了一个向量差
+  >>> [47:31] 自己是零
+  >>> [47:28] B差B直接是零了
+  >>> [47:27] 所以这一项就出不来啊
+  >>> [47:33] 向量力矩为零
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 20. figures/fig_20_ex5_solution.png ===
+  page:       f_0197.png
+  source:     49:00
+  paragraph:  AB = (1,1,1)、AC = (3,0,2)、AM = (x-1, y-2, z)，三向量共面即混合积为零
+  caption:    【例5】A(1,2,0)、B(2,3,1)、C(4,2,2)、M(x,y,z) 四点共面，混合积为零给出平面方程 2x + y - 3z - 4 = 0
+  [OK]   figure file: figures/fig_20_ex5_solution.png
+  [OK]   source page: frames/f_0197.png
+  --- material context around this figure ---
+  >>> [49:00] 明白为什么
+  >>> [49:01] 比方说现在我们找的这几个向量啊
+  >>> [48:57] 但是不要用太多的M
+  >>> [49:04] 你能够轻松写出他们的坐标啊
+      [49:06] ab唉终点减起点2-1是111直接写了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 20 figures, 0 file problems

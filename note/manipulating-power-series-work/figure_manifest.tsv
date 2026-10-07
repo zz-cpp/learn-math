@@ -1,0 +1,9 @@
+figure	page	source	paragraph	caption
+fig01-factory-flow.png	-	CeTZ 重绘：网页 page-01 开篇 + 转录 v9	"We will now obtain more Taylor series from the ones above by performing addition, multiplication, differentiation, and integration on them"	三栏流程：旧级数 → 多项式式操作 → 新级数家族
+fig02-sec-multiply.png	-	CeTZ 重绘：转录 v10 乘积法	"cosine times secant... it has to give us just 1... 1/24 - 1/4 + a_4/24 = 0"	sec·cos=1 的 x⁴ 三组配对与 a_4=5
+fig03-sin-to-cos.png	-	CeTZ 重绘：转录 v11 逐项求导	"the 3 cancels with the last factor in this 3 factorial and leaves you with 2 factorial"	sin 级数 → 逐项求导 → cos 级数
+fig04-substitution-tree.png	-	CeTZ 重绘：转录 v13/v15 + 讲义 page-04	"substitute in a polynomial of the form p(x)=ax^n since p(0)=0"	三条代换箭头 e^x→e^(-t²)、sin→sin(2x⁵)、ln→ln(1-x³)
+fig05-erf-area.png	-	CeTZ 重绘：转录 v15 + 网页 page-06	"the normalization... 2 over the square root of pi... the integral of e to the minus t squared dt from 0 to x"	高斯曲线下 [0,x] 面积 × 2/√π = erf(x)
+fig06-recognize-four.png	-	CeTZ 重绘：转录 v14	"this function is x squared e to the x... it was actually just still the geometric series"	A-D 四级数到函数四法连线
+fig07-pn-approx.png	-	CeTZ 重绘：网页 page-08 官方练习	"approximate sqrt(2) by P_3(1)"	√(1+x) 与 P_0..P_3 部分和曲线
+fig08-shift-axis.png	-	CeTZ 重绘：网页 page-10 平移公式	"converges when |x-a|<R and diverges when |x-a|>R"	以 a 为中心的收敛区间数轴

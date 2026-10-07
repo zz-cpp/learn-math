@@ -1,0 +1,418 @@
+########## PAGE 01 ##########
+So far, we have used Taylor's formula to obtain the following Taylor series:
+for .
+.
+We have also integrated the geometric series to obtain a power series for :
+.
+We will now obtain more Taylor series from the ones above by performing addition, multiplication, differentiation, and integration on them.
+### Review: multiply two polynomials
+1 point possible (graded)
+Find the coefficient of of , which is the product of the two polynomials and below:
+(3.214)
+(3.215)
+Coefficient of in the is
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### New series from old: multiplying series
+[VIDEO REMOVED]
+Multiplying two power series
+We multiply two powers series using the same rule as when we multiply two polynomials.
+Consider the power series which converges for , and the power series , which converges for .
+The product of the two power series converges for , but it could have a larger radius of convergence.
+### Multiply two power series
+1 point possible (graded)
+Find the coefficient of of , which is the product of the two power series and below:
+(3.219)
+(3.220)
+(Hint: Does this look familiar? )
+Coefficient of is
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Multiply two series 2
+2 points possible (graded)
+Consider the power series of obtained by multiplying the Taylor series for and .
+Find its radius of convergence and the coefficient of . (Enter infty for infinity.)
+unanswered
+The coefficient of in the power series of is:
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+Consider the product of two exponential series:
+(3.228)
+Is the product of these two series the same as the Taylor series of ?
+We say that a term in this product has total degree 2 if the power of plus the power of is 2.
+If we look at the all total degree 2 term in and in this product we get:
+(3.229)
+(3.230)
+(3.231)
+Can the terms of total degree be expressed in terms of ?
+### See answer
+(3.232)
+(3.233)
+(3.234)
+Remark: The pattern above continues for all . This is consistent with . To verify that this holds from the series formulas requires use of the Binomial Theorem:
+(3.235)
+Here's the computation:
+(3.236)
+(3.237)
+(3.238)
+where in the last step we have used the Binomial Theorem.
+Hide
+
+########## PAGE 02 ##########
+### Taylor series of secant
+[VIDEO REMOVED]
+If
+(3.239)
+where are all power series, then we can find by solving the following equation of power series degree by degree:
+(3.240)
+The radius of convergence of is more difficult to track, since diverges whenever and .
+### Taylor series of tangent
+2 points possible (graded)
+Compute the Taylor series for up to degree by using
+(3.241)
+(Your answer should be of the form .)
+Up to degree
+unanswered
+Find an upper bound on the radius of convergence for this Taylor series:
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 03 ##########
+### New series from old: differentiating a series
+[VIDEO REMOVED]
+
+########## PAGE 04 ##########
+### Examples with substitution
+[VIDEO REMOVED]
+We can find the composition of two power series by using similar rules as composition of polynomials. In this course, we will only substitute a polynomial into a power series .
+If the radius of convergence of the power series is then the power series converges whenever .
+In particular, we can find a Taylor series for a function at and then substitute in a polynomial of the form for where .
+### Practice substitution
+1 point possible (graded)
+Use substitution and the Taylor series of and to find the first three non-zero terms of the power series representing .
+(Your answer should be the sum of the three non-zero terms with the lowest power of . Remember that the constant term counts as the degree term. Enter factorial(n) for .)
+The 3 lowest non-zero terms:
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 05 ##########
+### Recognizing power series
+[VIDEO REMOVED]
+### Review: radius of convergence
+4 points possible (graded)
+Find the radius of convergence of the 4 power series presented in the video: (If enter infty.)
+For
+unanswered
+For
+unanswered
+For
+unanswered
+For
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Recognizing power series
+3 points possible (graded)
+Find the functions whose Taylor series are given below. (Recall that .) (Hint: You will need to recall the power series of the trigonometric and hyperbolic trigonometric functions, as well as how power series behave under differentiation/integration.)
+For :
+unanswered
+For :
+unanswered
+For :
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 06 ##########
+### New series from old: error function
+[VIDEO REMOVED]
+Error function
+Recall the error function is defined by the following integral formula:
+(3.287)
+and cannot be expressed in terms of functions that we already know with algebraic operations such as addition and multiplication.
+To obtain the Taylor series of the error function, we replace the integrand with its Taylor series:
+(3.288)
+(3.289)
+(3.290)
+### Taylor series of Fresnel integral
+2 points possible (graded)
+Find the first three non-zero terms of Taylor series of the Fresnel integral . Recall that there is no formula for this integral.
+(Type factorial(n) for .)
+The first three non-zero terms of the Taylor series of
+unanswered
+Also find the radius of convergence of the Taylor series. (If enter infty.)
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 07 ##########
+Taylor polynomials
+If the Taylor series of is
+(3.294)
+then the polynomial
+(3.295)
+is called the Taylor polynomial of degree of . In other words, the degree n Taylor polynomial is the polynomial obtained by truncating the Taylor series to degree n.
+The degree 1 and degree 2 Taylor polynomials for are respectively the linear and quadratic approximations of near . The degree n Taylor polynomial is the best fit degree n polynomial of near in the sense that
+(3.296)
+In other words, at the point , all the derivatives of the polynomial matches the respective derivatives of .
+Just as we use linear and quadratic approximations, we can use Taylor polynomials of any degree to approximate a function near a point. But how do we know how accurate the approximation is? And what degree of Taylor polynomial is needed to achieve a certain accuracy? The answer is in the Taylor Remainder Theorem below.
+Taylor remainder theorem
+Let be the degree Taylor polynomial of .
+Then, if
+is times differentiable on the open interval i.e. exist on the open interval and
+are all continuous on the closed interval
+then there is a number in such that
+(3.297)
+This is the Taylor remainder theorem, and is called the remainder or error of approximation.
+The case is the Mean Value Theorem (MVT). As in the MVT, we do not know exactly where is. Nonetheless, the Taylor remainder theorem is useful in giving upper bounds on errors of approximation by Taylor polynomials.
+Remark: The formula for is true even if is outside the radius of convergence of the Taylor series. If then in addition,
+(3.298)
+This means that within the radius of convergence, we can obtain an approximation of arbitrarily high accuracy by using a Taylor polynomial of high enough degree.
+### Proof of the Taylor remainder theorem
+Given the hypothesis of the Taylor remainder theorem, we need to show there is a in the open interval such that
+(3.299)
+In the proof below, we will use Rolle's theorem (a special case of the MVT in which the function takes the same value at the two end points), so let us first recall the statement of Rolle's Theorem:
+If is differentiable on and continuous on (as in the hypothesis of the MVT), and if then there is in such that .
+Now, we proceed to prove the Remainder Theorem for any fixed degree .
+To begin, fix (), and define
+(3.300)
+With this , define a new function with :
+(3.301)
+(3.302)
+Then, this new function has the following properties:
+(3.303)
+(3.304)
+Moreover, is times differentiable on the interval with the first derivatives continuous on because the hypothesis of the theorem says that is times differentiable on with the first derivatives continuous on and is a polynomial.
+Now, we find by iterated applications of Rolle's Theorem. Since is continuous on differentiable on and by Rolle's Theorem, there is with such that
+(3.305)
+But now since as well, and is continuous on and differentiable on we can apply Rolle's Theorem to on and obtain a number with such that
+(3.306)
+Again, and satisfies the hypothesis of Rolle's Theorem, so we can apply Rolle's Theorem to and obtain with such that
+(3.307)
+We can continue to apply Rolle's Theorem to the higher derivatives of on shrinking intervals, with the last application to . The end result is a number satisfying
+(3.308)
+such that
+(3.309)
+This final equation gives an expression for . Let We compute the derivative:
+(3.310)
+(3.311)
+This implies for .
+We have shown that given any fixed degree and fixed , there is a number in such that
+(3.312)
+Hide
+
+########## PAGE 08 ##########
+We approximate by a Taylor polynomial of degree up to 2 and find an upper bound on the error of approximation.
+Recall the Taylor series of is
+(3.313)
+Since this series contains only odd power terms, the degree 1 and degree 2 Taylor polynomials are the same:
+(3.314)
+Hence, the approximation of by the Taylor polynomial of degree 2 is
+(3.315)
+Now, we find an upper bound on the error of approximation By the Taylor remainder theorem,
+(3.316)
+(3.317)
+Now, we compute :
+(3.318)
+(3.319)
+(3.320)
+(3.321)
+Since both and for we conclude that
+(3.322)
+In other words, is an upper bound of on the interval . This gives an upper bound on the error of approximation:
+(3.323)
+In other words, the error of the approximation of by is less than .
+### Approximating square root of two
+3 points possible (graded)
+Often, numerical tools such as graphing tools and calculators use Taylor polynomials to approximate numbers.
+Approximate by where is the degree Taylor polynomial of centered at .
+unanswered
+Use the Taylor remainder theorem to give an expression of in terms of where is some number between and . (Your answer should be a function of . Enter factorial(n) for . )
+unanswered
+Find the maximum over the interval of the absolute value of the expression you entered above. This gives an upper bound on .
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Approximating the number e
+3 points possible (graded)
+Let be the degree Taylor polynomial of . Then the approximation of the number by is
+(3.333)
+Follow the two steps below to find such that is accurate to 4 decimal places, that is, to within .
+First, use the Taylor remainder theorem to give an expression of the error of approximation, in terms of and where is some number between and . (Enter factorial(n) for .)
+unanswered
+Use the fact that for to find the smallest such that the expression for above is .
+unanswered
+Using the you found above, compute and check whether it is correct to 4 decimal places.
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 09 ##########
+What if we want to find a Taylor polynomial approximation to a function at a point that is not ?
+There is nothing special about the point . In fact, we can translate any function to the right or to the left by some amount. So it makes sense that we should be able to find power series and Taylor approximations centered about other points. In fact, you have already seen linear and quadratic approximations centered about other points.
+The mathlet below allows you to see the Taylor approximation up to order at any point .
+### Review
+2 points possible (graded)
+Find the linear approximation of at . This is the Taylor polynomial of degree at .
+{"base_image": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd.png", "target_outline": "false", "one_per_target": "true", "draggables": [{"id": "f", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label1.png", "can_reuse": "", "target_fields": []}, {"id": "fa", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label2.png", "can_reuse": "", "target_fields": []}, {"id": "fprime", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label3.png", "can_reuse": "", "target_fields": []}, {"id": "fprimea", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label4.png", "can_reuse": "", "target_fields": []}, {"id": "fprime2", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label5.png", "can_reuse": "", "target_fields": []}, {"id": "fprime2a", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label6.png", "can_reuse": "", "target_fields": []}, {"id": "fprimeprime", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label7.png", "can_reuse": "", "target_fields": []}, {"id": "fprimeprimea", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_linapprox_linapprox_dnd_label8.png", "can_reuse": "", "target_fields": []}], "targets": [{"id": "1", "x": "108", "y": "2", "w": "81", "h": "77"}, {"id": "2", "x": "240", "y": "2", "w": "81", "h": "77"}], "label_bg_color": "rgb(222, 139, 238)"}
+unanswered
+Find the quadratic approximation of at , by adding a quadratic term to . This is the degree 2 Taylor polynomial of at .
+{"base_image": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd.png", "target_outline": "false", "one_per_target": "true", "draggables": [{"id": "x", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label1.png", "can_reuse": "", "target_fields": []}, {"id": "a", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label2.png", "can_reuse": "", "target_fields": []}, {"id": "xa", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label3.png", "can_reuse": "", "target_fields": []}, {"id": "xpa", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label4.png", "can_reuse": "", "target_fields": []}, {"id": "fprimeprime", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label5.png", "can_reuse": "", "target_fields": []}, {"id": "fprimeprimea", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label6.png", "can_reuse": "", "target_fields": []}, {"id": "twoprimeprime", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label7.png", "can_reuse": "", "target_fields": []}, {"id": "twofprimeprimea", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label8.png", "can_reuse": "", "target_fields": []}, {"id": "halffprimeprime", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label9.png", "can_reuse": "", "target_fields": []}, {"id": "halffprimeprimea", "label": "", "icon": "/asset-v1:MITxT+18.01.3x+2T2025+type@asset+block/images_quadapprox_quadapprox_dnd_label10.png", "can_reuse": "", "target_fields": []}], "targets": [{"id": "1", "x": "206", "y": "16", "w": "82", "h": "77"}, {"id": "2", "x": "334", "y": "16", "w": "82", "h": "77"}], "label_bg_color": "rgb(222, 139, 238)"}
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+
+########## PAGE 10 ##########
+Let That is, is the translation of to the left by .
+Recall the Taylor series of at is
+(3.337)
+Then
+(3.338)
+(3.339)
+Now let In terms of the above formula becomes
+(3.340)
+This is the Taylor series of at .
+Note that the radius of convergence of the Taylor series of at is the number such that converges when and diverges when .
+If , we get the formula for the Taylor series that we started with in this section. This special case of Taylor's formula gives us a power series often referred to as the Maclaurin series.
+### Taylor series of a polynomial at a
+4 points possible (graded)
+The Taylor series for the polynomial at takes the form:
+Find the coefficients of this Taylor series.
+unanswered
+unanswered
+unanswered
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Taylor series of the exponential at a
+1 point possible (graded)
+Find the term of order in the Taylor series of at . (Be sure to include the entire term including the power of . Enter factorial(n) for .)
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### More practice
+2 points possible (graded)
+Find the first 4 nonzero terms of the Taylor series for the function at . (Do not include extra terms.)
+unanswered
+This series converges when
+unanswered
+(Enter infty if the answer is infinity.)
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

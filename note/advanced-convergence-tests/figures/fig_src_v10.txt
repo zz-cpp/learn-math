@@ -1,0 +1,141 @@
+So let's work it out, then.
+So the limit comparison test
+says, so we look at the limit
+as n goes to infinity of
+the ratio of the two things
+that we're interested in.
+So in this case, this is
+5 n plus 2 over n cubed
+plus 1 divided by
+5 over n squared.
+
+So this is a ratio
+of two ratios,
+so we can rewrite it by
+multiplying upstairs.
+And we get that this
+is equal to the limit
+as n goes to infinity of
+5 n cubed plus 2 n squared
+over 5 n cubed plus 5.
+And so we've seen before when
+we were dealing with limits
+that when you have a
+ratio of two polynomials,
+as the variable
+goes to infinity,
+the limit is what you get just
+by comparing the leading terms.
+So in this case, we
+just have to look
+at 5 n cubed over 5 n cubed.
+And that's indeed 1.
+OK.
+So this is 1.
+So by the limit comparison
+test, our series,
+the sum of this a_n,
+converges if and only
+if this series converges.
+And we already said
+that we know some 1
+over n squared converges.
+So by the limit comparison
+test, since sum over n
+squared converges,
+our series converges.
+
+Great.
+OK.
+So that's the first one.
+Let's look at the second one.
+So the second one
+here is the sum from n
+equals 1 to infinity of 1
+plus the square of 5 over 2,
+that whole thing
+to the n-th power.
+Now if you look
+at this, the thing
+you should recognize
+this as is just
+a particular geometric
+series, right?
+If you were to replace 1 plus
+the square root of 5 over 2
+with x, this is just x, plus
+x squared, plus x cubed,
+plus dot dot dot dot dot.
+It's just a geometric
+series with constant ratio--
+well, x, 1 plus square
+root of 5 over 2.
+So we know exactly when
+geometric series converge.
+They converge exactly
+when the constant ratio
+is between minus 1 and 1.
+So it's bigger than
+minus 1 and less than 1.
+So this series converges,
+then, if and only
+if 1 plus the square
+root of 5 over 2
+is between minus 1 and 1.
+So then we just have to
+think about is this number
+between minus 1 and 1.
+And OK, so this is
+not that hard to do.
+Square root of 5
+is bigger than 2.
+So 1 plus the square root
+of 5 is bigger than 3.
+So 1 plus the square root of
+5 over 2 is bigger than 3/2.
+So 3/2 is bigger than 1.
+So this common ratio in this
+series is bigger than 1.
+So the terms of this
+series are blowing up.
+As n gets bigger
+and bigger, you're
+adding larger and
+larger numbers here.
+This is blowing up.
+It's a divergent
+geometric series.
+So this series
+does not converge.
+So B-- I'll just
+write that here.
+B diverges because it's
+geometric with common ratio
+bigger than 1.
+So that's the reason
+that part B diverges.
+Finally, we're left
+with question C.
+So I'm going to come
+over and write it over
+here again so we can see it.
+So part C asks the
+sum for n equals 1
+to infinity of log
+n over n squared.
+
+So this one's a little
+trickier, and it requires
+a little bit more thought.
+
+So let's start just by--
+it can't be solved just
+by a straightforward application
+of the limit comparison test
+that we've learned.
+So we need to think
+a little bit more
+about what ways
+could we solve it.
+So one thing to
+remember here is that we

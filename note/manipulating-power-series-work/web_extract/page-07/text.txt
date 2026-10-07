@@ -1,0 +1,54 @@
+Taylor polynomials
+If the Taylor series of is
+(3.294)
+then the polynomial
+(3.295)
+is called the Taylor polynomial of degree of . In other words, the degree n Taylor polynomial is the polynomial obtained by truncating the Taylor series to degree n.
+The degree 1 and degree 2 Taylor polynomials for are respectively the linear and quadratic approximations of near . The degree n Taylor polynomial is the best fit degree n polynomial of near in the sense that
+(3.296)
+In other words, at the point , all the derivatives of the polynomial matches the respective derivatives of .
+Just as we use linear and quadratic approximations, we can use Taylor polynomials of any degree to approximate a function near a point. But how do we know how accurate the approximation is? And what degree of Taylor polynomial is needed to achieve a certain accuracy? The answer is in the Taylor Remainder Theorem below.
+Taylor remainder theorem
+Let be the degree Taylor polynomial of .
+Then, if
+is times differentiable on the open interval i.e. exist on the open interval and
+are all continuous on the closed interval
+then there is a number in such that
+(3.297)
+This is the Taylor remainder theorem, and is called the remainder or error of approximation.
+The case is the Mean Value Theorem (MVT). As in the MVT, we do not know exactly where is. Nonetheless, the Taylor remainder theorem is useful in giving upper bounds on errors of approximation by Taylor polynomials.
+Remark: The formula for is true even if is outside the radius of convergence of the Taylor series. If then in addition,
+(3.298)
+This means that within the radius of convergence, we can obtain an approximation of arbitrarily high accuracy by using a Taylor polynomial of high enough degree.
+### Proof of the Taylor remainder theorem
+Given the hypothesis of the Taylor remainder theorem, we need to show there is a in the open interval such that
+(3.299)
+In the proof below, we will use Rolle's theorem (a special case of the MVT in which the function takes the same value at the two end points), so let us first recall the statement of Rolle's Theorem:
+If is differentiable on and continuous on (as in the hypothesis of the MVT), and if then there is in such that .
+Now, we proceed to prove the Remainder Theorem for any fixed degree .
+To begin, fix (), and define
+(3.300)
+With this , define a new function with :
+(3.301)
+(3.302)
+Then, this new function has the following properties:
+(3.303)
+(3.304)
+Moreover, is times differentiable on the interval with the first derivatives continuous on because the hypothesis of the theorem says that is times differentiable on with the first derivatives continuous on and is a polynomial.
+Now, we find by iterated applications of Rolle's Theorem. Since is continuous on differentiable on and by Rolle's Theorem, there is with such that
+(3.305)
+But now since as well, and is continuous on and differentiable on we can apply Rolle's Theorem to on and obtain a number with such that
+(3.306)
+Again, and satisfies the hypothesis of Rolle's Theorem, so we can apply Rolle's Theorem to and obtain with such that
+(3.307)
+We can continue to apply Rolle's Theorem to the higher derivatives of on shrinking intervals, with the last application to . The end result is a number satisfying
+(3.308)
+such that
+(3.309)
+This final equation gives an expression for . Let We compute the derivative:
+(3.310)
+(3.311)
+This implies for .
+We have shown that given any fixed degree and fixed , there is a number in such that
+(3.312)
+Hide

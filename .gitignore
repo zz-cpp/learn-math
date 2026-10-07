@@ -1,0 +1,69 @@
+# ==========================================================================
+# 精简追踪方案：只版本化「文本源 + 轻量产物」，重材料留在磁盘不进库
+#   入库   : .typ .tsv .srt .txt .md .json .toml .py .sh 等文本
+#   不入库 : 视频 / 音频 / PDF / 图片 / 网站镜像 / 会话缓存
+#   临时纳入某个被忽略的文件: git add -f <file>
+#   注意   : gitignore 不支持行内注释，说明一律独占一行
+# ==========================================================================
+
+# ---- 1. 指定排除 ----
+/book/
+/context/
+
+# ---- 2. 巨型派生材料目录 ----
+# MIT OCW 网站镜像，1217 js / 518 css / 122 html，约 700M
+/MIT/
+# 讲图与 OCR 分析缓存
+.vision/
+# 预览临时文件
+.view_tmp/
+# Reasonix 会话数据，含 other/mvt 下的嵌套副本
+.reasonix/
+
+# ---- 3. 媒体与二进制（任意层级）----
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.xlsx
+*.zip
+*.7z
+*.tar
+*.gz
+*.rar
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.svg
+*.ico
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# ---- 4. 编译产物 ----
+*.aux
+*.out
+*.toc
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# ---- 5. 运行时缓存 ----
+__pycache__/
+*.pyc
+*.lock

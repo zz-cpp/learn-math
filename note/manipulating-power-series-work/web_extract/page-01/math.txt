@@ -1,0 +1,121 @@
+$ \displaystyle \frac1{1-x} = \sum _{n=0}^{\infty } x^n\, $
+$ \, |x|<1 $
+$ \displaystyle e^x = \sum _{n=0}^{\infty } \frac{x^n}{n!} $
+$ \displaystyle \sin x = \sum _{n=0}^{\infty } \frac{(-1)^n x^{2n+1}}{(2n+1)!} $
+$ \displaystyle \cos x = \sum _{n=0}^{\infty } \frac{(-1)^n x^{2n}}{(2n)!} $
+$ \, \displaystyle \ln (1-x) $
+$ \displaystyle -\ln (1-x)\, =\, \sum _{n=1}^{\infty } \frac{x^n}{n} $
+$ x^3 $
+$ \, p(x)q(x) $
+$ \, p(x)\, $
+$ \, q(x)\, $
+$ \displaystyle \displaystyle p(x) $
+$ \displaystyle = $
+$ \displaystyle 1+x-2x^2+\frac{2}{3}x^3-3x^4+9x^6 $
+$ \displaystyle q(x) $
+$ \displaystyle = $
+$ \displaystyle 3-2x+x^2+x^3+\frac{4}{3}x^5. $
+$ \, x^3 $
+$ \, p(x)q(x)\, $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n, $
+$ |x|< A $
+$ \displaystyle \sum _{n=0}^{\infty } b_n x^n $
+$ |x|<B $
+$ |x|< \textrm{min}(A,B) $
+$ x^3 $
+$ P(x)Q(x) $
+$ \, P(x)\, $
+$ \, Q(x)\, $
+$ \displaystyle \displaystyle P(x) $
+$ \displaystyle = $
+$ \displaystyle 1+x-2x^2+\frac{2}{3}x^3-3x^4+9x^6+\cdots $
+$ \displaystyle Q(x) $
+$ \displaystyle = $
+$ \displaystyle 3-2x+x^2+x^3+\frac{4}{3}x^5+\cdots . $
+$ \, x^3 $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \, e^x \cos (x)\, $
+$ \, e^x\, $
+$ \, \cos (x) $
+$ \, R\, $
+$ x^4 $
+$ R=\quad $
+$ \, x^4 $
+$ \, e^x\cos (x)\, $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \displaystyle \displaystyle e^ae^{b} $
+$ \displaystyle = $
+$ \displaystyle \left(1+a+\frac{a^2}{2!}+\frac{a^3}{3!}+\frac{a^4}{4!}+\cdots \right)\left(1+b+\frac{b^2}{2!}+\frac{b^3}{3!}+\frac{b^4}{4!}+\cdots \right) $
+$ e^{a+b} $
+$ a $
+$ b $
+$ a $
+$ b $
+$ \displaystyle \displaystyle \text{Terms of total degree }\, 2 \, $
+$ \displaystyle = $
+$ \displaystyle \frac{a^2}{2!}+ab+\frac{b^2}{2!} $
+$ \displaystyle = $
+$ \displaystyle \frac{1}{2}\left(a^2+2ab+b^2\right) $
+$ \displaystyle = $
+$ \displaystyle \frac{(a+b)^2}{2!} $
+$ \, 3\, $
+$ (a+b)^3 $
+$ \displaystyle \displaystyle \text{Terms of total degree }\, 3 \, $
+$ \displaystyle = $
+$ \displaystyle \frac{a^3}{3!}+ \frac{a^2}{2!} (b)+(a) \frac{b^2}{2!} +\frac{b^3}{3!} $
+$ \displaystyle = $
+$ \displaystyle \frac{1}{3!}\left(a^3+3a^2 b+3a b^2+b^3 \right) $
+$ \displaystyle = $
+$ \displaystyle \frac{(a+b)^3}{3!} $
+$ \, n $
+$ e^ae^b = e^{a+b} $
+$ \displaystyle \displaystyle (a+b)^n $
+$ \displaystyle = $
+$ \displaystyle \sum _{p=0}^{n} \frac{n!}{p!(n-p)!} a^p \, b^{n-p}. $
+$ \displaystyle \displaystyle \text{Terms of total degree }\, n \, $
+$ \displaystyle = $
+$ \displaystyle \sum _{p=0}^{n} \frac{a^p}{p!}\, \frac{b^{n-p}}{(n-p)!} $
+$ \displaystyle = $
+$ \displaystyle \frac{1}{n!} \sum _{p=0}^{n} \frac{n!}{p!(n-p)!} \, a^p b^{n-p} $
+$ \displaystyle = $
+$ \displaystyle \frac{(a+b)^n}{n!} $

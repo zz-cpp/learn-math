@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV1tT421y7CY",
+  "url": "https://www.bilibili.com/video/BV1tT421y7CY",
+  "title": "旋转曲面不会？三重积分懵圈？50min拿捏曲面方程！",
+  "lecture_title_cn": "曲面方程与旋转曲面",
+  "section": "8.5",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 3348.09,
+  "duration_min": 55.8,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

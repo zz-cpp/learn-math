@@ -1,0 +1,31 @@
+$ \displaystyle \displaystyle \text{erf}(x) $
+$ \displaystyle = $
+$ \displaystyle \frac{2}{\sqrt{\pi }}\int _0^x e^{-t^2}\, dt, $
+$ \, e^{-t^2}\, $
+$ \displaystyle \displaystyle \text{erf}(x) $
+$ \displaystyle = $
+$ \displaystyle \frac{2}{\sqrt{\pi }}\int _0^x\, e^{-t^2}\, dt $
+$ \displaystyle = $
+$ \displaystyle \frac{2}{\sqrt{\pi }}\int _0^x\, \left(\sum _{n=0}^{\infty } \frac{(-1)^n t^{2n}}{n!}\right)\, dt $
+$ \displaystyle = $
+$ \displaystyle \frac{2}{\sqrt{\pi }} \left(\sum _{n=0}^{\infty } \frac{(-1)^n x^{2n+1}}{(2n+1)n!}\right). $
+$ \, \displaystyle \int _0^x \sin \left(t^2\right)\, dt\, $
+$ n! $
+$ \, \displaystyle \int _0^x \sin \left(t^2\right)\, dt\, \, =\quad $
+$ \, R $
+$ R=\infty ,\, $
+$ R=\, $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $

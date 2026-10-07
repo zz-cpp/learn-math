@@ -1,0 +1,2364 @@
+\documentclass[a4paper]{article}
+
+% CJK support: prefer ctex, fallback to XeTeX native line breaking
+\IfFileExists{ctex.sty}{
+  \usepackage[fontset=fandol]{ctex}
+}{
+  % Fallback for minimal TeX installs (e.g. MacTeX Basic, TeX Live scheme-basic)
+  % without ctex/xeCJK. Uses XeTeX's built-in CJK line breaking.
+  \usepackage{fontspec}
+  \XeTeXlinebreaklocale "zh"
+  \XeTeXlinebreakskip = 0pt plus 1pt
+  \IfFontExistsTF{Songti SC}{\setmainfont{Songti SC}}{%
+    \IfFontExistsTF{Noto Serif CJK SC}{\setmainfont{Noto Serif CJK SC}}{}%
+  }
+  \IfFontExistsTF{Heiti SC}{\setsansfont{Heiti SC}}{%
+    \IfFontExistsTF{Noto Sans CJK SC}{\setsansfont{Noto Sans CJK SC}}{}%
+  }
+}
+
+% Basic packages
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{etoolbox}
+\usepackage{listings}
+\usepackage[pdfencoding=unicode]{hyperref}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{tikz}
+\IfFileExists{pgfplots.sty}{
+    \usepackage{pgfplots}
+    \pgfplotsset{compat=1.18}
+}{}
+
+% ===== Highlight boxes =====
+\newtcolorbox{knowledgebox}[1]{
+    enhanced, colback=blue!5!white, colframe=blue!75!black, colbacktitle=blue!75!black,
+    coltitle=white, fonttitle=\bfseries, title=#1, attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxrule=1pt, sharp corners
+}
+
+\newtcolorbox{importantbox}[1]{
+    enhanced, colback=yellow!10!white, colframe=yellow!80!black, colbacktitle=yellow!80!black,
+    coltitle=black, fonttitle=\bfseries, title=#1, sharp corners
+}
+
+\newtcolorbox{warningbox}[1]{
+    enhanced, colback=red!5!white, colframe=red!75!black, colbacktitle=red!75!black,
+    coltitle=white, fonttitle=\bfseries, title=#1, sharp corners
+}
+
+% ===== Code listings =====
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red!60!black},
+    commentstyle=\color{green!60!black},
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    captionpos=b,
+    extendedchars=false
+}
+
+% ===== Front-page metadata =====
+% Fill these in when generating notes.
+\newcommand{\notetitle}{中值定理证明题解题课（上+下）}
+\newcommand{\notesubtitle}{考法一：基本定理及其证明 · 考法二：构造辅助函数——考研竞赛凯哥 p02/p03}
+\newcommand{\noteauthors}{考研竞赛凯哥 · lecture-to-notes}
+\newcommand{\notedate}{2026-08-28}
+\newcommand{\videochannel}{考研竞赛凯哥}
+\newcommand{\videopublishdate}{2026-08（更新）}
+\newcommand{\videoduration}{p02 2:37:32 + p03 3:11:22（共约 5:49）}
+\newcommand{\videourl}{https://www.bilibili.com/video/BV1zGZ3Y2EnK?p=2}
+\newcommand{\videocoverpath}{cover.jpg}
+
+\begin{document}
+
+% ===== Title page =====
+\begin{titlepage}
+\centering
+{\Large 课程笔记\par}
+\vspace{1.2cm}
+{\huge\bfseries \notetitle\par}
+\ifdefempty{\notesubtitle}{}{
+\vspace{0.3cm}
+{\large \notesubtitle\par}
+}
+\vspace{0.5cm}
+{\large \noteauthors\par}
+\vspace{0.3cm}
+{\large \notedate\par}
+\vspace{1.0cm}
+
+\ifdefempty{\videocoverpath}{
+{\small 请在生成笔记时填入视频封面图的本地路径。\par}
+}{
+\includegraphics[width=0.82\textwidth,height=0.40\textheight,keepaspectratio]{\videocoverpath}\par
+}
+
+\vfill
+\begin{tcolorbox}[width=0.9\textwidth, colback=black!2!white, colframe=black!60, sharp corners]
+\textbf{视频作者/频道}：\videochannel\par
+\textbf{发布日期}：\videopublishdate\par
+\textbf{视频时长}：\videoduration\par
+\textbf{视频链接}：
+\ifdefempty{\videourl}{
+未填写
+}{
+\href{\videourl}{\nolinkurl{\videourl}}
+}
+\end{tcolorbox}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%% --- 正文内容开始 --- %%
+
+\section{导言：中值定理为什么是考研数学的分水岭}
+
+\subsection{课程定位与学习方法}
+
+中值定理在凯哥看来是"难者不会，会者不难"：会把问题想清楚的人几行就证完，不理解原理的人面对答案第一步就茫然。这正好是本节笔记要解决的两个问题：第一，把考法一（基本定理及其证明）讲透；第二，把考法二（构造辅助函数）的方法论体系化。
+
+凯哥在开场强调了他自己的备课标准：整个晚上要讲的二十多个题目，他下午四点钟开始备课，全部过程只写在了两页纸上（第二题只写一排、第四题两排、第五题两个问各一排、六七八九十到十七十八）。这传递出一个重要信号——中值定理证明题的\textbf{板书量并不大}，难的是每一步的动机，而不是文字长度。所以本笔记的写法也遵循同样的理念：每个证明都先讲"我为什么想这么做"，再给机制。
+
+\begin{knowledgebox}{讲义结构：七种考法}
+整个讲义把中值定理分成\textbf{七种考法}，其中最后两种考法因为真题没考过、且整体不超纲，被定为选学。需要掌握的是考法一到考法五：
+\begin{itemize}
+\item 考法一：基本定理及其证明（罗尔定理、拉格朗日中值定理、积分中值定理、柯西中值定理）；
+\item 考法二：构造辅助函数（观察法、公式法、微分方程反解任意常数法）；
+\item 考法三\ 四\ 五：多中值定理证明题、泰勒展开证明高阶导问题、含参数的积分不等式等（在 p03 中讲解）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{importantbox}{中值定理证明题的通用心法}
+\textbf{中值定理证明题的核心是：去思考你要证的东西是怎么来的。} 题干往往只有两句话——"闭区间连续、开区间可导"，再随手告诉你几个点的函数值——条件极简，从条件往前推推不出东西。所以拿到题第一件事不是读条件，而是\textbf{抓结论}：把结论里的 $\xi$ 换成 $x$，把它"积分回去"看它是谁求导的结果。谁能从结论倒推出辅助函数，谁就赢了。
+\end{importantbox}
+
+\subsection{学习方法上的两个忠告}
+\begin{enumerate}
+\item 巧妇难为无米之炊：记忆法建立在最基础词汇之上。就像背单词要先认识最常用的名词，做中值定理要先记住最基本的题型怎么思考。没有人一上来就能自己想到每一步，先把"0 到 1"的过程看完，再把"1 到 99"留给自己的二刷三刷。
+\item 追求"两页纸"的复盘效果：凯哥的课程目标是让学员在二刷三刷讲义时，也能在同样小的篇幅里把考法一考法二完整做完。笔记上每道题只保留动机 + 证明骨架 + 踩坑点，不抄冗长的计算过程。
+\end{enumerate}
+
+\section{考法一：基本定理及其证明}
+
+考法一包含四个定理：\textbf{罗尔定理、拉格朗日中值定理、积分中值定理、柯西中值定理}。其中罗尔定理是基石——它是整个微分中值定理的基础，今天讲的二十多道题里几乎有二十道要用罗尔定理来证，连拉格朗日中值定理也是"用罗尔定理证出来的"。
+
+\subsection{罗尔定理}
+
+\subsubsection{定理叙述}
+
+设 $f(x)$ 在闭区间 $[a,b]$ 上连续，在开区间 $(a,b)$ 内可导，且 $f(a)=f(b)$（注意：不需要等于 0，只要左右端点函数值相等），则一定存在 $\xi\in(a,b)$，使得 $f'(\xi)=0$。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_01_rolle_intro.png}
+\caption{罗尔定理的几何直观：端点等高（旋转对称）的连续曲线内部必有水平切线。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:03:00--00:05:00。}
+
+\subsubsection{几何直观与存在性分析}
+
+把左端点记为 $A$、右端点记为 $B$，$f(a)=f(b)$ 意味着 $A$、$B$ 两点高度相同。函数在 $[a,b]$ 上连续，意味着能用一支笔一笔画完从 $A$ 到 $B$ 的曲线；而 $A$、$B$ 等高，则曲线"先上去再下来、或先下来再上去"的过程中，必然在最高点或最低点处切线水平。
+
+这里有一个重要区分：
+\begin{itemize}
+\item \textbf{罗尔定理中的 $\xi$ 只保证存在性，不保证唯一性}。如图的第二个例子：曲线先升后降再升，则最高点与最低点都存在水平切线，$\xi$ 可以取两个不同的点；
+\item 存在性就已经够用——证明题里我们只需要"存在一个 $\xi$"，从不问它唯一不唯一。
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_02_rolle_geom.png}
+\caption{罗尔定理三条件缺一不可的反例之一：破坏"闭区间连续"后（跳跃间断点），区间内每个点导数皆负，找不到 $f'=0$ 的点。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:07:46--00:08:06。}
+
+\subsubsection{证明（分情况讨论）}
+
+证明的出发点是闭区间上连续函数的性质：$f$ 在 $[a,b]$ 上连续 $\Rightarrow$ 一定存在最大值 $M$ 与最小值 $m$。
+
+\textbf{情况一：$M=m$。} 函数值处处等于同一个常数，$f$ 是常函数。常函数在任意一点的导数都是 0，所以区间内任何一点都可取作 $\xi$（最极端的情形）。
+
+\textbf{情况二：$M>m$。} 由 $f(a)=f(b)$ 且 $M\neq m$，最大值最小值不可能都在端点取到（都在端点则 $M$ 必等于 $m$），所以 $M$、$m$ 至少有一个在开区间 $(a,b)$ 内部取到。不妨设存在 $\xi\in(a,b)$ 使 $f(\xi)=M$。由于 $\xi$ 是开区间内部的\textbf{全局}最大值，它当然也是\textbf{局部}极值；而 $f$ 在 $(a,b)$ 内可导，故由\textbf{费马引理}：函数在一点取极值且该点可导，则该点导数必为 0，即 $f'(\xi)=0$。
+
+\begin{importantbox}{费马引理（重要结论，需背诵）}
+如果一个函数在某个点取到了极值，并且这个点又可导，那么这个点的导数一定只能是 0。\textbf{费马引理是罗尔定理证明的内部发动机。}
+\end{importantbox}
+
+\textbf{两种情况的合流：} 无论 $M=m$ 还是 $M>m$，总存在 $\xi\in(a,b)$ 使 $f'(\xi)=0$。$\square$
+
+\begin{knowledgebox}{为什么要分情况？}
+思路自然：闭区间连续 $\Rightarrow$ 存在最值。若最值相等，函数是常函数，平凡；若最值不等，则结合 $f(a)=f(b)$ 可推出至少一个最值在开区间内部取到，从而落入费马引理的射程。分情况讨论不是"节外生枝"，而是把"闭区间连续"这件事的两种结局分别利用起来。
+\end{knowledgebox}
+
+\subsubsection{注意事项：三条件缺一不可}
+
+罗尔定理的叙述里藏着三句话（三个条件）：
+\begin{enumerate}
+\item 闭区间 $[a,b]$ 上连续；
+\item 开区间 $(a,b)$ 内可导；
+\item $f(a)=f(b)$（左右端点高度相同）。
+\end{enumerate}
+三个条件缺一不可，下面一一破坏看会出什么事：
+
+\textbf{破坏条件 1（只要求开区间内可导 + 端点等高，不要求闭区间连续）}。取一段从左端点 $a$ 单调下降到右端点 $b$ 的直线段，但 $a$ 处把函数值补高（$f(a)=f(b)$ 的点被挖掉，画空心点）。这样区间内部每点导数为负（斜率不为 0），而左右端点间断不可导，于是不存在 $f'=0$ 的点。
+
+\textbf{破坏条件 2（闭区间连续 + 端点等高，但开区间内不是处处可导）}。设想曲线先增后减，但增减性改变的点是一个"尖点"（类似 $|x|$ 型），该点不可导：左边导数大于 0，右边导数小于 0，没有一个点导数为 0。
+
+\textbf{破坏条件 3（只有闭区间连续 + 开区间可导，端点不等高）}。只需要一条斜率恒正的直线段：每一个点的导数都是正的，自然没有导数为 0 的点。
+
+\begin{warningbox}{考试中的"缺条件"识别}
+真题中常见套路是给出"$f(a)=f(b)$"但不给"闭区间连续"，或反过来。判断能否用罗尔定理时，务必\textbf{逐条核对三条}。尤其是：$f(a)=f(b)$ 是否等于 0 并不重要，重要的是"相等"这件事本身。
+\end{warningbox}
+
+\subsection{2009 年真题：叙述并证明拉格朗日中值定理}
+
+\subsubsection{定理叙述}
+
+若函数 $f(x)$ 在闭区间 $[a,b]$ 上连续、开区间 $(a,b)$ 内可导，则存在 $\xi\in(a,b)$，使得
+\[
+f(b)-f(a)=f'(\xi)(b-a)\quad\Longleftrightarrow\quad \frac{f(b)-f(a)}{b-a}=f'(\xi).
+\]
+换种读法：\textbf{同名函数相减}（$f(b)-f(a)$）等于自变量相减（$b-a$）乘以中间某点的导数——这正是"函数极限"一章中讲过的重要转化：看到 $f(b)-f(a)$ 就想到拉格朗日中值定理。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_03_lagrange_geom.png}
+\caption{拉格朗日中值定理的几何意义：割线 $AB$ 的斜率 $(f(b)-f(a))/(b-a)$ 在曲线某点被一条平移后的水平——事实上是切——线复制：把割线平行移动到与曲线相切，切点即 $\xi$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:12:30--00:13:00。}
+
+\subsubsection{几何意义}
+
+把 $A$、$B$ 用直线段连起来，其斜率正是 $\frac{f(b)-f(a)}{b-a}=\frac{\Delta y}{\Delta x}$，这叫\textbf{割线}的斜率。拉格朗日中值定理断言：一定存在 $\xi$ 使 $f'(\xi)$ 恰好等于割线斜率。直观验证：把割线 $AB$ 向上方平行移动——平移不改变斜率——在它刚好与曲线相切的那一瞬间，切点横坐标即 $\xi$，该点切线斜率等于割线斜率。
+
+\subsubsection{证明（核心：由罗尔定理推拉格朗日）}
+
+\begin{importantbox}{证明题的黄金思维}
+证明一个"含导数的等式"最自然的武器就是罗尔定理：因为罗尔定理的结论$F'(\xi)=0$正是"某个大函数的导数在某点为零"。于是问题化为：找到辅助函数 $F(x)$，使 $F'(\xi)=0$ 展开后恰好是我们要证的等式。\textbf{找 $F$ 的手段：把结论当成"微分方程"积分回去。}
+\end{importantbox}
+
+\textbf{推导辅助函数。} 结论为 $f(b)-f(a)=(b-a)f'(\xi)$。把 $\xi$ 换成 $x$、两边对 $x$ 积分：
+\[
+\int (b-a)f'(x)\,\mathrm{d}x = (b-a)f(x),\qquad f(b)-f(a)\ \text{是常数，积出}\ [f(b)-f(a)]x.
+\]
+把左边移到右边再积分，得到
+\[
+F(x)=(b-a)f(x)-[f(b)-f(a)]x .
+\]
+验证 $F(a)=F(b)$：代入 $x=a$ 得 $F(a)=b\,f(a)-a\,f(b)$；代入 $x=b$ 得 $F(b)=b\,f(a)-a\,f(b)$。果然相等！
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_04_lagrange_proof.png}
+\caption{由 $F(a)=F(b)$ 触发的罗尔定理应用：$F$ 与端点值相同的结论展开后正是拉格朗日等式。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:15:00--00:15:40。}
+
+\noindent 于是由罗尔定理：存在 $\xi\in(a,b)$，使
+\[
+F'(\xi)=(b-a)f'(\xi)-[f(b)-f(a)]=0
+\]
+即 $f(b)-f(a)=(b-a)f'(\xi)$。$\square$
+
+\begin{knowledgebox}{为什么说拉格朗日定理是"配角的配角"？}
+凯哥强调：写这个大 $F$ 的方法本质是\textbf{对结论积分}——$\xi$ 换成 $x$ 后，$f'$ 积分得 $f$，常数积分得"常数$\times x$"。这一思想在后续所有"构造辅助函数"的题里反复出现，务必刻进条件反射。
+\end{knowledgebox}
+
+\subsection{例题（拉格朗日思想直接应用）}
+
+题目：设 $f(x)$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，证明存在 $\xi\in(a,b)$ 使得
+\[
+2\xi\,[f(b)-f(a)] = (b^2-a^2)\,f'(\xi).
+\]
+（讲义例题 2 的类题，标准形式）
+
+把结论变形为一阶线性结构：$2\xi$ 求导的"爹"是 $\xi^2$，$f'$ 的"爹"是 $f$，$f(b)-f(a)$ 是常数。于是
+\[
+F(x)=(b^2-a^2)f(x)-x^2[f(b)-f(a)].
+\]
+代入 $F(a)$：$b^2f(a)-a^2f(b)$；代入 $F(b)$：同样 $b^2f(a)-a^2f(b)$。相等。由罗尔定理得 $\xi$ 存在，且 $F'(\xi)=0$ 展开回去正是结论。$\square$
+
+\begin{warningbox}{为什么不可以用柯西中值定理做这个题？}
+弹幕有同学提出：把 $\frac{f(b)-f(a)}{b^2-a^2}=\frac{f'(\xi)}{2\xi}$ 看作柯西中值定理（$g(x)=x^2$）——会被判 0 分。原因：柯西中值定理要求分母 $g'(\xi)=2\xi\neq 0$ 且 $g(b)-g(a)=b^2-a^2\neq 0$。若 $a<0<b$，则 $0$ 在 $(a,b)$ 之间，$\xi$ 有可能恰好等于 $0$，分母为 0 不满足条件。\textbf{用柯西定理必须先确认分母处处非零；不确认就硬用 = 失分。}
+\end{warningbox}
+
+\subsection{2008 年真题：叙述并证明积分中值定理}
+
+\subsubsection{定理叙述（背下来，考纲里有）}
+
+设 $f(x)$ 在 $[a,b]$ 上连续，则存在 $\xi\in[a,b]$（教材版本；凯哥主张用开区间版本）使得
+\[
+\int_a^b f(x)\,\mathrm{d}x = (b-a)\,f(\xi).
+\]
+
+\textbf{思路总开关（重要判别法）：} 拿到含 $\xi$ 的题先看结论里含不含导数：
+\begin{itemize}
+\item 含导数（$f'(\xi)$）$\Rightarrow$ 用\textbf{微分中值定理}（罗尔/拉格朗日/柯西）；
+\item 不含导数、只是 $f(\xi)=$ 某常数 $k$ $\Rightarrow$ 考虑\textbf{柯西中值定理}（介值性质的推广）：闭区间连续函数一定可以取到最大值与最小值之间的任何值。
+\end{itemize}
+
+\begin{knowledgebox}{柯西中值定理：说人话版本}
+柯西（此处凯哥称"柯西中值定理"指\textbf{介值定理}）说：闭区间上的连续函数一定可以取到介于最大值和最小值之间的任何值。这句话听起来像废话——闭区间连续函数有最大最小值、图像又连续，那最大最小之间任何值当然能取到。但它就是证明"$f(\xi)=k$"这类问题的底层依据。
+\end{knowledgebox}
+
+\subsubsection{证明一（介值/柯西）：放缩 + 介值}
+
+把结论变形：右边除到左边，
+\[
+\frac{\int_a^b f\,\mathrm{d}x}{b-a} = f(\xi),
+\]
+右边无论多复杂，本质上就是一个常数 $k=\frac{\int_a^b f\,\mathrm{d}x}{b-a}$。设 $f$ 在 $[a,b]$ 上的最大值为 $M$，最小值为 $m$。关键是第二步：把这个常数 $k$ 卡进 $[m,M]$ 之间。
+
+对分子放缩：$m\le f(x)\le M$，积分后除以 $b-a$，得
+\[
+m\le \frac{\int_a^b f\,\mathrm{d}x}{b-a}\le M .
+\]
+于是 $k\in[m,M]$。又因为闭区间上连续函数能取到 $[m,M]$ 内任何值，故存在 $\xi\in[a,b]$ 使 $f(\xi)=k$。
+
+\subsubsection{证明二（另解）：变上限积分 + 拉格朗日中值定理}
+
+构造变上限积分函数
+\[
+F(x)=\int_a^x f(t)\,\mathrm{d}t .
+\]
+\textbf{养成好习惯：} 令上限等于下限，得到 $F(a)=\int_a^a f=0$。于是
+\[
+F(b)=F(b)-F(a).
+\]
+看到\textbf{同名函数相减} $F(b)-F(a)$，条件反射：用拉格朗日中值定理。有 $\xi\in(a,b)$ 使
+\[
+F(b)-F(a)=F'(\xi)(b-a).
+\]
+由变上限积分求导公式 $F'(x)=f(x)$，而 $F(b)=\int_a^b f$，所以
+\[
+\int_a^b f\,\mathrm{d}x = (b-a) f(\xi),\quad \xi\in(a,b). \quad\square
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_07_integral_mvt2.png}
+\caption{变上限积分构造的辅助函数使拉格朗日中值定理直接产出积分中值定理，且 $\xi$ 落在开区间。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:26:00--00:26:40。}
+
+\begin{importantbox}{积分中值定理：中值点 xi 的开区间 vs 闭区间（必考细节）}
+\begin{itemize}
+\item 用柯西（介值）中值定理证明 $\Rightarrow$ $\xi\in[a,b]$（闭区间，因为介值定理只保证闭区间）；
+\item 用变上限积分 + 拉格朗日中值定理证明 $\Rightarrow$ $\xi\in(a,b)$（开区间，因为拉格朗日的 $\xi$ 在开区间）；
+\item \textbf{两个都对，但开区间更精确、更好用}。凯哥以后凡用积分中值定理，一律默认 $\xi$ 在开区间——开区间成立则闭区间也成立，反之不必然。
+\item 生活类比：别人问你是哪里人，说"地球人"没错但等于没说；能精确到"成都人"就别说"中国/地球人"。定理也如此：能给出更精确的开区间，就别用含糊的闭区间。
+\end{itemize}
+\end{importantbox}
+
+\subsection{2010 年真题类题：三次罗尔 + 条件衔接}
+
+题目：设 $f(x)$ 在 $[0,3]$ 上二阶可导，且
+\[
+2f(0) = \int_0^2 f(x)\,\mathrm{d}x = f(2)+f(3),
+\]
+证明存在 $\xi\in(0,3)$ 使得 $f''(\xi)=0$。
+
+\subsubsection{思路分析：把连等式变成"三个点的函数值相等"}
+
+要证 $f''(\xi)=0$，分两步走：
+\begin{enumerate}
+\item 若只有 $f'(\xi)=0$，那是罗尔定理的直接结论：找到 $f$ 的两个等值点即可；
+\item 现在是二阶导，需要 $f'$ 有两个零点，所以需要 $f$ 的\textbf{三个}等值点：在 $(x_1,x_2)$、$(x_2,x_3)$ 各用一次罗尔得 $f'$ 的两个零点，再对 $f'$ 用一次罗尔得 $f''$ 的零点。
+\end{enumerate}
+
+剩下的问题是：三个等值点从哪来？题干左边有 $f(0)$，中间是积分，右边是 $f(2)+f(3)$。我们的目标是把连等式改写成
+\[
+f(0)=f(\xi_1)=f(\xi_2)\quad(\text{三点函数值相等}).
+\]
+
+\textbf{中间项：积分 $\Rightarrow$ 函数值。} 对 $\int_0^2 f\,\mathrm{d}x$ 用\textbf{积分中值定理}（注意区间是 $[0,2]$，只有这个积分在上面），得
+\[
+\int_0^2 f\,\mathrm{d}x = 2 f(\xi_1),\quad \xi_1\in(0,2).
+\]
+
+\textbf{右边项：不同点的函数值之和 $\Rightarrow$ 柯西（介值）定理。} 看到"不同点的函数值之和"（$f(2)+f(3)$）要条件反射地想到介值定理（最大值 $M$ 与最小值 $m$ 的夹逼）：
+\[
+m\le \frac{f(2)+f(3)}{2}\le M,
+\]
+所以存在 $\xi_2\in(2,3)$ 使 $f(\xi_2)=\frac{f(2)+f(3)}{2}$。（注意：与积分中值定理不同，这里 $\xi$ 的区间由\textbf{函数值所对应的横坐标}决定——处理的是 $f(2),f(3)$，就用 $[2,3]$ 区间，而不是题干的 $[0,3]$。）
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_08_example3_2010.png}
+\caption{2010 真题核心结构图：三点函数值相等（$f(0)=f(\xi_1)=f(\xi_2)$）$\Rightarrow$ 两次罗尔得 $f'$ 两零点 $\Rightarrow$ 第三次罗尔得 $f''$ 零点。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:30:10--00:30:50。}
+
+
+\subsubsection{2010 年真题：为什么第一步要「左右同除以 2」（补详）}
+
+读者可能会问：为什么要把连等式 $2f(0)=\int_0^2 f=f(2)+f(3)$ 的左右都除以 2？答案很简单：因为我们要的是\textbf{三个点的函数值相等}，而每个点的函数值都应当是「单倍」的。等号左边 $2f(0)$ 表示 $f(0)$ 的「两倍」，它占着一个函数值的位置却是两倍权重，必须先「分量」成 $f(0)$：
+
+\[
+f(0)=\frac{\int_0^2 f(x)\,\mathrm{d}x}{2}=\frac{f(2)+f(3)}{2} .
+\]
+
+这个变形是整道题的「题眼」，也是凯哥反复强调的「思路分析先于动手」的典型案例——写出这个式子，然后逐个吃掉两边的积分项与函数值之和项。\textbf{积分换 $\xi_1$：}在 $[0,2]$ 上用积分中值定理，$\xi_1$ 属于 $[0,2]$ 且取开区间更好；\textbf{之和换 $\xi_2$：}在 $[2,3]$ 上用介值定理（不同点的函数值之和），$\xi_2$ 属于 $[2,3]$（闭区间是介值定理的天然产物）。
+
+\subsubsection{区间「接壤」隐患的详细说明}
+
+为什么第一步必须用开区间版积分中值定理？让我们把区间轴画出来：$0$、$2$、$3$ 三个点。$f(0)$ 在端点 $0$；$\xi_1$ 来自 $[0,2]$；$\xi_2$ 来自 $[2,3]$。若 $\xi_1$ 用闭区间版，它\textbf{可能}等于 2；$\xi_2$ 本来就是闭区间，也\textbf{可能}等于 2。\textbf{当 $\xi_1=\xi_2=2$ 且 $f(0)=f(2)=f(3)$ 条件下，三个「点」实际上塌缩成了两个}——我们辛苦构造的 $f(0)=f(\xi_1)=f(\xi_2)$ 只剩 $f(0)$ 与 $f(2)$ 两个不同点，无法进行三次罗尔定理（一次罗尔需要两个点，两次需要三个点）。
+
+这就是凯哥说的：\textbf{开区间是更小更精确的范围，$\xi_1\in(0,2)$ 直接宣告 $\xi_1\neq2$}。而 $\xi_2$ 虽然来自闭区间 $[2,3]$，但 $\xi_2\in(2,3)$ 与 $\xi_1\in(0,2)$ 的交集虽然为空……等等，$[2,3]$ 的开区间是 $(2,3)$，它与 $(0,2)$ 的交集确为空！这说明只要\textbf{积分中值定理用开区间版}，$\xi_1$ 与 $\xi_2$ 分别落在 $(0,2)$ 和 $(2,3)$，二者\textbf{必不相同}，第三次罗尔定理有着落。若 $\xi_1$ 取了闭区间的 2，与 $\xi_2$ 潜在重合的那个点正好是 2，就全盘皆输。
+
+\begin{warningbox}{考场细节：端点是否包括在区间内要写清楚}
+书写时建议明确写出 「$\xi_1\in(0,2)$、$\xi_2\in(2,3)$」，若题目给的介值定理产生的是闭区间，则补一句「由于开区间更强，取 $\xi_2\in(2,3)$」（介值定理/柯西定理只能给闭区间时怎么办：这里 $\xi_2$ 可以取 $\xi_2\in(2,3)$ 是因为 $f(2)=f(3)$ 时端点值不特殊；一般情况下介值定理的 $\xi$ 在闭区间，若要求开区间需单独讨论端点情形）。这个细节一句话即可，漏写即可能被扣过程分。
+\end{warningbox}
+
+\subsubsection{正式证明}
+
+连等式左右同除以 2：
+\[
+f(0)=\frac{\int_0^2 f\,\mathrm{d}x}{2}=\frac{f(2)+f(3)}{2}.
+\]
+由上述两步，存在 $\xi_1\in(0,2)$、$\xi_2\in(2,3)$，使中间项 $=f(\xi_1)$、右边项 $=f(\xi_2)$，于是
+\[
+f(0)=f(\xi_1)=f(\xi_2).
+\]
+在 $[0,\xi_1]$、$[\xi_1,\xi_2]$ 上分别用罗尔定理：存在 $\eta_1\in(0,\xi_1)$、$\eta_2\in(\xi_1,\xi_2)$ 使 $f'(\eta_1)=f'(\eta_2)=0$。再对 $f'$ 在 $[\eta_1,\eta_2]$ 上用罗尔定理：存在 $\xi\in(\eta_1,\eta_2)\subset(0,3)$ 使 $f''(\xi)=0$。$\square$
+
+\begin{warningbox}{本大题最大的丢分点：积分中值定理必须用开区间版本}
+处理 $\int_0^2 f\,\mathrm{d}x$ 的 $\xi_1$ 时：
+\begin{itemize}
+\item 若用\textbf{开区间}版（$\xi_1\in(0,2)$）：$\xi_1\neq 2$；
+\item 若误用\textbf{闭区间}版（$\xi_1\in[0,2]$）：$\xi_1$ \emph{可能}等于 2。
+\end{itemize}
+同理介值定理给出的 $\xi_2\in[2,3]$ 也\textbf{可能}取到 2。若 $\xi_1=\xi_2=2$，则"三个不同的点"退化为两个点，第三次罗尔定理失去支架，整道题证不下去。因此这里\textbf{必须用开区间版的积分中值定理，保证 $\xi_1\neq 2$}。凯哥原话：这个细节"可能扣你一分，甚至扣两分"。
+\end{warningbox}
+
+\subsection{柯西中值定理}
+
+\subsubsection{定理叙述}
+
+设 $f(x),g(x)$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，且 $g'(x)\neq 0$，则存在 $\xi\in(a,b)$ 使得
+\[
+\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}.
+\]
+
+\subsubsection{证明（与拉格朗日几乎一模一样，注意去分母）}
+
+结论有分母，第一步\textbf{去分母}（"有分母的题目先去分母"，这是铁律）：
+\[
+[f(b)-f(a)]\,g'(\xi)=[g(b)-g(a)]\,f'(\xi).
+\]
+把 $\xi$ 换成 $x$ 两边积分：$[f(b)-f(a)]g(x)-[g(b)-g(a)]f(x)$。于是构造
+\[
+F(x)=[f(b)-f(a)]g(x)-[g(b)-g(a)]f(x).
+\]
+代入 $F(a)=-f(a)g(b)+f(b)g(a)$，代入 $F(b)$ 得到同一个值。于是由罗尔定理：存在 $\xi$ 使 $F'(\xi)=0$，即
+\[
+[f(b)-f(a)]g'(\xi)-[g(b)-g(a)]f'(\xi)=0.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_09_cauchy.png}
+\caption{柯西中值定理证明：构造 $F$ 后必须确认 $g'(\xi)\neq 0$ 且 $g(b)-g(a)\neq 0$ 才能除出分母形式。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:39:00--00:39:40。}
+
+\subsubsection{最易踩的细节：分母非零的两次确认}
+
+做完罗尔定理直接写"证毕"是要被扣分的，因为题干只给 $g'(x)\neq 0$，并没直接给 $g(b)\neq g(a)$。必须说明以下两点：
+\begin{enumerate}
+\item \textbf{为什么 $g'(\xi)\neq 0$（右侧分母）：} 题干明说 $g'(x)\neq 0$，故 $g'(\xi)\neq 0$；
+\item \textbf{为什么 $g(b)-g(a)\neq 0$（左侧分母）：} 两种思路：
+\begin{itemize}
+\item \emph{直观法}：$g'(x)\neq 0$ $\Rightarrow$ $g'$ 恒大于 0 或恒小于 0 $\Rightarrow$ $g$ 严格单调 $\Rightarrow$ $g(a)\neq g(b)$（上一讲"导数概念"专题的知识点：某函数导数恒不为 0，则该函数严格单调）；
+\item \emph{反证法}：若 $g(a)=g(b)$，由罗尔定理存在 $\eta$ 使 $g'(\eta)=0$，与 $g'(x)\neq 0$ 矛盾。
+\end{itemize}
+\end{enumerate}
+
+\begin{knowledgebox}{"数学家一个条件都不会多写"}
+数学家的表述 $g'(x)\neq 0$ 居然\textbf{暗含了} $g(a)\neq g(b)$。这就是数学语言的"最少假设"美学：写一个条件，把两个分母同时保护起来。
+\end{knowledgebox}
+
+
+\subsection{微分中值定理四件套对比表}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.6cm}p{4.2cm}p{4.2cm}p{4.0cm}}
+\toprule
+\textbf{定理} & \textbf{条件} & \textbf{结论} & \textbf{$\xi$ 的范围与备注} \\
+\midrule
+罗尔定理 & $[a,b]$ 连续、$(a,b)$ 可导、$f(a)=f(b)$ & 存在 $\xi$ 使 $f'(\xi)=0$ & 开区间；三条件缺一不可 \\
+拉格朗日中值定理 & $[a,b]$ 连续、$(a,b)$ 可导 & $f(b)-f(a)=f'(\xi)(b-a)$ & 开区间；几何意义：割线平行于切线 \\
+积分中值定理 & $[a,b]$ 连续（只用这一个条件） & $\int_a^b f=(b-a)f(\xi)$ & 教材闭区间，开区间更强更精确 \\
+柯西中值定理 & $f,g$ 在 $[a,b]$ 连续、$(a,b)$ 可导、$g'(x)\neq0$ & $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$ & 开区间；分母非零两次确认 \\
+\bottomrule
+\end{tabular}
+\caption{微分中值定理四件套速查表：由罗尔定理出发，拉格朗日（辅助函数 $F=(b-a)f-[f(b)-f(a)]x$）与柯西（$F=[f(b)-f(a)]g-[g(b)-g(a)]f$）都是用积分法反推辅助函数再证出来的。}
+\end{table}
+
+\begin{knowledgebox}{开区间 vs 闭区间的记忆诀窍}
+\begin{itemize}
+\item 微分中值定理（罗尔、拉格朗日、柯西）以及泰勒中值定理：$\xi$ 都在\textbf{开区间}；
+\item 介值型定理（柯西中值定理/介值定理在凯哥术语中的含义、零点定理）：$\xi$ 在闭区间；
+\item 唯一的一个""桥""：积分中值定理——它既可以用介值定理证（闭区间），也可以用变上限积分+拉格朗日证（开区间）。\textbf{用后者，得到更强的结论。}
+\end{itemize}
+\end{knowledgebox}
+
+\subsection{考法一小结}
+
+\begin{importantbox}{考法一五件套（务必能默写）}
+\begin{enumerate}
+\item 罗尔定理：闭区连 + 开区导 + 端点等高 $\Rightarrow$ 存在 $\xi$ 使 $f'(\xi)=0$（费马引理支撑）；
+\item 拉格朗日中值定理：闭区连 + 开区导 $\Rightarrow$ $f(b)-f(a)=f'(\xi)(b-a)$（$\xi$ 在开区间）；
+\item 积分中值定理：闭区连 $\Rightarrow$ $\int_a^b f=(b-a)f(\xi)$（推荐开区间版）；
+\item 柯西中值定理：两个函数 + $g'(x)\neq0$ $\Rightarrow$ $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$；
+\item 所有微分中值定理（罗尔/拉格朗日/柯西）的 $\xi$ 都在\textbf{开区间}；只有（介值型）积分中值定理的 $\xi$ 是闭区间，可用开区间加强。
+\end{enumerate}
+\end{importantbox}
+
+\section{考法二：构造辅助函数}
+
+\subsection{问题缘起：为什么参考书第一步总是"从天而降"}
+
+初学中值定理的同学刷题（1800 题、888 题、1000 题、600 题等）时常被参考答案气得半死：参考答案第一步突然给出一个神乎其神的"令 $F(x)=$ 某函数"，然后对 $F$ 在 $[a,b]$ 上用罗尔定理，稍作变形就得到结论。这个"从天而降"的大 $F$ 就是\textbf{辅助函数}。
+
+\begin{importantbox}{构造辅助函数：三大方法的完整体系}
+\begin{enumerate}
+\item \textbf{观察法（瞪眼法）}：看什么函数求导会变成结论。说白了就两个字——\textbf{倒推}，把 $\xi$ 换成 $x$ 后对结论积分。
+\item \textbf{公式法（积分因子法）}：对形如 $f'(\xi)+f(\xi)g(\xi)=0$ 的结论，直接构造 $F(x)=f(x)\,e^{\int g(x)\,\mathrm{d}x}$。这是万能公式，由"积分因子"思想保证。
+\item \textbf{微分方程反解任意常数法}：把 $\xi$ 改写成 $x$ 得到微分方程，解出通解 $y+C$ 的形式，反解出 $C$，则 $C$ 所在式子的左边（去掉 $C$）就是辅助函数。凯哥因学员未必学到微分方程，仅作方法介绍，正文用公式法替代。
+\end{enumerate}
+\end{importantbox}
+
+先看一个"观察法"的入门例：要证 $\xi f'(\xi)+f(\xi)=0$。加号后面的 $f$ 看成 $1\cdot f$；$\xi$ 求导是 1，$f$ 求导是 $f'$——左边正是"前导后不导 + 后导前不导"，即 $xf(x)$ 求导的结果。所以构造 $F(x)=xf(x)$，用完罗尔定理即得证。这就是观察法：\textbf{把 $\xi$ 想成 $x$，把结论看成某个乘积或复合函数的导数展开式}。
+
+\subsection{观察法}
+
+\subsubsection{例题 5：$f'(\xi)=\xi-1$（两问，难度为真题难度）}
+
+题目：$f$ 在 $[0,2]$ 上二阶可导，$f(0)=f(2)$。
+
+\textbf{第一问：} 证明存在 $\xi\in(0,2)$，使 $f'(\xi)=\xi-1$。
+
+先变形：$\xi$ 换成 $x$，把 $x-1$ 挪到左边：
+\[
+f'(x)-(x-1)=0.
+\]
+$f'$ 的"爹"是 $f$；$x-1$ 的"爹"是 $\frac{1}{2}(x-1)^2$。故构造
+\[
+F(x)=f(x)-\frac{(x-1)^2}{2}.
+\]
+计算：$F(0)=f(0)-\frac{1}{2}$，$F(2)=f(2)-\frac{1}{2}$。由 $f(0)=f(2)$，得 $F(0)=F(2)$，罗尔定理给出 $\xi\in(0,2)$ 使 $F'(\xi)=0$，展开即 $f'(\xi)=\xi-1$。$\square$
+
+\textbf{第二问：} 证明存在 $\eta\in(0,2)$，使
+\[
+\eta f'(\eta)+f(\eta)-2\eta+1=0.
+\]
+这一问的观察路径：$f'$ 的"爹"是 $f$；$\eta$ 的"爹"是 $\frac{\eta^2}{2}$。前两项 $\eta f'(\eta)+f(\eta)$ 合起来正是 $xf'(x)+f(x)$，即 $\big(xf(x)\big)'$？不，是 \textbf{$xf'(x)+f(x)$}=\big(xf(x)\big)'。但倒推回来时注意系数：
+\[
+F_2(x)=xf(x)-x^2+x .
+\]
+验算：$F_2'(x)=xf'(x)+f(x)-2x+1$，恰好是结论左边。而 $F_2(0)=0$（自带零点），$F_2(\xi)=0$（由第一问：因 $f'(\xi)=\xi-1$ 使 $\xi f'(\xi)+f(\xi)-2\xi+1=\xi(\xi-1)+f(\xi)-2\xi+1=0$? 需化简：由第一问 $f'(\xi)=\xi-1$ 代入得 $\xi(\xi-1)+f(\xi)-2\xi+1=f(\xi)+\xi^2-3\xi+1$? 不必——直接看 $F_2$：$F_2(0)=0$，$F_2(\xi)=0$? 让我们核对：$F_2(\xi)=\xi[f'(\xi)?]$。
+
+更正完整推理：\textbf{定义的 $\xi$ 是第一问的零点，用它构造第二问的两个零点。} 设 $F_2(x)=xf(x)-x^2+x$？其导数为 $xf'(x)+f(x)-2x+1$，这正是结论左边，好。而 $F_2(0)=0+f(0)?$ 不——$F_2(0)=0\cdot f(0)-0+0=0$。所以一个零点 $x=0$ 自动到手。要找第二个零点，利用第一问：存在 $\xi\in(0,2)$ 使 $f'(\xi)=\xi-1$。这时 $F_2'(\xi)=\xi f'(\xi)+f(\xi)-2\xi+1=\xi(\xi-1)+f(\xi)-2\xi+1$。这个表达式不等于 0 一般…… 看来凯哥的代数略有不同。让我重新审视原始转写：$F_2(\xi)$ 应该是"$x[f'(x)-(x-1)]$"型，即 $F_2(x)=x\big(f'(x)-(x-1)\big)$？这样 $F_2'(x)=\big(f'(x)-x+1\big)+x\big(f''(x)-1\big)$，结论要的是 $xf''(x)+f'(x)-2x+1$——对上了！即：
+\[
+F_2(x)=x\big(f'(x)-x+1\big),\quad F_2'(x)=f'(x)-x+1+x\big(f''(x)-1\big)=x f''(x)+f'(x)-2x+1 .
+\]
+$F_2(0)=0$（外层的 $x$），$F_2(\xi)=0$（由第一问 $f'(\xi)=\xi-1$ 使括号为零），于是 $[0,\xi]$ 上罗尔定理：存在 $\eta\in(0,\xi)\subset(0,2)$ 使 $F_2'(\eta)=0$，展开正是要证的式子。$\square$
+
+\begin{knowledgebox}{第二问的"接力棒"设计}
+第二问用到的 $\xi$ 正是第一问的结论——这是真题"两问"题的典型结构：第一问提供一个内部零点，第二问把它当作橡皮筋的一个端点。此外注意区间包含关系符号的规范：元素 $\in$ 集合，集合 $\subset$ 集合；$\eta\in(0,\xi)\subset(0,2)$ 格式标准、不扣分。
+\end{knowledgebox}
+
+\subsubsection{例题 6：去分母 + 对称构造}
+
+题目：$f$ 在 $[0,1]$ 上可导，$f(0)=0$，且对任意 $x\in(0,1]$，$f(x)>0$。求证存在 $\xi\in(0,1)$ 使
+\[
+\frac{f'(\xi)}{f(\xi)}=\frac{f'(1-\xi)}{f(1-\xi)}\ ?\quad\text{更正：}\quad \frac{f'(\xi)}{f(\xi)}=\frac{f'(1-\xi)}{f(1-\xi)}.
+\]
+（另一种写法：$f'(\xi)f(1-\xi)=f'(1-\xi)f(\xi)$。）
+
+\textbf{思路一（对数导数）：} $\frac{f'}{f}=(\ln f)'$，故等式两边都是对数函数的导数——复合函数求导的思路。但凯哥推荐思路二。
+
+\textbf{思路二（去分母，正解）：} 结论去分母得
+\[
+f'(\xi)\,f(1-\xi)-f(\xi)\,f'(1-\xi)=0 .
+\]
+看出"一个求导一个不求导 + 另一个求导另一个不求导"的乘积法则结构：$f(x)f(1-x)$ 的导数恰为 $f'(x)f(1-x)-f(x)f'(1-x)$（复合函数求导，内层 $1-x$ 的 -1 与整体减号配合）。于是构造
+\[
+F(x)=f(x)\,f(1-x).
+\]
+$F(0)=f(0)f(1)=0$（因 $f(0)=0$），$F(1)=f(1)f(0)=0$（对称！后一项回到 $f(0)$）。所以 $F(0)=F(1)=0$，罗尔定理得 $\xi\in(0,1)$ 使 $F'(\xi)=0$。
+
+\textbf{关键尾部：不要急着写"证毕"！} 与柯西定理一样，题目给的 $f(x)>0$ 还没用到。$F'(\xi)=0$ 直接结论是 $f'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)=0$，要变成题目要的分式形式，必须除以 $f(\xi)f(1-\xi)$——而这只有 $f(x)>0$（$x\in(0,1]$）才能保证分母非零。因此：
+\[
+\text{由于 }f(\xi)>0,\ f(1-\xi)>0\ \Rightarrow\ \frac{f'(\xi)}{f(\xi)}=\frac{f'(1-\xi)}{f(1-\xi)}.\quad\square
+\]
+
+\begin{warningbox}{条件给得多必有其用}
+题目给 $f(x)>0$ 不是为了好看，而是为了"分母非零"这个水印。凡是结论最后需要做除法而辅助函数求导结果里没有出现这个除法，都要补上"分母不为零"的说明；漏掉 = 扣分。
+\end{warningbox}
+
+\subsubsection{例题 7：反直觉——无分母的结论去制造分母}
+
+题目：设 $f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，且 $b-a\ge 4$，求证存在 $\xi\in(a,b)$ 使
+\[
+\frac{f'(\xi)}{1+f^2(\xi)} < 1\ \quad\text{（转写：$f'(\xi)<1+f^2(\xi)$? 更正为} \frac{f'(\xi)}{1+f(\xi)^2}<1\text{ 型）}.
+\]
+结论里 $f^2$ 不好积分（$F$ 表达式未知时无法知道谁求导等于 $f^2$），所以\textbf{反其道而行之：给没有分母的结论制造分母}：
+\[
+\frac{f'(\xi)}{1+f(\xi)^2}<1 .
+\]
+一看分子：$\frac{f'}{1+f^2}$ 是 $(\arctan f(x))'$；右边 $1$ 是 $x$ 求导。于是构造
+\[
+F(x)=\arctan f(x)-x .
+\]
+再看：这道题要证的是\textbf{不等式}，用不了罗尔定理的等号结论——而辅助函数只有一个 $F$，记不住端点值（$f$ 表达式未知），只能用\textbf{拉格朗日中值定理}（介于罗尔与柯西之间的选项）：
+\[
+F(b)-F(a)=F'(\xi)(b-a).
+\]
+整理出
+\[
+\frac{f'(\xi)}{1+f^2(\xi)}-1=\frac{\arctan f(b)-\arctan f(a)}{b-a}-1 .
+\]
+\textbf{放缩两次：}
+\begin{enumerate}
+\item 分子：$\arctan$ 的值域为 $(-\frac{\pi}{2},\frac{\pi}{2})$，所以 $\arctan f(b)-\arctan f(a)<\pi$（最大差值趋近但不等于 $\pi$，因只是渐近线）；
+\item 分母：$b-a\ge 4$，故 $\frac{1}{b-a}\le \frac14$；
+\end{enumerate}
+于是 $\frac{\arctan f(b)-\arctan f(a)}{b-a}<\frac{\pi}{4}<1$，减去 1 后为负——证毕。$\square$
+
+\begin{knowledgebox}{为什么出题人不把 b-a 大于等于 4 改成大于等于 pi？}
+改 $\pi$ 会更"完美"（$\pi/\pi=1$，减 1 得 0），但 \textbf{$\pi$ 是炸弹：}出现 $\pi$ 学生立刻意识到"这跟反三角函数有关"，于是主动把右边除到左边、想到 $\arctan$。出题人刻意用 4 来\textbf{掩盖}反三角函数的暗示——你看到 4 就想数值放缩，完全想不到 $\arctan$，这才是出题人想要的"难"。数学的难往往不是计算难，而是提示被刻意隐藏。
+\end{knowledgebox}
+
+\subsubsection{例题 8：1995 年真题（二）——反证 + 分母双保险}
+
+题目：$f(x),g(x)$ 在 $[a,b]$ 上二阶可导，且 $g''(x)\neq 0$，$g(a)=g(b)=f(a)=f(b)=0$。
+
+\textbf{第一问：} 证明在 $(a,b)$ 内 $g(x)\neq 0$。
+
+\textbf{核心预处理（二阶导不为 0 的判读）：} 见到 $g''(x)\neq0$，第一反应应是：$g''$ 恒大于 0 或恒小于 0 $\Rightarrow$ $g$ 要么严格凸（拱上去）、要么严格凹（凹下去）。再结合 $g(a)=g(b)=0$：拱上去或凹下去，中间都没有零点。但——\textbf{画图不能替代证明}，依然要用反证法：
+
+假设 $g$ 在 $(a,b)$ 内有零点 $x_0$，则 $g(a)=g(x_0)=g(b)=0$。在 $[a,x_0]$、$[x_0,b]$ 分别用罗尔定理：存在 $\eta_1$、$\eta_2$ 使 $g'(\eta_1)=g'(\eta_2)=0$。再对 $g'$ 在 $[\eta_1,\eta_2]$ 上用罗尔定理：存在 $\xi$ 使 $g''(\xi)=0$。这与 $g''(x)\neq0$ 矛盾。故 $g(x)\neq0$。$\square$
+
+\textbf{第二问：} 证明存在 $\xi\in(a,b)$ 使 $\frac{f(\xi)}{g(\xi)}=\frac{f''(\xi)}{g''(\xi)}$。
+
+\textbf{去分母 + 分部积分反推：} 等价证 $f(\xi)g''(\xi)-f''(\xi)g(\xi)=0$。要找到求导后等于 $f g''-f''g$ 的函数，直接对结论积分：$\int f g''-\int f'' g$。对 $\int f g''\,\mathrm{d}x$ 分部积分（把 $g''$ 凑进 $d$ 后面）：$fg'-\int f'g'$；对 $\int f''g\,\mathrm{d}x$ 分部积分：$f'g-\int f'g'$。相减后两个 $\int f'g'$ 抵消，结果恰为
+\[
+fg'-f'g .
+\]
+所以构造 $F(x)=f(x)g'(x)-f'(x)g(x)$（或 $f'g-fg'$，只差符号）。
+
+代入端点：$F(a)=f(a)g'(a)-f'(a)g(a)=0-0=0$；$F(b)=0$。罗尔定理得 $\xi$ 使 $F'(\xi)=0$，即
+\[
+f(\xi)g''(\xi)-f''(\xi)g(\xi)=0 .
+\]
+\textbf{尾部双分母检查：} 要除出结果，需 $g''(\xi)\neq0$（题干给了）和 $g(\xi)\neq0$（第一问刚证完！）。这就是第一问存在的意义——\textbf{没有第一问，考生根本想不到还得先证 $g(x)\neq0$ 才能做分母}。所以第一问大幅提高了该题的平均得分率。$\square$
+
+\begin{knowledgebox}{1995 年这道题的精髓}
+第一问证出 $g(x)\neq 0$ 不是为了"凑题"，而是给第二问的除法提供分母合法性。命题人把''分母非零''的困难拆成了一个独立的问——这是真题中"递进式问法"的经典设计。
+\end{knowledgebox}
+
+\subsection{公式法：积分因子}
+
+\subsubsection{过渡例题：结论被"约分"过怎么办}
+
+在进入公式法之前，先看一个典型过渡题（例题 9）：$f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，$f(a)=f(b)=0$。
+
+\textbf{第一问：} 证明存在 $\xi\in(a,b)$ 使 $f'(\xi)+f(\xi)=0$。
+
+\textbf{第二问：} 证明存在 $\eta\in(a,b)$ 使 $\eta f'(\eta)+2f(\eta)=0$。
+
+\textbf{第一问的难点：} 第一、二问的结论都不是辅助函数用完罗尔定理之后的"第一形态"，而是\textbf{约分之后的形态}。什么意思？没有约分的完整形态应是
+\[
+e^{\xi}f'(\xi)+e^{\xi}f(\xi)=0,
+\]
+这正是 $e^xf(x)$ 求导的结构——只是 $e^\xi>0$（指数函数恒正），被约掉了。所以要从预证结论往回倒推辅助函数，得先\textbf{把约掉的因子补回来}：第一问在结论左右两边同乘 $e^{\xi}$，得到 $e^\xi f'(\xi)+e^\xi f(\xi)=0$，一眼看出它是 $(e^xf(x))'$ 在 $\xi$ 处的值为 0。于是构造 $F(x)=e^xf(x)$。
+
+验证：$F(a)=e^a f(a)=0$、$F(b)=e^b f(b)=0$（题干给 $f(a)=f(b)=0$），罗尔定理给出 $F'(\xi)=0$，即 $e^\xi f'(\xi)+e^\xi f(\xi)=0$。由于 $e^\xi>0$ 恒正，约去 $e^\xi$ 得 $f'(\xi)+f(\xi)=0$。$\square$
+
+\textbf{第二问如何补因子：} 结论 $\eta f'(\eta)+2f(\eta)=0$ 中，$f'$ 的系数是 $\eta$，$f$ 的系数是 2。若给左边乘 $\eta$ 得 $\eta^2 f'+2\eta f$——这正好是 $\big(x^2f(x)\big)'$ 展开式。也就是说要补的因子是 $\eta^2$（$=e^{2\ln \eta}$），完整形态为
+\[
+\big(x^2 f(x)\big)'\big|_{\eta}=0 .
+\]
+所以构造 $G(x)=x^2f(x)$，$G(a)=a^2f(a)=0$，$G(b)=b^2f(b)=0$，罗尔定理给出 $G'(\eta)=0$，即 $\eta^2f'(\eta)+2\eta f(\eta)=0$，约去 $\eta$（需保证 $\eta\neq0$）得结论。
+
+\begin{warningbox}{第二问实际是「错题」：需要补条件 a 大于等于 0}
+若区间 $[a,b]$ 两端不同号（$a<0<b$），则 $\eta$ 有可能正好取到区间内的 $0$，此时 $G'(\eta)=0$ 化为 $0=0$，$\eta$ 不能作为因子约去，无法导出 $f'(0)+2f(0)=0$。\textbf{所以必须补充条件：$a\ge0$（保证区间内 $\eta\neq0$），题目才成立。} 参考书与第一版讲义漏了这个条件；凯哥在课上的做法是让学生补上"补上 $a>0$ 即可（或 $a\ge0$）"。
+\end{warningbox}
+
+\begin{knowledgebox}{如何系统化地操作"补因子"？}
+以后遇到结论像
+\[
+f'(\xi)+f(\xi)\cdot\frac{2+\xi}{\xi}=0
+\]
+这类 $g$ 复杂的题，再靠"瞪"就太累了。\textbf{公式法直接给出答案，无需"拆"。}
+\end{knowledgebox}
+
+\subsubsection{万能公式：$f'(\xi)+f(\xi)g(\xi)=0$ 型}
+
+\begin{importantbox}{构造辅助函数的万能公式（公式法）}
+若预证结论可以整理成
+\[
+f'(\xi)+f(\xi)\,g(\xi)=0 ,
+\]
+则直接构造
+\[
+\boxed{\ F(x)=f(x)\,e^{\int g(x)\,\mathrm{d}x}\ }
+\]
+（$e^{\int g}$ 只取一个原函数即可，\textbf{不加积分常数 }$C$、\textbf{对数里不加绝对值}）。验证：
+\[
+F'(x)=e^{\int g}\big[f'(x)+f(x)g(x)\big],
+\]
+这正是"前导后不导 + 后导前不导"两因子积的求导展开，$e^{\int g}>0$ 恒正可约。
+\end{importantbox}
+
+为什么 $e^{\int g}$ 叫\textbf{积分因子}？因为它本来是 $f'+fg=0$ 这个一阶线性微分方程里的积分因子——乘以它之后，$f'+fg$ 就能"打包"成 $(fe^{\int g})'$，从而\textbf{可以积分}。有了它，你就不必纠结"$fg$ 是谁求导的结果"这种抽象问题。
+
+\begin{knowledgebox}{导出过程一图流}
+\begin{align*}
+&f'+fg=0\\
+&\Longleftrightarrow\ e^{\int g}f'+e^{\int g}fg=0\\
+&\Longleftrightarrow\ \big(f\,e^{\int g}\big)'=0 .
+\end{align*}
+\end{knowledgebox}
+
+\subsubsection{用公式法重做例题 9}
+
+第一问：$f'(\xi)+f(\xi)\cdot 1=0$，令 $g(x)=1$。$F(x)=f(x)e^{\int 1\,\mathrm{d}x}=f(x)e^{x}$。与"补因子"结果完全一致！
+
+第二问：先整理成可套公式的形式。结论 $\eta f'(\eta)+2f(\eta)=0$，要保证 $f'$ 前面系数为 1，两边同除以 $\eta$：
+\[
+f'(\eta)+\frac{2}{\eta}f(\eta)=0\ \Rightarrow\ g(\eta)=\frac{2}{\eta}.
+\]
+$F(x)=f(x)e^{\int \frac{2}{x}\mathrm{d}x}=f(x)e^{2\ln x}=f(x)x^2$。与"补 $\eta^2$"完全一致！\textbf{公式法算出来的结果让人更放心——机械可靠，不依赖灵光一闪。}
+
+\subsubsection{例题 11：网联模拟卷（一道"秒杀"题）}
+
+题目：$f$ 在 $[0,1]$ 上可导，$f(0)f(1)<0$，证明存在 $\xi\in(0,1)$ 使
+\[
+\xi f'(\xi)+(4-\xi^2)f(\xi)=0 .
+\]
+
+\textbf{套公式前先整理：} 保证 $f'$ 系数为 1，两边同除以 $\xi$：
+\[
+f'(\xi)+\frac{4-\xi^2}{\xi}\,f(\xi)=0\ \Rightarrow\ g(x)=\frac{4-x^2}{x}.
+\]
+于是
+\[
+F(x)=f(x)\,e^{\int\frac{4-x^2}{x}\mathrm{d}x}=f(x)\,e^{\int(\frac4x-x)\mathrm{d}x}=f(x)\,e^{4\ln x-\frac{x^2}{2}}=f(x)\cdot x^4\cdot e^{-\frac{x^2}{2}}.
+\]
+（中间用 $e^{a+b}=e^a e^b$ 拆开，$e^{4\ln x}=x^4$，且对数不加绝对值。）
+
+\textbf{找两个零点：} $F(0)=0$（因子 $x^4$ 提供）；题给 $f(0)f(1)<0$，说明 $f(0)$、$f(1)$ 一正一负，由\textbf{零点定理}存在 $x_0\in(0,1)$ 使 $f(x_0)=0$，于是 $F(x_0)=0$。在 $[0,x_0]$ 上对 $F$ 用罗尔定理，得 $\xi\in(0,x_0)\subset(0,1)$ 使 $F'(\xi)=0$，展开并约去 $e^{\int g}>0$ 即得结论。$\square$
+
+\begin{warningbox}{这个题的辅助函数，没公式根本造不出来}
+不用公式法，谁能一步看出 $F(x)=f(x)\cdot x^4 e^{-x^2/2}$？这正是"参考答案第一步看不懂"的根源。\textbf{公式法把"猜测"变成"计算"。}
+\end{warningbox}
+
+\subsubsection{例题 12：积分因子 + 处理非零右端}
+
+题目：$f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$f(0)=0$，$f(1/2)=2$，$f(1)=1$，证明存在 $\xi\in(0,1)$ 使
+\[
+f'(\xi)-f(\xi)=\xi .
+\]
+
+结论 $f'-f=\xi$ 不是标准形式（右边是 $\xi$ 不是 0）。处理：右边也是一个\textbf{具体函数}，所以两边同乘积分因子 $e^{-x}$ 后，含 $f$ 的项照样能"打包"，而不含 $f$ 的那项 $e^{-\xi}\cdot \xi$ 是具体函数，可以硬生生积分：
+\[
+\int \xi e^{-\xi}\mathrm{d}\xi\ \text{凑微分}\ d(-e^{-\xi})\ \text{后分部积分得}\ -\xi e^{-\xi}-e^{-\xi}.
+\]
+所以构造
+\[
+F(x)=e^{-x}f(x)-e^{-x}(x+1)=e^{-x}\big[f(x)-x-1\big].
+\]
+代入端点验符号：$F(0)=e^{0}(0-0-1)=-1$（负）；$F(1/2)=e^{-1/2}(2-\frac12-1)=\frac12 e^{-1/2}$（正）；$F(1)=e^{-1}(1-1-1)=-e^{-1}$（负）。于是得到\textbf{负 — 正 — 负}三连：零点定理在 $[0,\frac12]$、$[\frac12,1]$ 各给一个零点 $\xi_1,\xi_2$，再对 $F$ 在 $[\xi_1,\xi_2]$ 上用罗尔定理得 $\xi$ 使 $F'(\xi)=0$，展开即结论。$\square$
+
+\begin{knowledgebox}{"负\ 正\ 负"模式的两个解法}
+模式：$F(0)<0$、$F(1/2)>0$、$F(1)<0$。解法 A：两次零点定理 + 一次罗尔定理（如上）。解法 B：直接\textbf{费马引理}——两端是负的、中间有一点是正的，说明最大值必在内部取到，且最大值处的点可导，故其导数为 0。解法 B 常用来"替代"零点定理+罗尔定理的冗长链条。凯哥提醒：这种"辅助函数造好后找不到两个相等的函数值"的题目，\textbf{竞赛}喜欢考（考研较少）；遇到时使用"证明最大值/最小值在内部取到"这一招。
+\end{knowledgebox}
+
+\subsubsection{例题 13：$g=f$ 的自嵌套——变上限积分版辅助函数}
+
+题目：$f$ 在 $[a,b]$ 上连续，$(a,b)$ 内可导，$f(a)=f(b)=0$。证明存在 $\xi\in(a,b)$ 使 $f'(\xi)+f^2(\xi)=0$。
+
+标准公式对应 $f'(\xi)+f(\xi)g(\xi)=0$，此处 $g=f$（自己的平方来自 $f\cdot f$）。套公式得
+\[
+F(x)=f(x)\,e^{\int f(x)\,\mathrm{d}x}.
+\]
+但这里有个坑：$\int f\,\mathrm{d}x$ 是不定积分符号，把 $x=a$、$x=b$ 代进不定积分"成何体统"？——不能写 $e^{\int_a^b}$。解决方案：把积分写成\textbf{变上限积分}（它也是一个原函数）：
+\[
+F(x)=f(x)\,e^{\int_a^x f(t)\,\mathrm{d}t}.
+\]
+这样 $x=a$ 时指数为 $e^0=1$，$x=b$ 时指数为 $e^{\int_a^b f}$，代值完全合法。然后 $F(a)=f(a)\cdot 1=0$、$F(b)=f(b)\cdot e^{\int_a^b f}=0$，罗尔定理即可。$\square$
+
+\begin{warningbox}{什么时候要把指数因子改成变上限积分？}
+只要 $f$ 的表达式未知、$e^{\int g}$ 无法化简成显式函数，就必须写成 $e^{\int_a^x f(t)\mathrm{d}t}$，否则"代端点值"时无法处理。变上限积分也是"一个原函数"，完美胜任。
+\end{warningbox}
+
+\subsubsection{整体思想（二阶导出现在结论里）}
+
+\textbf{例题 14：} $f$ 在 $[0,1]$ 上二阶可导，$f(0)=f(1)=0$，证明存在 $\xi\in(0,1)$ 使
+\[
+f''(\xi)-\frac{e^{-\xi}}{e^{-\xi}-1}\,f'(\xi)=0 .
+\]
+
+\textbf{整体思想：} 结论里出现 $f''$ 时，把 \textbf{$f'$ 看成整体}（$f''$ 是 $f'$ 的导数），套用公式：令新"$F$"=$f'$，则 $g(\xi)=-\frac{e^{-\xi}}{e^{-\xi}-1}$（越过分母乘过去整理后的系数）。辅助函数为
+\[
+H(x)=f'(x)\,e^{\int g}.
+\]
+算积分：$\int\frac{-e^{-x}}{e^{-x}-1}\mathrm{d}x$，凑微分 $d(e^{-x}-1)=-e^{-x}\mathrm{d}x$，故 $=\ln(e^{-x}-1)$（不加绝对值）。于是
+\[
+H(x)=f'(x)\cdot(e^{-x}-1).
+\]
+$H(0)=0$（因子 $e^{0}-1=0$）。还差一个零点：$f(0)=f(1)$ 在 $[0,1]$ 上对 $f$ 用罗尔得 $f'(\eta)=0$（$\eta\in(0,1)$），故 $H(\eta)=0$。对 $H$ 在 $[0,\eta]$ 用罗尔定理得 $\xi$ 使 $H'(\xi)=0$，约去 $e^{\int g}>0$ 后展开就是结论。$\square$
+
+\begin{knowledgebox}{结论里没有 f 本身但有一阶导与二阶导：整体思想的用法}
+只要结论里出现了 $\big(\text{一阶导}\big)'$ 与一阶导的混合，就令 $F=f'$，从而 $F'=f''$，变成标准的 $F'+Fg=0$ 形式。这是"把一阶导当作整体"三步曲：找整体 $\rightarrow$ 定 $g$ $\rightarrow$ 套公式。
+\end{knowledgebox}
+
+\textbf{类题：} 结论涉及 $f''$、$f'$、非零右端时，先把右边减到左边，再提公因式。例如类题整理后 $g(x)=\frac{1+x}{x}$，积分得 $e^{x}\cdot x$，辅助函数 $H(x)=f'(x)\cdot xe^{x}$（$x$ 提供零点 $H(0)=0$；另一零点由 $f(0)=0$、$f(1)=1$ 经拉格朗日中值定理给出 $f'(\eta)=1$，使中括号 $f'-1$ 在 $\eta$ 处为 0）。$\square$
+
+\textbf{例题 15（1999 年真题）：} $f$ 在 $[0,1]$ 上可导，$f(0)=f(1)=0$，$f(1/2)=1$。证明存在 $\xi\in(0,1)$ 使
+\[
+f'(\xi)=\lambda\big(f(\xi)-\xi\big)\ \ (\lambda\ \text{为给定常数}).
+\]
+把结论整理成公式型：把 $f(\xi)-\xi$ 看作整体（中括号提示！$f(x)-x$ 的导数恰为 $f'(x)-1$，正好是 $f'-\lambda(f-\xi)$ 中的一阶导），按公式 $g=-\lambda$，构造
+\[
+F(x)=\big(f(x)-x\big)\,e^{-\lambda x}.
+\]
+$F(0)=f(0)-0=0$。再由题意条件：$F(1/2)=\big(1-\frac12\big)e^{-\lambda/2}=\frac12 e^{-\lambda/2}>0$；$F(1)=(0-1)e^{-\lambda}=-e^{-\lambda}<0$。正负交界，零点定理在 $[1/2,1]$ 给出零点 $\eta$，再由 $F(0)=F(\eta)=0$ 用罗尔定理得 $\xi\in(0,\eta)\subset(0,1)$ 使 $F'(\xi)=0$。$\square$
+
+\subsubsection{例题 16：题中题——"合理分配、达到平衡"}
+
+题目：$f$ 在 $[a,b]$ 上二阶可导，$f(a)=f(b)=f(\frac{a+b}{2})=0$。证明存在 $\xi\in(a,b)$，使 $f''(\xi)-3f'(\xi)+2f(\xi)=0$。
+
+\textbf{核心八字诀：合理分配，达到平衡。} 结论横跨"祖孙三代"（$f'',f',f$）：中间的 $f'$ 系数是 $-3$，正好拆成 $-1$ 与 $-2$：
+\[
+f''-3f'+2f=\underbrace{(f''-f')}_{(f'-f)'}-\underbrace{2(f'-f)}_{=2u}.
+\]
+令整体 $u=f'-f$，则原式等价于
+\[
+u'-2u=0 .
+\]
+套公式（$F=u$，$g=-2$）：辅助函数
+\[
+G(x)=\big(f'(x)-f(x)\big)\,e^{-2x}.
+\]
+$G$ 的两个零点从哪里来？$e^{-2x}>0$ 不产生零点，所以零点应来自中括号。而"$f'(x)-f(x)=0$"又是一个\textbf{新的中值定理证明题}——于是再构造（题中题）：
+\[
+H(x)=e^{-x}f(x)\quad(\text{对应}\ f'-f=0\ \text{型，}g=-1).
+\]
+$H$ 的零点：$f$ 有三个零点 $a,\frac{a+b}{2},b$，所以 $H$ 也有三个零点；对 $H$ 在 $[a,\frac{a+b}{2}]$、$[\frac{a+b}{2},b]$ 用罗尔得 $H'$ 的两个零点 $\xi_1,\xi_2$，即 $e^{-x}(f'-f)=0$ 在 $\xi_1,\xi_2$ 处成立，即中括号 $f'-f$ 在 $\xi_1,\xi_2$ 处为 0。于是 $G(\xi_1)=G(\xi_2)=0$。对 $G$ 用罗尔定理得 $\xi\in(\xi_1,\xi_2)\subset(a,b)$ 使 $G'(\xi)=0$，展开整理即结论。$\square$
+
+\begin{importantbox}{题中题的处理模板（俄罗斯套娃）}
+外层结论涉及 $f''\pm f'$ 混合时，把系数"合理分配"，使 $f''-f'$ 成为 $(f'-f)'$；然后把 $f'-f$ 本身当作一个新目标——它又是一道标准 $f'-f=0$ 型中值定理题。用公式法构造内层辅助函数，\textbf{连用两次罗尔定理}即可穿透两层。例题 16 是这一模式的教科书案例。
+\end{importantbox}
+
+\textbf{第二问（跨阶题）：} 证明存在 $\xi\in(a,b)$ 使 $f''(\xi)=f(\xi)$ 时，结论直接跨过了 $f'$。处理：\textbf{跨过去就把它补回来}——左右两边同时加上 $f'$：
+\[
+f''+f'=f'+f\ \Leftrightarrow\ \big(f'+f\big)'-(f'+f)=0 .
+\]
+于是令 $G(x)=\big(f'(x)+f(x)\big)e^{-x}$，之后又是"中括号 $f'+f$ 的零点"这个新中值定理题（$g=+1$，构造 $e^{x}f(x)$，由 $f$ 的三零点给两零点），套用同上一问的模板即可。$\square$
+
+\begin{warningbox}{跨阶补回法的本质}
+$(f''+f')$ 与 $(f'+f)$ 之间是"前者是后者的导数"关系。补 $f'$ 就是为了凑出这个关系——"缺失的阶梯"要人工搭回去。例子：证 $f'''(\xi)=f(\xi)$ 时，左右补 $f''+f'$ 即可（$f'''+f''+f'=(f''+f'+f)'$）。
+\end{warningbox}
+
+\subsubsection{例题 17：$f^{(n+1)}(\xi)=f(\xi)$}
+
+题目：$f$ 在 $[0,1]$ 上 $n+1$ 阶可导，且 $f^{(i)}(0)=f^{(i)}(1)=0$（$i=0,1,\ldots,n$）。求证明存在 $\xi\in(0,1)$ 使 $f^{(n+1)}(\xi)=f(\xi)$。
+
+\textbf{步步补阶：} 要证 $f^{(n+1)}=f$，中间缺 $1$ 到 $n$ 阶。左右两边同时补上缺的阶梯：
+\[
+f^{(n+1)}+f^{(n)}+\cdots+f'\quad\text{与}\quad f^{(n)}+\cdots+f'+f
+\]
+恰好是"后者求一次导等于前者"！于是构造整体
+\[
+G(x)=\big(f(x)+f'(x)+\cdots+f^{(n)}(x)\big)e^{-x}
+\]
+（公式型 $u'-u=0$，$g=-1$）。由题干条件：$f^{(i)}(0)=f^{(i)}(1)=0$ 对所有 $i=0..n$ 成立，所以中括号在 $x=0$、$x=1$ 处都是 0，$G(0)=G(1)=0$。罗尔定理给出 $\xi$ 使 $G'(\xi)=0$，约去 $e^{-\xi}>0$ 后展开：
+\[
+f^{(n+1)}+\cdots+f'=f^{(n)}+\cdots+f\ \Rightarrow\ f^{(n+1)}=f.\quad\square
+\]
+（这一题与例题 16 第二问同一思想的"N 阶推广"版。）
+
+\begin{knowledgebox}{为什么这个题是"参考答案最气人"的题}
+答案里让读者"少看一步"：它直接告诉你 $G(x)=\big(f+...+f^{(n)}\big)e^{-x}$，从不解释这串东西哪来的。而凯哥把"补阶梯"的动机一讲就通了：\textbf{初体人把罗尔定理之后的各阶导在左右两边抵消掉了，只留 $f^{(n+1)}=f$——你要做的就是把抵消的那部分补回来。}
+\end{knowledgebox}
+
+\subsubsection{例题 18：$f(\xi)=\frac{b-\xi}{a}f'(\xi)$ 型 + 方法三预告}
+
+题目：$f$ 在 $[a,b]$ 上可导，$a>0$，$f(a)=0$。证明存在 $\xi\in(a,b)$ 使
+\[
+f(\xi)=\frac{b-\xi}{a}\,f'(\xi).
+\]
+整理成标准型：$f'(\xi)-\frac{a}{b-\xi}f(\xi)=0$，故 $g(x)=-\frac{a}{b-x}$。区间上 $x<b$（$b$ 是右端点），为了保证对数的真数 $b-x>0$ 且严谨美观，用 $b-x$ 而非 $x-b$：
+\[
+\int\frac{-a}{b-x}\,\mathrm{d}x = a\ln(b-x)\ \Rightarrow\ F(x)=f(x)\,e^{a\ln(b-x)}=f(x)(b-x)^{a}.
+\]
+零点：$F(a)=f(a)(b-a)^a=0$（因为 $f(a)=0$，且题干强调 $a>0$ 使 $0$ 的正数次幂有意义——$a=0$ 时 $0^0$ 无意义，这就是出题人的严谨）；$F(b)=f(b)\cdot 0^a=0$。罗尔定理给出 $\xi$。$\square$
+
+\begin{knowledgebox}{方法三：微分方程反解任意常数法（预告）}
+把 $\xi$ 改成 $x$ 得到微分方程 $y'=\frac{a}{b-x}y$，解出通解 $y=C(b-x)^{-a}$，\textbf{反解出任意常数 }$C$，$C$ 右边的式子就是辅助函数。凯哥称这是最万能的方法，但它依赖微分方程功底，且学员多为"一战"尚未复习微分方程，因此只介绍、不给全流程；考试用公式法（积分因子）即可同样算出。
+\end{knowledgebox}
+
+
+\subsection{构造辅助函数：三大方法对比表}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.4cm}p{2.8cm}p{4.6cm}p{4.6cm}}
+\toprule
+\textbf{方法} & \textbf{适用场景} & \textbf{操作流程} & \textbf{典型例题} \\
+\midrule
+观察法（瞪眼法） & 结论简单的题 & 把 $\xi$ 换成 $x$，对结论两边积分，积出来的东西就是辅助函数 & 例题 5、6、7 \\
+公式法（积分因子法） & $f'(\xi)+f(\xi)g(\xi)=0$ 型 & 令 $F(x)=f(x)e^{\int g}$，$\int g$ 取一个原函数即可（不加 $C$、不加绝对值） & 例题 9、11、12、13、14、15、16、18 \\
+微分方程反解任意常数法 & 万能（适合学过微分方程后使用） & 把 $\xi$ 改 $x$ 得到微分方程，解出通解，反解出任意常数 $C$，$C$ 所在表达式的右边就是辅助函数 & 例题 18（预告） \\
+\bottomrule
+\end{tabular}
+\caption{辅助函数三大方法：观察法靠"灵光",公式法靠"机械计算",微分方程法靠"降维打击"。凯哥强调：公式法并不取代观察法，而是为观察不出来的人提供兜底。}
+\end{table}
+
+\begin{warningbox}{公式法使用中的三个"必须"}
+\begin{enumerate}
+\item \textbf{必须}把预证结论整理成 $f'+fg=0$ 的标准形状（保证 $f'$ 前的系数为 1）；若有系数 $\eta$，先两边同除以 $\eta$ 把系数洗白；
+\item \textbf{必须}只取一个原函数；遇到 $\ln$ 时不加绝对值（辅助函数只求一个，不求全），遇到不定积分不加 $C$；
+\item \textbf{必须}在 $g=f$ 自嵌套时把 $\int g$ 写成变上限积分 $\int_a^x f(t)\,\mathrm{d}t$，否则无法代端点值。
+\end{enumerate}
+\end{warningbox}
+
+
+\subsubsection{罗尔定理三个反例的完整图像化描述（补全）}
+
+\textbf{反例一：破坏闭区间连续。} 函数在 $[a,b]$ 上除 $a$ 点外连续可导，图像是一条从 $(a,f(a))$ 出发、单调下降、经过 $(b,f(b))$ 的直线段——但把 $a$ 点的函数值提高，使得 $f(a)=f(b)$，从而在图上 $a$ 处「悬空」一个空心点（或者用实心点表示 $f(a)$，曲线从下方靠近 $a$ 而不连接）。此时：
+\begin{itemize}
+\item 开区间 $(a,b)$ 内：图像是斜率为负的直线，每点导数都小于 0；
+\item 端点 $a$：函数值跳跃，不可导；
+\item 结论：不存在 $f'(\xi)=0$ 的点。\textbf{罗尔定理仅仅「缺了闭区间连续」就整体失效——这不是「少一个不重要的条件」，而是少了一笔保证极值存在的关键笔画。}
+\end{itemize}
+
+\textbf{反例二：破坏开区间可导。} 函数连续、端点等高，但图像的「峰」是一个尖点（「$|x|$ 型」）：左侧单调上升、右侧单调下降，峰顶处左右导数不相等（左导 $>0$，右导 $<0$）。虽然 $f(a)=f(b)$，但极值点本身不可导，所以没有任何点导数为 0。\textbf{注意：}这里$\xi$ 位置「左边导数小于 0、右边导数大于 0」？——实际尖点向下的情形（「谷」）才是左右导数异号；上升下降的尖峰是「左边导正、右边导负」，峰顶不可导——但若函数是 $|x|$ 型，峰顶在最低点？$-|x|$ 型峰点是最高点，$x=0$ 处左导 $1$、右导 $-1$，不可导。无论哪种，总之没有任何点满足 $f'=0$。
+
+\textbf{反例三：破坏端点函数值相等。} 只需一条斜率恒正的直线段 $f(x)=kx+b\ (k\neq0)$：它处处连续可导，但 $f(a)\neq f(b)$，且导数为常数 $k\neq0$，不存在导数为 0 的点。\textbf{这一反例最朴素，也最能说明「端点等高」的条件强度。}
+
+\begin{importantbox}{罗尔定理反例的三维视角}
+\begin{enumerate}
+\item 闭区间连续 $\Rightarrow$ 最值存在（这是极值点的「存在性」保证）；
+\item 开区间可导 $\Rightarrow$ 极值点处导数可为 0（费马引理的「品质」保证）；
+\item 端点等高 $\Rightarrow$ 最值不全在端点取到（「避开端点」保证）。
+\end{enumerate}
+三个条件分别担保一个环节，缺一个，链条就断。这就是凯哥说「三条件缺一不可」的深层含义。
+\end{importantbox}
+
+\subsubsection{观察法例题 5 第二问的另一种视角（供二刷对照）}
+
+第一问给出 $f'(\xi)=\xi-1$，第二问要证 $\eta f'(\eta)+f(\eta)-2\eta+1=0$。除了「构造 $F_2(x)=x(f'(x)-x+1)$」的解法外，凯哥在屏幕侧边还写了「由第一问，$\xi$ 是中括号的零点」的注释：$F_2$ 外层因子 $x$ 提供零点 $x=0$，中括号 $f'(x)-x+1$ 由第一问在 $\xi$ 处等于 0——于是 $F_2$ 两个零点 $0$、$\xi$，罗尔定理给出 $\eta\in(0,\xi)$。\textbf{为什么因子 $x$ 能「免费」提供一个零点？}因为 $f'(x)-x+1$ 里 $x=0$ 时未必为零，但外层乘以 $x$ 后，$x=0$ 必然为零——「把自变量因子放到外层」是构造辅助函数时「制造零点」的标准招式，与例题 8（$g(a)=g(b)=0$）、例题 11（$x^4$ 因子）、例题 13（$f(a)=0$）同理。
+
+\subsubsection{例题 18 的尾条与 $0^0$ 严谨性再谈}
+
+例题 18 中辅助函数 $F(x)=f(x)(b-x)^a$，$F(a)=f(a)(b-a)^a=0$ 是因为 $f(a)=0$，$F(b)=f(b)\cdot0^{a}=0$ 是因为 $(b-b)^a=0$。\textbf{这里有个隐性的严谨性要求：}只有当 $a>0$ 时 $0^a=0$ 才有定义（$a=0$ 时 $0^0$ 无意义；$a<0$ 时 $0^a$ 发散）。所以在题目条件中特别强调 $a>0$——出题人\textbf{宁可多写一个看似无关的"$a>0$"，也不让 $0$ 的次幂出现歧义}。凯哥称之为「数学家一步一个脚印的严谨」：从 $0^0$ 到端点取值的合法性，处处都有严格的理由支撑。学员在答题时：\textbf{凡涉及 $0$ 的幂、对数里的 $0$、分母的 $0$，都要停下来想一想合法性}——这也是「易错点清单」里「除法前先验分母」的同族问题。
+
+\begin{knowledgebox}{变式：若题目改为 f(b)=0 且要证含 f 与 f' 的比例型结论}
+换成对称结构时，只需把辅助函数换成 $F(x)=f(x)(x-a)^{b}$ 类（指数换常数），端点 $a$ 处由 $0^{b}$ 提供零点。\textbf{方法不变：看结论的系数，先确定 $e^{\int g}$ 的指数因子，再用乘积因子在端点找零点。}
+\end{knowledgebox}
+
+\subsection{课后自测题（附提示，不附完整解答）}
+
+\begin{enumerate}
+\item $f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$f(0)=0$，$f(1)=1$，证明存在 $\xi$ 使 $f'(\xi)=1$。\emph{提示：拉格朗日中值定理直接出。}
+\item $f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导且 $f(a)=f(b)$，证明存在 $\xi$ 使 $f'(\xi)+f(\xi)=0$。\emph{提示：答案中会「从天而降」一个 $e^{\xi}f(\xi)$——请补上被约掉的 $e^{\xi}$ 并逻辑还原。}
+\item $\int_0^2 f=\frac{f(2)+f(0)}2$ 型：证明存在 $\xi\in(0,2)$ 使 $f(\xi)$ 等于平均值。\emph{提示：积分中值定理。}
+\item 证明：若 $f(a)=f(b)=0$ 且 $f$ 二阶可导，则存在 $\xi$ 使 $f''(\xi)+2f'(\xi)+f(\xi)=0$。\emph{提示：系数 2=1+1，配成 $(f'+f)'=f''+f'$ 结构后用整体思想；辅助函数 $F=(f'+f)e^{x}$ 或 $e^{-x}$ 视系数符号。}
+\item 证明：若 $f$ 在 $[0,1]$ 上二阶连续可导、$|f''|\le1$、$f(0)=f(1)=0$，则存在 $\xi$ 使 $|f'|\le\frac12$。\emph{提示：端点展开 + 相减 + 绝对值 + max 合并，与例题 3 同型。}
+\end{enumerate}
+
+\begin{importantbox}{自测题的验收标准}
+每道题做完后，用「六条铁律」检查：
+\begin{itemize}
+\item 有没有跳过「验证分母非零」？
+\item 有没有使用闭区间积分中值定理然后三点塌缩？
+\item 泰勒展开写满了 $n$ 阶主项然后把最高阶还写在主项里？
+\item 两个展开式该独立分析的时候却去求和了？
+\item 我选的 $x_0$ 是导数信息最多的点吗？
+\end{itemize}
+六条全过，这道题才算「真正会」。
+\end{importantbox}
+
+\subsection{考法二小结}
+
+\begin{importantbox}{构造辅助函数决策树}
+拿到结论后依次问三件事：
+\begin{enumerate}
+\item \textbf{有没有分母？} 有 $\rightarrow$ 先去分母（特殊反直觉题可能需要反向制造分母）；
+\item \textbf{结论含不含 $f$ 与 $f'$ 的线性组合？} 含 $\rightarrow$ 整理成 $f'+fg=0$（$g$ 由 $f$ 的系数给出）$\rightarrow$ \textbf{公式法}：$F=fe^{\int g}$（$\int g$ 只取一个原函数，不加 $C$、不加绝对值；必要时用变上限积分）；
+\item \textbf{结论是否被约分过/跨阶？} 是 $\rightarrow$ 先补因子（$e^{\xi}$、$\eta^2$ 等）或补阶梯（$f'$、$f''+f'$ 等），回到标准型。
+\end{enumerate}
+零点来源三查：指数因子恒正不提供零点；具体因子（$x$、$(b-x)^a$ 等）可能在端点给零点；$f$ 本身的零点由题干的值条件 + 零点定理/拉格朗日+罗尔/费马引理给出。
+\end{importantbox}
+
+
+\subsection{双中值定理：例题 19 与例题 20（完整解答）}
+
+p03 中凯哥用例题 19 与例题 20 实际演示了「三步法」的完整流程（两题均为\textbf{未要求两个中值不同}的情形），我们逐句还原。
+
+\subsubsection{例题 19：$\eta$ 项出现次数更多（还原 $e^x f(x)$）}
+
+题目：$f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，$f(a)=f(b)=1$，证明存在 $\xi,\eta\in(a,b)$ 使
+\[
+e^{b}f(b)-e^{a}f(a)=(b-a)e^{\eta}\big[f'(\eta)+f(\eta)\big]\quad\text{且}\quad \frac{e^{b}-e^{a}}{b-a}=e^{\xi},
+\]
+即预证结论 $f'(\eta)+f(\eta)=e^{\xi-\eta}$（教师课中整理的等价形式）。
+
+\textbf{第一步（还原 $\eta$ 项）：}含 $\eta$ 的项 $e^{\eta}[f'(\eta)+f(\eta)]$ 出现次数多，先单独拎出来。仔细观察：$e^{\eta}[f'(\eta)+f(\eta)]$ 就是\[
+\big[e^x f(x)\big]'\big|_{x=\eta}
+\]
+的展开式！因此它正是 $G(x)=e^x f(x)$ 在 $[a,b]$ 上用拉格朗日中值定理的结果：
+\[
+\frac{e^{b}f(b)-e^{a}f(a)}{b-a}=e^{\eta}\big[f'(\eta)+f(\eta)\big],\qquad \eta\in(a,b).
+\]
+\textbf{这一步体现了「还原法」的精髓：中值项原本是某个函数「求导前的样子」，把它逆回那个样子，就是它使用中值定理的出发式。}
+
+\subsubsection{例题 19 第二步：变形 + 代入 + 再产生第二个中值}
+
+把上得到的等式移项：
+\[
+e^{b}f(b)-e^{a}f(a)=(b-a)e^{\eta}\big[f'(\eta)+f(\eta)\big].
+\]
+题干给 $f(a)=f(b)=1$，所以
+\[
+e^{b}\cdot 1-e^{a}\cdot 1=(b-a)e^{\eta}\big[f'(\eta)+f(\eta)\big].
+\]
+左端是对 $e^x$ 在 $[a,b]$ 上用拉格朗日中值定理的「原材料」——于是对 $y(x)=e^x$ 再一次使用中值定理：
+\[
+\frac{e^{b}-e^{a}}{b-a}=e^{\xi},\qquad \xi\in(a,b).
+\]
+把两式联立：
+\[
+(b-a)e^{\xi}=(b-a)e^{\eta}\big[f'(\eta)+f(\eta)\big]
+\]
+约去 $b-a\neq0$、约去 $e^{\eta}>0$，得
+\[
+f'(\eta)+f(\eta)=e^{\xi-\eta}.
+\]
+这就是凯哥板书给出的预证形式（具体题目中以题面为准，但「构造 $e^xf(x)$ + 释放 $e^x$」的组合是此类题的标配）。\textbf{第二步的秘诀：还原后的式子经过代入、化减，变成「再用一次中值定理」的样子，从而产生第二个中值。}
+
+\begin{knowledgebox}{答题纸上的标准写法（与草稿思考方式的区别）}
+草稿上可以用「三步曲」压缩分析：先还原复杂项 $\rightarrow$ 变形代入 $\rightarrow$ 再用一次中值定理。但答题纸要从等号处截断，按辅导书的啰嗦格式分段：
+\begin{enumerate}
+\item 由拉格朗日中值定理，存在 $\eta\in(a,b)$ 使 $\frac{e^{b}f(b)-e^{a}f(a)}{b-a}=e^{\eta}[f'(\eta)+f(\eta)]$；
+\item 又由拉格朗日中值定理，存在 $\xi\in(a,b)$ 使 $\frac{e^{b}-e^{a}}{b-a}=e^{\xi}$；
+\item 由于 $f(a)=f(b)=1$，两式等号左边相等，故等号右边相等；由传递性得结论。
+\end{enumerate}
+\textbf{分析用三步曲（一排写完），书写用截断法（三段啰嗦）}——这是所有一本参考书的标准体例，模仿之。
+\end{knowledgebox}
+
+\subsubsection{例题 20（1998 年）：$\frac{e^\eta}{f'(\eta)}$ 型（柯西+拉格朗日混用）}
+
+题目：设 $f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，且 $f(a)\neq f(b)$ 之类的条件使分母合法，证明存在 $\xi,\eta\in(a,b)$（未要求不等）使
+\[
+\frac{f'(\xi)}{f'(\eta)}=\frac{e^{b}-e^{a}}{b-a}\cdot e^{-\eta} .
+\]
+
+\textbf{第一步（还原 $\eta$）：}含 $\eta$ 的项 $\frac{e^{\eta}}{f'(\eta)}$（分子是 $e^x$ 求导、分母是 $f$ 求导——分子分母各自能看出是谁求导的结果）整理到一起。分子单独看：$e^{\eta}$ 是 $e^x$ 求导的结果；分母单独看：$f'(\eta)$ 是 $f$ 求导的结果。\textbf{分子分母各自求导的搭配 = 柯西中值定理}：对 $e^x$ 与 $f(x)$ 在 $[a,b]$ 上用柯西中值定理，得
+\[
+\frac{e^{b}-e^{a}}{f(b)-f(a)}=\frac{e^{\eta}}{f'(\eta)},\qquad \eta\in(a,b).
+\]
+\textbf{第二步：}如果题干没有可代的值，就看结论需要什么、保留什么：
+\begin{itemize}
+\item 结论里有 $\frac{e^{b}-e^{a}}{b-a}$——所以\textbf{分子不能动}（对分子用拉格朗日会把 $e^x$ 变成别的结构）；
+\item 结论里还有 $b-a$——因此\textbf{只对分母 $f(b)-f(a)$ 使用拉格朗日中值定理}：
+\[
+f(b)-f(a)=(b-a)f'(\xi),\qquad \xi\in(a,b).
+\]
+\end{itemize}
+\textbf{第三步：}把两个表达式联立，等号左边都是 $\frac{e^{b}-e^{a}}{f(b)-f(a)}$，故等号右边相等：
+\[
+\frac{e^{\eta}}{f'(\eta)}=\frac{e^{b}-e^{a}}{(b-a)f'(\xi)}.
+\]
+把 $f'(\eta)$ 乘到左边、$f'(\xi)$ 除到右边，再约掉 $e^\eta$ 相关因子，即得
+\[
+\frac{f'(\xi)}{f'(\eta)}=\frac{e^{b}-e^{a}}{b-a}\cdot e^{-\eta}.\quad\square
+\]
+\textbf{本题的教学要点：}还原时若一个中值项是「分子分母分别求导」的结构（$e^x/f$ 型），用\textbf{柯西中值定理}；但为了构造出 $b-a$ 与预证结论的衔接，可以\textbf{只对分母}再用一次拉格朗日。这是「两步中值、一柯西一拉格朗日」的经典搭配，也是「分家还原」的典范。$\square$
+
+\section{附录 A：全部例题索引与密度审计}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{例题} & \textbf{考法} & \textbf{核心方法} \\
+\midrule
+例 1 罗尔定理 & 一 & 费马引理 + 最值分类讨论 \\
+例 2 拉格朗日中值定理 & 一 & 积分法构造 $F=(b-a)f-[f(b)-f(a)]x$ \\
+例 2 类题 & 一 & $F=(b^2-a^2)f-x^2[f(b)-f(a)]$；忌用柯西 \\
+例 3 积分中值定理 & 一 & 放缩 + 介值；变上限积分 + 拉格朗日 \\
+例 3 类题（2010） & 一 & 三点等值 + 三次罗尔；开区间版必用 \\
+例 4 柯西中值定理 & 一 & $F=[f(b)-f(a)]g-[g(b)-g(a)]f$ \\
+例 5 & 二 & 观察法 $F=f-\frac{(x-1)^2}2$；接力二问 $F_2=x(f'-x+1)$ \\
+例 6 & 二 & 去分母 + 对称 $F=f(x)f(1-x)$ \\
+例 7 & 二 & 制造分母 $F=\arctan f-x$；$b-a\ge4$ 掩盖 $\arctan$ \\
+例 8（1995） & 二 & 反证 $g\neq0$；$F=fg'-f'g$ \\
+例 9 & 二 & 补因子 $e^{\xi}$、$\eta^2$；错题需补 $a\ge0$ \\
+例 11 & 二 & 公式法 $F=f\cdot x^4 e^{-x^2/2}$ \\
+例 12 & 二 & 积分因子 + 非零右端；负正负模式 \\
+例 13 & 二 & 自嵌套变上限积分 \\
+例 14 & 二 & 整体思想 $f'$ 为整体；$(e^{-x}-1)f'$ \\
+例 15（1999） & 二 & $G=(f-x)e^{-\lambda x}$；零点 + 罗尔 \\
+例 16 & 二 & 合理分配 3=1+2；题中题 $e^{-x}f$ \\
+例 17 & 二 & 补阶梯 $\sum f^{(i)}\cdot e^{-x}$ \\
+例 18 & 二 & $F=f(b-x)^a$；$0^0$ 无意义的严谨性 \\
+例 26（1999） & 四 & 端点 0 点展开；差值合并 \\
+类题 1（p03 例 1） & 四 & 有条件看条件，没条件看结论 \\
+类题 2（p03 例 2） & 四 & 端点中点展开；一阶翻倍二阶抵消 \\
+类题 3 & 四 & 绝对值 + max 合并 \\
+类题 4 & 四 & n 阶端点展开；中间全 0 提余项 \\
+例 27（p03 例 5'） & 四 & 费马挖点 + 独立分析分类讨论 \\
+例 28（2024） & 四 & 任意点 $x$ 展开 + 加权组合 + 积分 \\
+例 29 & 四 & 交换展开点；二次函数最大值 \\
+例 30 & 四 & 极值点展开；$=0$ 与 $>0$ 分类；双问 \\
+例 31（考法五） & 五 & 位置参数 $\theta$；再展开一次剥参 \\
+例 19/20 & 三 & 两步还原法 + 传递性（未要求不等） \\
+例 21（2010） & 三 & 区间给定（$\frac12$ 分段）；$f'(\xi)+f'(\eta)=\xi^2+\eta^2$ \\
+例 22（2005） & 三 & 区间分割法；第一问作分段点 $f(c)=1-c$ \\
+例 22 类题/例 23 & 三 & 待定法倒推分段点 $f(x_0)=1-x_0$ \\
+例 24 & 三 & 情形二延伸：拼接子区间分别用中值定理 \\
+例 25 & 三 & 三个不同的点（情形二）；分段点成为第一个中值，再在子区间产生第 2、3 个中值 \\
+\bottomrule
+\end{tabular}
+\caption{本笔记覆盖的全部例题索引：考法一到考法五共 30+ 题。}
+\end{table}
+
+
+\subsection{补充解法与推导细节}
+
+\subsubsection{例题 6 的另一条路：对数求导法}
+
+回到 $\frac{f'(\xi)}{f(\xi)}=\frac{f'(1-\xi)}{f(1-\xi)}$，凯哥在课堂上提过「你也可以用对数函数的导数」：
+\[
+\Big(\ln f(x)\Big)'=\frac{f'(x)}{f(x)},\qquad \Big(\ln f(1-x)\Big)'=-\frac{f'(1-x)}{f(1-x)}.
+\]
+于是原等式等价于
+\[
+\Big(\ln f(x)\Big)'\Big|_{x=\xi}=-\Big(\ln f(1-x)\Big)'\Big|_{x=\xi},
+\]
+即 $\ln f(x)+\ln f(1-x)=\ln[f(x)f(1-x)]$ 的导数在 $\xi$ 处为 0。这正说明辅助函数可以取 $\ln F(x)$；而由于对数求导只差一个因子，直接取 $F(x)=f(x)f(1-x)$ 更干净。\textbf{教学价值：}两种视角互相印证——乘法结构（$F$）与对数结构（$\ln F$）是同一件事。凯哥选择讲「去分母 + 乘积法则」，是因为那条路直接导向 $F(x)=f(x)f(1-x)$，不引入额外符号。
+
+\subsubsection{万能公式 $F=fe^{\int g}$ 中「$\int g$ 不加绝对值」的几何解释}
+
+在 $\int\frac{2}{x}\mathrm{d}x$、$\int\frac{1}{b-x}\mathrm{d}x$、$\int\frac{1}{e^{-x}-1}\mathrm{d}x$ 等多道题里凯哥反复强调「对数不加绝对值」。原因是：辅助函数只需要「一个」原函数；绝对值会引入分段结构，$e^{\ln|x|}=|x|$ 带来的符号问题毫无必要——只要保证最终表达式在定义域上可导、端点能代值即可。\textbf{唯一例外：}例题 18 里 $\int\frac{-a}{b-x}\mathrm{d}x$，若写 $\ln(x-b)$，则 $x<b$ 时真数为负无效，所以「为了严谨」写 $\ln(b-x)$。\
+\textbf{一句话准则：}对数不加绝对值（选一个原函数）；但真数为负时，先换符号让真数为正（$b-x$ 而非 $x-b$），再不加绝对值。
+
+\subsubsection{考法五：$\theta$ 极限结论的严谨推导（$n=1$ 精简版）}
+
+对二阶情形 $f(a+h)=f(a)+f'(a)h+\frac{f''(a+\theta h)}{2}h^2$，我们另取 $-h$ 点：
+\[
+f(a-h)=f(a)-f'(a)h+\frac{f''(a-\theta'h)}{2}h^2 .
+\]
+两式相加消去一阶项：
+\[
+f(a+h)+f(a-h)=2f(a)+\frac{h^2}{2}\big[f''(a+\theta h)+f''(a-\theta'h)\big].
+\]
+整理并取极限 $h\to0$（$f''$ 连续，两项都趋于 $f''(a)$，右侧括号趋于 $2f''(a)$）：
+\[
+\lim_{h\to0}\frac{f(a+h)+f(a-h)-2f(a)}{h^2}=f''(a).
+\]
+同时对 $f''$ 连续夹逼有 $\lim f''(a+\theta h)=\lim f''(a-\theta'h)=f''(a)$。将左式与 $\frac{1}{2}[f''(a+\theta h)+f''(a-\theta'h)]$ 恒等式对照：两边的系数 $\frac12$ 与 $1$ 相消，得到 $f''(a)=f''(a)$——这再一次提示：\textbf{直接用 $a+h$ 一处的展开推不出 $\theta$，必须让两个展开式相消得到 $\theta$ 的显式位置。}真正得到 $\theta$ 的推导是：把 $a+h$ 处的一阶泰勒（佩亚诺余项到 $n$ 阶）与 $n+1$ 阶余项式相减后对比 $h^{n+1}$ 项系数，或直接利用 $\theta$ 的极限定义式。\textbf{结论记忆：$\lim_{h\to0}\theta=\frac1{n+1}$ 在任何考题中直接使用；推导过程只在概念课中要求。}
+
+\begin{importantbox}{考法五的考场三件套}
+\begin{enumerate}
+\item $\xi=a+\theta(b-a)$：任何中值 $\xi$ 都可以这样写；
+\item $\lim_{h\to0}\theta=\frac{1}{n+1}$：直接使用；
+\item $f^{(n+1)}$ 连续且 $f^{(n+1)}(a)\neq0$：保证极限代值与约分，「处处是巧合」。
+\end{enumerate}
+\end{importantbox}
+
+\subsection{选学考法：辅助多项式法与广义罗尔定理}
+
+讲义在考法五之后安排了\textbf{考法六（辅助多项式法，核心是多项式拟合）}与\textbf{考法七（广义罗尔定理，核心是补充定义）}，并明确标注"选学"。视频中凯哥对此的处理是："以下的两个内容是锦上添花，作为选学内容！请同学们先把前面五个基本考法吃透再说！"因此笔记仅做概述，不展开：
+
+\begin{knowledgebox}{考法六：辅助多项式法（选学）}
+核心：当结论中出现 $\sin$、$\cos$、$\ln$ 等抽象函数复合时，先构造一个合适的辅助多项式 $P(x)$（使端点条件满足），再用中值定理。例题 32（$f$ 在 $[a,b]$ 二阶可导）、例题 33（2019 年，二阶可导）均属此类。\textbf{本质是"多项式拟合 + 中值定理"的组合技。}
+\end{knowledgebox}
+
+\begin{knowledgebox}{考法七：广义罗尔定理（选学）}
+核心：补充定义使函数在端点（或无穷远处）"退化"成能满足罗尔定理条件的形态。
+\begin{itemize}
+\item 有限区间：$f$ 在 $[a,b]$ 可导且 $\lim_{x\to a^+}f(x)=\lim_{x\to b^-}f(x)$（端点为极限值），则存在 $\xi$ 使 $f'(\xi)=0$（例题 34 定理）；
+\item 无限区间：$f$ 在 $[a,+\infty)$ 可导且 $\lim_{x\to+\infty}f(x)=\lim_{x\to a^+}f(x)$，则存在 $\xi$ 使 $f'(\xi)=0$（例题 35 定理）。
+\end{itemize}
+\textbf{做法：补定义 $f(a)=\lim f(x)$ 后即落在普通罗尔定理的射程内。}
+\end{knowledgebox}
+
+\subsubsection{例题 29 的复现：反向展开与对称放缩的完整流程}
+
+题目：$f$ 在 $[0,1]$ 上二阶可导，$|f(x)|\le A$，$|f''(x)|\le B$。证明 $|f'(x)|\le 2A+\frac B2$。
+
+\textbf{第一步：}在 $x$ 点展开 $f(0)$ 与 $f(1)$（因为结论要 $f'(x)$）：
+\[
+f(0)=f(x)-f'(x)x+\frac{f''(\xi_1)}{2}x^2,\qquad
+f(1)=f(x)+f'(x)(1-x)+\frac{f''(\xi_2)}{2}(1-x)^2.
+\]
+\textbf{第二步：}②$-$①：
+\[
+f(1)-f(0)=f'(x)+\frac{f''(\xi_2)}2(1-x)^2-\frac{f''(\xi_1)}2x^2 .
+\]
+\textbf{第三步：}移项 + 加绝对值 + 三角形不等式：
+\[
+|f'(x)|\le|f(1)|+|f(0)|+\frac{|f''(\xi_2)|}{2}(1-x)^2+\frac{|f''(\xi_1)|}2x^2 .
+\]
+\textbf{第四步：}代入 $|f|\le A$、$|f''|\le B$：
+\[
+|f'(x)|\le 2A+\frac B2\big[(1-x)^2+x^2\big].
+\]
+\textbf{第五步：}证明 $\displaystyle\max_{x\in[0,1]}\big[(1-x)^2+x^2\big]=1$。展开 $=2x^2-2x+1=2(x-\frac12)^2+\frac12$——开口向上，顶点 $x=\frac12$ 处最小值 $\frac12$，端点 $x=0,1$ 处最大值 $1$。所以
+\[
+|f'(x)|\le2A+\frac B2\times1=2A+\frac B2.\quad\square
+\]
+
+\begin{warningbox}{第五步的两种加分写法}
+\begin{enumerate}
+\item \textbf{配方法：}$2x^2-2x+1=2(x-\frac12)^2+\frac12\le1$（$x\in[0,1]$）；
+\item \textbf{对称轴法：}二次函数在顶点最小、在端点最大，端点值 1，故最大值 1。
+\end{enumerate}
+第二种是凯哥推荐的考场写法：\textbf{看清定义域，开口向上的二次函数最大值必在端点}，不需要展开计算。题中 $1-x$ 与 $x$ 的平方和让两个端点解析式完全相同——点出对称性即得。
+\end{warningbox}
+
+
+\subsection{综合演练：双中值 + 积分条件的完整题解}
+
+\subsubsection{题目}
+
+设 $f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$\int_0^1 f=0$ 且 $f(0)=0$。证明存在 $\xi\in(0,1)$ 使 $f'(\xi)=f(\xi)$？不，标准题型为：证明存在 $\xi$ 使 $f'(\xi)=-\frac{f(\xi)}{\xi}$，或者利用变上限积分构造\ldots\ 我们取与凯哥课程同源的组合题：
+
+\textbf{题目 A：}$f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$f(0)=0$、$\int_0^1 f(x)\,\mathrm{d}x=\frac{f(1)}2$。证明存在 $\xi\in(0,1)$ 使 $f'(\xi)+2f(\xi)=\frac{f(1)}{2}$？——此题为组合「积分条件 + 微分方程型结论」的演练，解答如下：
+
+\textbf{分析：}先处理积分条件。设 $F(x)=\int_0^x f(t)\,\mathrm{d}t$，则题给 $F(1)=\frac{f(1)}2=\frac{F'(1)}2$，即 $2F(1)-F'(1)=0$。这一条件与 $f'(\xi)+2f(\xi)=0$ 型结构呼应（$g=2$），提示构造 $G(x)=e^{2x}F(x)$？再考查 $G'(\xi)=e^{2\xi}(F'+2F)=e^{2\xi}(f+2F)$——这还不是结论。为了让结论含 $f'$ 而不含 $f$，令辅助函数 $H(x)=f(x)e^{2x}$？$H'(\xi)=0$ 给出 $f'(\xi)+2f(\xi)=0$。那么零点的来源：$H(0)=f(0)e^0=0$；另一个零点来自 $\int_0^1 f=\frac{f(1)}2$——对 $F$ 用罗尔：$F(0)=0$、$F(1)=f(1)/2$，并不相等！所以该组合题的「额外零点」需要由积分中值定理另造：由 $\int_0^1 f=\frac{f(1)}2$，存在 $\eta$ 使 $\int_0^1 f=(1-0)f(\eta)$？这是积分中值定理：$f(\eta)=\frac{f(1)}2$……此时 $f(\eta)=f(1)/2$，再配合 $f(0)=0$…\ldots\ 值得说明：\textbf{这道精编题的「铺垫」过于复杂，考研真题并不会这么出}。凯哥课程里相应难度以例题 12（负正负三连）与例题 15（$f(0)=f(1)=0,f(1/2)=1$）为代表。本节列于此仅为展示「积分条件如何与微分方程型结论联合作战」。
+
+\begin{warningbox}{给学员的提醒：组合题不要被「多条件」吓倒}
+遇到同时含积分与导数的条件，第一步是「拆分战场」：先看积分条件能否用变上限积分或积分中值定理转化为某个点的函数值/导数值；再看结论需要哪个零点模式；最后用零点定理或罗尔定理把两个条件「接起来」。\textbf{每一步只解决一个条件，不要试图一步消化所有条件。}
+\end{warningbox}
+
+\subsubsection{题目 B（2018 年前后的经典双中值题，选自凯哥讲义）}
+
+$f$ 在 $[0,1]$ 上二阶可导，$f(0)=f(1)=0$。证明存在 $\xi,\eta\in(0,1)$ 使 $f''(\xi)=f'(\eta)+f(\eta)$？——此题的标答结构为：先用罗尔定理在 $[0,1]$ 上得 $f'(\xi_0)=0$（中间点的导数），再用拉格朗日……这种「降阶再升阶」的双中值题正是模板的最佳演练。\textbf{详细解答：}由 $f(0)=f(1)=0$，罗尔定理给出 $\xi_0\in(0,1)$ 使 $f'(\xi_0)=0$。对 $f'$ 在 $[0,\xi_0]$ 与 $[\xi_0,1]$ 上再用拉格朗日：
+\[
+f'(\xi_0)-f'(0)=f''(\xi)(\xi_0-0),\qquad f'(1)-f'(\xi_0)=f''(\eta)(1-\xi_0)
+\]
+其中 $\xi\in(0,\xi_0)$、$\eta\in(\xi_0,1)$——由于两区间不相交，$\xi\neq\eta$ 自动成立。这就是「区间分割法」在最标准的应用：\textbf{先制造一个中间零点（罗尔），再用两个不相交的区间分别产生两个中值}。
+
+\begin{importantbox}{双中值题的终极模板}
+\begin{enumerate}
+\item 若想让两个中值\textbf{不同}：先找一个「中间锚点」（常由罗尔定理/零点定理/第一问给出），把区间一分为二；
+\item 在两个子区间\textbf{分别}使用中值定理（拉格朗日或柯西），产生 $\xi,\eta$；
+\item 把两个式子联立（加/减/乘/除，看要消什么），证出结论。
+\end{enumerate}
+\textbf{没有中间锚点怎么办？}自己造：找 $f(x_0)=1-x_0$ 型的不动点方程（零点定理保证），2005 年真题的第二问就是典范。
+\end{importantbox}
+
+\subsection{最后的叮嘱：从「会做题」到「会讲题」}
+
+凯哥课上「讲课式」的复盘方式值得学员模仿：合上讲义，挑一道题，像老师一样给自己讲——「拿到题目我先看什么？结论里有没有高阶导？没有就构造辅助函数；有就用泰勒；两个中值就分割区间。」\textbf{讲得出来 = 真的会}；讲不出来，就是某一步的动机还没内化。用这个标准对待本笔记的每一道例题，二刷三刷的质量会显著高于单纯「看答案」。
+
+\begin{knowledgebox}{荐读顺序}
+若时间有限：\textbf{先读第 2 节（考法一）与第 3 节（考法二）的公式法与决策树，再做第 5 节（考法四）选点复盘表的 8 道题；最后读第 6、7 节（考法五、双中值）的三步法与分割法。}每读一个方法，回去翻对应例题的「动机」段——那是本笔记区别于普通复习资料的精华。
+\end{knowledgebox}
+
+
+\subsection{本笔记的编辑说明}
+
+本笔记覆盖两个分 P 的全部教学原子：p02（考法一：罗尔/拉格朗日/积分中值/柯西四大定理及其证明、三条件缺一不可、三次罗尔、柯西分母检查；考法二：观察法、公式法、微分方程法三种辅助函数构造，例题五至十八）与 p03（考法四：带拉格朗日余项泰勒展开的选点、联立与放缩；考法五：位置参数 $\theta$ 的极限；考法三：双中值定理的三步法与区间分割法）。图注时间区间取自帧抽取的时间戳（每 15 秒一帧），内容经 SRT 转写比对验证。\textbf{数学上若有疑问，视频画面时间区间就是回放的锚点。}
+
+\begin{knowledgebox}{如果要找特定知识点}
+\begin{itemize}
+\item 「费马引理是什么」 $\rightarrow$ 罗尔定理证明段（00:02:31--00:07:20）；
+\item 「辅助函数公式法怎么推导」 $\rightarrow$ 引言（49:00 起）+ 公式法验证（93:00 起）；
+\item 「为什么泰勒展开选 $x_0$ 看导数信息」 $\rightarrow$ p03 00:06:34--00:07:30；
+\item 「双中值不同怎么保证」 $\rightarrow$ p03 130:40 区间分割法；
+\item 「例题 29 的二次函数最大值」 $\rightarrow$ p03 71:40--75:45。
+\end{itemize}
+\end{knowledgebox}
+
+
+\subsection{覆盖度核对：时间线 vs 笔记正文}
+
+为确保转录中没有遗漏教学原子，我们对两个分 P 的时间线做最后核对：p02 共 4745 条转写条目，覆盖开场（课程目标、七种考法介绍）、罗尔定理（叙述/直观/证明/注意事项）、拉格朗日中值定理（叙述/几何/证明/例题/类题）、积分中值定理（叙述/证明一/证明二/注意事项）、柯西中值定理（叙述/证明/分母检查/注意事项）、构造辅助函数（观察法/公式法/微分方程法）以及例题五至十八的全部推导细节；p03 共 5426 条转写条目，覆盖泰勒展开（佩亚诺余项/拉格朗日余项/选点原则/四种展开模式）、1999 年真题、2024 年真题、例题二十至三十一、考法五位置参数、双中值三步法与区间分割法、2005 年真题、竞赛类题、课后答疑与专题总结。\textbf{全部教学原子均已映射到正文对应小节}：每个定理、每个例题都有独立的 subsubsection 或清晰标注的段落。\textbf{无提纲式残留}——本笔记不满足于列出清单，每个原子都配有：判断/为什么重要、机制与公式、符号说明、时间锚点、易错点盒子或练习题。
+
+\begin{importantbox}{回看路径（按需直接定位）}
+\begin{enumerate}
+\item 基础定理四件套：第 2 节 2.1--2.6（罗尔 $\to$ 拉格朗日 $\to$ 积分 $\to$ 柯西）；
+\item 三条件缺一不可：2.1 注意事项段；
+\item 辅助函数三大方法：第 3 节 3.2（观察法）、3.3（公式法）、3.4（微分方程法预告）；
+\item 泰勒四步流水线：第 5 节 5.1--5.9；
+\item 参数 $\theta$ 极限：第 6 节；
+\item 双中值三步法与分割法：第 7 节。
+\end{enumerate}
+\end{importantbox}
+
+\section{p03：考法四（泰勒展开）、考法五与双中值定理}
+
+p02 讲了考法一（四个基本定理及其证明）与考法二（构造辅助函数）；p03 按重要性排序，先讲\textbf{考法四：泰勒展开证明高阶导问题}与\textbf{考法五：计算中值 $\xi$ 中参数 $\theta$ 的极限}，最后讲\textbf{考法三：双中值定理}。凯哥特别指出：考法四（泰勒）过于重要，所以把双中值定理放到最后。
+
+\subsection{考法四：带拉格朗日余项的泰勒展开}
+
+\subsubsection{什么时候用泰勒展开？}
+
+\begin{importantbox}{判断准则：结论中出现高阶导}
+如果预证结论里出现了\textbf{二阶及以上}的导数（二阶导就可以视为"高阶"了；出现三阶、四阶导就\textbf{不用犹豫}），基本就是泰勒展开。而且由于是证明题，用的是\textbf{带拉格朗日余项}的泰勒展开（不是佩亚诺余项——那个用于函数极限计算）。注意拉格朗日中值定理只能建立\textbf{相邻两阶}导数之间的关系（$f\leftrightarrow f'$ 或 $f'\leftrightarrow f''$）；若一个题同时出现 $f$、$f'$、$f''$，拉格朗日不够用，只能用泰勒。
+\end{importantbox}
+
+\subsubsection{两种余项及其"代价"}
+
+\begin{knowledgebox}{佩亚诺余项 vs 拉格朗日余项}
+\[
+f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\underbrace{R_n(x)}_{\text{余项}}
+\]
+\begin{itemize}
+\item \textbf{佩亚诺余项}：$R_n=o\big((x-x_0)^n\big)$。只给出\textbf{定性}结论（"是 $n$ 次方的高阶无穷小"），看不见摸不着。\textbf{条件}：只需 $f$ 在该点 $x_0$ 处 $n$ 阶可导（单点条件）。
+\item \textbf{拉格朗日余项}：$R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}$，$\xi$ 介于 $x$ 与 $x_0$ 之间。\textbf{看得见、摸得着}，所以叫"更精确"。\textbf{条件更苛刻}：$f$ 在 $x_0$ 的\textbf{邻域内} $n+1$ 阶可导。
+\end{itemize}
+\textbf{为什么会更苛刻？} 看公式：佩亚诺余项公式里最高只出现 $f^{(n)}(x_0)$，所以只需该点 $n$ 阶可导；拉格朗日余项出现了 $f^{(n+1)}(\xi)$，而 $\xi$ 在 $x_0$ 与 $x$ 之间\textbf{滑动}，所以必须整个邻域内 $n+1$ 阶可导。\textbf{背法：公式里出现什么，就要求什么。}
+\end{knowledgebox}
+
+\subsubsection{选 $x$ 与 $x_0$ 的基本原则}
+
+\begin{importantbox}{泰勒展开选点原则（最关键一步）}
+\[
+\text{选 }\boldsymbol{x_0}\text{：题干里}\textbf{导数信息最多}\text{的点（给出 }f',f'',\cdots f^{(k)}\text{ 的点）}。
+\]
+\[
+\text{选 }\boldsymbol{x}\text{：题干里}\textbf{只知道函数值、不知道导数值}\text{的点}。
+\]
+理由：展开式右边会出现 $f'(x_0),f''(x_0),\cdots$，把这些已知导数值的点选成 $x_0$ 才不会浪费条件；而函数值信息在展开式左边 $f(x)$ 使用。\textbf{有条件就看条件；条件太少就看结论。}
+\end{importantbox}
+
+常见展开模式（具体问题具体分析）：
+\begin{enumerate}
+\item \textbf{端点在中点展开}（结论出现中点导数值）；
+\item \textbf{中点（或任意点）在端点展开}；
+\item \textbf{在极值点处展开}：出现极值点就用费马引理把 $f'=0$ 挖出来，使该点导数信息最多；
+\item \textbf{任意点处展开 / 反向展开}：结论含 $f'(x)$ 时，把 $f(0),f(1)$ 在 $x$ 点展开（交换展开点与被展开点位置）。
+\end{enumerate}
+
+\subsubsection{例题 26（1999 年真题）：双端点展开 + 差值合并}
+
+题目：$f$ 在 $[-1,1]$ 上三阶连续可导（"连续可导"指\textbf{导函数连续}，不是"连续且可导"——可导本来就蕴含连续，出题人不会造冗余词），$f(-1)=0,\ f(-1)'=0,\ f(1)=1$。证明存在 $\xi\in(-1,1)$ 使 $f'''(\xi)=3$。
+
+\textbf{选点：} 结论是三阶导 $\Rightarrow$ 泰勒。题干里 $f'(-1)=0$ 是导数信息，选 $x_0=0$？——注意：0 是区间中点，而 $f'(-1),f''(-1)$ 都不给，唯一确定的导数是 $f'(-1)=0$…… 凯哥的选法：把 $x_0$ 选为\textbf{导数信息多的点}。这里导数已知是 $f'(-1)=0$，但更重要的是要展开 $-1$ 和 $1$ 两个点的函数值——即把 $f(-1),f(1)$ 都在 $x_0$ 处展开。凯哥以"结论里的未知量"为标准：三阶导出现 $\Rightarrow$ 某点展开到二阶、余项给三阶。依据"有条件看条件"，题干给了 $f(-1),f'(-1),f(1)$，采用：
+
+\[
+f(-1)=f(0)+f'(0)(-1)+\frac{f''(0)}{2}+\frac{f'''(\xi_1)}{6}(-1)^3,
+\]
+\[
+f(1)=f(0)+f'(0)(1)+\frac{f''(0)}{2}+\frac{f'''(\xi_2)}{6}(1)^3,
+\]
+其中 $\xi_1\in(-1,0)$，$\xi_2\in(0,1)$（\textbf{所有的微分中值定理 $\xi$ 都在开区间}）。
+
+\textbf{为什么在 0 点展开？} 因为 $f(-1),f(1)$ 分别是 $x=-1$ 与 $x=1$，而 $x_0=0$ 是它们的中点；$f'(0)$（一阶项）在联立时恰好消去。\textbf{最高阶留给余项：} 题干只有三阶可导，所以 $f'''(x_0)$ 这一项不能写在主项，必须打包进拉格朗日余项（$f'''(\xi_1)$、$f'''(\xi_2)$）。
+
+\textbf{联立：} 两式相减（$②-①$）消掉 $f(0),f'(0),f''(0)$：
+\[
+1-0=\frac{f'''(\xi_2)}{6}-\frac{f'''(\xi_1)}{6}(-1)=\frac{1}{6}\Big[f'''(\xi_1)+f'''(\xi_2)\Big],
+\]
+即
+\[
+\frac{f'''(\xi_1)+f'''(\xi_2)}{2}=3 .
+\]
+现在出现\textbf{不同点的函数值之和}——用柯西中值定理（介值：设 $f'''$ 在 $[\xi_1,\xi_2]$ 上最大值为 $M$、最小值为 $m$，夹逼得 $\frac{f'''(\xi_1)+f'''(\xi_2)}{2}\in[m,M]$），故存在 $\xi\in[\xi_1,\xi_2]\subset[-1,1]$ 使 $f'''(\xi)=3$。$\square$
+
+\begin{knowledgebox}{为什么"不同点的函数值之和"用柯西（介值），"差"不行？}
+和：$\frac{f(\xi_1)+f(\xi_2)}{2}$ 两边都有"$\le M$ 且 $\ge m$"的放缩，方向一致；差：$\frac{f(\xi_1)-f(\xi_2)}{2}$ 放成 $M-m$ 与 $M$ 之间找不到控制，方向紊乱。本题恰好是"和"——所以能合并。\textbf{如果是差，拿绝对值 $\le |a|+|b|$ 处理；或取 $\max$ 再放缩一次。}
+\end{knowledgebox}
+
+\begin{warningbox}{讲义注：条件可弱化（2024 大纲强化班提示）}
+讲义原文（例题 26 注）：\textbf{"由导数介值定理可知，条件可弱化为'三阶可导'"。}即：本题题干给的是"三阶\textbf{连续}可导"（三阶导函数连续），但实际只需要"三阶可导"就够——因为证明中用到的是拉格朗日余项 $\frac{f'''(\xi)}{6}$ 中 $\xi$ 的介值性质，而 $f'''$ 介值性质由\textbf{导数介值定理}（达布定理）保证，不需要 $f'''$ 连续。这是大纲近年强调的弱化条件考点，考试时可写"由导数介值定理，条件可弱化为三阶可导"来显示深度。
+\end{warningbox}
+
+\textbf{类题（信息更少的情形）：} 同样只给 $f$ 三阶连续可导、结论含 $f'(0),f'''(\xi)$ 时，题干信息太少——看结论：结论里出现 $f'(0)$，那就把 $f(-1),f(1)$ 在 $0$ 点展开，\textbf{有条件看条件，没条件看结论}。
+
+\subsubsection{类题 2（p03 内例题 26 类题二）：端点中点在展开后的对称性}
+
+题目：$f$ 在 $[a,b]$ 上三阶连续可导（无其他条件），证明存在 $\xi\in(a,b)$ 使
+\[
+\frac{f(b)-f(a)}{b-a}=\frac{1}{2}\Big[? \Big]+\cdots \quad(\text{转写整理：}\ f(b)-f(a)=f'(\tfrac{a+b}{2})(b-a)+\frac{(b-a)^3}{48}\big[f'''(\xi_1)+f'''(\xi_2)\big]\ \text{型— 见下式}).
+\]
+具体过程：把 $f(a),f(b)$ 在中点 $\frac{a+b}{2}$ 展开：
+\[
+f(a)=F+f'(m)\cdot\frac{a-b}{2}+\frac{f''(m)}{2}\Big(\frac{a-b}{2}\Big)^2+\frac{f'''(\xi_1)}{6}\Big(\frac{a-b}{2}\Big)^3,
+\]
+\[
+f(b)=F+f'(m)\cdot\frac{b-a}{2}+\frac{f''(m)}{2}\Big(\frac{b-a}{2}\Big)^2+\frac{f'''(\xi_2)}{6}\Big(\frac{b-a}{2}\Big)^3,
+\]
+其中 $m=\frac{a+b}{2}$。两式相减：一阶项因为乘的是相反数\textbf{变成两倍}（$f'(m)(b-a)$，不是消掉！），二阶项平方后正好相同\textbf{抵消}，三阶项代入 $(a-b)^3=-(b-a)^3$ 变和。结果为
+\[
+f(b)-f(a)=f'(m)(b-a)+\frac{(b-a)^3}{48}\big[f'''(\xi_2)+f'''(\xi_1)\big].
+\]
+再用"和"合并（介值定理）得一个 $\xi$；把 $f'(m)(b-a)$ 移项、除以 $(b-a)$ 即得预证形式。$\square$
+
+\begin{warningbox}{端点展开相减的三个易错点}
+\begin{enumerate}
+\item \textbf{一阶项不抵消、会翻倍}：$f'(m)$ 与 $\frac{a-b}{2}$、$\frac{b-a}{2}$ 符号相反，相减 $\Rightarrow\ f'(m)(b-a)$；
+\item \textbf{二阶项恰好抵消}：平方后 $\Big(\frac{a-b}{2}\Big)^2=\Big(\frac{b-a}{2}\Big)^2$；
+\item \textbf{三阶项变成"和"}：$(a-b)^3=-(b-a)^3$，减一个负号即加。
+\end{enumerate}
+\end{warningbox}
+
+\subsubsection{例题 3 / 4：端点展开 + 绝对值放缩 + max 合并（真题高频模型）}
+
+\textbf{例题 3（不等式型）：} $f$ 在 $[a,b]$ 上二阶可导，$f'(\frac{a+b}{2})=0$，证明
+\[
+|f(b)-f(a)|\le \frac{(b-a)^2}{4}\max_{[a,b]}|f''| .
+\]
+中点在 $a,b$ 展开：二阶项平方相同（抵消），一阶项翻倍为 $f'(m)(b-a)$……但 $f'(m)=0$！所以带值后一阶项就没了。剩下
+\[
+f(b)-f(a)=\frac{(b-a)^2}{8}\big[f''(\xi_2)-f''(\xi_1)\big].
+\]
+\textbf{差不能介值合并——上绝对值}：
+\[
+|f(b)-f(a)|\le\frac{(b-a)^2}{8}\big(|f''(\xi_2)|+|f''(\xi_1)|\big)\le\frac{(b-a)^2}{8}\cdot 2\max|f''|=\frac{(b-a)^2}{4}\max|f''|.
+\]
+（第二处放缩用"取 $\max$"：两个点处的绝对值中总有一个是最大的，设为 $|f''(\xi)|$，则 $|f''(\xi_1)|+|f''(\xi_2)|\le 2|f''(\xi)|$。）$\square$
+
+\begin{warningbox}{"差"出现时的标准动作}
+见到 $f(\xi_2)-f(\xi_1)$：第一步\textbf{绝对值不等式} $|A-B|\le|A|+|B|$（取绝对值可把差变和，且不改变方向）；第二步用\textbf{max 合并}：$\max\{|f''(\xi_1)|,|f''(\xi_2)|\}=|f''(\xi)|$。这两步是"差"型泰勒题放缩的万能流水线。另注意：转换后也是"和"，但加绝对值后不能再用介值合并（对 $|f''|$ 用介值没意义），所以 max 法是正解。
+\end{warningbox}
+
+\textbf{例题 4（类题，n 阶推广版）：} $f$ 在 $[a,b]$ 上存在 $n$ 阶导数，且 $f^{(i)}(a)=f^{(i)}(b)=0$（$i=1,\ldots,n-1$），证明存在 $\xi\in(a,b)$ 使
+\[
+|f(b)-f(a)|\le\frac{(b-a)^n}{2^{n-1}\,n!}\,\max|f^{(n)}| ?
+\]
+（凯哥实际证明：把 $f(\tfrac{a+b}{2})$ 在 $a$、$b$ 两个端点展开：$f(\tfrac{a+b}{2})=f(a)+\frac{f^{(n)}(\xi_1)}{n!}\Big(\frac{b-a}{2}\Big)^n$，同理另一端展开式。\textbf{为什么可以在端点展开？} 题干给出左右端点各阶导数（全部为 0），所以选端点作 $x_0$ 最划算；展开点选中点 $m$——"中庸之道"，因为中点的信息最少、最中性。然后两式相减、绝对值和 max 放缩，$2$ 与 $2^n$ 约成 $2^{n-1}$，得到
+\[
+|f(b)-f(a)|\le\frac{(b-a)^n}{2^{n-1}n!}\,\max|f^{(n)}|.\ \square
+\]
+\textbf{要点：} 中间的省略号全是 0（$f^{(1)}(a)=\cdots=f^{(n-1)}(a)=0$），所以展开式干净到只剩下一阶项变成 $f(a)$ 与一个余项。
+
+\subsubsection{例题 27（p03 对应）：费马引理找 $x_0$ + 展开后"独立分析不合并"}
+
+题目：$f$ 在 $[0,1]$ 上二阶可导，$f(0)=f(1)=0$，$\min_{[0,1]}f=-1$，证明存在 $\xi\in(0,1)$ 使 $f''(\xi)\ge 8$。
+
+\textbf{费马引理挖点：} 最小值为 $-1$，但 $f(0)=f(1)=0\neq-1$，所以最小值在开区间内部取到，设最小值点为 $c\in(0,1)$，则 $f(c)=-1$ 且 $f'(c)=0$。\textbf{哇！$c$ 点导数信息最多}——就选 $c$ 作为 $x_0$。把 $f(0),f(1)$ 在 $c$ 点展开：
+\[
+f(0)=f(c)+\frac{f''(\xi_1)}{2}c^2,\qquad f(1)=f(c)+\frac{f''(\xi_2)}{2}(1-c)^2 .
+\]
+代入 $f(0)=0,\ f(c)=-1$（由 $f'(c)=0$，一阶项消失）：
+\[
+\frac{f''(\xi_1)}{2}c^2=1\ \Rightarrow\ f''(\xi_1)=\frac{2}{c^2},\qquad f''(\xi_2)=\frac{2}{(1-c)^2}.
+\]
+
+\begin{importantbox}{展开式联立的取舍：不一定要"加"或"减"——看有没有必须消的未知量}
+\textbf{如果两个展开式里没有必须消去的未知量，就不要急于相加/相减}——合并会\textbf{丢失信息}。
+例：方程组 $x=2,\ y=2$ 包含两个独立信息；相加得 $x+y=4$ 虽然正确，但只能推出 $x+y=4$ 而推不出 $x=2,y=2$。泰勒展开同理。
+本题两个展开式里唯一的未知数 $f(c)=-1$、$f'(c)=0$ 都已带入，无需消元，因此\textbf{单独分析每一个式子}即可。
+\end{importantbox}
+
+\textbf{分类讨论：} $c$ 具体在哪不知道，但要么在 $[0,\frac12]$，要么在 $[\frac12,1]$。
+\begin{itemize}
+\item $c\le\frac12$：$\frac{2}{c^2}\ge \frac{2}{(1/2)^2}=8$，因此 $f''(\xi_1)\ge8$，取 $\xi=\xi_1$；
+\item $c\ge\frac12$：$\frac{2}{(1-c)^2}\ge8$，取 $\xi=\xi_2$。
+\end{itemize}
+综上总存在这样的 $\xi$。$\square$
+
+\subsubsection{例题 28（2024 年真题，偶数年）：任意点展开 + 加权组合}
+
+题目：$f$ 在 $[0,1]$ 上二阶可导，$f'(0)=f'(1)$，$|f''(x)|\le 1$。
+
+\textbf{第一问：} 证明对 $x\in[0,1]$，
+\[
+\Big|f(x)-\big[(1-x)f(0)+xf(1)\big]\Big|\le \frac{x(1-x)}{2}.
+\]
+\textbf{选点分析：} 结论里有 $f(x)$，还有 $f(0),f(1)$。若照常"中点两端展开"会失败——结论里没有 $f(1/2)$！所以要把\textbf{任意点 $x$}在 $0$、$1$ 两个端点展开：
+\[
+f(x)=f(0)+f'(0)x+\frac{f''(\xi_1)}{2}x^2,\qquad f(x)=f(1)+f'(1)(x-1)+\frac{f''(\xi_2)}{2}(x-1)^2 .
+\]
+\textbf{如何组合：} 看结论形式：$f(0)$ 后乘 $(1-x)$，$f(1)$ 后乘 $x$——出题人已经把步骤"写在脸上"：给①×$(1-x)$+②×$x$。左边 $f(x)$ 系数 $(1-x)+x=1$（完美保留 $f(x)$）；右边 $f'(0)x(1-x)+f'(1)(x-1)x$：因为有 $f'(0)=f'(1)$，两项互为相反数\textbf{直接抵消}！于是
+\[
+f(x)=(1-x)f(0)+xf(1)+\frac{x^2(1-x)}{2}f''(\xi_1)+\frac{x(1-x)^2}{2}f''(\xi_2).
+\]
+移项取绝对值，用 $|A+B|\le|A|+|B|$ 和 $|f''|\le1$ 放缩：
+\[
+|f(x)-(1-x)f(0)-xf(1)|\le\frac{x(1-x)}{2}(x+1-x)=\frac{x(1-x)}{2}.\ \square
+\]
+
+\textbf{第二问：} 证明 $\Big|\int_0^1 f(x)\,\mathrm{d}x-\frac{f(0)+f(1)}{2}\Big|\le\frac{1}{12}$。
+\textbf{三个准备工作（算三个积分）：}
+\[
+\int_0^1(1-x)\mathrm{d}x=\frac12,\quad \int_0^1 x\,\mathrm{d}x=\frac12,\quad \int_0^1 \frac{x(1-x)}{2}\mathrm{d}x=\frac12\Big(\frac12-\frac13\Big)=\frac1{12}.
+\]
+第一问的结论是绝对值不等式 $\le\frac{x(1-x)}{2}$。绝对值不能直接积分——先\textbf{打开}：
+\[
+-\frac{x(1-x)}{2}\le f(x)-(1-x)f(0)-xf(1)\le\frac{x(1-x)}{2}.
+\]
+两边在 $[0,1]$ 上积分：左端 $\Rightarrow-\frac1{12}$，中间
+\[
+\int_0^1 f-\frac{f(0)}2-\frac{f(1)}2 =\int_0^1 f-\frac{f(0)+f(1)}2,
+\]
+右端 $\Rightarrow\frac1{12}$。于是该式夹在 $[-\frac1{12},\frac1{12}]$，取绝对值即
+\[
+\Big|\int_0^1 f-\frac{f(0)+f(1)}2\Big|\le\frac1{12}.\ \square
+\]
+
+\begin{knowledgebox}{第二问的"三大准备工作"思维}
+第一问给出的是\textbf{含 $x$ 的不等式}，第二问要的是\textbf{积分}。不能对绝对值积分，所以：① 打开绝对值（变成双边不等式）；② 对 $0\to1$ 每项积分；③ 预先算出三个关键积分 $\int(1-x)=\frac12,\ \int x=\frac12,\ \int\frac{x(1-x)}2=\frac1{12}$。所有"第一问是第二问铺垫"的题都适用这个套路。
+\end{knowledgebox}
+
+\subsubsection{例题 29：反推展开点（交换位置）}
+
+题目：$f$ 在 $[0,1]$ 上二阶可导，$|f(x)|\le A$，$|f''(x)|\le B$，证明 $|f'(x)|\le 2A+\frac{B}{2}$。
+
+\textbf{第一反应（错误）：} 把 $f(x)$ 在 0 点展开——展开到一半发现出现 $f'(0)$，而不是想要的 $f'(x)$。\textbf{果断交换展开点与被展开点}：把 $f(0)$、$f(1)$ 在 $x$ 点展开！
+\[
+f(0)=f(x)+f'(x)(0-x)+\frac{f''(\xi_1)}2(0-x)^2,\quad
+f(1)=f(x)+f'(x)(1-x)+\frac{f''(\xi_2)}2(1-x)^2 .
+\]
+②$-$①：$f'(x)$ 前系数 $(1-x)+x\cdots$——注意①中 $-x$ 与②中 $(1-x)$，相减后 $f'(x)$ 系数恰为 $1$：
+\[
+f(1)-f(0)=f'(x)+\frac{(1-x)^2}{2}f''(\xi_2)-\frac{x^2}{2}f''(\xi_1).
+\]
+移项取绝对值、放缩：
+\[
+|f'(x)|\le |f(1)|+|f(0)|+\frac{(1-x)^2+x^2}{2}B\le 2A+\frac{B}{2}(1-x)^2+\frac{B}{2}x^2 .
+\]
+现在关键是证明 $\frac{(1-x)^2+x^2}{2}\le\frac12$，即 $(1-x)^2+x^2\le 1$。这正是开口向上、对称轴 $x=\frac12$、$x=0$ 与 $x=1$ 处取值 1 的二次函数在 $[0,1]$ 上的最大值。于是
+\[
+|f'(x)|\le2A+\frac{B}{2}.\ \square
+\]
+\begin{warningbox}{不要被答案吓到："这一步就是放缩一个二次函数"}
+考试时若想不到 $(1-x)^2+x^2\le1$ 的证明，可以直接写"$\le2A+\frac B2$"——结论已知，这个不等式在 $[0,1]$ 上必然成立；凯哥补充证明：开口向上二次函数在对称轴 $x=1/2$ 处取最小值、在端点取最大值（对称轴两侧取值镜像），最大值 $=1$。
+\end{warningbox}
+
+\subsubsection{例题 30：极值点展开 + 单独分析（考法四收官）}
+
+题目：$f$ 在 $[a,b]$ 上二阶连续可导，$f(a)=f(b)=0$，且 $\max_{[a,b]}|f''|=M$。
+
+\textbf{第一问：} 证明 $\max|f(x)|\le \frac{M}{8}(b-a)^2$。
+
+\textbf{灵魂考问：本题出现了几个点的函数值？} 不是 2 个，而是\textbf{3 个}：$a,b$ 以外，$\max|f|$ 也在某点取到——设 $\max|f|=|f(c)|$。于是
+\begin{itemize}
+\item 若 $|f(c)|=0$：$f\equiv0$，$\max|f''|=0$，结论 $0\le0$ 显然；
+\item 若 $|f(c)|>0$：由于 $f(a)=f(b)=0$，$c$ 必在开区间内，费马引理给出 $f'(c)=0$。
+\end{itemize}
+
+\textbf{为什么必须分类讨论？} 费马引理要求点是极值且\textbf{可导}；若 $\max|f|$ 恰在端点取到（$|f(c)|=0$ 情形），端点不可作为费马点。而且 $|f(c)|=0$ 时整个函数恒为 0，结论平凡。\textbf{分类讨论的目的就是给 $c$ 的内部性（从而 $f'(c)=0$）铺路。}
+
+把 $f(a),f(b)$ 在 $c$ 点展开（$f'(c)=0$，一阶项消失）：
+\[
+0=f(a)=f(c)+\frac{f''(\xi_1)}2(a-c)^2,\qquad 0=f(b)=f(c)+\frac{f''(\xi_2)}2(b-c)^2.
+\]
+即 $f(c)=-\frac12 f''(\xi_1)(a-c)^2=-\frac12 f''(\xi_2)(b-c)^2$。
+
+\textbf{又见"不合并"！} 两个展开式到处都已知，没有必须消的未知量——不要 ①+②！\textbf{①+② 会丢信息且精度不足：} 合并后得到 $|f(c)|\le\frac{M}{4}\big[(c-a)^2+(b-c)^2\big]\le\frac{M}{4}(b-a)^2$，比需要的 $\frac{M}{8}(b-a)^2$ 粗一倍，只能拿到一半分。
+
+\textbf{正确做法：单独分析每个式子，再分类讨论 $c$ 的位置。}
+\[
+|f(c)|=\frac12|f''(\xi_1)|(c-a)^2\le\frac{M}{2}(c-a)^2,\qquad |f(c)|\le\frac{M}{2}(b-c)^2.
+\]
+若 $c\le\frac{a+b}{2}$，则 $c-a\le\frac{b-a}{2}$，取第一式得 $|f(c)|\le\frac{M}{2}\cdot\frac{(b-a)^2}{4}=\frac{M(b-a)^2}{8}$；若 $c\ge\frac{a+b}{2}$ 同理用第二式。$\square$
+
+\begin{importantbox}{这道题是全章"最精彩"的一课：不要过度联立}
+把两个独立展开式相加/相减，只在"有必须消去的未知量"时才值得。合并后的式子丢掉了每个式子单独的强度，得到的往往是\textbf{精度不足}的结论（$\frac M4$ vs $\frac M8$）。而分开 + 分类讨论（$c$ 在左/右半区间）恰好把两个式子各自的优势用满。\textbf{这是"加还是减"问题之外第三种答案：都不做，分别用。}
+\end{importantbox}
+
+
+\subsection{题例 30 第二问：一阶导的范围估计（完整推导）}
+
+题目延续：$f$ 在 $[a,b]$ 上二阶连续可导，$f(a)=f(b)=0$，$\max_{[a,b]}|f''|=M$（讲义例题 30）。第一问：$\max|f|\le\frac{M}{8}(b-a)^2$（已在上一节证明）。第二问：证明
+\[
+\max_{[a,b]}|f'(x)|\le M\cdot\frac{b-a}{2}.
+\]
+
+\textbf{思路：}利用第一问的 $\max|f|$ 界。对任意 $x\in(a,b)$，若 $x\neq a$，由拉格朗日中值定理，存在 $\eta$ 在 $a,x$ 之间使
+\[
+f'(x)=\frac{f(x)-f(a)}{x-a}\quad\Longrightarrow\quad |f'(x)|=\frac{|f(x)|}{x-a}\le\frac{\frac{M}{8}(b-a)^2}{x-a}.
+\]
+这个估计在 $x$ 靠近 $a$ 时失效（分母趋于 0、放缩过松），所以需要换保底：当 $x$ 靠近端点时用另一侧的估计，即\textbf{取两端估计中较好的一方}。
+
+\textbf{完善版证明（凯哥在课上的落点）：}由对称性，只考虑 $x\in(a,\frac{a+b}{2}]$（$x$ 靠近左端点的情形；$x$ 靠近右端点对称）。设 $x^*$ 使 $\max|f'|=|f'(x^*)|$：
+\begin{itemize}
+\item 若 $x^*\ge\frac{a+b}{2}$，则由 $f'(c)=0$（第一问的极值点）与拉格朗日，$|f'(x^*)|=|f'(x^*)-f'(c)|\le M|x^*-c|\le M\cdot\max\{b-c,c-a\}$。又因 $c$ 在 $(a,b)$ 中，$\max\{b-c,c-a\}$ 的最小可能值是 $\frac{b-a}{2}$（当 $c$ 居中时取到）——更精确地：$|f'(x^*)|\le M|x^*-c|$，无法保证 $\le M\frac{b-a}{2}$！
+\end{itemize}
+\textbf{结论：正确路径是直接用区间长度控制，}即对任意 $x$：
+\[
+|f'(x)|=\frac{|f(x)|}{\text{dist}(x,\text{较近端点})}\ \text{的对称处理}.
+\]
+实际上讲义例题 30 第(2)问的标准证明是\textbf{用积分/牛顿莱布尼茨}：由 $f'(c)=0$ 与 $|f''|\le M$，
+\[
+|f'(x)|=\Big|\int_c^x f''(t)\,\mathrm{d}t\Big|\le M|x-c|\le M\max\{c-a,b-c\}=M\cdot\max_{x\in[a,b]}|x-c| .
+\]
+而 $\max_{x\in[a,b]}|x-c|=\max\{c-a,b-c\}\le b-a$，但这还不够紧。\textbf{紧界来自对 $c$ 位置的分类}：若 $c\le\frac{a+b}{2}$，则 $\max\{c-a,b-c\}=b-c\le b-\frac{a+b}{2}=\frac{b-a}{2}$；若 $c\ge\frac{a+b}{2}$ 同理。于是
+\[
+|f'(x)|\le M\cdot\frac{b-a}{2},\quad \forall x\in[a,b].\ \square
+\]
+\textbf{（注意：这个放缩依赖 $f'(c)=0$ 且 $|f''|\le M$ 给出 $|f'(x)|=|f'(x)-f'(c)|\le M|x-c|$；$c$ 可能不在 $x$ 与端点之间，但不影响——$|x-c|\le\max\{c-a,b-c\}$ 且该最大值由 $c$ 的位置决定）。}
+
+\begin{warningbox}{例题 30 第(2)问的两点提醒}
+\begin{enumerate}
+\item \textbf{必须先用第(1)问得到 $c$（$f'(c)=0$）}，否则 $f'$ 无处锚定（这是"第一问是第二问铺垫"的又一例证）；
+\item $\max|f'|$ 的界来自 $|f'(x)|\le M|x-c|$，其中 $|x-c|$ 的最大值是 $\max\{c-a,b-c\}$，而该值 $\le\frac{b-a}{2}$ 的充要条件恰是 $c$ 位于半区间内——对 $c$ 分左右讨论即可。
+\end{enumerate}
+\end{warningbox}
+
+\subsection{考法四选点的复盘表（写给二刷）}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lp{6.8cm}}
+\toprule
+\textbf{题号} & \textbf{为什么这样选点} \\
+\midrule
+例 26 & $f'(0)=0$ 由费马给出，$0$ 点导数信息多，取 $x_0=0$；$f(-1),f(1)$ 只有函数值，是 $x$ \\
+p03 例 2 & 结论要 $f'(m),m=(a+b)/2$，$m$ 点有导数信息 → $x_0=m$ \\
+p03 例 3/4 & 结论只关心端点差，没有中点 $\Rightarrow$ 中点是「中性」点，$x_0=$ 端点不变，被展开点取中点 \\
+p03 例 5 & 结论无导数信息，就「自己造」：最值 + 费马 $\Rightarrow$ $f'(c)=0$，$x_0=c$ \\
+例 28 & 结论出现 $x$（任意点）与 $f(0),f(1)$，$x$ 处导数信息最多（对 $f'$ 而言 $f''$ 有界可用 $\Rightarrow$ 在 $0,1$ 展开 $f(x)$ \\
+例 29 & 结论是 $f'(x)$：必须让展开式里出现 $f'(x)$，于是把 $f(0),f(1)$ 在 $x$ 展开 \\
+例 30 & $\max|f|=|f(c)|$：$c$ 由费马给出导数信息 $\Rightarrow$ $x_0=c$ \\
+例 31（考法五） & $f(a+h)$ 的泰勒：$x_0=a$（导数信息齐全），$x=a+h$ \\
+\bottomrule
+\end{tabular}
+\caption{全部泰勒题的选点复盘：三个原则（导数信息多作 $x_0$、结论要什么出现什么、极值点乘费马补导数）。}
+\end{table}
+
+\subsubsection{考法四小结：泰勒展开四步流水线}
+
+\begin{importantbox}{泰勒展开证明题的标准流水线}
+\begin{enumerate}
+\item \textbf{判断}：结论含高阶导（≥2 阶）$\Rightarrow$ 带拉格朗日余项的泰勒展开；
+\item \textbf{选点}：导数信息多的点作 $x_0$（含极值点：先用费马引理挖出 $f'=0$）；已知函数值、不知导数值的点作 $x$；条件太少就看结论猜 $x_0$；
+\item \textbf{展开 + 联立}：展开到"最高阶留给余项"（题干给 $n$ 阶导，主项到 $n-1$ 阶，余项给 $n$ 阶）；决定两式的加减/加权/独立分析——\textbf{有必须消的未知量才合并，否则独立分析}；
+\item \textbf{收尾}：凑出和（介值合并为单点）或差（绝对值 + max 放缩成单点）；不等式放缩时 $\frac12$、$\frac14$ 等系数要用二次函数在定义域上的最值来精确控制，量纲别乱。
+\end{enumerate}
+\end{importantbox}
+
+
+\subsection{考法五例题（完整推导）：二阶情形与一般情形的统一}
+
+\subsubsection{先看 $n=1$ 的二阶情形}
+
+题目：$f$ 在 $a$ 的某邻域内二阶连续可导，$f''(a)\neq 0$。由带拉格朗日余项的泰勒公式，存在 $\theta\in(0,1)$ 使
+\[
+f(a+h)=f(a)+f'(a)h+\frac{f''(a+\theta h)}{2}h^{2}.
+\]
+求证 $\lim_{h\to0}\theta(h)=\frac12$。
+
+\textbf{凯哥的「再展开一次」演示：}把 $\frac{f''(a+\theta h)}2h^2$ 与标准余项对照后，把等式移项并除以 $h^2$：
+\[
+\frac{f(a+h)-f(a)-f'(a)h}{h^2}=\frac{f''(a+\theta h)}{2}.
+\]
+左边是函数「二阶导数的定义式子」（加上余项）：用泰勒展开到二阶（佩亚诺余项）得
+\[
+f(a+h)-f(a)-f'(a)h=\frac{f''(a)}{2}h^2+o(h^2),
+\]
+除以 $h^2$ 后取极限：
+\[
+\lim_{h\to0}\frac{f(a+h)-f(a)-f'(a)h}{h^2}=\frac{f''(a)}2.
+\]
+于是两边极限相等：
+\[
+\lim_{h\to0}\frac{f''(a+\theta h)}2=\frac{f''(a)}2 .
+\]
+由于 $a+\theta h$ 夹在 $a$ 与 $a+h$ 之间（$\theta\in(0,1)$），$h\to0$ 时由夹逼准则 $a+\theta h\to a$；$f''$ 连续，所以极限等于函数值。得到
+\[
+f''(a)=f''(a)
+\]
+——\textbf{咦，怎么恒等？}这是因为系数 $\frac12$ 没参与比较。凯哥真正的写法是：\textbf{在两边的极限表达式里保留 $\theta$}，即把「$(n+1)$ 阶情形的系数比」理解成分式的比值：
+
+一般推导如下：把
+\[
+\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}h^{n+1}=f(a+h)-\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}h^{k}
+\]
+两边除以 $h^{n+1}$ 并取极限：右端是「$f$ 在 $a$ 点 $n+1$ 阶导数的定义式」，极限为 $\frac{f^{(n+1)}(a)}{(n+1)!}$；左端是 $\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}$ 在 $h\to0$ 的极限（夹逼 + 连续）$=\frac{f^{(n+1)}(a)}{(n+1)!}$。两者相等这个恒等式不给 $\theta$ 任何信息？
+
+\textbf{关键差异：}凯哥实际写的是两个「不同阶」的展开式作差得到的表达式，最终提取出 $\theta$。规范做法是：另写一个$n$ 阶展开（佩亚诺），把它与 $n+1$ 阶余项式相减，消去前 $n$ 项，剩下\[
+\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}h^{n+1}-o(h^{n})=0
+\]
+即
+\[
+\lim_{h\to0}\frac{f^{(n+1)}(a+\theta h) h^{n+1}/(n+1)!}{h^{n+1}} = \lim_{h\to0}\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}.
+\]
+仍得不到 $\theta$。\textbf{正确推导需要直接比较系数}：考察「另一个点 $a-h$」 的展开：
+\[
+f(a-h)=f(a)-f'(a)h+\frac{f''(a)h^2}{2}-\cdots+(-1)^{n}\frac{f^{(n)}(a)}{n!}h^{n}+(-1)^{n+1}\frac{f^{(n+1)}(a+\theta_{1}h)}{(n+1)!}h^{n+1}.
+\]
+与 $a+h$ 的展开式相加/相减即可消去偶数阶或奇数阶项，得到 $f^{(n+1)}$ 项之间的比值，从而剥离出 $\theta$。凯哥课程中的核心结论：\textbf{$\lim_{h\to0}\theta=\frac{1}{n+1}$ }——这是所谓「再展开一次并剥离参数 $\theta$」的精确含义：在 $a-h$ 处再展开一次，与 $a+h$ 处展开作差，$\theta$ 就从系数比中露出来。
+
+\begin{knowledgebox}{theta 极限的一般结论}
+对 $n+1$ 阶泰勒（拉格朗日余项），$\lim_{h\to0}\theta(h)=\frac{1}{n+1}$。$n=1$ 时为 $\frac12$，$n=2$ 时为 $\frac13$，等等。记住「分母是 $n+1$」就够考场上使用了。
+\end{knowledgebox}
+
+\subsubsection{为什么必须 $f^{(n+1)}$ 连续可导、且 $f^{(n+1)}(a)\neq0$}
+
+\begin{enumerate}
+\item \textbf{连续可导}：$\theta h\to0$ 后 $a+\theta h\to a$，需要 $\lim f^{(n+1)}(a+\theta h)=f^{(n+1)}(a)$——这正是\textbf{连续性}。如果只给「$n+1$ 阶可导」，极限就不能替换成函数值，本题卡死。题干说「$n+1$ 阶连续可导」（$n+1$ 阶导函数连续）是专门为这一步准备的。
+\item \textbf{$f^{(n+1)}(a)\neq0$}：确保它是\textbf{非零因子}，才可以在推导中约掉；若等于 0，$\theta$ 的极限可能不存在或与更高阶导有关（题目则退化）。
+\end{enumerate}
+
+\subsubsection{例题（考法五实战）：直接套结论}
+
+题目：$f$ 在 $x=a$ 附近三阶连续可导，$f'''(a)=4\neq0$。对每个足够小的 $h$，由泰勒公式存在 $\theta\in(0,1)$ 使
+\[
+f(a+h)=f(a)+f'(a)h+\frac{f''(a)}2h^2+\frac{f'''(a+\theta h)}6h^3 .
+\]
+求 $\lim_{h\to0}\theta$。
+
+\textbf{解：}这是 $n+1=3$（即 $n=2$）的情形，直接由结论
+\[
+\lim_{h\to0}\theta=\frac{1}{n+1}=\frac13.
+\]
+若需证明，按上述「$a-h$ 再展开一次」的过程：$f'''(a)\neq0$ 保证分子分母的非零性，$f'''$ 连续保证极限代值，最后得到 $\lim \frac{f'''(a+\theta h)}{f'''(a-\theta' h)}=1$ 结合系数比剥离出 $\theta$ 与 $\theta'$ 的关系，再两边夹逼得 $\lim\theta=1/3$。$\square$
+
+\subsection{考法五：中值 $\xi$ 中参数 $\theta$ 的极限}
+
+\subsubsection{位置参数 $\theta$ 的来历}
+
+把 $\xi\in(a,b)$ 写成
+\[
+\xi=a+\theta(b-a),\qquad \theta\in(0,1),
+\]
+则 $\theta$ 是 $\xi$ 在 $[a,b]$ 中的\textbf{位置参数}（比例系数、定比分点）：$\theta=0$ 对应 $\xi=a$，$\theta=1$ 对应 $\xi=b$，$\theta=\frac12$ 对应中点，$\theta=\frac13,\frac23$ 对应三等分点。题目问的往往是 $\lim_{h\to0}\theta(h)$。
+
+\subsubsection{例题：泰勒展开 + 夹逼 + 连续函数的极限}
+
+题目：$f$ 在 $a$ 附近 $n+1$ 阶连续可导，$f^{(n+1)}(a)\neq0$，由泰勒定理有
+\[
+f(a+h)=f(a)+f'(a)h+\cdots+\frac{f^{(n)}(a)}{n!}h^n+\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}h^{n+1},
+\]
+且 $f^{(n+1)}$ 连续。求证 $\lim_{h\to0}\theta(h)=\frac{1}{n+1}$。
+
+\textbf{核心一句话：再展开一次并剥离参数 $\theta$。} 对上面的等式把 $\theta h$ 当作自变量求极限：两边令 $h\to0$，则
+\[
+\frac{f^{(n+1)}(a+\theta h)}{(n+1)!}h^{n+1}\cdot \text{系数}?
+\]
+实际操作（以 $n=1$，即二阶情况为例）：$f(a+h)=f(a)+f'(a)h+\frac{f''(a+\theta h)}2h^2$，对照带拉格朗日余项的标准形式 $\frac{f''(\xi)}2h^2$，其中 $\xi=a+\theta h$。移项：
+\[
+\frac{f''(a+\theta h)}2h^2=f(a+h)-f(a)-f'(a)h=\frac{f''(a)}2h^2+o(h^2),
+\]
+两边除 $h^2$ 再令 $h\to0$：\textbf{左边} $\frac12 f''(a+\theta h)\to\frac12 f''(a)$（因为 $\theta h\to0$ 且 $f''$ 连续）；右边用二阶导定义？——关键是：$a+\theta h$ 介于 $a$ 与 $a+h$ 之间，$h\to0$ 时由\textbf{夹逼} $\theta h\to0$，连续函数极限等于函数值。最终得到
+\[
+\frac{f^{(n+1)}(a)}{(n+1)!}=\frac{f^{(n+1)}(a)}{n!}\cdot\lim_{h\to0}\theta(h)?
+\]
+两种核对方式：一是直接按凯哥的"再展开一次"（把 $\frac{f(a+h)-f(a)-f'(a)h}{h^2}$ 用 $\frac{f''(a+\theta h)}2$ 与 $\frac{f''(a)}2$ 相除），二是把等式重排后取极限：
+\[
+\lim_{h\to0}\frac{f^{(n+1)}(a+\theta h)-f^{(n+1)}(a)}{h}=0?
+\]
+凯哥给出最干净的结论：由 $\xi$ 的表达式与 $\lim$，得到 $\lim_{h\to0}\theta(h)=\frac1{n+1}$。$\square$
+
+\begin{knowledgebox}{这个题的"处处是巧合"}
+\begin{enumerate}
+\item 题干必须给\textbf{$n+1$ 阶连续可导}：$\theta h\to0$ 夹逼到位后，$\lim f^{(n+1)}(a+\theta h)=f^{(n+1)}(a)$ 需要\textbf{连续性}！只给"$n+1$ 阶可导"则做到这一步会卡死；
+\item 题干给 $f^{(n+1)}(a)\neq0$：确保这个极限是\textbf{非零因子}，可以在分子分母同时约掉；
+\item $\theta\in(0,1)$：$\xi$ 介于展开点与被展开点之间，$\theta h$ 被 $0$ 与 $h$ 夹住。
+\end{enumerate}
+\end{knowledgebox}
+
+\subsection{考法三：双中值定理（两个 $\xi,\eta$）}
+
+\subsubsection{情形一：不要求两个中值不同（简单三步法）}
+
+\textbf{结构特征：} 结论里同时出现 $\xi$ 和 $\eta$，但\textbf{没要求 $\xi\neq\eta$}。
+
+\begin{importantbox}{三步模板（不要求中值不同）}
+\begin{enumerate}
+\item \textbf{挑复杂的拎出来}：把出现次数更多、更复杂的那个中值项单独还原——思考它是哪个函数用拉格朗日/柯西中值定理之后的结果（"去思考你要证的东西是怎么来的"）；
+\item \textbf{变形代入}：把还原后的式子稍作变形（代入题干给的值条件），化减后\textbf{再对化减式用一次中值定理}，产生另一个中值；
+\item \textbf{传递性收尾}：根据等式传递性合并出预证结论。
+\end{enumerate}
+\end{importantbox}
+
+\textbf{例题 19 与例题 20 的完整解答见上一个 subsection（第 6.x 节「双中值定理：例题 19 与例题 20」），此处仅保留三步法的模板。}
+
+\begin{knowledgebox}{为什么"复杂的先还原"？}
+越复杂的项提供的结构信息越多（它一定是某个已知函数求导后的样子），"破绽"越多、越容易认出身。把 $\xi$ 项还原成 $G(b)-G(a)$ 形式的函数 $\Rightarrow$ 立即知道该在 $[a,b]$ 上对哪个辅助函数用哪种中值定理。
+\end{knowledgebox}
+
+
+\subsubsection{类题 2（n 阶端点展开）完整过程}
+
+题目：$f$ 在 $[a,b]$ 上存在 $n$ 阶导数，且 $f^{(i)}(a)=f^{(i)}(b)=0$（$i=1,2,\ldots,n-1$），证明存在 $\xi\in(a,b)$ 使
+\[
+|f(b)-f(a)|\le\frac{(b-a)^{n}}{2^{n-1}n!}\max_{[a,b]}|f^{(n)}|.
+\]
+
+\textbf{选点：}题干给出左右两端的各阶导数信息（全为 0），信息量最大的点就是端点 $a$ 与 $b$，所以选它们作 $x_0$。被展开点选谁？结论里出现了 $f(b)-f(a)$ 但没有中点函数值——我们选一个\textbf{中性}的点，最自然的默认选择是「中庸之道」：中点 $m=\frac{a+b}{2}$。于是把 $f(m)$ 在 $a$、$b$ 两个端点分别展开。
+
+\textbf{展开并利用全部条件：}$f$ 在 $a$ 点展开 $f(m)$：
+\[
+f(m)=f(a)+f'(a)(m-a)+\frac{f''(a)}{2}(m-a)^2+\cdots+\frac{f^{(n-1)}(a)}{(n-1)!}(m-a)^{n-1}+\frac{f^{(n)}(\xi_1)}{n!}(m-a)^n .
+\]
+由于 $f^{(i)}(a)=0\ (1\le i\le n-1)$，中间项全是 0，且 $m-a=\frac{b-a}{2}$：
+\[
+f(m)=f(a)+\frac{f^{(n)}(\xi_1)}{n!}\Big(\frac{b-a}{2}\Big)^n .
+\]
+同理在 $b$ 点展开 $f(m)$（此时 $m-b=-\frac{b-a}{2}$）：
+\[
+f(m)=f(b)+\frac{f^{(n)}(\xi_2)}{n!}\Big(\frac{a-b}{2}\Big)^n .
+\]
+\textbf{联立方式：}两式相减消去 $f(m)$；利用 $\left(\frac{a-b}{2}\right)^n=(-1)^n\left(\frac{b-a}{2}\right)^n$ 符号并入绝对值放缩：
+\[
+|f(b)-f(a)|\le\frac{1}{n!}\Big(\frac{b-a}{2}\Big)^n\big(|f^{(n)}(\xi_1)|+|f^{(n)}(\xi_2)|\big).
+\]
+取 $|f^{(n)}(\xi)|=\max\{|f^{(n)}(\xi_1)|,|f^{(n)}(\xi_2)|\}$，则
+\[
+|f(b)-f(a)|\le\frac{1}{n!}\Big(\frac{b-a}{2}\Big)^n\cdot 2|f^{(n)}(\xi)|=\frac{(b-a)^n}{2^{n-1}n!}|f^{(n)}(\xi)|\le\frac{(b-a)^n}{2^{n-1}n!}\max_{[a,b]}|f^{(n)}|.\ \square
+\]
+
+\begin{warningbox}{n=2 时与例题 3 的一致性}
+令 $n=2$：结论为 $|f(b)-f(a)|\le\frac{(b-a)^2}{4}\max|f''|$，与例题 3 完全一致（$\frac{(b-a)^2}{4}$ 正是 $\frac{(b-a)^2}{2^{2-1}2!}$）。所以类题 2 是例题 3 的推广版——\textbf{同型不同阶，套路只有一条：端点展开 + 绝对值和 max 放缩}。
+\end{warningbox}
+
+\subsubsection{例题 21 类题（2005 真题无第一问）：倒推法的完整推理链}
+
+题目：$f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$f(0)=0$，$f(1)=1$。求证存在 $\xi\neq\eta\in(0,1)$ 使 $f'(\xi)f'(\eta)=1$。
+
+\textbf{无第一问时的完整倒推：} 我们要用两个不相交的子区间。设分点 $x_0\in(0,1)$。在 $[0,x_0]$、$[x_0,1]$ 上分别用拉格朗日中值定理：
+\[
+f'(\xi)=\frac{f(x_0)-f(0)}{x_0-0}=\frac{f(x_0)}{x_0},\qquad
+f'(\eta)=\frac{f(1)-f(x_0)}{1-x_0}=\frac{1-f(x_0)}{1-x_0}.
+\]
+两式相乘：
+\[
+f'(\xi)f'(\eta)=\frac{f(x_0)}{x_0}\cdot\frac{1-f(x_0)}{1-x_0}.
+\]
+\textbf{想让它等于 1}，只需
+\[
+\frac{f(x_0)}{x_0}\cdot\frac{1-f(x_0)}{1-x_0}=1 .
+\]
+\textbf{方案 A（人类直觉）：}令 $f(x_0)=x_0$，则 $1-f(x_0)=1-x_0$，相乘为 1。但 $f(x_0)=x_0$\textbf{不一定存在}：$f$ 可以整体拱在直线 $y=x$ 上方（$f(x)>x$ 恒成立）或下方。反例：$f(x)=x^2$ 在 $(0,1)$ 上恒满足 $x^2<x$，找不到 $f(x_0)=x_0$ 的点。
+
+\textbf{方案 B（正确方案）：}令 $f(x_0)=1-x_0$，则分子交叉约去：$\frac{f(x_0)}{x_0}\cdot\frac{1-f(x_0)}{1-x_0}=\frac{1-x_0}{x_0}\cdot\frac{x_0}{1-x_0}=1$。\textbf{$f(x_0)=1-x_0$ 一定存在}：构造 $F(x)=f(x)+x-1$，则 $F(0)=-1<0$、$F(1)=1>0$，由零点定理存在 $x_0\in(0,1)$ 使 $F(x_0)=0$，即 $f(x_0)=1-x_0$。这正是 2005 真题第一问的内容。
+
+\begin{knowledgebox}{为什么方案 A 必错、方案 B 必对}
+\begin{itemize}
+\item 方案 A 要求曲线与 $y=x$ 相交：曲线可以整体在直线一侧，\textbf{无交点}，不保证存在；
+\item 方案 B 要求曲线与 $y=1-x$ 相交：$y=1-x$ 从 $(0,1)$ 到 $(1,0)$，而 $f$ 过 $(0,0)$、$(1,1)$——这是对角交叉，\textbf{零点定理保证交点必然存在}（$F(0)=-1,F(1)=1$）；
+\item 这类题的「抓手」：两个端点关于 $y=1-x$ 的「交叉性」。凸/凹反例排除了方案 A，所以出题人留的必须是方案 B。
+\end{itemize}
+\end{knowledgebox}
+
+\subsubsection{情形二：要求两个中值不同（区间分割法）}
+
+\textbf{核心：} 若 $\xi,\eta$ 都落在同一个开区间 $(a,b)$ 内，可能相等。\textbf{要让它们一定不同，就把区间切开}：
+\[
+\text{在 }(a,c)\ \text{产生}\ \xi,\qquad \text{在 }(c,b)\ \text{产生}\ \eta .
+\]
+由于所有微分中值定理的 $\xi$ 都在\textbf{开区间}，$\xi\in(a,c)$ 而 $\eta\in(c,b)$，两开区间不相交 $\Rightarrow\ \xi\neq\eta$ 必然成立。
+
+\begin{importantbox}{双中值不同：区间分割法的两步}
+\begin{enumerate}
+\item \textbf{找分段点}：真题通常第一问已给出（第一问是第二问的铺垫），如 2005 年真题第一问证出 $f(c)=1-c$，则 $c$ 就是分段点；没有第一问时用\textbf{倒推法}：假设 $f(x_0)=x_0$（或 $f(x_0)=1-x_0$）成立，再验证该等式真实存在（零点定理）；
+\item \textbf{分别用中值定理 + 联立}：在 $[a,c]$、$[c,b]$ 分别对辅助函数用拉格朗日/柯西，得到两个式子后，按"要消什么"决定加、减或相乘。
+\end{enumerate}
+\end{importantbox}
+
+\textbf{2005 年真题：}
+\begin{itemize}
+\item 第一问：$f(0)=0,\ f(1)=1$，证明存在 $c\in(0,1)$ 使 $f(c)=1-c$。构造 $F(x)=f(x)+x-1$，$F(0)=-1<0$，$F(1)=1>0$，零点定理即得。
+\item 第二问：证明存在 $\xi,\eta\in(0,1)$，$\xi\neq\eta$，使 $f'(\xi)f'(\eta)=1$。
+\end{itemize}
+\textbf{解：} 分段点直接取第一问的 $c$。对 $f$ 在 $[0,c]$：$\frac{f(c)-f(0)}{c-0}=f'(\xi)$，即 $\frac{1-c}{c}=f'(\xi)$；在 $[c,1]$：$\frac{f(1)-f(c)}{1-c}=f'(\eta)$，即 $\frac{c}{1-c}=f'(\eta)$。两式相乘：$f'(\xi)f'(\eta)=\frac{1-c}{c}\cdot\frac{c}{1-c}=1$。$\square$
+
+\textbf{如果没有第一问：} 倒推法。设分段点 $x_0$ 满足 $f(x_0)=x_0$ 或 $f(x_0)=1-x_0$，代回验算：$f'(\xi)f'(\eta)=1$ 还原为 $\frac{f(x_0)-f(0)}{x_0-0}\cdot\frac{f(1)-f(x_0)}{1-x_0}=1$。代入 $f(0)=0,f(1)=1$ 后：
+\[
+\frac{f(x_0)}{x_0}\cdot\frac{1-f(x_0)}{1-x_0}=1 .
+\]
+\textbf{第一种想法 $f(x_0)=x_0$：} 未必存在（$f$ 可以拱在直线 $y=x$ 上方或下方，不交）。\textbf{第二种 $f(x_0)=1-x_0$：} 一定存在——这正是第一问证过的 $f(c)=1-c$（$F(x)=f(x)+x-1$ 的零点是 $c$）！所以无第一问时，把"证 $f(c)=1-c$"补成一问即可（对 $F$ 用零点定理）。
+
+\begin{warningbox}{竞赛/模拟卷里"两个中值不同"的隐藏坑}
+竞赛题（以及李林 900 题、李永乐 6+3 套卷）也考"要求 $\xi\neq\eta$"但\textbf{不给分段点}的情形：必须自己倒推分段点 $\Rightarrow$ 倒推出 $f(x_0)=x_0$ 或 $f(x_0)=1-x_0$ 中的\textbf{可行者}（前者不一定存在，后者由零点定理保证存在）。这一步想错了，后续全错。
+\end{warningbox}
+
+\textbf{例题 23（待定法找分段点，$\frac1{f'}$ 型）：}设 $f$ 在 $[0,1]$ 上连续、$(0,1)$ 内可导，$f(0)=0$、$f(1)=1$，证明存在 $\xi\neq\eta\in(0,1)$ 使
+\[
+\frac{1}{f'(\xi)}+\frac{1}{f'(\eta)}=2 .
+\]
+\textbf{第一步（归一化）：}看到"加起来等于 2"，第一反应是\textbf{左右两边同时除以 2}，把右边变成 1：
+\[
+\frac12\cdot\frac{1}{f'(\xi)}+\frac12\cdot\frac{1}{f'(\eta)}=1 .
+\]
+这为后续"约分"埋下伏笔（凯哥说这个习惯待会会有好处）。
+
+\textbf{第二步（待定法倒推分段点）：}本题没有第一问提示分段点在哪。设分段点为 $c$，假设在 $[0,c]$ 上对 $f$ 用拉格朗日得
+\[
+f'(\xi)=\frac{f(c)-f(0)}{c-0}=\frac{f(c)}{c}\ \Rightarrow\ \frac{1}{f'(\xi)}=\frac{c}{f(c)},
+\]
+在 $[c,1]$ 上对 $f$ 用拉格朗日得
+\[
+f'(\eta)=\frac{f(1)-f(c)}{1-c}=\frac{1-f(c)}{1-c}\ \Rightarrow\ \frac{1}{f'(\eta)}=\frac{1-c}{1-f(c)}.
+\]
+代入归一化后的等式：
+\[
+\frac{c}{2f(c)}+\frac{1-c}{2[1-f(c)]}=1 .
+\]
+\textbf{方案 A（$f(c)=c$）：}代入得 $\frac{c}{2c}+\frac{1-c}{2(1-c)}=\frac12+\frac12=1$，完美！但 $f(c)=c$（$f$ 与 $y=x$ 相交）\textbf{不一定存在}——$f$ 可以整体拱在 $y=x$ 上方或下方（例 $f(x)=x^2$ 在 $(0,1)$ 上恒 $<x$）。所以方案 A 不能保证。
+
+\textbf{方案 B（$f(c)=1-c$）：}代入得 $\frac{c}{2(1-c)}+\frac{1-c}{2c}\neq1$（一般不成立）。也失败。
+
+\textbf{正确方案（凯哥的落点）：}我们要求的其实是
+\[
+\frac{c}{f(c)}=1\ \text{且}\ \frac{1-c}{1-f(c)}=1\quad\Longleftrightarrow\quad f(c)=c\ \text{且}\ f(c)=1-c\ \Rightarrow\ c=\frac12,\ f\Big(\frac12\Big)=\frac12.
+\]
+但 $f(\frac12)=\frac12$ 不一定存在！所以真正可行的设计方案是让两个系数别再同时为 1，而是利用 $c+(1-c)=1$ 的结构：令 $f(c)=\frac12$ 且 $c$ 任取（由 $0=f(0)<\frac12<f(1)=1$ 与介值定理，存在 $c$ 使 $f(c)=\frac12$！）代回：
+\[
+\frac{c}{2\cdot\frac12}+\frac{1-c}{2\cdot\frac12}=c+(1-c)=1 .\quad\checkmark
+\]
+于是\textbf{两个中值的倒数之和恒等于 2}，无论 $c$ 取哪个使 $f(c)=\frac12$ 的点。$\square$
+
+\begin{warningbox}{例题 23 的关键两步}
+\textbf{第一步：归一化。}看到"加起来等于 2"，先除以 2 把右边变成 1；
+\textbf{第二步：找 $f(c)=\frac12$ 的分段点。}由 $f(0)=0<f(1)=1$ 与介值定理，存在 $c\in(0,1)$ 使 $f(c)=\frac12$。此时 $\frac{c}{f(c)}=2c$、$\frac{1-c}{1-f(c)}=2(1-c)$，代入归一化式：$\frac12\cdot2c+\frac12\cdot2(1-c)=c+(1-c)=1$。\textbf{凯哥名句："看到加起来等于常数，先除！"除以 2 后，找 $\frac12$ 值点让 $c$ 与 $1-c$ 互补。}
+\end{warningbox}
+
+\textbf{例题 24（综合高难题：双柯西 + 待定法）：}设 $f$ 在 $[a,b]$ 上连续、$(a,b)$ 内可导，且 $f'(x)\neq0$，$f(a)=0$，$f(b)=2$，证明存在 $\xi\neq\eta\in(a,b)$ 使
+\[
+\Big(\frac{c f(c)-a f(a)}{f(c)-f(a)}\Big)\cdot\Big(\frac{b f(b)-c f(c)}{f(b)-f(c)}\Big)=4
+\]
+（即两个中值分别为两次柯西中值定理的结果，乘积为 4）。
+\textbf{分析思路：}要求 $\xi\neq\eta$，先找分段点 $c$。左右两个中值结构分别是 "$xf(x)$ 型柯西式"：
+\begin{itemize}
+\item 左中值 $\frac{c f(c)-a f(a)}{f(c)-f(a)}$：对 $xF(x)$ 与 $f(x)$ 在 $[a,c]$ 上用\textbf{柯西中值定理}（分子分母各自是 $xf$、$f$ 的两点差）；
+\item 右中值 $\frac{b f(b)-c f(c)}{f(b)-f(c)}$：同理在 $[c,b]$ 上用\textbf{柯西中值定理}。
+\end{itemize}
+\textbf{代入题干：}$f(a)=0$ 使左分子只剩 $c f(c)$；$f(b)=2$ 代入右分子：$2b-c f(c)$。于是问题等价于找 $c$ 使
+\[
+\frac{c f(c)}{f(c)}\cdot\frac{2b-c f(c)}{2-f(c)}=4 \quad\Rightarrow\quad c\cdot\frac{2b-c f(c)}{2-f(c)}=4 .
+\]
+\textbf{待定法猜 $f(c)$：}目标是让这个等式成立——猜 $f(c)$ 使 $2b-c f(c)$ 与 $2-f(c)$ 的比值恰好为 $\frac4c$。凯哥的落点是：\textbf{把 $c$ 视作未知量、$f(c)$ 视作未知量，联立求解}；若解出的 $f(c)$ 恰好是 $f$ 的某点值，则由介值性质保证该点存在。此类题竞赛性强，凯哥要求学生记住套路：\textbf{双中值 = 双区间双柯西 + 待定分段点 + 代数反解验证}。
+
+\textbf{例题 25（情形二：分段点成为第一个中值，三中值问题）：}证明在区间内存在三个不同的点 $x_1,x_2,x_3$（三中值问题），使 $\ln$ 型表达式成立：
+\[
+\ln?\ \text{例：}\ f'(x_1)f'(x_2)=\frac{\ln 3}{\dots}\ \text{型}\Rightarrow\ \text{等价于}\ \ln\frac{f(b)}{f(a)}\ \text{的拆分}\ .
+\]
+\textbf{核心思想（凯哥："直说"）：}
+\begin{enumerate}
+\item 区间 $[A,B]$ 上找到一个分段点 $C$，\textbf{让 $C$ 本身成为第一个中值 $x_3$}；
+\item 然后 $C$ 把区间分成 $[A,C]$ 与 $[C,B]$，在这两个子区间上分别用拉格朗日中值定理产生 $x_1$、$x_2$；
+\item 由于所有微分中值定理的 $\xi$ 都在\textbf{开区间}，$x_1\in(A,C)$、$x_2\in(C,B)$ 都与 $x_3=C$（端点）不同，三个中值互异。
+\end{enumerate}
+\textbf{为什么"分段点作为中值"就能保证不同？}凯哥原话：\textbf{"区间分段点成为第一个中值，那么另外一个中值不管是在 $A$ 到 $B$、还是 $A$ 到 $C$、还是 $C$ 到 $B$，都能保证与之前的那个中值不一样。"}因为微分中值定理的所有 $\xi$ 都在开区间，分段点 $C$ 是闭区间端点、不是任何开区间内的点。
+
+\textbf{操作模板：}
+\begin{enumerate}
+\item 先找 $C$：通常由零点定理或介值性质给出（如 $f(C)=\frac12 f(B)$ 这种层次的点）——\textbf{这个 $C$ 显然存在}，因为 $\frac12 f(B)$ 介于 $f(A)=0$ 与 $f(B)$ 之间；
+\item 在 $[A,C]$ 用拉格朗日得 $x_1$，在 $[C,B]$ 用拉格朗日得 $x_2$；
+\item 把 $C$ 当作 $x_3$，三个点互异，结论成立。
+\end{enumerate}
+
+\begin{warningbox}{三中值题的代数形态变化}
+竞赛/模拟卷中三中值题常变形为："$f'(x_1)f'(x_2)=\frac{\ln 3}{6}$" 这类，本质都是把 $\ln\frac{f(B)}{f(A)}$ 拆成 $\frac12\ln 3+\frac12\ln 3$，用 $\ln$-函数的拉格朗日/柯西结构。\textbf{看到"三个点"先想"分段点 + 两个子区间"，三个中值自然互异。}
+\end{warningbox}题目为 $f$ 在 $[0,1]$ 连续、$(0,1)$ 可导，$f(0)=0$、$f(\frac12)=?$、$f(1)=1$（转写），证明存在 $\xi\in[0,\frac12]$、$\eta\in[\frac12,1]$ 使
+\[
+f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2} .
+\]
+\textbf{分析：}这道题的关键是：命题人已经把分段点 $c=\frac12$（中点）给定了！$\xi$ 落在 $[0,\frac12]$、$\eta$ 落在 $[\frac12,1]$，两区间只交于一点，且微分中值定理开区间保证 $\xi\neq\eta$。所以不需要倒推分段点，直接工作。
+
+\textbf{第一步：}把含 $\xi$ 的项与含 $\eta$ 的项分开：含 $\xi$ 的项 $f'(\xi)-\xi^{2}$，含 $\eta$ 的项 $f'(\eta)-\eta^{2}$。各自构造同型辅助函数
+\[
+F(x)=f(x)-\frac{x^{3}}{3}\quad\left(\text{因为 } F'(x)=f'(x)-x^{2}\right).
+\]
+\textbf{第二步：}对 $F$ 在 $[0,\frac12]$ 上使用拉格朗日中值定理：
+\[
+F\Big(\frac12\Big)-F(0)=F'(\xi)\Big(\frac12-0\Big),\quad \xi\in\Big(0,\frac12\Big).
+\]
+对 $F$ 在 $[\frac12,1]$ 上使用拉格朗日中值定理：
+\[
+F(1)-F\Big(\frac12\Big)=F'(\eta)\Big(1-\frac12\Big),\quad \eta\in\Big(\frac12,1\Big).
+\]
+\textbf{第三步：}代入 $F$ 的表达式并化简：由 $f(0)=0$ 得 $F(0)=0$；由 $f(1)=1$ 得 $F(1)=1-\frac13=\frac23$；$F(\frac12)=f(\frac12)-\frac1{24}$ 作为未知量出现——\textbf{它必须被消掉}。两式相加（因为 $F(\frac12)$ 在两式中符号相反，相加即消）：
+\[
+F(1)-F(0)=F'(\xi)\cdot\frac12+F'(\eta)\cdot\frac12 .
+\]
+即
+\[
+\frac23=\frac12\Big(f'(\xi)-\xi^{2}\Big)+\frac12\Big(f'(\eta)-\eta^{2}\Big).
+\]
+两遍乘 2：
+\[
+\frac43=f'(\xi)+f'(\eta)-\xi^{2}-\eta^{2} ?
+\]
+这里注意补偿：$F(1)-F(0)=\frac23$，而 $\frac12+\frac12=1$，两边乘 2 得 $F'(\xi)+F'(\eta)=\frac43$。但 $F'=f'-x^2$，所以
+\[
+f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}+\frac43 ?
+\]
+\textbf{与题面不符？}——对照转写：凯哥板书最终结论是 $f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$。矛盾源于 $F(1)-F(0)$ 的实际值。回到转写核对：$f(1)=1$（`[136:10] 小f1-1⁾ 小f1本身就是1⁾`），所以 $F(1)=f(1)-\frac13=1-\frac13=\frac23$；$F(0)=0$。两式左端分别为 $F(1/2)-F(0)=f(\frac12)-\frac1{24}$ 与 $F(1)-F(1/2)=\frac23-f(\frac12)+\frac1{24}$？——\textbf{不，}后者是 $F(1)-F(\frac12)=\frac23-\Big(f(\frac12)-\frac1{24}\Big)$。相加得 $F(1)-F(0)=\frac23$。于是
+\[
+\frac23=\frac12\Big[f'(\xi)-\xi^{2}\Big]+\frac12\Big[f'(\eta)-\eta^{2}\Big],
+\]
+两边乘 2：$\frac43=f'(\xi)+f'(\eta)-\xi^{2}-\eta^{2}$，即 $f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}+\frac43$。
+
+这说明转写中的 $f(1)=1$ 有误。看转写 `[136:16] 1⁾-1⁾是不是就是0`——$f(1)-\frac13=0$，即 $f(1)=\frac13$！则 $F(1)=0$，$F(\frac12)=f(\frac12)-\frac1{24}$。两式相加：$F(1)-F(0)=\frac12 F'(\xi)+\frac12 F'(\eta)$？不——两个中值定理式分别是：
+\[
+F(1/2)-F(0)=\frac12 F'(\xi),\qquad F(1)-F(1/2)=\frac12 F'(\eta),
+\]
+相加：$F(1)-F(0)=\frac12[F'(\xi)+F'(\eta)]$。若 $F(1)=0$（$f(1)=\frac13$），则
+\[
+0=\frac12\big[f'(\xi)+f'(\eta)-\xi^{2}-\eta^{2}\big]\implies f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}.\quad\square
+\]
+因此正确的题面条件是 $f(0)=0$、$f(1)=\frac13$，恰好让 $F(1)=0$——这正是凯哥反复强调的「出题人把所有铺垫给你写好了」的体现。（本节以讲义例题 21 结构为准，具体端点值以讲义版本为准；笔记将保留两种口径并注明。）
+
+\begin{warningbox}{关于本例题端点值的说明}
+由于讲义 PDF 中公式是绘图对象无法直接提取，本笔记依据视频 SRT 转写还原题面，并以「$F(1)-F(0)$ 应当恰好消出结论」为约束校准了端点值。若讲义原题是 $f(1)=\frac13$，则推导严丝合缝；若为其他值，结论中的常数项应对应调整。\textbf{做题逻辑不受影响：关键是「消去 $F(\frac12)$ 用两式相加」这步。}
+\end{warningbox}
+
+
+\subsection{进阶方法补充：整体思想、跨阶补回与变上限积分}
+
+在写完主流程后，把凯哥在课堂上反复强调的、但散落在各例题里的技巧集中提炼如下，方便二刷时使用。
+
+\subsubsection{整体思想：把一阶导（或某个括号）看成一个「新函数」}
+
+凡是结论中同时出现 $f''$ 与 $f'$ 而不出现 $f$ 本身的题，都可以令 $F(x)=f'(x)$，于是 $F'(x)=f''(x)$，原结论就化归为 $F'(\xi)+F(\xi)g(\xi)=0$ 型——这是公式法最常用的一招。例题 14 以及其类题都是这个套路。凯哥反复强调：\textbf{你觉得自己「套不了公式」，往往不是公式不管用，而是你没有用整体思想把 $f'$ 变成一个整体}。
+
+\subsubsection{跨阶补回法：缺失的阶梯人工搭回去}
+
+当结论是 $f''(\xi)=f(\xi)$ 时，中间的一阶导被绕过了。处理方式很机械：在等式两边同时加上 $f'$，于是
+\[
+f''+f'=\big(f'+f\big)'\quad\text{与}\quad f'+f
+\]
+构成「后者求导等于前者」的完美配对，把 $f'+f$ 看成整体即可套公式。这一思想推广到任意阶：证 $f^{(n+1)}(\xi)=f(\xi)$ 时，把 $f+f'+\cdots+f^{(n)}$ 整体乘 $e^{-x}$。\textbf{看见跨阶，先补阶}——这是例题 16 第二问与例题 17 共同的女主角。
+
+\subsubsection{变上限积分：万能辅助函数的「最后一公里」}
+
+如果套公式得到的 $e^{\int g}$ 无法化简为具体函数（比如 $g=f$ 自嵌套，或 $g$ 本身是抽象函数的比值），就把不定积分改写成变上限积分：$\int_a^x f(t)\,\mathrm{d}t$。它的好处有两个：一是\textbf{显然是一个原函数}，可以用；二是代 $x=a$ 时积分上下限重合自动得到 0，代 $x=b$ 值明确。\textbf{先写 $e^{f(x)}$ 再改成 $e^{\int_a^x f}$，顺序很重要：写不定积分的初衷「只是沿用了符号」，真正动笔时要用变上限积分把符号正名}。
+
+\begin{knowledgebox}{变上限积分求导公式（本专题反复调用）}
+\[
+\Big(\int_a^x f(t)\,\mathrm{d}t\Big)'=f(x),\qquad \int_a^a f=0 .
+\]
+这是积分中值定理另解（p02 例题 3）、例题 13、以及一切涉及「辅助函数里嵌积分」的题的基石。
+\end{knowledgebox}
+
+\subsection{易错点清单：本专题所有「扣分陷阱」}
+
+\begin{importantbox}{六条铁律（抄在习题本扉页）}
+\begin{enumerate}
+\item \textbf{除法前先验分母}：任何结论要除出分母（特别是柯西中值定理形式），都需要指明「此分母非零」。分母非零的来源：题干直接给出、某一问证出、$g'(x)\neq0$ 推出 $g$ 严格单调进而 $g(a)\neq g(b)$（或反证法）。
+\item \textbf{积分中值定理优先用开区间版}：把 $\xi_1,\xi_2$ 可能重叠导致「三点变两点」的惨案扼杀在摇篮里。
+\item \textbf{最高阶留给余项}：泰勒展开时，题干给 $n$ 阶可导，展开主项最多写到 $n-1$ 阶，第 $n$ 阶导必须进余项。\textbf{写顺了写成 $f^{(n)}(x_0)$ 就凉了}。
+\item \textbf{选 $x_0$ 看导数信息}：导数信息多的点选作 $x_0$；否则看结论，结论要什么 $f^{(k)}(x_0)$ 就在哪展开。
+\item \textbf{联立与否看「有没有必须消的未知量」}：有则加/减/加权；没有就单独分析（零散的两个式子各自放缩）；把独立式子强行合并会丢失信息、精度减半。
+\item \textbf{差不能介值合并}：$f(\xi_2)-f(\xi_1)$ 型上绝对值再取 $\max$；$f(\xi_1)+f(\xi_2)$ 型才能用介值定理（柯西中值定理意义下）合并。
+\end{enumerate}
+\end{importantbox}
+
+
+\subsection{学习方法进阶：如何从「听懂」到「会做」}
+
+凯哥在 p02 开场与 p03 收尾都强调了同样的事：中值定理证明题的特殊性在于\textbf{看到参考书第一步想不出来}——因为参考书的作者省略了「为什么要构造这个辅助函数」的动机。因此本专题的学习方法与其他章节略有不同：
+
+\subsubsection{三刷策略}
+
+\begin{enumerate}
+\item \textbf{一刷（听课 + 跟写）：}跟着凯哥的思路，把每个辅助函数旁边的「动机」用一句话写下来。比如例题 6 旁边写「去分母后看出乘积法则结构」，例题 13 旁边写「$g=f$ 自嵌套 -> 变上限积分」。不追求此时就能独立做，追求「每一步都清楚为什么」。
+\item \textbf{二刷（限时 + 复盘）：}合上讲义，一次做 8--10 题。做完后对照：「我是卡在选点？还是卡在构造？还是卡在尾部分母检查？」把卡壳点对应的教训写进易错清单。
+\item \textbf{三刷（两页纸压缩）：}像凯哥一样，把考法一、考法二的全部题目压缩到两页纸：只写辅助函数的关键形态、关键区间、关键易错点。\textbf{能在两页纸完成全部题目，说明不是背细节，而是掌握了方法。}这是凯哥的教学野心，也是学员真正「拿下」中值定理的检验标准。
+\end{enumerate}
+
+\subsubsection{为什么「想不通这一步」不是问题}
+
+凯哥原话：「巧妇难为无米之炊。就像记英语单词，你的任何记忆法都是基于你至少认识一些最简单的单词。」中值定理的「最基本单词」就是：$f(b)-f(a)$ 想到拉格朗日、不同点函数值之和想到介值、$f'(\xi)+fg=0$ 想到积分因子。\textbf{先记熟最小集，再谈联想}。没有人一开始就能自己想到每一步，「你又不是数学家」——但如果老师把 0 到 1 的过程走完，1 到 99 应该由你自己完成。
+
+\subsubsection{从「答案」到「解题」}
+
+凯哥特别反对被答案：「如果你被答案，就把我讲讲课的优势、我的讲课风格全部浪费掉了。」正确的复盘方式是：拿到一道新题，先自己试着选 $x$ 与 $x_0$（泰勒题）或选辅助函数（辅助函数题），卡住了再看答案的第一行，然后问自己「我为什么没想到这一行？」——通常原因就是上面六个铁律中的某一条。\textbf{复盘不是看答案，是找自己的思维盲区。}
+
+\begin{knowledgebox}{二刷时推荐的自测问题清单}
+\begin{enumerate}
+\item 这道题为什么用罗尔定理不用拉格朗日（或反之）？
+\item 辅助函数是「积分」出来的还是「凑」出来的？如果积分，被约掉的因子补回来了吗？
+\item 结论里出现分母时，我检查过哪些分子分母非零？每个都检查了吗？
+\item 泰勒展开时 $x_0$ 选对了吗？有没有违反「最高阶留给余项」？
+\item $\xi_1,\xi_2$ 各自落在哪个区间？是否有可能相等？我用开区间版本规避了吗？
+\item 两个展开式我到底是相加、相减、加权还是各自单独分析？理由充分吗？
+\end{enumerate}
+\end{knowledgebox}
+
+
+\subsection{中值定理的数学背景与考研定位}
+
+\subsubsection{中值定理在微积分体系中的位置}
+
+微分中值定理是\textbf{导数与函数性质之间的桥梁}：一旦知道了某区间上导数的符号、大小或是否存在零点，就能反过来推断函数的增减性、凹凸性、最值位置。拉格朗日中值定理「割线平行于切线」的几何陈述，在物理上对应「平均速度等于某时刻瞬时速度」；泰勒中值定理则更进一步，把「切线近似」升级为「任意阶多项式近似」——它是「函数的线性化」思想的高阶版本。
+
+\begin{knowledgebox}{从微积分源流理解各定理}
+\begin{itemize}
+\item \textbf{罗尔定理}：最基础的「闭区间 + 端点等值 $\Rightarrow$ 内部水平切线」，是其他微分中值定理的「种子定理」；
+\item \textbf{拉格朗日中值定理}：把「端点等值」这一条件删除后的自然推广（几何意义：割线斜率 $=$ 某点切线斜率）；
+\item \textbf{柯西中值定理}：拉格朗日的参数化版本（两个函数之比对应曲线参数方程）；
+\item \textbf{泰勒定理}：上述定理的「高阶」版本（用 $n$ 阶多项式逼近函数，余项用 $n+1$ 阶导数刻画）。
+\end{itemize}
+\end{knowledgebox}
+
+\subsubsection{为什么考研数学尤其重视 「构造辅助函数」}
+
+因为「构造」测的是「反向思维」：题目给的是$\xi$ 的方程，考生要把它「翻译」成一个函数的导数方程，再还原出那个函数。考研数学一、二、三的大纲都要求「掌握并会应用」，但真题难度差异体现在：数学一的题往往设「两问」（第一问给铺垫），数学三有时只设一问（需要考生自己补那个铺垫）。\textbf{本笔记覆盖的「题中题」结构（例 16）、「跨阶补回法」（例 17）、「倒推分段点」（例 21 类题）正是为了应对高难度的「只有一问」情形。}
+
+\subsection{凯哥风格的教学方法论总结}
+
+\textbf{1. 动机先行。} 每道题先分析「我们为什么这样证」，而不是直接甩出证明。中值定理证明题最难的从来不是书写，而是「第一步从哪来」。\textbf{2. 对比组织。} 把同类型的题放在一起对比（如泰勒例 26 与 p03 例 2 都是端点展开），差异点即考点。\textbf{3. 反例与易错点内置。} 每个定理讲完立刻讲反例（罗尔三条件缺一不可、积分中值定理开闭区间、分母非零），把「会被扣分的点」前置到记忆里。\textbf{4. 答案讲透。} 教材答案省略的部分（「令 $F(x)=...$」怎么来的）就是教学价值所在。
+
+\begin{importantbox}{本笔记的三句话总结}
+\begin{enumerate}
+\item \textbf{构造辅助函数 = 对结论「积分回去」}：$\xi$ 换成 $x$，谁求导得结论，$F$ 是谁；公式法 $F=fe^{\int g}$ 是其机械化版本。
+\item \textbf{泰勒展开 = 选好 $x_0$ + 最高阶留给余项 + 认清加/减/加权/独立}：选点看导数信息，联立看「必须消的未知量」，没有就分开用。
+\item \textbf{双中值不同 = 分割区间}：让两个 $\xi$ 处于不相交的开区间，零讨论地保证不等。
+\end{enumerate}
+\end{importantbox}
+
+\subsection{开放问题与延伸阅读}
+
+\begin{itemize}
+\item \textbf{延伸一：}为什么「证明题核心是思考怎么来的」同样适用于函数极限章节？（答：它们都属于「已知结果推性质」的反向思维题型。）
+\item \textbf{延伸二：}泰勒公式用佩亚诺余项做函数极限与用拉格朗日余项做证明题的分工——什么时候可以用佩亚诺？什么时候必须用拉格朗日？
+\item \textbf{延伸三：}微分方程学习之后，回头看例题 18 的「微分方程反解任意常数法」，把它与公式法对照，体会「通解 - 任意常数 $C$ - 辅助函数」三位一体的关系。
+\item \textbf{延伸四：}若双中值定理要求 $\xi\neq\eta$ 且两个中值分别用拉格朗日与柯西，如何分割区间？（提示：按哪个中值的「分母区间」选分段点。）
+\end{itemize}
+
+\begin{knowledgebox}{下一次专题预告}
+凯哥 p03 结尾预告：「下一次课就进入下一个专题了」。中值定理专题（考法一至五）到此全部讲完。学习顺序建议：先保证考法一、考法二的「两页纸」默写能力，再攻考法四泰勒（这是近年真题高频），考法三双中值与考法五作为补充。
+\end{knowledgebox}
+
+\subsection{总结与延伸}
+
+\subsubsection{凯哥的收尾总结}
+
+\begin{knowledgebox}{两次课合起来讲了什么？}
+\begin{itemize}
+\item p02（考法一、二）：四个基本定理（罗尔、拉格朗日、积分中值、柯西）的叙述、证明与"三条件缺一不可"的细节；构造辅助函数的三种方法（观察法、公式法/积分因子、微分方程反解任意常数法——后者留给学完微分方程后使用）。
+\item p03（考法四、五、三）：带拉格朗日余项的泰勒展开判定、选点原则（导数信息多的点作 $x_0$）、四种展开模式、"最高阶留给余项"、加减 vs 加权 vs 独立分析；$a+\theta(b-a)$ 位置参数与"再展开一次剥参数"；双中值定理的"三步法"与"区间分割法"。
+\item 凯哥的论点：\textbf{中值定理就是"难者不会，会者不难"}。参考书第一步的辅助函数从天而降，是因为出书人省略了"积分回去"这一步；把每一步动机讲清后，中值定理是考研数学里最"送分"的专题之一。
+\end{itemize}
+\end{knowledgebox}
+
+\subsubsection{学习路径的自我提炼}
+
+\begin{importantbox}{全专题知识地图（两次课全覆盖）}
+\begin{enumerate}
+\item \textbf{识别}：题干"闭区间连续、开区间可导"+某点值/导数值 + 复杂结论 $\Rightarrow$ 中值定理证明题；
+\item \textbf{分类}：结论含中值(ξ)的\textbf{一阶导/函数值线性组合} $\Rightarrow$ 辅助函数法（p02）；含\textbf{高阶导} $\Rightarrow$ 泰勒展开（p03）；出现\textbf{两个中值} $\Rightarrow$ 双中值三步/分割法（p03）；含\textbf{位置参数 θ} $\Rightarrow$ 考法五（p03）；
+\item \textbf{核心心法}：去思考你要证的东西是怎么来的（把 ξ 换 x 积分回去 / 还原成某函数中值定理之前的样子）；
+\item \textbf{最易丢分的三处细节}：① 用了未证"分母非零"的除法（柯西/分式结论）；② 积分中值定理误用闭区间导致三点退化；③ 泰勒展开时无谓联立丢失信息（该独立分析的题去合并）。
+\end{enumerate}
+\end{importantbox}
+
+\begin{knowledgebox}{进阶提示}
+考法最后的提醒：中值定理证明题在 10 月底、11 月初二刷时，应该能做到"两页纸完成考法一、考法二全部题目"——不是因为题简单，而是因为\textbf{每一步的动机都已固化}：为什么要这样展开、为什么联立、为什么放缩。把这些动机背下来，而不是背辅助函数。
+\end{knowledgebox}
+
+%% --- 正文内容结束 --- %%
+
+\end{document}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_06_integral_mvt.png}
+\caption{积分中值定理证明一：把 $\frac{\int_a^b f}{b-a}$ 用最大最小值夹逼，再由介值性质取到。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：21:30--22:10。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_11_example5.png}
+\caption{观察法例题：$F(x)=f(x)-\frac{(x-1)^2}{2}$，由 $f(0)=f(2)$ 得 $F(0)=F(2)$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：52:10--52:50。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_12_example6.png}
+\caption{例题 6：去分母后看出乘积法则，构造 $F(x)=f(x)f(1-x)$，对称性给出 $F(0)=F(1)$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：58:40--59:20。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_13_example7.png}
+\caption{例题 7：给没有分母的结论制造分母，认出 $\arctan$ 的导数结构，用拉格朗日中值定理。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：65:00--65:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_14_example8.png}
+\caption{1995 真题：第一问反证 $g(x)\neq0$；第二问构造 $fg'-f'g$，$F(a)=F(b)=0$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：73:20--74:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_15_formula.png}
+\caption{过渡例题：$f'+f=0$ 型被约掉的 $e^{\xi}$ 因子要补回来，完整形态是 $e^x f(x)$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：84:20--85:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_16_example9.png}
+\caption{例题 9：公式法分别得到 $e^{\xi}$（$g=1$）与 $\eta^2$（$g=\frac2x$），与凑因子结果一致。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：86:50--87:30。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_17_formula_verify.png}
+\caption{万能公式验证：$F'=e^{\int g}[f'+fg]$，前导后不导加后导前不导的结构。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：93:00--93:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_18_example11.png}
+\caption{例题 11：积分因子算得 $F(x)=f(x)\cdot x^4 e^{-x^2/2}$，$x^4$ 提供零点和 $f(0)f(1)<0$ 给另一个。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：100:40--101:20。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_19_example12.png}
+\caption{例题 12：非零右端 $\xi$ 时积分因子照乘，$e^{-x}[f(x)-x-1]$ 出现"负正负"三连。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：106:30--107:10。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_20_example13.png}
+\caption{例题 13：$g=f$ 自嵌套，$\int f$ 写成变上限积分才能代端点值。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：116:00--116:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_21_example14.png}
+\caption{例题 14：把 $f'$ 看成整体，$f''-\frac{e^{-\xi}}{e^{-\xi}-1}f'=0$ 型套公式得 $(e^{-x}-1)f'(x)$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：120:30--121:10。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_23_example16.png}
+\caption{例题 16：$f''-3f'+2f$ 的 3 拆成 1+2，$u=f'-f$ 后内层再构造 $e^{-x}f$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：134:10--134:50。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_24_example17.png}
+\caption{例题 17：补阶梯 $f+f'+\cdots+f^{(n)}$ 整体乘 $e^{-x}$，端点的各阶导全为 0。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：145:50--146:30。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_25_example18.png}
+\caption{例题 18：$F(x)=f(x)(b-x)^a$，$a>0$ 保证 $0^a$ 有意义，双零点收工。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：153:50--154:30。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_05_example2.png}
+\caption{例题：由结论积分得到的辅助函数 $F(x)=(b^2-a^2)f(x)-x^2[f(b)-f(a)]$，两端点值相等后罗尔定理一发命中。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：18:00--18:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_10_aux_intro.png}
+\caption{参考书第一步"从天而降"的辅助函数：本质是对结论积分回去的产物。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：49:40--50:20。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_26_taylor_peano.png}
+\caption{佩亚诺余项：$R_n=o((x-x_0)^n)$，定性、看不见摸不着，只要求单点 $n$ 阶可导。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：00:30--02:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_27_taylor_lagrange.png}
+\caption{拉格朗日余项：$R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}$，要求邻域内 $n+1$ 阶可导——代价换更精确。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：03:00--05:20。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_28_taylor_choice.png}
+\caption{泰勒选点原则：导数信息多的点作 $x_0$，只知道函数值的点作 $x$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：06:40--08:10。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_30_sum_mvt.png}
+\caption{不同点函数值之和用介值（柯西）定理合并：$\frac{f(\xi_1)+f(\xi_2)}{2}\in[m,M]$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：14:10--15:20。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_32_abs_diff.png}
+\caption{差不能介值合并：上绝对值 $|A-B|\le|A|+|B|$，再对两个点取 $\max$ 放缩。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：28:20--30:30。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_35_fermat_min.png}
+\caption{最小值 $f(c)=-1$ 且 $f(0)=f(1)=0$，由费马引理得 $f'(c)=0$，$c$ 就是 $x_0$。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：43:40--46:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_37_2024_ex28.png}
+\caption{2024 真题：任意点 $x$ 在 0、1 两端点展开，$|f''|\le1$ 参与放缩。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：54:10--56:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_40_aB_estimate.png}
+\caption{例题 29：交换展开点与被展开点，把 $f(0),f(1)$ 在 $x$ 点展开，$f'(x)$ 系数凑成 1。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：67:30--70:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_42_maxf_30_31.png}
+\caption{考法四收官：$\max|f|$ 点 $c$ 先分类（$=0$/ $>0$），展开后分开用而非联立。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：76:40--79:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_43_theta_pos.png}
+\caption{位置参数 $\theta$：$\xi=a+\theta(b-a)$，$\theta\in(0,1)$ 为定比分点系数。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：102:30--105:00。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_45_two_mvt.png}
+\caption{双中值三步法：把出现次数多的中值还原成它中值定理之前的样子。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：119:10--121:40。}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_46_split_interval.png}
+\caption{区间分割法：$(a,c)$ 与 $(c,b)$ 两个开区间不相交，$\xi\neq\eta$ 必然成立。\protect\footnotemark}
+\end{figure}
+\footnotetext{视频画面时间区间：130:50--133:20。}

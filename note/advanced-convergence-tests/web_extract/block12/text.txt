@@ -1,0 +1,56 @@
+Let for all .
+Then
+if converges, then also converges;
+if diverges, then also diverges.
+### Practice 1
+1 point possible (graded)
+Let be a function of such that for all .
+Suppose converges, what can you conclude about ?
+converges.
+diverges.
+We cannot conclude convergence of from the convergence of .
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Practice 2
+1 point possible (graded)
+Use direct comparison along with results from integral comparison to determine whether the series below converges or diverges.
+(3.7)
+The series converges.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Practice 3
+1 point possible (graded)
+Use direct comparison along with results from integral comparison to determine whether the series below converges or diverges.
+(3.11)
+The series converges.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

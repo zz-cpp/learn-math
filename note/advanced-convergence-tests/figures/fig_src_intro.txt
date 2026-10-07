@@ -1,0 +1,60 @@
+
+These are my kids' blocks.
+My kids are grown now, so
+I get to play with them.
+What I want to do is to stack
+these blocks in such a way
+that the bottom block is here.
+And then say the
+next one goes here.
+And the next one goes there.
+And then by the time I
+get to the top block,
+it's completely to
+the left and not
+supported by the bottom block.
+The question is, can we do this?
+Does it fall down?
+Or is there a way with enough
+blocks that I can build this?
+Whoop.
+It fell.
+So the question is, if
+I build it correctly,
+how far out can I go, even
+with infinitely many blocks?
+We can answer these
+questions in terms of what
+are known as infinite series.
+Before we dive into
+the details, let's see
+how this played out in lecture.
+I'm going to-- because
+this is a real life thing,
+I'm going to try to do it.
+All right.
+All right.
+So now I'm going to tell
+you what the trick is.
+The trick is to do it backwards.
+When most people are
+playing with blocks,
+they decide to build it
+from the bottom up, right?
+But we're going to build
+it from the top down.
+From the top down.
+And that's going
+to make it possible
+for us to do the optimal
+thing at each stage.
+So when I build it from the
+top down, the best I can do
+is-- well, it'll fall off.
+I need to have it
+half way across.
+That's the best I can do.
+So the top one I'm going
+to build like that.
+I'm going to take it as
+far to the left as I can.

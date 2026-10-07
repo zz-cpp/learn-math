@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV1U4421X7wp",
+  "url": "https://www.bilibili.com/video/BV1U4421X7wp",
+  "title": "备战期末！平面束是啥？直线方程不懂？50min从入门到高手！|高数下",
+  "lecture_title_cn": "平面束与空间直线方程",
+  "section": "8.4",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 3377.41,
+  "duration_min": 56.29,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

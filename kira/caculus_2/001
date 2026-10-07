@@ -1,0 +1,13 @@
+  │ WS=/home/zz/Document/kaoyan/math/caculus/700/kira/caculus_2
+  │ mkdir -p ~/note/2026/gaoshu-xia && cd ~/note/2026/gaoshu-xia
+  │ rm -rf lec-0*                                   # 清掉我先前建的文件级链接
+  │ for d in lec-01-vector-coordinate lec-02-vector-products lec-03-plane-equation \
+  │          lec-04-line-plane-bundle lec-05-quadric-surface lec-06-space-curve-projection; do
+  │   ln -sfn "$WS/$d" "$d"                         # 目录级链接：.typ / figures / cover 一并可见
+  │ done
+  │ ls -l ~/note/2026/gaoshu-xia
+  │
+  │ cd ~/note/note-site && ./start.sh stop && ./start.sh
+  │
+  │ curl -s http://localhost:2026/api/index | python3 -c \
+  │   "import json,sys; d=json.load(sys.stdin); [print(c['name'], len(c['files']), [f['name'] for f in c['files']]) for c in d['courses'] if 'gaoshu' in c['name']]"

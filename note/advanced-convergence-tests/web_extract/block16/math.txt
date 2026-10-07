@@ -1,0 +1,76 @@
+$ \, \displaystyle \sum _{n=1}^{\infty } a_n\, $
+$ \, a_n>0 $
+$ \, n>N $
+$ \displaystyle \displaystyle L=\lim _{n\rightarrow \infty } \sqrt[n]{a_n} =\lim _{n\rightarrow \infty } (a_n)^{\frac{1}{n}}. $
+$ L<1,\, $
+$ L>1,\, $
+$ L=1,\, $
+$ n $
+$ \displaystyle \lim _{n\rightarrow \infty } 2^{\frac{1}{n}}\, =\, $
+$ \displaystyle \lim _{n\rightarrow \infty } (n^p)^{\frac{1}{n}}\, =\, $
+$ \, \ln \, $
+$ \displaystyle \displaystyle \ln \left(\lim _{n\rightarrow \infty } b(n)\right)= \lim _{n\rightarrow \infty } \ln (b(n)) $
+$ \, \displaystyle \lim _{n\rightarrow \infty } b(n)\, $
+$ \, +\infty $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \, \displaystyle \lim _{n\rightarrow \infty } (n!)^\frac {1}{n}.\, \, $
+$ \displaystyle \displaystyle \lim _{n\rightarrow \infty } (n!)^\frac {1}{n} $
+$ \displaystyle = $
+$ \displaystyle \infty . $
+$ \, \displaystyle \sum _{n=1}^{N} \ln (n)\, $
+$ \, \displaystyle \int _1^N \ln (x)\, dx $
+$ \, \displaystyle \ln $
+$ \displaystyle \displaystyle $
+$ \displaystyle \ln \left( \lim _{n\rightarrow \infty } (n!)^{\frac{1}{n}}\right) $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty }\frac{\ln (n!)}{n} $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \frac{ \sum _{k=2}^{n} \ln (k)}{n} $
+$ \, \displaystyle \frac{ \sum _{k=2}^{n} \ln (k)}{n}\, $
+$ \displaystyle \, \sum _{k=2}^{n} \ln (k) \, $
+$ \, \displaystyle \int _{1}^{n} \ln (x) \, dx\, $
+$ \, \displaystyle \Delta x=1.\, \, $
+$ \, \ln (x)\, $
+$ \displaystyle \displaystyle \sum _{k=2}^{n} \ln (k) $
+$ \displaystyle > $
+$ \displaystyle \int ^{n}_1 \ln (x)\, dx. $
+$ \displaystyle \displaystyle $
+$ \displaystyle \int \ln (x)\, dx $
+$ \displaystyle = $
+$ \displaystyle x \ln x-\int \frac{x}{x}\, dx \qquad \left(u=\ln (x), dv= dx\right) $
+$ \displaystyle = $
+$ \displaystyle x\ln (x)-x $
+$ \displaystyle \Longrightarrow $
+$ \displaystyle \int _1^n \ln (x)\, dx $
+$ \displaystyle = $
+$ \displaystyle n \ln (n)-n+1. $
+$ \displaystyle \, \sum _{k=1}^{n} \ln (k) $
+$ \displaystyle \displaystyle \sum _{k=1}^{n} \ln (k) $
+$ \displaystyle > $
+$ \displaystyle n \ln n-n+1. $
+$ \displaystyle \displaystyle $
+$ \displaystyle \ln \left( \lim _{n\rightarrow \infty } (n!)^{\frac{1}{n}}\right) $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \frac{ \sum _{k=2}^{n} \ln (k)}{n} $
+$ \displaystyle > $
+$ \displaystyle \lim _{n\rightarrow \infty } \frac{n \ln n-n+1}{n} $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \left(\ln (n)-1 +\frac{1}{n}\right) $
+$ \displaystyle = $
+$ \displaystyle \infty $
+$ \displaystyle \displaystyle \lim _{n\rightarrow \infty } \left(n!\right)^{\frac{1}{n}} $
+$ \displaystyle = $
+$ \displaystyle e^{\infty } \, =\, \infty . $

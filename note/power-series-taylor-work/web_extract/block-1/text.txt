@@ -1,0 +1,120 @@
+### First example of a power series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+So here we are with power series.
+Our first series was this one.
+And we mentioned last time that it was equal to be 1 over 1
+minus x for x less than 1.
+Well, this one is known as the geometric series.
+You didn't use the letter x last time.
+I used the letter a, but this is known as a geometric series.
+Now I'm going to show you one reason why this is true,
+why the formula holds.
+And it's just the kind of manipulation
+that was done when these things were first introduced.
+And here is the idea of a proof.
+So suppose that this sum is equal to sum number
+S, which is the sum of all of these numbers here.
+The first thing that I'm going to do
+is I'm going to multiply by x.
+So if I multiply by x-- let's think about
+that-- I multiply by x on both the left
+and the right-hand side.
+Then on the left side, I get x plus x squared plus x
+cubed plus and so forth.
+And on the right side, I get S times x.
+And now I'm going to subtract the two
+equations, one from the other.
+And there's a very, very substantial cancellation.
+This whole tail here gets canceled off.
+And the only thing that's left is the 1.
+So when I subtract, I get one on the left-hand side.
+And on the right-hand side, I get S minus S times x.
+And now that can be rewritten as S times 1 minus x.
+And so I've got my formula here.
+This 1 over 1 minus x is equal to S.
+Now this reasoning has one flaw.
+It's not complete.
+And this reasoning is, basically, correct,
+but it's incomplete, because it requires that S exists.
+For example, it doesn't make any sense in the case x equals 1.
+So for example, in the case x equals 1,
+we have 1 plus 1 plus 1 plus 1 plus, et cetera,
+equals whatever we call S.
+And then when we multiply through by 1,
+we get 1 plus 1 plus 1 plus equals S times 1.
+And now you see that the subtraction gives us
+infinity minus infinity is equal to infinity minus infinity.
+That's what's really going on in the argument in this context.
+So it's just nonsense.
+I mean, it doesn't give us anything meaningful.
+So this argument, it's great.
+And it gives us the right answer, but not always.
+And the times when it gives us the answer, the correct answer,
+is when the series is convergent.
+And that's why we care about convergence,
+because we want manipulations like this to be allowed.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+### Convergence
+1 point possible (graded)
+Recall that
+(3.137)
+For what values of does the power series converge?
+All real numbers.
+This series is not well defined for any .
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Domains of definition
+2 points possible (graded)
+Let us define the function by
+(3.138)
+where the power series converges.
+Consider also the function .
+What is the domain of definition
+What is the domain of definition
+of the function ?
+of the function ?
+All real numbers.
+This series is not well defined for any .
+unanswered
+All real numbers.
+This series is not well defined for any .
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

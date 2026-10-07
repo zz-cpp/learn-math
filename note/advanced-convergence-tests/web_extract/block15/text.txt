@@ -1,0 +1,508 @@
+### Ratio test for convergence
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Welcome back to recitation.
+In this video, I want to talk to you
+about another test for convergence we have for series
+that you haven't really spent any time looking
+at this particular one.
+And it's pretty helpful, and it also
+will help us understand something
+about Taylor series, which I'll do in another video.
+So this is the ratio test.
+And you'll understand the name of this test momentarily.
+So we're going to start with a series
+that we'll just say-- we'll call each term a sub n.
+And I'm not going to tell you where n starts,
+because it doesn't matter.
+It's really going to only matter what's
+happening out at infinity.
+And to make things simpler, we're
+going to let all the terms be positive.
+If they're not positive, you can take the absolute value
+of all the terms and still make some conclusions in terms
+of absolute convergence.
+So that's just a little side bar,
+but let's just deal with all the terms
+positive so we don't have to worry about anything.
+And now what does the ratio test say?
+Well, the ratio test says that first, we
+consider a certain ratio-- the limit
+as n goes to infinity of a sub n plus 1 over a sub n.
+So we consider this limit.
+Well, that's your ratio.
+What is this doing?
+This is taking a term, and it's dividing by the previous term.
+You do that for all of the values for n as n
+goes to infinity, and you look at the limit if it exists.
+If the limit doesn't exist, then you can't use this test.
+So sometimes, that will happen.
+But if the limit exists, you can use this test and you say it
+equals L.
+And then you have the following conclusions that you can make.
+So here are the conclusions.
+There's three of them.
+So if L is less than 1, then the series converges.
+OK.
+That's nice.
+It's good.
+If L is bigger than 1, the series diverges.
+OK.
+That's another good thing.
+And then the last one is if L equals 1,
+you can't conclude anything.
+So I will try and convince you of that fact
+with a few examples later.
+But let's look at this.
+So you look at the ratio, and if the ratio is less than 1, then
+you actually can conclude that the series converges.
+And if the ratio is bigger than 1,
+you can conclude that the series diverges.
+So let me just give you a little understanding
+of why this one is true, and then the same kind of logic
+can be used for the second one.
+So we'll try and understand at least a little bit
+why, when L is less than 1, the series converges.
+So let me just start writing here.
+So if L is less than 1, then this
+means that we have that a sub n plus 1 over a sub n
+as goes to infinity is equal to L, which is less than 1.
+So we can pick something between L and 1.
+We can pick a number between L and 1,
+because L is strictly less than 1.
+And so what I'm going to do is I'm
+going to say I'm going to call this thing
+r, some number between L and 1.
+So what does that mean?
+That means that for large n, we have
+a sub n plus 1 over a sub n.
+Sorry, that looks like I'm adding 1 to the a sub n.
+That's a subscript.
+a sub n plus 1 over a sub n is less than some fixed r.
+So I'm picking a value r between L and 1.
+And then this is true for all large n.
+And when you're doing math, sometimes people
+say for n bigger than or equal to some fixed value.
+Basically, if you go far enough out in the sequence,
+then all the values bigger than some fixed one have this ratio.
+But let's get fancy with this.
+This, we can rewrite as r to the n plus 1 over r to the n.
+This is just r.
+And now if I do a little moving around, what do I see?
+I see that a sub n plus 1 over r to the n plus 1
+is less than a sub n over r to the n.
+Now, this might be weird.
+What do I do?
+I just multiply it through by the a sub n
+and I divided by the r sub n plus 1.
+I get this thing, and then I see that this ratio as n
+goes to infinity, the ratio between a sub n and r to the n
+is decreasing.
+It's a decreasing, because the next term, it's smaller.
+And so the point is that if I go far enough out-- if I start,
+say, past this n_0, if I go far enough out,
+then I always have that a sub n is less than some constant
+times r to the n.
+So this implies a sub n is always
+less than some constant times r to the n.
+And now what do we do?
+We do our comparison test.
+We do our comparison test.
+This is what's going to tell us that the series converges.
+Now, again, this isn't necessarily true
+all the way through the series, but it's true
+when you're far enough out after this n_0.
+And if a series converges at the end,
+the beginning is just a finite sum,
+so we don't have to worry about what's
+going on at the beginning.
+So again, we're at this place.
+We want to know what happens to the sum of a sub n,
+of all the terms a sub n.
+Well, we know that's going to be less than k times the sum of r
+to the n, because each a sub n is less than some constant
+times r to the n.
+Now, why does this converge?
+What do we know about r?
+r we chose.
+We said it's between L and 1.
+In particular, it's less than 1.
+This is a geometric series.
+Geometric series when r is less than 1, we know it converges.
+And so this one converges, so then this one converges.
+So that's the logic behind it.
+We're going to now use it.
+But I want to point out that if you
+liked that, you can come back over here,
+and you can do the same kind of reasoning for why,
+if L is bigger than 1, the sum of the a sub n's diverges.
+And that's going to come down to now
+you choose an r that's between L and 1,
+but it has to be bigger than 1.
+And then you can look at that.
+Or maybe r has to be bigger than L.
+I didn't even work that one out all the way.
+But you can do it.
+You put an r in there somewhere.
+And the same kind of logic, because the r will be bigger
+than 1, you're going to get to a place
+where probably the inequality sign is going
+to go the opposite way, and then you'll
+have a series that diverges, and the other one will be bigger
+than that one.
+And so that's how the logic is going to work.
+So you have to figure out where the r goes,
+but I guarantee you'll want the r bigger than 1.
+And then you'll have to have the inequality signs be
+opposite what they are here.
+You'll see they're going to be opposite there.
+Now let's get some examples.
+Example 1-- let's look at some that we know,
+and then let's look at some that we don't know.
+So let's look, for example, first at 1/n.
+Let's use the ratio test on 1/n.
+Maybe this seems funny, because what do we know about it?
+We know it diverges, but let's check if this tells us.
+The limit as n goes to infinity of-- well,
+what's the n plus first term of this?
+It's going to be 1 over n plus 1.
+And what's the nth term of this?
+It's going to be 1 over n.
+And so we get it's the limit as n goes to infinity of n over n
+plus 1, and that equals 1.
+So this one didn't work.
+This one didn't tell us anything.
+But we know this one diverges.
+So we know that-- this makes us think, well, maybe when L is 1,
+then we know it diverges.
+But just to make sure we don't make that conclusion,
+we don't draw that conclusion, let's look at 1 over n squared.
+And what are the terms there? a sub n plus 1 and a sub n.
+The limit as n goes to infinity-- well,
+the n plus first term is going to be 1 over n
+plus 1 quantity squared, and the nth term
+is going to be 1 over n squared, which
+is going to be the limit as n goes to infinity of n squared
+over n plus 1 quantity squared, which is also equal to 1.
+And what do we know about this one?
+This one converges.
+So this one gave us the L is equal to 1,
+but we know this one diverges.
+And this one gave us L is equal to 1, and we know it converges.
+So we know that when L equals 1, we really cannot conclude
+convergence or divergence.
+L equals 1 doesn't let us draw any conclusions.
+But now let's see something where we can draw a conclusion.
+Because it would be no fun if this test never
+told us anything.
+It probably wouldn't be a test then.
+So let's try this one.
+Let's try 4 to the n over n times 3 to the n.
+Let's see what that one does.
+So let's see.
+We need the limit as n goes to infinity.
+We need the n plus first term, so let's plug in n plus 1
+for all of these.
+And I'm actually going to do a little trick here,
+and I'll explain it as I go.
+4 to the n plus 1 over n plus 1 3 to the n plus 1-- I'm
+going to multiply by 1 over a sub n,
+because sometimes that's a lot easier to do.
+I could have done it on these other ones, maybe,
+but now I'm going to do it on this one.
+So this is actually what the a sub n is going to look like.
+I had to put in n plus 1 to get a sub n plus 1.
+This is a sub n.
+I'm going to write down 1 over a sub n,
+and that's going to give me n times 3 to the n over 4
+to the n.
+And now let's start simplifying.
+I have 3 to the n over 3 to the n plus 1.
+I'm left with just a 3 there.
+4 to the n and 4 to the n plus 1, I'm left with just a 4
+there.
+And now the limit as n goes to infinity-- let's just rewrite
+it so I know what it is.
+Let's see.
+I have 4 n over 3 times n plus 1.
+Well, the 4 and the 3 I can actually just pull out.
+But what do I have here? n over n plus 1.
+The limit as n goes to infinity of that, that equals to 4/3.
+That's bigger than 1.
+So that actually diverges.
+And I have one more example, and I'm almost out of space.
+And let me actually come over here and figure out
+what example I wanted.
+Sorry about that.
+I knew I had one more.
+n to the 10th over 10 to the n-- this is an interesting one,
+because you have an exponential and then you have a power of n.
+So let's look at this one.
+So we need to consider the limit as n goes to infinity,
+so I put in n plus 1 first, n plus 1 the 10th over 10
+to the n plus 1.
+And then I'm going to just-- remember, do times 1
+over a sub n.
+So I'm going to have 10 to the n over n to the 10th.
+So again, I took a sub n, I did 1 over that.
+That's just the reciprocal.
+And now let's start dividing if I'm allowed to divide.
+Yeah, I've got 10 to the n there and 10 to the n plus 1 there,
+so that gives me a single 10 in the denominator.
+And so now I really have the limit
+as n goes to infinity of 1 over 10 times n plus 1
+to the 10th over n to the 10th.
+Well, that's equal to n plus 1 to the 10th over n to the 10th.
+You might start to get nervous and think, oh my gosh,
+these powers are getting really big.
+It might make a difference that that 1 is there.
+It doesn't make a difference that that 1 is there,
+because if you actually expand this out,
+the leading term is just n to the 10th.
+And we know that the highest degree is going to win out,
+so it's going to be an n to the 10th over n
+to the 10th is how it's going to behave in the limit.
+So this part is just going to go to 1, so I get 1/10.
+Well, that's less than 1.
+Yay.
+So this series converges.
+So we had one that diverges, one that converges,
+and a few where we couldn't get conclusions by this test.
+And one point I want to make about this
+is that in some cases, you have the integral test already,
+and sometimes, that's easy and that helps you.
+In the case of these examples where we couldn't tell,
+where L was equal to 1, the integral test
+is going to tell you something.
+But in this case, it's a little bit harder
+to deal with this as an integral test.
+You can still do it, but it's a little bit harder.
+And so this maybe is a little bit
+quicker way to deal with these types of problems.
+And the big thing we're going to do is, in the next video
+on the ratio test, I'm going to show you
+how you can use this to determine
+the radius of convergence for these Taylor series.
+So that's actually going to be kind of exciting,
+and that will be in our next video.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Ratio test
+The ratio test is another way to determine convergence of a series.
+Consider where for all .
+Define
+(3.33)
+There are three cases:
+If then the series converges;
+If then the series diverges;
+If then there is no conclusion, i.e. the series can diverge or converge.
+Here, we focus on series where for all large. You will see shortly that you can use the ratio test on series whose tail is not always positive.
+### Ratio test practice 1
+2 points possible (graded)
+Use the ratio test to determine if the following series converges or diverges.
+(3.34)
+First, compute .
+unanswered
+Now, use to determine if the series converges or diverges.
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by the ratio test.
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Ratio test practice 2
+2 points possible (graded)
+Use the ratio test to find all values of for which the following series converge.
+(3.38)
+First, compute in terms of .
+unanswered
+For which does the series converge? (Check all that apply).
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Ratio test practice 3 (*)
+2 points possible (graded)
+Use the ratio test to determine if the following series converges or diverges.
+(3.43)
+First, compute . Hint: Recall that since is continuous,
+(3.44)
+provided the is positive or .
+unanswered
+Now, use to determine if the series converges or diverges.
+The series converges.
+The series tends to and so diverges.
+Cannot be determined by the ratio test.
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

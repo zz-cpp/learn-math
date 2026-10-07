@@ -1,0 +1,96 @@
+Finding the radius of convergence
+Given a power series
+
+∞
+X
+
+an xn , the ratio test implies that the power series converges
+
+n=0
+
+if
+
+an+1 xn+1
+an+1
+= lim
+|x| < 1.
+n
+n→∞
+n→∞
+an x
+an
+lim
+
+There are 3 possibilities:
+1. There is a finite number R such that
+an+1
+|x| < 1,
+n→∞
+an
+
+• |x| < R =⇒ lim
+
+an+1
+|x| > 1.
+n→∞
+an
+
+• |x| > R =⇒ lim
+
+We say the radius of convergence is R.
+an+1
+|x| < 1. We say the radius of convergence is ∞.
+n→∞
+an
+(All x satisfy |x| < ∞.)
+
+2. For all x
+
+lim
+
+an+1
+|x| > 1 for all x 6= 0. We say the radius of convergence is 0.
+n→∞
+an
+
+3. lim
+
+Remark: Alternative method using ratio test
+(Note that in the method that follows, the n + 1 term is in the denominator and
+the n term is in the numerator, which is the opposite of the ratio test.)
+∞
+X
+an x n ,
+Given a power series
+n=0
+
+an
+if lim
+= R (where R exists or is ∞),
+n→∞ an+1
+then the radius of convergence for the power series is R.
+Example
+Consider
+
+∞
+X
+n=0
+
+1
+2n
+=
+n+1
+n→∞ 2
+2
+
+2n xn , then lim
+
+2
+
+=⇒
+
+1
+R= .
+2
+
+

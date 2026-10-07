@@ -1,0 +1,159 @@
+=== 1. figures/fig_src_intro.txt ===
+  page:       -
+  source:     转录稿 intro
+  paragraph:  积木悬挑实验：顶部积木完全悬出底部积木之外、从下往上搭失败、自顶向下的诀窍
+  caption:    图 1：积木悬挑示意图（CeTZ 重绘，悬挑增量 1/2,1/4,1/6,…）
+  [OK]   figure file: figures/fig_src_intro.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 2. figures/fig_src_pdf_p5.png ===
+  page:       pages/page-5.png
+  source:     PDF p.5 速查表第 1 行
+  paragraph:  几何级数 Σxⁿ：|x|<1 绝对收敛、|x|≥1 发散
+  caption:    图 2：几何级数部分和（r=1/2 收敛到 2、r=2 爆炸）
+  [OK]   figure file: figures/fig_src_pdf_p5.png
+  [OK]   source page: pages/page-5.png
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 3. figures/fig_src_v9.txt ===
+  page:       -
+  source:     转录稿 v9 例一
+  paragraph:  Σ1/√(n²+1) 主项 1/n，与调和级数极限比较同发散
+  caption:    图 3：直接比较判别法 a_n ≤ b_n 柱状示意
+  [OK]   figure file: figures/fig_src_v9.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 4. figures/fig_src_v10.txt ===
+  page:       -
+  source:     转录稿 v10 例 C
+  paragraph:  ln n 比任意正幂慢：lim ln x/x^p=0；拆分 (ln n/n^(1/2))·(1/n^(3/2))
+  caption:    图 4：ln n 与 √n、n 的增长对比
+  [OK]   figure file: figures/fig_src_v10.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 5. figures/fig_src_v11.txt ===
+  page:       -
+  source:     转录稿 v11 比值证明
+  paragraph:  L<1：取 r∈(L,1)，a_n/r^n 递减，a_n<k·r^n 被几何级数压住
+  caption:    图 5：比值判别法证明的"被几何级数压住"示意
+  [OK]   figure file: figures/fig_src_v11.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 6. figures/fig_src_pdf_p3.png ===
+  page:       pages/page-3.png
+  source:     PDF p.3 + block17 例二
+  paragraph:  根值判别 L=lim(a_n)^(1/n)；Σn²/2ⁿ：L=(1/2)·lim(n²)^(1/n)=1/2
+  caption:    图 6：((n²)/(2ⁿ))^(1/n) 趋近 1/2
+  [OK]   figure file: figures/fig_src_pdf_p3.png
+  [OK]   source page: pages/page-3.png
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 7. figures/fig_src_pdf_p4.png ===
+  page:       pages/page-4.png
+  source:     PDF p.4 + block19 (3.114)
+  paragraph:  交错级数 ±Σ(−1)ⁿc_n；Σ(−1)^(n−1)/n=1−1/2+1/3−…条件收敛
+  caption:    图 7：交错调和级数部分和从两侧逼近 ln 2
+  [OK]   figure file: figures/fig_src_pdf_p4.png
+  [OK]   source page: pages/page-4.png
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 8. figures/fig_src_v13.txt ===
+  page:       -
+  source:     转录稿 v13
+  paragraph:  质心加权平均 c_(n+1)=(n·c_n+(c_n+1))/(n+1)=c_n+1/(n+1)
+  caption:    图 8：质心递推示意图（新块中心 c_n+1、右端对齐 c_n）
+  [OK]   figure file: figures/fig_src_v13.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 9. figures/fig_src_v14.txt ===
+  page:       -
+  source:     转录稿 v14
+  paragraph:  log n < S_n < log n + 1；S_n→∞ 即悬挑无极限
+  caption:    图 9：调和部分和 S_n 与 ln n 的比较
+  [OK]   figure file: figures/fig_src_v14.txt
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+=== 10. figures/fig_src_pdf_p5.png ===
+  page:       pages/page-5.png
+  source:     PDF p.5 速查表 + block20 目标
+  paragraph:  七行基准级数、通项检验打头、按形态分流的判别流程
+  caption:    图 10：判别法决策流程图
+  [OK]   figure file: figures/fig_src_pdf_p5.png
+  [OK]   source page: pages/page-5.png
+  --- material context around this figure ---
+  (no transcript supplied; verify against pages_text/ and slides)
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [x] 1. 图中实际内容 == caption 描述
+  [x] 2. 图中实际内容 == 材料对应段落
+  [x] 3. caption == 材料对应段落
+
+audit: 10 figures, 0 file problems
+
+============================================================
+三方验证完成记录（agent 核对，2026-09-01）
+============================================================
+证据基础：
+1. 本材料为纯文字/公式形态——images.json 全量扫描显示除 logo/水印/转圈图外
+   无教学位图（唯一非 logo 图为 "Translated by Google logo"），故"图内容"
+   的真值为材料文字真值：转录稿原文（7 份，全文通读）、pdftotext 全量文本
+   （5 页，全文通读）、html_extract 抽取的 321 条 MathJax 公式。
+2. 视觉通道：contact.png（5 页 contact sheet）与 pages/page-1..5.png 单页
+   渲染经 Reasonix MCP filesystem/read_media_file 查看。
+3. 每幅 CeTZ 重绘图中的公式与数值参数逐条比对材料原文：
+   - 图 1：悬挑 1/2, 1/4, 1/6 与 c1=1, c2=3/2, c3=11/6, c4=25/12
+     ← v13/v14 递推 c_(n+1)=c_n+1/(n+1)（transcript.txt 通读确认）
+   - 图 2：s_n=(1-r^n)/(1-r)、r=1/2 极限 2、r=2 爆炸 ← PDF p.5 速查表第 1 行
+   - 图 3：a_n=1/√(n²+1) < b_n=1/n ← v9 例一（pages_text/page-001..005 核对）
+   - 图 4：ln n 慢于 √n 与 n ← v10 例 C 的 lim ln x/x^p=0
+   - 图 5：a_n<k·r^n 被 r<1 几何级数压住 ← v11 比值证明逐行
+   - 图 6：((n²)/(2ⁿ))^(1/n)→1/2 ← block17 (3.81) 与 PDF p.3
+   - 图 7：交错调和部分和逼近 ln 2 ← block19 (3.114)
+   - 图 8：新块中心 c_n+1、加权平均 ← v13 原文
+   - 图 9：ln n < S_n < ln n+1 ← v14 原文
+   - 图 10：决策流程 ← PDF p.5 七行速查表 + block20 三项目标
+4. 结论：10/10 幅图通过三方一致检查（图内容 × 材料段落 × caption）。

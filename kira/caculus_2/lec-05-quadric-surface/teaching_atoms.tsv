@@ -1,0 +1,28 @@
+atom	status	evidence
+二次曲面的一般式与四种研究任务	ok	== 这一讲要练成的四种能力 + fig_01
+截痕法的定义与"降维"思想	ok	importantbox 截痕法 + == 截痕法
+球面方程与判别要点（系数相同、无交叉项）	ok	公式块 + fig_02/fig_03 + importantbox
+椭球面方程与截痕分析	ok	公式块 + fig_04
+"常数默认正数"的约定	ok	fig_05 + 正文
+圆锥面 vs 旋转抛物面（z 有无平方的区别）	ok	importantbox 一句话分辨 + fig_06
+圆锥面的带根号写法	ok	importantbox 补充
+椭圆锥面与椭圆抛物面（伸缩而来）	ok	正文
+单叶/双叶双曲面的定义与连通性解释	ok	knowledgebox 单叶/双叶
+单叶与双叶的符号判别（两正一负/一正两负）	ok	importantbox 判别 + fig_07
+双曲抛物面（马鞍面）的截痕双重性	ok	== 双曲抛物面 + fig_08
+鞍点与 z=xy 的可逆线性换元	ok	knowledgebox 两个常识 + fig_09
+九种二次曲面小结（判别窍门）	ok	== 本章小结
+旋转曲面的定义（母线、轴、纬圆）	ok	importantbox 三个术语 + fig_10
+旋转曲面方程的两条等量关系与推导	ok	importantbox + fig_11 + cetz 图
+旋转曲面方程的口诀	ok	importantbox 书写口诀 + fig_12
+例1：平面曲线绕两轴的旋转曲面方程（正反两向）	ok	== 例题1 + fig_13 + importantbox 反向题
+旋转曲面在曲面积分中的应用	ok	== 应用 + fig_14 + warningbox
+伸缩变换的反着说（sin 图象三例）	ok	knowledgebox + importantbox + fig_15
+由旋转面伸缩得到一般二次曲面	ok	importantbox + fig_16
+例2：作图三步（认名字、还原、伸缩）	ok	== 例题2 + fig_17 + warningbox
+柱面的两种理解与方程特征（缺变量）	ok	importantbox + fig_18
+常见二次柱面表	ok	booktabs 表
+例3：以交线为准线的柱面（消元法）	ok	== 例题3 + fig_19/fig_20 + importantbox
+交线方程的写法	ok	knowledgebox（顺带一提）
+例4：报菜名式的图形识别（三小题完整思路）	ok	== 例题4 + fig_21/fig_22 + importantbox 三个检查步骤
+本讲三件工具的一页对照	ok	== 本讲三件工具的一页对照 booktabs 表

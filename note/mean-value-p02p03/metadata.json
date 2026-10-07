@@ -1,0 +1,14 @@
+{
+  "platform": "bilibili",
+  "collection_title": "全网最强：中值定理证明题，5小时，彻底拿下！",
+  "uploader": "考研竞赛凯哥",
+  "aid": 114234151147349,
+  "bvid": "BV1zGZ3Y2EnK",
+  "videos": [
+    {"part": 2, "cid": 29095955239, "title": "p02 中值定理 解题课（上）", "duration": 9451.753, "webpage_url": "https://www.bilibili.com/video/BV1zGZ3Y2EnK?p=2"},
+    {"part": 3, "cid": 29117451396, "title": "p03 中值定理 解题课（下）", "duration": 11482.453, "webpage_url": "https://www.bilibili.com/video/BV1zGZ3Y2EnK?p=3"}
+  ],
+  "duration_total": 20934.206,
+  "subtitle_languages": [],
+  "cover": "http://i1.hdslb.com/bfs/archive/21a24abe580a0716450efee39a9a443afb0276d0.jpg"
+}

@@ -1,0 +1,417 @@
+=== 1. fig01-factory-flow.png ===
+  page:       -
+  source:     CeTZ 重绘：网页 page-01 开篇 + 转录 v9
+  paragraph:  "We will now obtain more Taylor series from the ones above by performing addition, multiplication, differentiation, and integration on them"
+  caption:    三栏流程：旧级数 → 多项式式操作 → 新级数家族
+  [OK]   figure file: figures/fig01-factory-flow.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. fig02-sec-multiply.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v10 乘积法
+  paragraph:  "cosine times secant... it has to give us just 1... 1/24 - 1/4 + a_4/24 = 0"
+  caption:    sec·cos=1 的 x⁴ 三组配对与 a_4=5
+  [OK]   figure file: figures/fig02-sec-multiply.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. fig03-sin-to-cos.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v11 逐项求导
+  paragraph:  "the 3 cancels with the last factor in this 3 factorial and leaves you with 2 factorial"
+  caption:    sin 级数 → 逐项求导 → cos 级数
+  [OK]   figure file: figures/fig03-sin-to-cos.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. fig04-substitution-tree.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v13/v15 + 讲义 page-04
+  paragraph:  "substitute in a polynomial of the form p(x)=ax^n since p(0)=0"
+  caption:    三条代换箭头 e^x→e^(-t²)、sin→sin(2x⁵)、ln→ln(1-x³)
+  [OK]   figure file: figures/fig04-substitution-tree.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. fig05-erf-area.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v15 + 网页 page-06
+  paragraph:  "the normalization... 2 over the square root of pi... the integral of e to the minus t squared dt from 0 to x"
+  caption:    高斯曲线下 [0,x] 面积 × 2/√π = erf(x)
+  [OK]   figure file: figures/fig05-erf-area.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. fig06-recognize-four.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v14
+  paragraph:  "this function is x squared e to the x... it was actually just still the geometric series"
+  caption:    A-D 四级数到函数四法连线
+  [OK]   figure file: figures/fig06-recognize-four.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. fig07-pn-approx.png ===
+  page:       -
+  source:     CeTZ 重绘：网页 page-08 官方练习
+  paragraph:  "approximate sqrt(2) by P_3(1)"
+  caption:    √(1+x) 与 P_0..P_3 部分和曲线
+  [OK]   figure file: figures/fig07-pn-approx.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. fig08-shift-axis.png ===
+  page:       -
+  source:     CeTZ 重绘：网页 page-10 平移公式
+  paragraph:  "converges when |x-a|<R and diverges when |x-a|>R"
+  caption:    以 a 为中心的收敛区间数轴
+  [OK]   figure file: figures/fig08-shift-axis.png
+  --- material context around this figure ---
+  [line 866] and that power series
+  [line 867] by itself and see
+  [line 868] if it's easy to get back
+  [line 869] this formula that we had.
+  [line 870] But any of those
+  [line 871] ways is a good way
+  [line 872] to double check
+  [line 873] that this is really
+  [line 874] true, that this function, that
+  [line 875] this power series here, f of x,
+  [line 876] has this functional form.
+  [line 877] Now, of course, I
+  [line 878] haven't said anything
+  [line 879] about the radius of
+  [line 880] convergence, but the thing
+  [line 881] to remember when you're doing
+  [line 882] calculus on power series
+  [line 883] is that when you take a
+  [line 884] derivative or an antiderivative
+  [line 885] of a power series,
+  [line 886] you don't change
+  [line 887] the radius of convergence.
+  [line 888] Sometimes you can fiddle with
+  [line 889] what happens at the end points,
+  [line 890] but the radius of
+  [line 891] convergence stays the same.
+  [line 892] So this is going
+  [line 893] to be true whenever
+  [line 894] x is between negative 1 and 1.
+  [line 895] And, in fact, this series
+  [line 896] diverges at its end points.
+  [line 897] That's pretty easy to check.
+  [line 898] So there we go.
+  [line 899] So this is the functional
+  [line 900] form for this power series.
+  [line 901] It's valid whenever x is
+  [line 902] between negative 1 and 1.
+  [line 903] That's it's range
+  [line 904] of convergence.
+  [line 905] And so here we have a cute
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 8 figures, 0 file problems

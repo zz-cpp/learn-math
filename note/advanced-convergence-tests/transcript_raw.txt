@@ -1,0 +1,1855 @@
+
+These are my kids' blocks.
+My kids are grown now, so
+I get to play with them.
+What I want to do is to stack
+these blocks in such a way
+that the bottom block is here.
+And then say the
+next one goes here.
+And the next one goes there.
+And then by the time I
+get to the top block,
+it's completely to
+the left and not
+supported by the bottom block.
+The question is, can we do this?
+Does it fall down?
+Or is there a way with enough
+blocks that I can build this?
+Whoop.
+It fell.
+So the question is, if
+I build it correctly,
+how far out can I go, even
+with infinitely many blocks?
+We can answer these
+questions in terms of what
+are known as infinite series.
+Before we dive into
+the details, let's see
+how this played out in lecture.
+I'm going to-- because
+this is a real life thing,
+I'm going to try to do it.
+All right.
+All right.
+So now I'm going to tell
+you what the trick is.
+The trick is to do it backwards.
+When most people are
+playing with blocks,
+they decide to build it
+from the bottom up, right?
+But we're going to build
+it from the top down.
+From the top down.
+And that's going
+to make it possible
+for us to do the optimal
+thing at each stage.
+So when I build it from the
+top down, the best I can do
+is-- well, it'll fall off.
+I need to have it
+half way across.
+That's the best I can do.
+So the top one I'm going
+to build like that.
+I'm going to take it as
+far to the left as I can.
+And then I'm going
+to put the next one
+down as far to
+the left as I can,
+and then the next one as
+far to the left as I can.
+Oop.
+I was a little too far.
+And then I'm going to do the
+next one as far to the left
+as I can.
+And I'm going to
+do the next one--
+well, let's line it up first--
+as far to the left as I can.
+And then the next one as
+far to the left as I can.
+All right now.
+Those of you who are in this
+line can see I succeeded.
+All right.
+That's over the edge.
+All right.
+So it can be done.
+[APPLAUSE]
+
+So it turns out
+we can build this.
+Now the question is,
+how far out can we go?
+I want to point out that this
+is a good kind of math question,
+where no matter
+what the answer is,
+we're going to find
+something interesting.
+There are two possibilities.
+Either there is a limit even
+with infinitely many blocks,
+there is some limit as to how
+far to the left we can go.
+In that case that limit is
+a very interesting number.
+Or else there's no limit as
+to how far out we can go.
+We can go arbitrarily far.
+And this is also
+interesting and curious.
+Let's start developing the tools
+to analyze this problem now.
+
+And now I have one
+last bit on comparisons
+that I need to tell you about.
+And this is very
+much like what we
+did with integrals, which is
+a so-called limit comparison.
+
+The limit comparison says
+the following, if f of n
+is similar to g of n.
+We'll recall that that
+means f of n over g of n
+turns to 1 as n
+goes to infinity.
+
+And we're in the positive
+case, so let's just
+say g(n) is positive.
+
+Then-- that doesn't
+even, well-- then,
+sum f(n), sum g(n)
+either both-- same thing
+as above-- either both
+converge or both diverge.
+
+All right.
+This is just saying
+that if they behave
+the same way in the tail, which
+is all we really care about,
+then they have similar behavior.
+Similar convergence properties.
+
+And let me give you
+a couple examples.
+
+So here's one example.
+If you take the sum, 1 over
+n squared plus 1 square root.
+
+This is going to be replaced
+by something simpler,
+which is the main
+term here, which
+is 1 over the square
+root of n squared,
+which we recognize as sum
+1 over n, which diverges.
+
+So this guy is one of the
+red guys on the red team.
+And now we have another
+example, which is, let's say,
+the square root of
+n, I don't know,
+to the 5th minus n squared.
+Now, if you have
+something where that's
+negative in the
+denominator, you kind of
+do have to watch out that
+the denominator makes sense;
+it isn't 0.
+So we're going to be careful
+and start this at n equals 2.
+In which case, the
+first term-- right.
+I don't like 1 over 0
+as a term in my series.
+So I'm just going to be a
+little careful about how--
+I said I was kind of lazy here.
+I could have started this
+one to 0, for instance.
+
+All right.
+So here's the picture.
+Now this, I just replaced by
+its main term, which is 1 over n
+to the fifth square root,
+which is sum 1 over n
+to the 5/2, which converges.
+
+All right.
+The power is bigger than 1.
+1 is the divider for these
+things and it just misses.
+This one converges.
+Hi.
+Welcome back to recitation.
+In class, you've been learning
+about convergence tests
+for infinite series.
+I have here three examples of
+series that I happen to like.
+So the first one
+is the sum from n
+equals 0 to infinity
+of five n plus 2
+divided by n cubed plus 1.
+The second one is the
+sum from n equals 1
+to infinity of the quantity
+1 plus the square root
+of 5 over 2, all that
+to the n-th power.
+And the third one
+is the sum from n
+equals 1 to infinity
+of the natural log of n
+divided by n squared.
+So what I'd like you to do
+for each of these three series
+is to figure out whether
+or not they converge.
+So whether they converge,
+or whether they diverge.
+So why don't you
+pause the video.
+Take some time to work
+that out, come back,
+and we can work on it together.
+
+Welcome back.
+Hopefully you had some luck
+working on these series.
+So let's talk about
+how we do them.
+So I'll start with
+the first one here.
+So this first one, the
+function that we're summing
+is this five n plus 2
+divided by n cubed plus 3.
+And so you want to know, does
+that sum of that expression--
+as n goes from 1 to
+infinity-- does that converge?
+Does it reach some finite value?
+Or does it diverge?
+Does it either oscillate,
+or go to infinity,
+or something like that.
+So one thing you can always do
+is something like a comparison
+test.
+And so what you want
+to do there is you
+want to extract the information.
+From the expression
+for the summand,
+you want to figure out
+about how big this is.
+What are the
+important parts of it?
+So in this case,
+you have a ratio.
+And so when you have a
+ratio, what you want to do
+is you want to look at what's
+the magnitude of the top,
+and what's the
+magnitude of the bottom?
+So roughly speaking,
+the magnitude of the top
+is of the order of n, right?
+It's 5 n.
+The 5 is just a
+constant multiple.
+That's not going to make
+a whole big difference.
+And the plus 2 is just
+much, much, much smaller
+than the n, when n
+gets very, very large.
+So we can say that the order
+of magnitude at the top
+here is of the order of n.
+And similarly, the order
+of magnitude of the bottom
+is of the order
+of n cubed, right?
+The plus 1 is much, much,
+much smaller than the n cubed.
+So it's as almost insignificant.
+So roughly speaking,
+we should expect
+this to be of the same
+behavior as if we just
+had n over n cubed, which
+is 1 over n squared.
+And we know that
+1 over n squared--
+the series 1 over
+n squared from n
+equals one to
+infinity-- converges.
+So that's just a way
+of thinking about this.
+And we can formalize it using
+the limit comparison test.
+So the idea here for part A
+is to use the limit comparison
+test.
+So what we want to compute--
+so I'm going to put a 5 in.
+So I'm going to make
+it 5 over n squared
+because we had this 5 up here.
+So we have a_n is equal to 5 n
+plus two over n cubed plus 1.
+And I want to limit
+compare it with-- I'm
+going to compare my
+series with the series sum
+from n equals 1 to infinity
+of 5 over n squared.
+Now I'm talking
+about this 5, right?
+This 5 doesn't matter.
+If this series-- if 1 over n
+squared that sum converges,
+then 5 over n squared
+that sum converges
+to exactly five times as much.
+And if I wrote a divergent
+thing here, and then
+multiplied it by 5, the
+result multiplied by 5
+would still diverge.
+So this constant multiple
+isn't going to matter.
+And I'm just putting the 5
+in there because of this 5
+we saw over here.
+So OK.
+So let's work it out, then.
+So the limit comparison test
+says, so we look at the limit
+as n goes to infinity of
+the ratio of the two things
+that we're interested in.
+So in this case, this is
+5 n plus 2 over n cubed
+plus 1 divided by
+5 over n squared.
+
+So this is a ratio
+of two ratios,
+so we can rewrite it by
+multiplying upstairs.
+And we get that this
+is equal to the limit
+as n goes to infinity of
+5 n cubed plus 2 n squared
+over 5 n cubed plus 5.
+And so we've seen before when
+we were dealing with limits
+that when you have a
+ratio of two polynomials,
+as the variable
+goes to infinity,
+the limit is what you get just
+by comparing the leading terms.
+So in this case, we
+just have to look
+at 5 n cubed over 5 n cubed.
+And that's indeed 1.
+OK.
+So this is 1.
+So by the limit comparison
+test, our series,
+the sum of this a_n,
+converges if and only
+if this series converges.
+And we already said
+that we know some 1
+over n squared converges.
+So by the limit comparison
+test, since sum over n
+squared converges,
+our series converges.
+
+Great.
+OK.
+So that's the first one.
+Let's look at the second one.
+So the second one
+here is the sum from n
+equals 1 to infinity of 1
+plus the square of 5 over 2,
+that whole thing
+to the n-th power.
+Now if you look
+at this, the thing
+you should recognize
+this as is just
+a particular geometric
+series, right?
+If you were to replace 1 plus
+the square root of 5 over 2
+with x, this is just x, plus
+x squared, plus x cubed,
+plus dot dot dot dot dot.
+It's just a geometric
+series with constant ratio--
+well, x, 1 plus square
+root of 5 over 2.
+So we know exactly when
+geometric series converge.
+They converge exactly
+when the constant ratio
+is between minus 1 and 1.
+So it's bigger than
+minus 1 and less than 1.
+So this series converges,
+then, if and only
+if 1 plus the square
+root of 5 over 2
+is between minus 1 and 1.
+So then we just have to
+think about is this number
+between minus 1 and 1.
+And OK, so this is
+not that hard to do.
+Square root of 5
+is bigger than 2.
+So 1 plus the square root
+of 5 is bigger than 3.
+So 1 plus the square root of
+5 over 2 is bigger than 3/2.
+So 3/2 is bigger than 1.
+So this common ratio in this
+series is bigger than 1.
+So the terms of this
+series are blowing up.
+As n gets bigger
+and bigger, you're
+adding larger and
+larger numbers here.
+This is blowing up.
+It's a divergent
+geometric series.
+So this series
+does not converge.
+So B-- I'll just
+write that here.
+B diverges because it's
+geometric with common ratio
+bigger than 1.
+So that's the reason
+that part B diverges.
+Finally, we're left
+with question C.
+So I'm going to come
+over and write it over
+here again so we can see it.
+So part C asks the
+sum for n equals 1
+to infinity of log
+n over n squared.
+
+So this one's a little
+trickier, and it requires
+a little bit more thought.
+
+So let's start just by--
+it can't be solved just
+by a straightforward application
+of the limit comparison test
+that we've learned.
+So we need to think
+a little bit more
+about what ways
+could we solve it.
+So one thing to
+remember here is that we
+should think about what are
+the magnitudes of these things?
+So we know that sum 1
+over n squared converges,
+but log n is a
+function that grows.
+So this individual term is
+bigger than 1 over n squared.
+So we can't just compare
+it to 1 over n squared.
+But log n grows
+very, very slowly.
+How slowly?
+Well, it grows more
+slowly than any power
+of x-- or any power
+of n in this case,
+because the variable is n.
+So if you remember,
+we know we've
+shown that the
+limit of ln x over x
+to the p as x goes
+to infinity is
+equal to 0 for any positive p.
+So ln, log n, ln n
+is going to infinity,
+but it's going to infinity much
+slower than any power of n,
+in this case.
+Or x down here.
+So OK.
+So what does that mean?
+Well, one thing you could
+do is you could say, OK.
+So ln n over n-- that's
+getting really small.
+And then what we're
+left with is 1 over n.
+So you can say, OK.
+So this is much
+smaller than 1 over n.
+The problem is that
+some 1 over n diverges.
+So that doesn't help
+us, really, right?
+So we've shown this is
+bigger than the sum over n
+squared, which converges.
+And it's smaller than the
+sum 1 over n, which diverges.
+But that still doesn't tell
+us-- it could be something
+that-- there's a
+lot of room bigger
+than a particular
+convergent series
+and smaller than a
+particular divergent series.
+And in particular, there are
+both convergent and divergent
+series in between.
+So we still need
+either something
+that converges that
+our thing is less than,
+or we need something that
+diverges that our thing is
+bigger than, right?
+If we can bound our series
+above by something convergent,
+then our series
+converges, because it only
+has positive terms.
+This is important.
+Or if we can bound it below
+by something that diverges,
+then we would know it diverges.
+And so far, we haven't
+been able to do that.
+But maybe we can think
+of a-- a second ago,
+I said we could write
+ln n over n squared
+is equal to ln n over
+n times 1 over n.
+So that was what we just
+said a minute ago, which
+we showed is eventually
+less than 1 over n.
+So this is true, but it wasn't
+useful because the sum 1
+over n diverges.
+But maybe we can do something
+even a little more tricky.
+Because here, we saw that
+we could use, in the base,
+we could use any power
+of the variable n.
+Any positive power.
+So here, we tried it with
+the power n to the 1.
+We tried to split
+this 2 as 1 plus 1,
+and we kept one of the n's
+to knock out the log n.
+And we kept the
+other n over here.
+But we don't need a whole power
+of n to knock out the log n.
+Any positive power
+of n would do.
+So in particular, we could
+split this using, say,
+just a small power of n, even
+smaller than the first power
+here, and leave more
+of it over here.
+So we also know that
+ln n over n squared
+is equal to, for example, ln
+n over-- well, for example,
+n to the 1/2 times
+1 over n to the 3/2.
+And now we know that
+ln n over n to the 1/2
+goes to 0 as n gets large.
+So this thing is getting
+smaller and smaller and smaller.
+So as this gets smaller, we have
+that this has to be less than 1
+over n to the 3/2.
+So this thing that
+we're adding up here
+is smaller than
+1 over n the 3/2.
+Well what's the
+significance of that?
+Well, we know 1 over n to the
+3/2, that series converges.
+But we know the sum 1
+over n to the 3/2 from n
+equals 1 to infinity converges,
+because 3/2 is bigger than 1.
+OK?
+So what does that mean?
+Well, we have our
+series, and we've
+shown that the
+terms of our series
+are eventually bounded
+below 1 over n the 3/2.
+And we know that the sum of 1
+over n to the 3/2 converges,
+so our series is bounded
+above by a convergent series.
+So whenever you have a
+series bounded above,
+a series of non-negative
+terms bounded
+above by a convergent series,
+that means your series also
+has to converge.
+OK, so this converges.
+So it converges by a
+comparison to this other series
+using this cute trick
+that we can replace
+a log with any small
+positive power of n that
+happens to be convenient.
+And of course, if you
+wanted to, maybe you
+could have made this 1/2 a 1/10,
+and that would have been fine.
+Or you could have
+even made it a 9/10.
+And then you would here be
+left with n to the 11/10.
+And that would still be OK,
+because that would be 11/10,
+and 11/10 would still
+be bigger than 1.
+All right.
+So this is a nice use
+of a comparison test.
+We didn't use exactly
+the limit comparison
+test as it was
+described in lecture,
+but it's a very
+closely related process
+that we went through to show
+that this third series also
+converges.
+So I'll end there.
+Welcome back to recitation.
+In this video, I
+want to talk to you
+about another test for
+convergence we have for series
+that you haven't really
+spent any time looking
+at this particular one.
+And it's pretty
+helpful, and it also
+will help us
+understand something
+about Taylor series, which
+I'll do in another video.
+So this is the ratio test.
+And you'll understand the
+name of this test momentarily.
+So we're going to
+start with a series
+that we'll just say-- we'll
+call each term a sub n.
+And I'm not going to
+tell you where n starts,
+because it doesn't matter.
+It's really going to
+only matter what's
+happening out at infinity.
+And to make things
+simpler, we're
+going to let all the
+terms be positive.
+
+If they're not positive, you
+can take the absolute value
+of all the terms and still
+make some conclusions in terms
+of absolute convergence.
+So that's just a
+little side bar,
+but let's just deal
+with all the terms
+positive so we don't have
+to worry about anything.
+And now what does
+the ratio test say?
+Well, the ratio test
+says that first, we
+consider a certain
+ratio-- the limit
+as n goes to infinity of a
+sub n plus 1 over a sub n.
+So we consider this limit.
+Well, that's your ratio.
+What is this doing?
+This is taking a term, and it's
+dividing by the previous term.
+You do that for all of
+the values for n as n
+goes to infinity, and you look
+at the limit if it exists.
+If the limit doesn't exist,
+then you can't use this test.
+So sometimes, that will happen.
+But if the limit exists, you
+can use this test and you say it
+equals L.
+And then you have the following
+conclusions that you can make.
+So here are the conclusions.
+There's three of them.
+So if L is less than 1,
+then the series converges.
+
+OK.
+That's nice.
+It's good.
+If L is bigger than 1,
+the series diverges.
+
+OK.
+That's another good thing.
+And then the last
+one is if L equals 1,
+you can't conclude anything.
+
+So I will try and
+convince you of that fact
+with a few examples later.
+But let's look at this.
+So you look at the ratio, and if
+the ratio is less than 1, then
+you actually can conclude
+that the series converges.
+And if the ratio
+is bigger than 1,
+you can conclude that
+the series diverges.
+So let me just give you
+a little understanding
+of why this one is true, and
+then the same kind of logic
+can be used for the second one.
+So we'll try and understand
+at least a little bit
+why, when L is less than
+1, the series converges.
+So let me just
+start writing here.
+So if L is less
+than 1, then this
+means that we have that a
+sub n plus 1 over a sub n
+as goes to infinity is equal
+to L, which is less than 1.
+So we can pick something
+between L and 1.
+We can pick a number
+between L and 1,
+because L is
+strictly less than 1.
+And so what I'm
+going to do is I'm
+going to say I'm going
+to call this thing
+r, some number between L and 1.
+So what does that mean?
+That means that for
+large n, we have
+a sub n plus 1 over a sub n.
+Sorry, that looks like I'm
+adding 1 to the a sub n.
+That's a subscript.
+a sub n plus 1 over a sub n
+is less than some fixed r.
+So I'm picking a value
+r between L and 1.
+And then this is
+true for all large n.
+And when you're doing
+math, sometimes people
+say for n bigger than or
+equal to some fixed value.
+Basically, if you go far
+enough out in the sequence,
+then all the values bigger than
+some fixed one have this ratio.
+But let's get fancy with this.
+This, we can rewrite as r to
+the n plus 1 over r to the n.
+This is just r.
+And now if I do a little
+moving around, what do I see?
+I see that a sub n plus
+1 over r to the n plus 1
+is less than a sub
+n over r to the n.
+Now, this might be weird.
+What do I do?
+I just multiply it
+through by the a sub n
+and I divided by
+the r sub n plus 1.
+I get this thing, and then
+I see that this ratio as n
+goes to infinity, the ratio
+between a sub n and r to the n
+is decreasing.
+It's a decreasing, because
+the next term, it's smaller.
+And so the point is that if I
+go far enough out-- if I start,
+say, past this n_0, if
+I go far enough out,
+then I always have that a sub
+n is less than some constant
+times r to the n.
+So this implies
+a sub n is always
+less than some constant
+times r to the n.
+
+And now what do we do?
+We do our comparison test.
+We do our comparison test.
+This is what's going to tell
+us that the series converges.
+Now, again, this
+isn't necessarily true
+all the way through the
+series, but it's true
+when you're far enough
+out after this n_0.
+And if a series
+converges at the end,
+the beginning is
+just a finite sum,
+so we don't have to
+worry about what's
+going on at the beginning.
+So again, we're at this place.
+We want to know what happens
+to the sum of a sub n,
+of all the terms a sub n.
+Well, we know that's going to be
+less than k times the sum of r
+to the n, because each a sub
+n is less than some constant
+times r to the n.
+Now, why does this converge?
+What do we know about r?
+r we chose.
+We said it's between L and 1.
+In particular, it's less than 1.
+This is a geometric series.
+Geometric series when r is less
+than 1, we know it converges.
+And so this one converges,
+so then this one converges.
+So that's the logic behind it.
+We're going to now use it.
+But I want to point
+out that if you
+liked that, you can
+come back over here,
+and you can do the same
+kind of reasoning for why,
+if L is bigger than 1, the
+sum of the a sub n's diverges.
+And that's going
+to come down to now
+you choose an r that's
+between L and 1,
+but it has to be bigger than 1.
+And then you can look at that.
+Or maybe r has to
+be bigger than L.
+I didn't even work that
+one out all the way.
+But you can do it.
+You put an r in there somewhere.
+And the same kind of logic,
+because the r will be bigger
+than 1, you're going
+to get to a place
+where probably the
+inequality sign is going
+to go the opposite
+way, and then you'll
+have a series that diverges,
+and the other one will be bigger
+than that one.
+And so that's how the
+logic is going to work.
+So you have to figure
+out where the r goes,
+but I guarantee you'll
+want the r bigger than 1.
+And then you'll have to
+have the inequality signs be
+opposite what they are here.
+You'll see they're going
+to be opposite there.
+Now let's get some examples.
+
+Example 1-- let's look
+at some that we know,
+and then let's look at
+some that we don't know.
+So let's look, for
+example, first at 1/n.
+Let's use the ratio test on 1/n.
+Maybe this seems funny, because
+what do we know about it?
+We know it diverges, but
+let's check if this tells us.
+The limit as n goes
+to infinity of-- well,
+what's the n plus
+first term of this?
+It's going to be
+1 over n plus 1.
+And what's the nth term of this?
+It's going to be 1 over n.
+And so we get it's the limit as
+n goes to infinity of n over n
+plus 1, and that equals 1.
+So this one didn't work.
+This one didn't
+tell us anything.
+
+But we know this one diverges.
+So we know that-- this makes us
+think, well, maybe when L is 1,
+then we know it diverges.
+But just to make sure we
+don't make that conclusion,
+we don't draw that conclusion,
+let's look at 1 over n squared.
+And what are the terms there?
+a sub n plus 1 and a sub n.
+The limit as n goes
+to infinity-- well,
+the n plus first term
+is going to be 1 over n
+plus 1 quantity squared,
+and the nth term
+is going to be 1
+over n squared, which
+is going to be the limit as n
+goes to infinity of n squared
+over n plus 1 quantity squared,
+which is also equal to 1.
+And what do we know
+about this one?
+This one converges.
+So this one gave us
+the L is equal to 1,
+but we know this one diverges.
+And this one gave us L is equal
+to 1, and we know it converges.
+So we know that when L equals
+1, we really cannot conclude
+convergence or divergence.
+L equals 1 doesn't let
+us draw any conclusions.
+But now let's see something
+where we can draw a conclusion.
+Because it would be no
+fun if this test never
+told us anything.
+It probably wouldn't
+be a test then.
+So let's try this one.
+Let's try 4 to the n
+over n times 3 to the n.
+Let's see what that one does.
+So let's see.
+We need the limit as
+n goes to infinity.
+We need the n plus first term,
+so let's plug in n plus 1
+for all of these.
+And I'm actually going to
+do a little trick here,
+and I'll explain it as I go.
+4 to the n plus 1 over n plus
+1 3 to the n plus 1-- I'm
+going to multiply
+by 1 over a sub n,
+because sometimes that's
+a lot easier to do.
+I could have done it on
+these other ones, maybe,
+but now I'm going to
+do it on this one.
+So this is actually what the
+a sub n is going to look like.
+I had to put in n plus
+1 to get a sub n plus 1.
+This is a sub n.
+I'm going to write
+down 1 over a sub n,
+and that's going to give me
+n times 3 to the n over 4
+to the n.
+And now let's start simplifying.
+I have 3 to the n over
+3 to the n plus 1.
+I'm left with just a 3 there.
+4 to the n and 4 to the n
+plus 1, I'm left with just a 4
+there.
+And now the limit as n goes to
+infinity-- let's just rewrite
+it so I know what it is.
+
+Let's see.
+I have 4 n over
+3 times n plus 1.
+Well, the 4 and the 3 I
+can actually just pull out.
+But what do I have
+here? n over n plus 1.
+The limit as n goes to infinity
+of that, that equals to 4/3.
+That's bigger than 1.
+So that actually diverges.
+
+And I have one more example,
+and I'm almost out of space.
+And let me actually come
+over here and figure out
+what example I wanted.
+Sorry about that.
+I knew I had one more.
+
+n to the 10th over 10 to the
+n-- this is an interesting one,
+because you have an exponential
+and then you have a power of n.
+So let's look at this one.
+So we need to consider the
+limit as n goes to infinity,
+so I put in n plus 1 first,
+n plus 1 the 10th over 10
+to the n plus 1.
+And then I'm going to
+just-- remember, do times 1
+over a sub n.
+So I'm going to have 10 to
+the n over n to the 10th.
+So again, I took a sub
+n, I did 1 over that.
+That's just the reciprocal.
+And now let's start dividing
+if I'm allowed to divide.
+Yeah, I've got 10 to the n there
+and 10 to the n plus 1 there,
+so that gives me a single
+10 in the denominator.
+And so now I really
+have the limit
+as n goes to infinity of
+1 over 10 times n plus 1
+to the 10th over n to the 10th.
+Well, that's equal to n plus 1
+to the 10th over n to the 10th.
+You might start to get
+nervous and think, oh my gosh,
+these powers are
+getting really big.
+It might make a difference
+that that 1 is there.
+It doesn't make a difference
+that that 1 is there,
+because if you actually
+expand this out,
+the leading term is
+just n to the 10th.
+And we know that the highest
+degree is going to win out,
+so it's going to be an
+n to the 10th over n
+to the 10th is how it's
+going to behave in the limit.
+So this part is just going
+to go to 1, so I get 1/10.
+Well, that's less than 1.
+Yay.
+So this series converges.
+
+So we had one that diverges,
+one that converges,
+and a few where we couldn't
+get conclusions by this test.
+And one point I want
+to make about this
+is that in some cases, you
+have the integral test already,
+and sometimes, that's
+easy and that helps you.
+In the case of these examples
+where we couldn't tell,
+where L was equal to
+1, the integral test
+is going to tell you something.
+But in this case, it's
+a little bit harder
+to deal with this
+as an integral test.
+You can still do it, but
+it's a little bit harder.
+And so this maybe
+is a little bit
+quicker way to deal with
+these types of problems.
+And the big thing we're going
+to do is, in the next video
+on the ratio test,
+I'm going to show you
+how you can use
+this to determine
+the radius of convergence
+for these Taylor series.
+So that's actually going
+to be kind of exciting,
+and that will be
+in our next video.
+
+Last time, we left
+off with a question
+having to do with
+playing with blocks.
+And this is supposed to give us
+a visceral feel for something
+anyway, having to
+do with series.
+And the question was whether
+I could stack these blocks.
+Build a stack, so that
+I'm going to try here up.
+I'm already off balance here.
+See?
+The question is,
+can I build this
+so that-- let's draw
+a picture of it.
+So that the first
+block is like this.
+The next block is like this.
+And maybe the next
+block is like this.
+And notice, there
+is no visible means
+of support for this block.
+It's completely to the
+left of the first block.
+And the question is,
+will this fall down?
+
+Or more precisely, eventually,
+we'll ask how far can we go?
+Now, before you
+answer this question,
+the claim is that this is a
+natural, physical question,
+which involves some
+important answer.
+No matter whether the answer
+is you can do it or you can't.
+So this is the good kind
+of math question, where
+no matter what the answer is, if
+when you figure out the answer,
+you're going to get something
+interesting out of it.
+Because there are
+two possibilities.
+Either there is a limit to
+how far to the left we can go.
+In which case, it's a
+very interesting number.
+Or else there is no limit.
+You can go arbitrarily far.
+And that's also
+interesting and curious.
+And that's the difference
+between convergence
+and divergence, the thing
+that we were talking about
+up to now, concerning series.
+So my first question
+is, do you think
+that I can get it so that
+this thing doesn't fall down?
+Well, you see, I have about
+eight blocks here or so.
+So you can vote now.
+How many in favor that I can
+succeed in doing this thing,
+with maybe more
+than three blocks?
+How many in favor?
+All right, somebody's
+voting twice there.
+That's good.
+I like that.
+How about opposed?
+
+So that was really
+close to a tie.
+All right.
+But I think that there
+were slightly more opposed.
+I don't know.
+You guys who are in the
+back maybe could tell.
+Anyway, it was pretty close.
+So now, because this
+is a real life thing,
+I'm going to try to
+do it, all right?
+All right, so now I'm going
+to tell you what the trick is.
+The trick is to do it backwards.
+When most people are
+playing with blocks,
+they decide to build
+it from the bottom up.
+But we're going to build
+it from the top down.
+And that's going
+to make it possible
+for us to do the optimal
+thing at each stage.
+So when I build it from the
+top down, the best I can do
+is, well, it'll fall off.
+I need to have it
+less halfway across.
+That's the best I can do.
+So the top one, I'm
+going to build like that.
+I'm going to take it as
+far to the left as I can.
+And then I'm going to
+put the next one down,
+as far to the left as I can.
+And then the next one as
+far to the left as I can.
+That was a little too far.
+And then I'm going to do the
+next one as far to the left
+as I can.
+Then I'm going to
+do the next one.
+Well, let's line it up first,
+as far to the left as I can.
+And then the next one, as
+far to the left as I can.
+Now, those of you who
+are in this line can see.
+All right, I succeeded.
+That's over the edge.
+All right?
+So it can be done.
+
+All right, so now we know
+that we can get farther than,
+you know.
+We can make it overflow.
+So the question now
+is, how far can I get?
+OK, do you think
+I can get to here?
+Can I get to the end over here?
+So how many people think I
+can get this far over here?
+How many people think
+I can get this far?
+Well, remember,
+I'm going to have
+to use more than just this
+one more block that I've got.
+Obviously, I'm
+thinking actually,
+I do have some more
+blocks at home.
+Anyway, you think I
+can get over to here?
+How many people say yes?
+And how many people say no?
+More people said no then yes.
+All right, so maybe
+the stopping place
+is some mysterious
+number in between here.
+All right, well, OK.
+So now, we're going
+to do the arithmetic.
+And we're going to figure out
+what happens with this problem.
+OK?
+Let's do it.
+So now again the idea is we're
+going to start with the top.
+
+The top block.
+
+We'll call that
+block number one.
+
+And then the farthest,
+if you like, to the right
+that you can put a
+block underneath it
+is exactly halfway.
+
+All right, well, that's
+the best job I can do.
+Now in order to make my
+units work out easily,
+I'm going to decide to call
+the length of the block 2.
+All right?
+And that means if I
+start at location 0 then
+the first place where I am
+is supposed to be halfway,
+and that will be 1.
+
+OK so the first
+step in the process,
+is one more to the right.
+Or if you like, if
+I were building up--
+which is what you would actually
+have to do in real life--
+it would be one to the left.
+OK now the next one--
+now here is the way
+that you start figuring
+out the arithmetic.
+The next one is based on a
+physical principle, which
+is that the farthest I can
+stick this next block underneath
+is at what's called the
+center of mass of these two,
+which is exactly halfway here.
+That is, there's a
+quarter of this guy
+and a quarter of that guy
+balancing each other, right?
+So that's as far as I can go.
+If I go farther than
+that, it'll fall over.
+So that's the absolute
+farthest I can do.
+So the next block is
+going to be over here.
+And a quarter of 2 is
+1/2, so this is 3/2 here.
+All right so we went to
+1, we went to 3/2 here,
+and then I'm going to keep on
+going with this eventually.
+All right so we're
+going to figure out
+what happens with this stack.
+Question?
+This is the best way
+to optimize your--
+The question is,
+how do I know this
+is the best way to optimize?
+I can't answer that question.
+But I can tell you
+that it's the best
+way if I start with
+a top like this,
+and the next one like this.
+Right?
+Because I'm doing the farthest
+possible at each stage.
+That actually has a name
+in computer science,
+it's called the
+greedy algorithm.
+I'm trying to do the best
+possible at each stage.
+The greedy algorithm
+starting from the bottom
+is an extremely bad
+strategy, because when
+you do that you stack it this
+way and it almost falls over.
+And then the next time
+you can't do anything.
+So the greedy algorithm is
+terrible from the bottom.
+But this is the greedy
+algorithm starting from the top,
+and it turns out
+to do much better
+than the greedy algorithm
+starting from the bottom.
+But of course,
+I'm not addressing
+whether there might not
+be some other incredibly
+clever strategy, where I wiggle
+around and make it go up.
+That's-- I'm not an
+addressing that question.
+All right, it turns out
+this is the best you can do,
+but that's not clear.
+All right so now, here
+we have this thing,
+and now I have to figure out
+what the arithmetic pattern is
+so that I can figure out what
+I was doing with those shapes.
+
+So let's figure out a
+thought experiment here.
+Now the thought
+experiment I want
+to imagine for you is you've got
+a stack of a bunch of blocks.
+
+And this is the first n blocks.
+
+And now we're going to
+put one underneath it.
+And we're going to
+figure out is the center
+of mass of those n blocks,
+which I'm going to call c sub n.
+OK?
+And that's the place
+where I'm going
+to put this very next block.
+I'll put it in a
+different color here.
+Here is the new,
+the next block over.
+The next block over is
+the n plus first block.
+
+And now, I want you to think
+about what's going on here.
+If the center of mass of the
+first n blocks is this number.
+This new one, it's of length
+2 and its center of mass
+is one further to the right
+than the center of mass
+that we had before.
+So in other words, I've
+added to this configuration
+of n blocks, one
+more block, which
+is shifted, whose center
+of mass is not lined up
+with the center of mass
+of this, but actually
+over farther to the right.
+So the new center of
+mass of this new block--
+this is the extra
+piece of information
+that I want to observe-- is that
+this thing has a center of mass
+at c_n plus 1.
+It's one unit over because
+this total length is 2.
+So right in the middle there is
+1 over, according to my units.
+Now this is going to make it
+possible for me to figure out
+what the new center of mass is.
+So c_n plus 1 is
+the center of mass--
+
+Of n plus 1 blocks.
+
+Now this is really only in
+the horizontal variable.
+I'm not keeping track
+of the center of mass.
+Actually this thing
+is hard to build
+because the center of
+mass is also rising,
+it's getting higher and higher.
+But I'm only keeping track of
+its left, right characteristic.
+So this is the
+x-coordinate of it.
+
+All right.
+So now here's the idea.
+I'm combining the white
+ones, the end blocks,
+with the pink one, which
+is the one on the bottom.
+And there are n
+of the white ones,
+and there's one of the pink one.
+And so in order to get the
+center of mass of the whole,
+I have to take the weighted
+average of the two.
+That's n times c_n,
+plus 1 times the center
+of mass of the pink one
+which is c_n plus 1.
+And then I have to
+divide-- if it's
+a weighted average
+of the total of n
+plus 1 blocks-- by n plus 1.
+So this is going to give
+me the new center of mass
+of my configuration at
+the n plus first stage.
+
+And now I can just
+do the arithmetic
+and figure out what this is.
+And the two c_n's combine.
+I get n plus 1 times c_n
+plus 1 divided by n plus 1.
+And if I combine
+these two things
+and do the cancellation,
+that gives me this recurrence
+formula c_n plus 1
+is equal to c_n plus
+there's a little extra.
+These two cancel,
+that gives me the c_n.
+But then I also have
+1 over n plus 1.
+
+That's how much gain I can
+get in the center of mass
+by adding one more block.
+That's how much I can
+shift things over,
+depending on how we're
+thinking of things,
+to the left or the
+right, depending on which
+direction we're building them.
+All right.
+So now I'm going to
+work out the formulas.
+First of all, c_1-- that was
+the center of the first block--
+I put its left end at 0.
+The center of the
+first block is at 1.
+So that means that c_1 is 1.
+
+c_2, according to this formula--
+and actually, I worked it out.
+We'll check it in a second.
+c_2 is c_1 plus 1 over 2.
+That's the case n equals 1.
+So this is 1 plus 1/2.
+That's what we already did.
+That's the 3/2 number.
+And now the next
+one is c_2 plus 1/3.
+That's the formula again.
+And so that comes out to
+be 1 plus 1/2 plus 1/3.
+And now you can see
+what the pattern is.
+
+If you just keep on going here,
+c_n is going to be 1 plus 1/2
+plus 1/3 plus 1/4 plus 1/n.
+
+So now I would like
+you to vote again.
+Now that we have
+a formula, do you
+think I can get over to here?
+How many people think
+I can get over to here?
+
+How many people think I
+can't get over to here?
+There's still a lot
+of people who do.
+So it's still almost 50-50.
+That's amazing.
+Well, so we'll address
+that in a few minutes.
+So now let me tell
+you what's going on.
+This c_n, of course, is the
+same as what we called last time
+S_n.
+And remember that we actually
+estimated the size of this guy.
+This is related to what's
+called the harmonic series.
+And what we showed
+was that log n
+is less than S_n, which
+is less than S_n plus 1.
+
+Now I'm going to
+call your attention
+to the red part, which
+is the divergence
+part of this estimate, which
+is this one for the time being.
+Just saying that this
+thing is growing.
+And what this is saying is
+that as n goes to infinity,
+log n goes to infinity.
+
+So that means that
+S_n goes to infinity.
+
+Because of this inequality
+here, it's bigger than log n.
+And so if n is big enough,
+we can get as far as we like.
+
+So I can get to here.
+And at least half of you--
+at least the ones who voted,
+that was-- we have a quorum
+here, but I'm not sure.
+We certainly didn't have
+a majority on either side.
+Anyway, this thing
+does go to infinity.
+So on principle, if
+I had enough blocks,
+I could get it over to here.
+And that's the meaning of
+divergence in this case.
+
+On the other hand,
+I want to discuss
+with you-- and the
+reason why I use
+this example is I want
+to discuss with you
+also what's going on with
+this other inequality here
+and what its
+significance is, which
+is that it's going to take
+us a lot of numbers n,
+a lot of blocks, to get
+up to a certain level.
+In other words, I can't do it
+with just eight blocks or nine
+blocks.
+In order to get
+over here, I'd have
+to use quite a few of them.
+So let's just see
+how many it is.
+
+So I worked this out carefully.
+And let's see what I got.
+So to get across the lab
+tables-- this distance here,
+I already did this secretly.
+But I don't actually even have
+enough of these to show you.
+But, well, 6 and 1/2,
+I guess that's enough.
+So it's 6 and 1/2.
+So it's two lab tables.
+There's 13 of these blocks.
+So there are 13 blocks,
+which is equal to 26 units.
+
+That's how far to
+get across I need.
+And the first one is already
+2, so it's really 26 minus 2,
+which is 24.
+That's what I need.
+So I need log n to be equal
+to 24, roughly speaking,
+in order to get that far.
+So let's just see
+how big that is.
+I think I worked this out.
+
+So let's see.
+That means that n is
+equal to e to the 24th.
+And if you realize that these
+blocks are 3 centimeters high--
+let's see how many that
+we would need here.
+That's kind of a lot.
+Let's see.
+It's 3 centimeters
+times e to the 24th,
+which is about 8 times
+10 to the 8th meters.
+
+And that is twice the
+distance to the moon.
+
+So OK-- I could do
+it, maybe, but I
+would need a lot of blocks.
+That's not very plausible here.
+So those of you who
+voted against this
+were actually half right.
+And in fact, if you
+wanted to get it
+to the wall over there,
+which is over 30 feet,
+the height would be
+about the diameter
+of the observable universe.
+That's kind of a long way.
+There's one other
+thing that I wanted
+to point out to you
+about this shape here,
+which is that if you
+lean to the left,
+if you put your head
+like this-- of course,
+you have to be on your
+side to look at it--
+this curve is the shape
+of a logarithmic curve.
+So in other words, if you think
+of the vertical as the x-axis
+and the horizontal that
+way, as the vertical
+as the up direction,
+then this thing
+is growing very, very,
+very, very slowly.
+If you send the x-axis all
+the way up to the moon,
+the graph still hasn't gotten
+across the lab tables here.
+It's only partway there.
+If you go twice the distance
+to the moon up that way,
+it's gotten,
+finally, to that end.
+So that's how slowly
+the logarithm grows.
+it grows very, very slowly.
+And if you look at
+it another way--
+if you stand on your head, you
+can see an exponential curve.
+So you get some sense as
+to the growth properties
+of these functions.
+And fortunately, these
+are protecting us
+from all kinds of
+stuff that would
+happen if there
+weren't exponentially
+small tails in the world.
+I could walk through this wall,
+which I wouldn't like doing.
+
+So this is our last example.
+And the important
+number-- unfortunately, we
+didn't discover another
+important number.
+There wasn't an amazing number
+place where this stopped.
+All we discovered, again, is
+some property of infinity.
+So infinity is
+still a nice number.
+And the theme here is just that
+infinity isn't just one thing.
+It has a character which
+is a rate of growth.
+And you shouldn't
+just think of there
+being one order of infinity.
+There are lots of different
+orders, and some of them
+have different
+meaning from others.
+So that's the theme I
+wanted to do and just have
+a visceral example of infinity.

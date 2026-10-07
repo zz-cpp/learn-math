@@ -1,0 +1,6 @@
+Objectives
+Represent functions by power series over the interval of convergence.
+Find the radius of convergence for power series.
+Use Taylor's formula to define power series.
+Contents: 10 pages
+9 videos (70 minutes 1x speed) 17 questions

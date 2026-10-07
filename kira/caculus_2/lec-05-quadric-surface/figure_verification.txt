@@ -1,0 +1,397 @@
+=== 1. figures/fig_01_quadric_overview.png ===
+  page:       f_0004.png
+  source:     00:45
+  paragraph:  二次曲面方程：一般式 Ax²+By²+Cz²+Dxy+Eyz+Fzx+Gx+Hy+Iz+K=0；研究任务有四条途径，右上角是各类二次曲面的图形总览
+  caption:    二次曲面的总览：一般式与四类研究途径（成为有常识的人、能看懂一切空间曲面、会用截痕法、各种图形变换），右侧是常见二次曲面图形总览
+  [OK]   figure file: figures/fig_01_quadric_overview.png
+  [OK]   source page: frames/f_0004.png
+  --- material context around this figure ---
+  >>> [0:45] 那也就可以用XYZ的方程去表示
+  >>> [0:42] XYZ它始终满足的关
+  >>> [0:49] 当然啦
+      [0:50] 我们也不是什么曲面都学的
+      [0:39] 也就是这个曲面上任何一个点
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. figures/fig_02_sphere.png ===
+  page:       f_0011.png
+  source:     02:30
+  paragraph:  球面：(x-x0)²+(y-y0)²+(z-z0)²=R²，球心 M0(x0,y0,z0)、半径为 R
+  caption:    球面方程：$(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2$，左边是两点距离的平方，右边是半径的平方
+  [OK]   figure file: figures/fig_02_sphere.png
+  [OK]   source page: frames/f_0011.png
+  --- material context around this figure ---
+  >>> [2:28] 二次曲面需要大家非常熟悉的是
+  >>> [2:32] 以以下这九种不多啊
+      [2:25] 好我们先研究第一个和第二个任务
+      [2:35] 我们一条一条的来过
+      [2:23] 这里会给大家一个很好用的技巧
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. figures/fig_03_sphere_completing.png ===
+  page:       f_0016.png
+  source:     03:45
+  paragraph:  球面方程的三个识别要点：平方项系数必须一样、不出现交叉项、可以通过配方化成标准形式
+  caption:    球面的判别要点：$x^2, y^2, z^2$ 的系数必须相同、不出现交叉项，因此一定可以配方
+  [OK]   figure file: figures/fig_03_sphere_completing.png
+  [OK]   source page: frames/f_0016.png
+  --- material context around this figure ---
+  >>> [3:44] 他马上就不是球面了
+  >>> [3:46] 它会是什么呢
+  >>> [3:47] 唉会是一会儿我们说的椭球面
+  >>> [3:42] 一旦我这里改个2X方
+      [3:50] 就XY它这个轴长就不一样了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. figures/fig_04_ellipsoid.png ===
+  page:       f_0022.png
+  source:     05:15
+  paragraph:  椭球面：x²/a² + y²/b² + z²/c² = 1；用垂直于坐标轴的平面去截，截痕都是椭圆
+  caption:    椭球面方程与截痕：$x^2/a^2 + y^2/b^2 + z^2/c^2 = 1$，平行于各坐标面的截面都是椭圆——这就是它叫「椭球」的原因
+  [OK]   figure file: figures/fig_04_ellipsoid.png
+  [OK]   source page: frames/f_0022.png
+  --- material context around this figure ---
+  >>> [5:14] 就只要我把Z看作是常数
+  >>> [5:12] 所以它就像切一刀一样
+  >>> [5:18] 那我其实就垂直于Z轴去切一刀啊
+      [5:07] 那不就是对应的这张平面垂直于Z轴的平面啊
+      [5:24] 去贴这张曲面
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. figures/fig_05_section_note.png ===
+  page:       f_0030.png
+  source:     07:15
+  paragraph:  注：截痕法讲解中提到的「常数」都默认为「正数」
+  caption:    截痕法的一个约定：讲解中提到的常数都默认为正数（画面红字反复强调）
+  [OK]   figure file: figures/fig_05_section_note.png
+  [OK]   source page: frames/f_0030.png
+  --- material context around this figure ---
+  >>> [7:15] 那这叫什么呢
+  >>> [7:16] 这是远的方程A
+  >>> [7:11] 是不是就X方加Y方等于一个常数啊
+  >>> [7:19] 所以说你垂直于Z轴的平面去截它的结合诶
+      [7:10] 那你把这个A方乘过来
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. figures/fig_06_cone_sections.png ===
+  page:       f_0037.png
+  source:     09:00
+  paragraph:  圆锥面与旋转抛物面的截痕对照：z²=a²(x²+y²) 的截痕是直线，z=a²(x²+y²) 的截痕是抛物线
+  caption:    圆锥面与旋转抛物面的对照：$z^2 = a^2 (x^2 + y^2)$ 是圆锥面（顶点尖）、$z = a^2 (x^2 + y^2)$ 是旋转抛物面（圆鼓鼓）
+  [OK]   figure file: figures/fig_06_cone_sections.png
+  [OK]   source page: frames/f_0037.png
+  --- material context around this figure ---
+  >>> [9:00] 那我同样的是垂直于X轴
+  >>> [9:02] 咔往下砍一刀
+  >>> [8:57] 那我们再看抛物这边啊
+  >>> [8:56] 这不就是圆锥的特点吗
+  >>> [9:04] 其实就这个面就叫令X取零啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. figures/fig_07_hyperboloid_1s.png ===
+  page:       f_0048.png
+  source:     11:45
+  paragraph:  单叶双曲面：x²/a² + y²/b² - z²/c² = 1（两正一负）——广州小蛮腰就是它
+  caption:    单叶双曲面：$x^2/a^2 + y^2/b^2 - z^2/c^2 = 1$（两正一负），现实中的广州塔「小蛮腰」就是这一曲面
+  [OK]   figure file: figures/fig_07_hyperboloid_1s.png
+  [OK]   source page: frames/f_0048.png
+  --- material context around this figure ---
+  >>> [11:45] 那这个时候呢X方减Z方
+  >>> [11:42] 我固定住Y不动卡竖直往下切
+  >>> [11:48] 它对应的你看就截出来这个结合它是什么
+      [11:40] 哎
+      [11:40] 你移项移到右边去啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. figures/fig_08_hyperbolic_paraboloid.png ===
+  page:       f_0063.png
+  source:     15:30
+  paragraph:  双曲抛物面（马鞍面）：z = x²/a² - y²/b²——既能截出双曲线，又能截出抛物线
+  caption:    双曲抛物面（马鞍面）：$z = x^2/a^2 - y^2/b^2$——垂直于不同坐标轴去截，能分别截出双曲线与抛物线，这就是它名字的来历
+  [OK]   figure file: figures/fig_08_hyperbolic_paraboloid.png
+  [OK]   source page: frames/f_0063.png
+  --- material context around this figure ---
+  >>> [15:30] 最后一个双曲抛物面也叫马安面
+  >>> [15:28] 那这就是双叶双曲的特点
+  >>> [15:26] 这个式子一下变得有点怪诶
+      [15:35] 好它的方程长
+      [15:24] 你突然出来两个负向
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 9. figures/fig_09_saddle_point.png ===
+  page:       f_0079.png
+  source:     19:30
+  paragraph:  马鞍面上的「鞍点」：一个方向上是最低点，另一个方向上却是最高点
+  caption:    马鞍面的鞍点：沿一个方向看它是最低点，沿另一个方向看它又是最高点——这就是「极大值还是极小值」都不成立的情形
+  [OK]   figure file: figures/fig_09_saddle_point.png
+  [OK]   source page: frames/f_0079.png
+  --- material context around this figure ---
+  >>> [19:30] 诶那如果我把平方差开平方和这叫什么
+  >>> [19:28] Z等于平方差的形式
+  >>> [19:34] 这叫抛物面啊
+      [19:24] 所以马鞍面呢它的关键属性是呃
+      [19:36] 旋转抛物或者椭圆抛物
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 10. figures/fig_10_rot_surface_def.png ===
+  page:       f_0091.png
+  source:     22:30
+  paragraph:  旋转曲面：平面曲线绕同一平面上的一条定直线旋转一周生成的曲面；曲线叫母线，定直线叫轴
+  caption:    旋转曲面的定义：母线（负责不断复制自己的曲线）绕轴的旋转；轴与母线的关系决定了整个曲面
+  [OK]   figure file: figures/fig_10_rot_surface_def.png
+  [OK]   source page: frames/f_0091.png
+  --- material context around this figure ---
+  >>> [22:29] 旋转曲面和伸缩变换这两大工具
+  >>> [22:26] 我们就需要继续往后看
+  >>> [22:34] 先看旋转曲面方程
+      [22:24] 这些方程是怎么被构造出来的
+      [22:37] 我们研究的是下面这个情况
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 11. figures/fig_11_rot_surface_derive.png ===
+  page:       f_0103.png
+  source:     25:30
+  paragraph:  旋转曲面方程推导：同一纬圆上两个不变量——z 不变、到轴的距离不变（纬圆所在平面垂直于轴）
+  caption:    旋转曲面方程的推导关键：同一纬圆上「$z$ 不变」与「到轴的距离不变」这两条等量关系，把母线的方程偷梁换柱成动点的方程
+  [OK]   figure file: figures/fig_11_rot_surface_derive.png
+  [OK]   source page: frames/f_0103.png
+  --- material context around this figure ---
+  >>> [25:29] 比方说M1这个点转出来的
+  >>> [25:27] 它其实是由这个母线上的
+  >>> [25:33] 那M1绕Z轴旋转一周
+      [25:35] 它会转出一圈圆周啊
+      [25:23] 她的母亲县给到他的那个点
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 12. figures/fig_12_rot_rule.png ===
+  page:       f_0117.png
+  source:     29:00
+  paragraph:  旋转曲面方程的口诀：绕哪个轴转，该变量不变（照抄）；另一个变量改为「它与该缺变量平方和」的正负平方根
+  caption:    旋转曲面方程的口诀：绕哪个轴旋转，那个变量就照抄不变；另一个变量替换为「它与缺失变量平方和」的正负平方根
+  [OK]   figure file: figures/fig_12_rot_rule.png
+  [OK]   source page: frames/f_0117.png
+  --- material context around this figure ---
+  >>> [29:00] 它是照抄的
+  >>> [29:01] 所以第一句话绕哪个轴转这个变量不变
+  >>> [28:57] 这样你会发现Z这个坐标没变
+      [29:05] 第二就是把另外一个变量这个Y改改成什么呢
+      [28:54] 最后转出来的旋转曲面长
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 13. figures/fig_13_ex1_rotation.png ===
+  page:       f_0125.png
+  source:     31:00
+  paragraph:  【例1】把平面曲线绕 x 轴、y 轴分别旋转：绕 x 轴时 x 不变、y 变成 ±√(y²+z²)，得到旋转椭球面
+  caption:    【例1】把平面上的椭圆分别绕 $x$ 轴、$y$ 轴旋转：绕 $x$ 轴时把 $y^2$ 换成 $y^2+z^2$，得到旋转椭球面；绕 $y$ 轴同理
+  [OK]   figure file: figures/fig_13_ex1_rotation.png
+  [OK]   source page: frames/f_0125.png
+  --- material context around this figure ---
+  >>> [31:00] 这是一个妥球面
+  >>> [30:58] 这是个什么形状啊
+  >>> [31:03] 所以你可以理解为椭球面
+      [30:55] 唉Y方加Z方等于一
+      [31:06] 它就是由这个平面上的椭圆绕着轴转出来的啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 14. figures/fig_14_surface_integral.png ===
+  page:       f_0131.png
+  source:     32:15
+  paragraph:  【高数下册-典型考题】计算曲面积分：其中 Σ 是由曲线绕轴旋转生成的曲面——不会写旋转曲面方程这题直接零分
+  caption:    【高数下册典型考题】曲面积分中，积分曲面由「某平面曲线绕一条坐标轴旋转一周」生成——不会写旋转曲面方程，这道题直接零分
+  [OK]   figure file: figures/fig_14_surface_integral.png
+  [OK]   source page: frames/f_0131.png
+  --- material context around this figure ---
+  >>> [32:15] 好那绕着Y轴转是不一样啊
+  >>> [32:12] 这样我快速的在这儿一说这个题型啊
+  >>> [32:18] 绕着Y转的话
+  >>> [32:11] 反着写都要会好吧
+  >>> [32:19] Y不动把X方变成它和缺失变量的平方和二
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 15. figures/fig_15_scaling_review.png ===
+  page:       f_0154.png
+  source:     38:30
+  paragraph:  伸缩变换复习：y = sin x、y = sin 2x、y = sin(x/2) 的图象对比——自变量乘 2 反而被压缩
+  caption:    伸缩变换复习：$y = sin x$、$y = sin 2 x$、$y = sin(x/2)$ 的图象对比；自变量前乘 $2$ 反而被横向压缩
+  [OK]   figure file: figures/fig_15_scaling_review.png
+  [OK]   source page: frames/f_0154.png
+  --- material context around this figure ---
+  >>> [38:30] 都是由旋转面伸缩而来的
+  >>> [38:29] 单叶双曲啊
+  >>> [38:34] 但是具体这个伸缩的参数是什么样呢
+      [38:25] 我们可以认为一般的椭圆抛物啊
+      [38:23] 就是刚才提到的伸缩变换
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 16. figures/fig_16_ellipsoid_scaling.png ===
+  page:       f_0167.png
+  source:     41:30
+  paragraph:  由旋转椭球面伸缩得到一般椭球面：把 y 换成 (a/b)y，即沿 y 轴方向伸缩 b/a 倍
+  caption:    从旋转椭球面到一般椭球面：把 $y$ 换成 $(a/b) y$，等价于沿 $y$ 轴方向伸缩 $b/a$ 倍（伸缩反着说：变量乘几，就伸缩几分之一）
+  [OK]   figure file: figures/fig_16_ellipsoid_scaling.png
+  [OK]   source page: frames/f_0167.png
+  --- material context around this figure ---
+  >>> [41:30] 那你要Y前面是不是先乘上A把这个A约掉
+  >>> [41:29] 它整个形式会变成B分之Y
+  >>> [41:33] 然后再除以B所以说在这个过程中
+  >>> [41:26] 那你可以想想Y变成什么
+      [41:36] Y它其实变成了B分支AY那为了用起来方便
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 17. figures/fig_17_ex2_paraboloid.png ===
+  page:       f_0178.png
+  source:     44:15
+  paragraph:  【例2】画出指定方程表示的曲面：先去掉一个字母得到平面上的抛物线，绕中心轴旋转，再沿 y 轴伸缩
+  caption:    【例2】画出方程表示的曲面：先砍去一个变量得到平面上的抛物线，绕中心轴旋转成旋转抛物面，再沿另一个轴伸缩成椭圆抛物面
+  [OK]   figure file: figures/fig_17_ex2_paraboloid.png
+  [OK]   source page: frames/f_0178.png
+  --- material context around this figure ---
+  >>> [44:14] 取到沿着Y轴方向
+  >>> [44:18] 它是诶
+  >>> [44:19] 那就是伸长了3/2倍
+      [44:10] 那外被变成了三分之2Y说明你伸缩怎么样呢
+      [44:22] 这个时候Z和X不变
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 18. figures/fig_18_cylinders.png ===
+  page:       f_0180.png
+  source:     44:45
+  paragraph:  常见二次柱面：椭圆柱面、双曲柱面、抛物柱面、圆柱面——它们都是「平面曲线沿垂直于该平面的方向平移」扫出来的
+  caption:    常见二次柱面总览：椭圆柱面、双曲柱面、抛物柱面与圆柱面——都由平面曲线沿「缺的那个变量的方向」平移扫出
+  [OK]   figure file: figures/fig_18_cylinders.png
+  [OK]   source page: frames/f_0180.png
+  --- material context around this figure ---
+  >>> [44:44] 那现在呢就不要那么圆了是吧
+  >>> [44:47] 你沿着Y轴稍微给它伸长个1.5倍
+  >>> [44:42] 他这个截面很圆嗯
+  >>> [44:41] 本来它假设它很圆嗯
+      [44:39] 那本来本来画的也不圆啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 19. figures/fig_19_ex3_cylinder.png ===
+  page:       f_0197.png
+  source:     49:00
+  paragraph:  【例3】求以曲线 {2x²+2y²+3z²=1; z=x²+y²} 为准线、母线平行于 z 轴的柱面
+  caption:    【例3】求以两曲面交线为准线、母线平行于 $z$ 轴的柱面——做法就是*消去 $z$*
+  [OK]   figure file: figures/fig_19_ex3_cylinder.png
+  [OK]   source page: frames/f_0197.png
+  --- material context around this figure ---
+  >>> [49:02] 那刚才你也观察到了准线
+  >>> [48:57] 让我们去求一个唉以一个曲线为准线
+  >>> [49:04] 它其实就反映了诶两个变量之间的关系是吧
+      [48:54] 好那这样就会衍生出一类题型
+      [48:52] 平行于坐标轴的柱面哈
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 20. figures/fig_20_ex3_result.png ===
+  page:       f_0205.png
+  source:     51:00
+  paragraph:  例3 结果：代入消去 z 得 3z²+2z-1=0，解得 z=1/3（另一根 z=-1 舍去），于是柱面为 x²+y²=1/3
+  caption:    【例3】结果：消去 $z$ 得 $3z^2 + 2z - 1 = 0$，因式分解得 $z = 1/3$（$z = -1$ 舍去），所求柱面为 $x^2 + y^2 = 1/3$
+  [OK]   figure file: figures/fig_20_ex3_result.png
+  [OK]   source page: frames/f_0205.png
+  --- material context around this figure ---
+  >>> [51:01] 解得Z也就是X方加Y方等于13
+  >>> [50:58] 所以这里Z呢就是13对吧
+  >>> [50:56] 所以它呢肯定是非负的啊
+      [50:54] 注意Z是平方和
+      [51:06] 这个呢即为所求呃
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 21. figures/fig_21_ex4_statement.png ===
+  page:       f_0211.png
+  source:     52:30
+  paragraph:  【例4】说出以下方程的图形名称：(1) 4x²+4y²-15z²+60=0；(2) y²+z²-20y=0；(3) 4x²+9z²-36y=0
+  caption:    【例4】报菜名：说出三个方程的图形名称——(1) $4x^2+4y^2-15z^2+60=0$；(2) $y^2+z^2-20y=0$；(3) $4x^2+9z^2-36y=0$
+  [OK]   figure file: figures/fig_21_ex4_statement.png
+  [OK]   source page: frames/f_0211.png
+  --- material context around this figure ---
+  >>> [52:30] 直接写上面这个二元的式子好交线有点懵的
+  >>> [52:28] 如果是柱面
+  >>> [52:34] 等下节课再一起看柱面先解决
+      [52:25] 你就在交一下Z等于13
+      [52:24] 所以说如果写交线方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 22. figures/fig_22_ex4_solution.png ===
+  page:       f_0221.png
+  source:     55:00
+  paragraph:  例4 解答：(1) 化成 z²/4 - x²/15 - y²/15 = 1 是双叶双曲面；(2) 配方得 (y-10)²+z²=100 是圆柱面；(3) 化为 y = x²/9 + z²/4 是椭圆抛物面
+  caption:    【例4】解答：(1) 双叶双曲面（化为 $z^2/4 - x^2/15 - y^2/15 = 1$ 后是一正两负）；(2) 圆柱面（配方得 $(y-10)^2 + z^2 = 100$）；(3) 椭圆抛物面（$y = x^2/9 + z^2/4$）
+  [OK]   figure file: figures/fig_22_ex4_solution.png
+  [OK]   source page: frames/f_0221.png
+  --- material context around this figure ---
+  >>> [54:59] 然后呢唉这样沿着X轴去延伸它是吧
+  >>> [54:58] 以十为半径的圆
+  >>> [55:03] 就这样一个圆柱面好
+      [54:55] 是先画一个以十零为圆心啊
+      [55:05] 最后一个哎这个三元都到齐了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 22 figures, 0 file problems

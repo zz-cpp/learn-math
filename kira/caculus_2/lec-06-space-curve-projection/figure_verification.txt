@@ -1,0 +1,361 @@
+=== 1. figures/fig_01_tasks.png ===
+  page:       f_0004.png
+  source:     00:45
+  paragraph:  本节任务导图：1. 曲线方程（参数方程、一般方程）2. 空间曲线在坐标面上的投影 3. GeoGebra 在线 3D 绘图（一个工具）
+  caption:    本节三件事：曲线方程的两种写法、空间曲线在坐标面上的投影、以及一个画图小工具 GeoGebra 3D
+  [OK]   figure file: figures/fig_01_tasks.png
+  [OK]   source page: frames/f_0004.png
+  --- material context around this figure ---
+  >>> [0:45] 你只要会用键盘录入数字和英文字母
+  >>> [0:44] 完全傻瓜操作
+  >>> [0:43] Jo gabria
+  >>> [0:49] 就能用它画出精确好看的空间曲面和曲线图像
+      [0:38] 我会给大家顺便介绍一个非常实用的小工具
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. figures/fig_02_curves_everywhere.png ===
+  page:       f_0005.png
+  source:     01:00
+  paragraph:  生活中空间曲线无处不在：过山车轨道是「曲率 + 双曲」的曲线，意大利面是空间曲线
+  caption:    空间曲线无处不在：过山车的轨道、盘中的意大利面——数学里的空间曲线就长这样
+  [OK]   figure file: figures/fig_02_curves_everywhere.png
+  [OK]   source page: frames/f_0005.png
+  --- material context around this figure ---
+  >>> [1:00] 生活中空间曲线是无处不在的
+  >>> [0:58] 空间曲线启动
+  >>> [0:57] 话不多说
+  >>> [1:03] 和直线一样
+  >>> [1:04] 我们可以在空间直角坐标系中建立曲线的方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. figures/fig_03_two_forms.png ===
+  page:       f_0007.png
+  source:     01:30
+  paragraph:  空间曲线的两种方程：参数方程（动点轨迹，t 为时间）与曲面交线（两个曲面相交）
+  caption:    空间曲线的两种常用方程：参数方程（把曲线看作动点的运动轨迹，$t$ 相当于时间）与一般方程（两张曲面相交）
+  [OK]   figure file: figures/fig_03_two_forms.png
+  [OK]   source page: frames/f_0007.png
+  --- material context around this figure ---
+  >>> [1:30] 最后连点成线就是空间曲线的方程了
+  >>> [1:28] 它就会对应落在不同的点
+      [1:35] 另一种是一般方程
+      [1:23] 那你随着T时间取不同的值XYZ
+      [1:37] 也叫焦面式
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. figures/fig_04_ex1_statement.png ===
+  page:       f_0009.png
+  source:     02:00
+  paragraph:  【例1】方程组 {x^2+y^2=1; 2x+3z=6} 表示怎样的曲线？
+  caption:    【例1】方程组 $x^2+y^2=1$ 与 $2x+3z=6$ 表示怎样的曲线
+  [OK]   figure file: figures/fig_04_ex1_statement.png
+  [OK]   source page: frames/f_0009.png
+  --- material context around this figure ---
+  >>> [2:00] 直接看题
+  >>> [2:01] 这个方程组表示怎样的曲线呢
+  >>> [1:56] 都是以这种曲面交线的形式给出的
+      [2:05] 那我们就看看它到底是怎样的
+      [1:53] 后续大部分题目中的空间曲线
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. figures/fig_05_ex1_solution.png ===
+  page:       f_0015.png
+  source:     03:30
+  paragraph:  【例1】解答：第一个方程是母线平行于 z 轴、准线为 xOy 面上单位圆的圆柱面；第二个方程是平行于 y 轴、过点 (2,0,3) 的平面；曲线是二者的交线
+  caption:    【例1】解答：圆柱面（母线平行 $z$ 轴）与平面（缺 $y$、平行于 $y$ 轴）的交线——一个斜着切出来的椭圆
+  [OK]   figure file: figures/fig_05_ex1_solution.png
+  [OK]   source page: frames/f_0015.png
+  --- material context around this figure ---
+  >>> [3:29] 就截出这么一个截面啊
+  >>> [3:31] 整体呢是这样的图像好
+  >>> [3:27] 应该是个椭圆哎
+  >>> [3:33] 当然这个图呢画的是比较丑了
+  >>> [3:26] 它肯定不是个圆是吧
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. figures/fig_06_geogebra_cylinder.png ===
+  page:       f_0022.png
+  source:     05:15
+  paragraph:  GeoGebra 演示：输入 x^2+y^2=1 立刻画出圆柱面
+  caption:    GeoGebra 3D 计算器演示：输入 $x^2 + y^2 = 1$ 立刻生成圆柱面
+  [OK]   figure file: figures/fig_06_geogebra_cylinder.png
+  [OK]   source page: frames/f_0022.png
+  --- material context around this figure ---
+  >>> [5:15] 去掉阴影
+  >>> [5:16] 放松一下
+  >>> [5:13] 比方说显示一下网格啊
+  >>> [5:17] 如果想看交线的形状
+  >>> [5:11] 可以稍微调一下参数
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. figures/fig_07_geogebra_intersection.png ===
+  page:       f_0024.png
+  source:     05:45
+  paragraph:  GeoGebra 演示：再输入第二张曲面，两曲面相交得到精确的交线
+  caption:    再输入第二张曲面（平面），GeoGebra 立刻画出两曲面的交线——可 360 度拖动观察
+  [OK]   figure file: figures/fig_07_geogebra_intersection.png
+  [OK]   source page: frames/f_0024.png
+  --- material context around this figure ---
+  >>> [5:45] 这个交线它头在对面YOZ平面上是个椭圆
+  >>> [5:42] 比方说呢我们去看正视图诶
+  >>> [5:41] 各个视角都能看见
+  >>> [5:49] 那你正着往下看呢
+      [5:51] 这个交线投在XY平面上呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. figures/fig_08_ex2_statement.png ===
+  page:       f_0025.png
+  source:     06:00
+  paragraph:  【例2】参数方程 x = cos t、y = sin t、z = t（t 属于 R）表示怎样的曲线？
+  caption:    【例2】参数方程 $x = cos t$、$y = sin t$、$z = t$（$t in RR$）表示怎样的曲线
+  [OK]   figure file: figures/fig_08_ex2_statement.png
+  [OK]   source page: frames/f_0025.png
+  --- material context around this figure ---
+  >>> [6:00] 所以说你可以360度的去研究这个几何图形
+  >>> [5:59] 这个交线它是个斜的
+  >>> [5:58] 你看你这样看诶
+      [5:55] 那如果想看一下XOZ平面上投影呢
+      [6:05] 刚才讲的主要是用来自用啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 9. figures/fig_09_ex2_solution.png ===
+  page:       f_0030.png
+  source:     07:15
+  paragraph:  【例2】解答：x^2+y^2 = cos^2 t + sin^2 t = 1，曲线在圆柱面 x^2+y^2=1 上；z = t 每增加 2π，z 也增加 2π——这条曲线称为螺旋线
+  caption:    【例2】解答：消去 $t$ 得 $x^2 + y^2 = 1$（曲线在单位圆柱面上），而 $z = t$ 表示每转一圈高度上升 $2 pi$——这条曲线叫*螺旋线*
+  [OK]   figure file: figures/fig_09_ex2_solution.png
+  [OK]   source page: frames/f_0030.png
+  --- material context around this figure ---
+  >>> [7:17] 那就它的XY坐标始终在这个柱面上
+  >>> [7:11] 它对应的XY坐标是中满足这个柱面方程
+      [7:21] 那Z等于T是什么意思哦
+      [7:08] 那也就说明区线上的点
+      [7:23] 随着T的增加
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 10. figures/fig_10_helix_summary.png ===
+  page:       f_0036.png
+  source:     08:45
+  paragraph:  螺旋线小结：曲线在圆柱面 x^2+y^2=1 上，每增加 2π 上升 2π
+  caption:    螺旋线小结：$x^2 + y^2 = 1$（在圆柱面上）＋ 每增加 $2 pi$ 高度上升 $2 pi$——一边绕圈一边上升
+  [OK]   figure file: figures/fig_10_helix_summary.png
+  [OK]   source page: frames/f_0036.png
+  --- material context around this figure ---
+  >>> [8:45] 直到他转了一圈
+  >>> [8:43] 一边转一边往上走
+  >>> [8:47] A又回到了X取1Y取零对应的这个位置
+  >>> [8:42] 逆时针的转
+      [8:39] 把它带进去好从这个起点我们就开始转啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 11. figures/fig_11_geogebra_helix.png ===
+  page:       f_0038.png
+  source:     09:15
+  paragraph:  GeoGebra 演示：把参数方程依次输入，画出螺旋线
+  caption:    用 GeoGebra 画螺旋线：把参数方程的三个坐标依次输入即可，还能拖动参数看多圈效果
+  [OK]   figure file: figures/fig_11_geogebra_helix.png
+  [OK]   source page: frames/f_0038.png
+  --- material context around this figure ---
+  >>> [9:15] 我们可以在这调一下参数
+  >>> [9:13] 所以它没有走完一圈
+  >>> [9:17] 比方说呢Z最大我们调到20
+  >>> [9:11] 这里因为Z轴不够长
+  >>> [9:19] 同时呢这个地方T你看它也是带参数的
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 12. figures/fig_12_projection_def.png ===
+  page:       f_0044.png
+  source:     10:45
+  paragraph:  空间曲线在坐标面上的投影：定义与「一束垂直的光打下来」的直观图景
+  caption:    空间曲线在坐标面上的投影：把曲线上的每一点垂直投到坐标面上——一束垂直的光打下来，轮廓就是投影柱面
+  [OK]   figure file: figures/fig_12_projection_def.png
+  [OK]   source page: frames/f_0044.png
+  --- material context around this figure ---
+  >>> [10:45] 答就是这个曲线L它一定在这个柱面上
+  >>> [10:43] 那么这个柱面有什么特点呢
+  >>> [10:49] 为什么
+      [10:50] 因为只要有一个点
+      [10:51] XYZ它符合L同时满足这两个方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 13. figures/fig_13_projection_cylinder.png ===
+  page:       f_0048.png
+  source:     11:45
+  paragraph:  消去一个变量得到投影柱面（这里是平行于 z 轴的柱面），投影柱面与坐标面的交线即投影曲线
+  caption:    投影柱面 = 消去一个变量后得到的柱面（投影柱面不是投影本身，而是那束光形成的柱面）
+  [OK]   figure file: figures/fig_13_projection_cylinder.png
+  [OK]   source page: frames/f_0048.png
+  --- material context around this figure ---
+  >>> [11:46] 你满足L的方程就一定满足H的方程
+  >>> [11:43] 因为它是由这个方程组消出来的
+  >>> [11:49] 为什么和Z轴平行
+      [11:40] 再想想为什么它一定会过L
+      [11:50] 因为你缺Z就和Z轴平行
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 14. figures/fig_14_projection_steps.png ===
+  page:       f_0053.png
+  source:     13:00
+  paragraph:  求投影的步骤：① 消去一个变量得到投影柱面；② 与对应的坐标平面联立得到投影曲线
+  caption:    求投影曲线的两步：① 消去一个变量得到投影柱面；② 与对应坐标面的方程联立——往哪个面投，就保留哪两个变量的关系
+  [OK]   figure file: figures/fig_14_projection_steps.png
+  [OK]   source page: frames/f_0053.png
+  --- material context around this figure ---
+  >>> [13:00] 也给出了对应的解答步骤
+  >>> [13:02] 就第一步呢是你要消去一个变量
+  >>> [12:56] 所以这一段不仅给出了投影的定义
+      [13:05] 求投影柱面
+      [13:07] 那我往XY面上投呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 15. figures/fig_15_ex3_statement.png ===
+  page:       f_0054.png
+  source:     13:15
+  paragraph:  【例3】曲线 {x^2/16 + y^2/4 - z^2/5 = 1; x - 2z + 3 = 0} 在 xOy 平面上的投影曲线的方程是____
+  caption:    【例3】曲线（单叶双曲面与平面的交线）在 $x O y$ 平面上的投影曲线方程
+  [OK]   figure file: figures/fig_15_ex3_statement.png
+  [OK]   source page: frames/f_0054.png
+  --- material context around this figure ---
+  >>> [13:13] 那么如果说我想往yo这面去投影
+  >>> [13:17] 我该削谁呢
+  >>> [13:18] 那你就要最后保留Y和Z的关系
+  >>> [13:11] 要消Z唉
+      [13:09] 那我肯定是只保留XY
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 16. figures/fig_16_ex3_solution.png ===
+  page:       f_0062.png
+  source:     15:00
+  paragraph:  【例3】解答：由 x - 2z + 3 = 0 得 z = (x+3)/2，代入单叶双曲面消去 z，得 x^2 + 20y^2 - 24x - 116 = 0（投影柱面），再与 z = 0 联立即得投影曲线
+  caption:    【例3】解答：由平面解出 $z = (x+3)/2$ 代入消去 $z$，得到投影柱面 $x^2 + 20 y^2 - 24 x - 116 = 0$，再与 $z = 0$ 联立即为投影曲线
+  [OK]   figure file: figures/fig_16_ex3_solution.png
+  [OK]   source page: frames/f_0062.png
+  --- material context around this figure ---
+  >>> [15:01] 带入到单叶双曲的方程当中啊
+  >>> [14:57] 哎将C等于二分之1X加三啊
+      [15:05] 得到X平方比上164分之Y方
+      [14:54] 你把它往上一代这个X它不就没了嘛是吧
+      [15:09] 再减去1/5
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 17. figures/fig_17_boss_statement.png ===
+  page:       f_0064.png
+  source:     15:45
+  paragraph:  终极 BOSS：上半球体 x^2+y^2+z^2 <= a^2（z >= 0）与圆柱体 (x - a/2)^2 + y^2 <= (a/2)^2 的公共部分在坐标面上的投影
+  caption:    【终极 BOSS】上半球体与圆柱体的公共部分在坐标面上的投影——注意题目给的是*不等式*，对应的是立体的公共部分
+  [OK]   figure file: figures/fig_17_boss_statement.png
+  [OK]   source page: frames/f_0064.png
+  --- material context around this figure ---
+  >>> [15:47] 道理上面都讲过了
+  >>> [15:42] in联立就是我们要的投影曲线方程
+  >>> [15:49] 这里我们简单的实操一下就过了
+      [15:52] 最后我们打一下这节的终极boss
+      [15:37] 你只需要再把它坐标平面Z等于零
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 18. figures/fig_18_boss_xy.png ===
+  page:       f_0073.png
+  source:     18:00
+  paragraph:  【BOSS】在 xOy 面上的投影：圆柱体垂直穿过半球，投影就是圆柱的底面圆域 (x - a/2)^2 + y^2 <= (a/2)^2
+  caption:    【BOSS】在 $x O y$ 面上的投影：圆柱体直上直下地穿过半球，落下来就是它自己的底面圆域 $(x - a/2)^2 + y^2 <= (a/2)^2$
+  [OK]   figure file: figures/fig_18_boss_xy.png
+  [OK]   source page: frames/f_0073.png
+  --- material context around this figure ---
+  >>> [17:59] 它是一个平面区域啊
+  >>> [18:02] 所以呢你写在XY面上的投影啊
+  >>> [17:57] 唉其实就是这个圆域
+      [17:55] 它的这个投影是谁呢
+      [18:08] 它呢是圆域啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 19. figures/fig_19_boss_xz.png ===
+  page:       f_0078.png
+  source:     19:15
+  paragraph:  【BOSS】在 xOz 面上的投影：需把两个几何体的投影都画清楚再取公共部分——圆柱体的投影是 0 <= x <= a，半球体的投影是 x^2 + z^2 <= a^2
+  caption:    【BOSS】在 $x O z$ 面上的投影：两个几何体的投影分别画出来再取公共部分——圆柱体给出 $0 <= x <= a$（需标注范围），半球体给出 $x^2 + z^2 <= a^2$
+  [OK]   figure file: figures/fig_19_boss_xz.png
+  [OK]   source page: frames/f_0078.png
+  --- material context around this figure ---
+  >>> [19:14] 直上直下的这样教出来的这么一个几何体
+  >>> [19:11] 圆柱体它的测试图是不是长这样啊
+  >>> [19:19] 那么你说它在XOZ平面的投影是谁
+      [19:22] 是不是
+      [19:22] 就我现在红色阴影标出这个部分
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 20. figures/fig_20_finish.png ===
+  page:       f_0081.png
+  source:     20:00
+  paragraph:  通关页：向量代数与空间解析几何全部完成，下一期开启多元函数微分学
+  caption:    通关：向量代数与空间解析几何全部完成——下一期正式开启多元函数微分学
+  [OK]   figure file: figures/fig_20_finish.png
+  [OK]   source page: frames/f_0081.png
+  --- material context around this figure ---
+  >>> [19:58] 恭喜各位通关向量代数与空间解析几何
+  >>> [20:02] 记得及时复习
+  >>> [20:03] 多多刷题哦
+  >>> [20:04] 下一期我们正式开启多元函数微分学
+      [19:55] 最终对应的投影是谁
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 20 figures, 0 file problems

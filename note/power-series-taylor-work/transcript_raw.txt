@@ -1,0 +1,2299 @@
+
+────── 视频 1: 18013x-U10S03_intro-en.txt ──────
+
+The exponential, sine,
+and cosine functions
+are important
+because they appear
+all over science
+and engineering,
+in more than just planetary
+motion and calculus.
+For example, scientific
+computing and signal
+processing.
+The exponential
+and trig functions
+are the first functions
+we can't describe
+using finite processes.
+We call such functions
+transcendental.
+Recall that we define
+the exponential function
+as the solution of
+this differential
+equation and initial condition.
+
+This is analogous to
+defining the square root of 2
+as the positive solution to the
+equation x squared equals 2.
+To get at the
+square root of 2, we
+have to use an infinite
+decimal expansion.
+Taylor series are analogous
+infinite expansions
+for functions.
+We'll learn how to find
+Taylor series next.
+
+────── 视频 2: 18013x-u10s3v1-MITx-en.txt ──────
+
+So here we are
+with power series.
+
+Our first series was this one.
+
+And we mentioned last time that
+it was equal to be 1 over 1
+minus x for x less than 1.
+
+Well, this one is known
+as the geometric series.
+You didn't use the
+letter x last time.
+I used the letter a, but this
+is known as a geometric series.
+
+Now I'm going to show you
+one reason why this is true,
+why the formula holds.
+And it's just the
+kind of manipulation
+that was done when these
+things were first introduced.
+And here is the idea of a proof.
+So suppose that this sum
+is equal to sum number
+S, which is the sum of
+all of these numbers here.
+
+The first thing
+that I'm going to do
+is I'm going to multiply by x.
+So if I multiply by
+x-- let's think about
+that-- I multiply by
+x on both the left
+and the right-hand side.
+Then on the left side, I
+get x plus x squared plus x
+cubed plus and so forth.
+And on the right
+side, I get S times x.
+
+And now I'm going
+to subtract the two
+equations, one from the other.
+And there's a very, very
+substantial cancellation.
+This whole tail here
+gets canceled off.
+And the only thing
+that's left is the 1.
+So when I subtract, I get
+one on the left-hand side.
+And on the right-hand side,
+I get S minus S times x.
+
+And now that can be rewritten
+as S times 1 minus x.
+And so I've got my formula here.
+This 1 over 1 minus
+x is equal to S.
+Now this reasoning has one flaw.
+It's not complete.
+And this reasoning is,
+basically, correct,
+but it's incomplete, because
+it requires that S exists.
+
+For example, it doesn't make any
+sense in the case x equals 1.
+So for example, in
+the case x equals 1,
+we have 1 plus 1 plus 1
+plus 1 plus, et cetera,
+equals whatever we call S.
+And then when we
+multiply through by 1,
+we get 1 plus 1 plus 1
+plus equals S times 1.
+And now you see that
+the subtraction gives us
+infinity minus infinity is equal
+to infinity minus infinity.
+That's what's really going on
+in the argument in this context.
+So it's just nonsense.
+I mean, it doesn't give
+us anything meaningful.
+So this argument, it's great.
+And it gives us the right
+answer, but not always.
+And the times when it gives us
+the answer, the correct answer,
+is when the series
+is convergent.
+And that's why we care
+about convergence,
+because we want manipulations
+like this to be allowed.
+────── 视频 3: 18013x-u10s3v2-MITx-en.txt ──────
+
+So here is the general setup.
+
+The general setup
+is that we have
+not just the coefficients 1 all
+the time, but any numbers here.
+
+And we abbreviate that with
+this summation notation.
+This is the sum a_n x to the
+n, n equals 0 to infinity.
+And that's what's known
+as a power series.
+
+Fortunately, there
+is a very simple rule
+about how power series converge.
+And it's the following,
+there's a magic number R, which
+depends on these numbers here.
+And this thing is known as
+a radius of convergence.
+
+In the problem that we had,
+it's this number 1 here.
+This thing works
+for x less than 1.
+In our case, it's maybe
+x less than R. So that's
+some symmetric interval.
+That's the same as minus
+R less than x less than R
+where there's convergence,
+where the series converges.
+
+And then there is
+the region where
+every computation that you
+give will give you nonsense.
+So x greater than R is the
+sum a_n x to the n diverges.
+
+And x equals R is a
+very delicate borderline
+and will not be used by us.
+
+We're going to stick inside
+the radius of convergence.
+Now the way you'll
+be able to recognize
+this is the following,
+what always happens
+is that these numbers tend
+to 0 exponentially fast,
+fast for x less than
+R and doesn't even
+tend to 0 at all for
+x greater than R.
+It'll be totally obvious.
+When you look at
+this series here,
+what's happening
+when x less than R
+is that the numbers are getting
+smaller and smaller, less
+than 1.
+When x is bigger
+than 1, the numbers
+are getting bigger and bigger.
+There is no chance that
+the series converges.
+So that's going to be the
+case with all power series.
+There is going to
+be a cutoff, and it
+will be one particular number.
+And below that,
+it will be obvious
+that you have
+convergence and you'll
+be able to do computations.
+And above that, every
+formula will be wrong
+and won't make sense.
+So it's a very clean thing.
+There is this very
+subtle borderline,
+but we're not going to
+discuss that in this class.
+And It's actually not used in
+direct studies of power series.
+How do you tell when the numbers
+are declining exponentially
+fast versus just-- in
+other words, 1 over x--
+So the question is why
+was I able to tell you
+this word here?
+Why I was able to tell you
+not only is it going to 0,
+but it's going
+exponentially fast?
+I'm telling you
+extra information.
+I'm telling you it always
+goes exponentially fast.
+You can identify it.
+In other words, you will see it.
+And it will happen
+every single time.
+I'm just promising you
+that it works that way.
+And it's really
+for the same reason
+that it works that way
+here, that these are powers.
+And what's going on over here is
+it's close to powers with these
+a_n's.
+
+────── 视频 4: 18013x-u10s3v3-MITx-en.txt ──────
+
+Welcome back to recitation.
+In this video, I
+want to finish up
+our work with the ratio test.
+And in particular
+in this video, I'd
+like to address something that
+Professor Jerison talked about.
+When he was talking
+about these power series,
+he was talking about the radius
+of convergence at some point.
+And he didn't go into
+it very specifically,
+but he was essentially
+saying for some values
+of x you'll have a series
+that has x to the n in it.
+For some values of x it will
+converge and for some values
+it will diverge.
+So let me just remind you of
+something you already know.
+So if we consider the
+series x to the n,
+right, this is a
+geometric series
+and we know that this
+is equal to be 1 over 1
+minus x, if the absolute
+value of x is less than 1.
+Right, and so we know that
+this series is finite.
+This sum converges to whatever
+value, if I plug in x here,
+it converges when absolute
+value of x is less than 1.
+And it diverges when absolute
+value of x is bigger than 1.
+And we're not going to address
+when absolute value of x
+equals 1.
+We won't address that case.
+But the point I want to
+make is that for some values
+this series converges,
+and for some
+values the series diverges.
+And those values can give us
+the radius of convergence.
+So the radius of
+convergence of this series
+is actually 1, because x
+goes from 0 up to 1 and then
+from 0 down to 1.
+If you think about it, radius
+might be a confusing term,
+but you can think about it
+as a circle and one dimension
+less than maybe you usually
+think about it as a circle.
+If this is the number line,
+we're going from 0 up to 1,
+and down to minus 1.
+So you're going in one direction
+up to 1, in one direction down
+to minus 1, So this is radius 1.
+r is equal to 1.
+OK.
+So what I want to
+do is figure out
+how I can use the
+ratio test to tell me
+the radius of convergence
+of other series,
+other power series
+besides this one.
+OK, so we're really interested
+in for what values of x
+do these power series converge.
+OK?
+And how we're going
+to do that is we're
+going to directly
+use the ratio test.
+And one thing that I
+mentioned in the other case,
+in the other ratio
+test video, is
+I said you want to have
+your terms be positive.
+And so just to make this easy on
+ourselves, when we do the ratio
+test, we're just going to
+take the absolute value
+of the ratio.
+And that will be
+sufficient for our purposes
+to determine the
+radius of convergence.
+I don't want to go into anything
+more complicated than that.
+So we'll see as we
+do these examples,
+we're just going to take the
+absolute value of the ratio.
+So let's actually
+start off right away
+with doing some
+examples, and each time I
+do an example I'm asking
+the following question, OK?
+Well, actually, I
+was going to say
+for what values of x, but
+that's not quite true.
+I just want to know: what
+is the radius of convergence
+for each power series?
+So I'm not going to
+write it up every time,
+but this is the question we
+want to be thinking about.
+So I'm going to write
+down some power series
+and we're going to see what
+is the radius of convergence
+for each of those.
+I was going to write find the
+values of x for which the power
+series converge, but
+that's not quite true
+because sometimes
+it will actually
+converge on one or
+both of the endpoints.
+We're not going to
+deal with that one,
+but sometimes it
+will converge on one
+or the other of the endpoints.
+So I'm going to be
+asking the question find
+the radius of convergence.
+So let's do an example
+and I'll show you
+how it applies to
+the ratio test,
+and then we'll go from there
+and do some other examples.
+So let's consider the
+series x over 2 to the n.
+This will be easy one.
+Now the ratio test told us that
+we examine a certain limit.
+We examine the limit
+as n goes to infinity.
+It said a sub n
+plus 1 over a sub n.
+Well if we think of this
+whole thing as a sub n,
+then a sub n plus 1 is x
+over 2 to the n plus 1.
+And then we have to divide
+by x over 2 to the n.
+So let me just make
+sure we understand that.
+The way we want to
+think about this
+is as if the a sub n is
+actually a function of x
+that also depends on n, OK?
+So a sub n, think of it as
+x over 2 raised to the n.
+So a sub n plus 1 is x over
+2 raised to the n plus 1.
+a sub n is x over 2
+raised to the n, OK?
+And so this is looks
+exactly like the ratio test
+we had before.
+I told you I'm going to
+put absolute values on it.
+And so let me simplify this.
+I put the division sign
+maybe kind of funny
+because I wanted to
+have it in a row there.
+I apologize if that
+made it more confusing.
+So this equals, well,
+I have x to the n
+plus 1 over an x
+to the n times 2
+to the n-- this comes
+to the numerator,
+because it's in the denominator
+of the denominator-- over,
+and this goes to the
+denominator, 2 to the n plus 1.
+Now what is this?
+This whole thing
+converges to what?
+2 to the n over 2 to the
+n plus 1 simplifies to 1/2
+and x to the n plus
+1 over x to the n
+simplifies to x, so this is
+equal to absolute value of x
+over 2.
+Now we haven't shown
+how the ratio test is
+going to help us find the
+radius of convergence,
+and here's where we're
+going to see it working.
+If we want to draw a conclusion
+about the convergence
+of this series, we know that
+if this limit is less than 1,
+that the series
+definitely converges.
+So if I take my limit
+when I'm all done
+and I set it less than 1, and I
+solve for absolute value of x,
+then that will tell me exactly
+what the radius of convergence
+is.
+Let me go through
+that one more time.
+We knew that if we had this
+series in terms of a sub n
+and we looked at
+the ratio, and we
+took the limit of these
+ratios, and in the limit
+the value was
+strictly less than 1,
+we know the series converges.
+So now we have this
+thing, it's in terms of x,
+but ultimately it's
+the same process.
+And we get to a place
+where we know the limit.
+It depends on x.
+And so the limit
+will be less than 1
+exactly where this
+thing is less than 1.
+Right?
+So it's now in terms of x.
+This is less than 1 I'm
+putting in at the end.
+This is where the ratio
+test is happening.
+So what does this tell us?
+Where does this converge?
+It converges when absolute value
+of x over 2 is less than 1,
+which means absolute value
+of x is less than 2, right?
+
+Right, I just multiply by 2
+because absolute value of 2
+is 2, so I don't have to
+worry about if 2 is negative.
+OK, so absolute value
+of x is less than 2.
+That tells me the radius of
+convergence is actually 2.
+Now this shouldn't
+surprise us, really,
+because this is, in
+fact, a geometric series,
+and we know that
+the usual geometric
+series converges when absolute
+value of x is less than 1.
+So it's not surprising,
+and actually
+fits in with what
+we already know,
+that if this thing
+on the inside,
+if its absolute
+value is less than 1
+that the thing will converge.
+So that means absolute value
+of x has to be less than 2.
+So again, hopefully this
+fits in with the knowledge
+we already have.
+Hopefully it makes sense to
+you what we're trying to do.
+And so let's do another couple
+examples to make this solidify.
+
+All right where were
+my other examples.
+OK, let's do this one.
+x to the n over n factorial.
+All right, so now
+our a sub n when
+we look at this geometric--
+this is not geometric--
+when we look at the
+series, our a sub n
+is going to be x to
+the n over n factorial.
+And so when we take
+our whole limit,
+the thing that's
+going to happen is
+we're going to have something
+in terms of x at the end.
+Our goal is defined
+for what values of x
+is that thing we
+have less than 1.
+Again, this is where we're
+using the ratio test.
+So let's look at this thing.
+We want to look at the
+limit as n goes to infinity.
+Well, a sub n plus 1 is
+going to be x to the n
+plus 1 over the quantity
+n plus 1 factorial.
+I'm going to put the
+absolute value over there,
+and I'm going to multiply
+by 1 over a sub n.
+So this is actually a
+sub n, so 1 over that
+is n factorial over x to the n.
+Now, we have to be a
+little careful here.
+I want to make sure everybody
+understands something.
+n factorial is n
+times n minus 1,
+times n minus 2, times
+n minus 3, blah, blah,
+blah, all the way down, right?
+n plus 1 factorial is n plus
+1 times n times n minus 1,
+times n minus 2, blah, blah,
+blah, all the way down.
+So n plus 1 factorial,
+I'll just write this here,
+n plus 1 factorial equals
+n plus 1 times n factorial.
+That's very important
+that you recognize that.
+OK?
+Because the division
+of factorials
+is a little more complicated
+than the division
+of straight polynomials
+or something like this.
+All right?
+Because when I take this
+limit, what am I going to get?
+I'm going to get
+x to the n plus 1
+over x to the n, that's
+going to give me one x.
+And then, n factorial divided
+by n plus 1 factorial,
+well based on the
+fact that this is
+equal to n plus 1
+times n factorial,
+the n factorials divide and
+I'm left with x over n plus 1.
+That's actually what
+this limit equals.
+Let me go through
+that one more time.
+This part's easy. x to the
+n plus 1 over x to the n
+gives me the x.
+And then, n factorial over
+n plus 1 factorial is just 1
+over n plus 1.
+And I have to be careful
+because I wrote equals,
+but there's still an n here.
+So let me erase that.
+I'm not going to--
+I don't think--
+my studio audience
+didn't say anything yet,
+but I don't think
+they were going
+to let me get away with that.
+This is the limit as n goes to
+infinity of x over n plus 1.
+Now what is that?
+Well as n goes to
+infinity, for any fixed x
+I pick-- we have to be
+careful here-- for any fixed
+x I pick as n goes to infinity,
+this quantity is equal to 0.
+OK?
+If I were moving x around,
+if I were moving x with n
+this would be a
+problem, but x is fixed.
+When I do this sum I fix
+my x at the beginning.
+So for any fixed x, n plus 1
+is getting arbitrarily large,
+so x over n plus 1 is
+getting arbitrarily small,
+so this limit is 0.
+This is strictly less than 1.
+What does this mean?
+For any x I pick, this
+whole thing is less than 1.
+Right?
+Any fixed x, this ratio
+is always less than 1.
+What does that mean?
+That means the radius of
+convergence is infinite.
+So radius is infinity.
+OK.
+The radius of convergence
+is actually infinite.
+What series is this?
+This is actually the power
+series for e to the x.
+So we know that the
+power series for e
+to the x that this
+converges for any x.
+It's kind of a nice thing.
+So now we've used the
+ratio test to tell us
+how the power series behaves
+for a function that we know.
+OK?
+We know it's a radius of
+convergence is infinite,
+so that's pretty nice.
+All right, let's do maybe
+one or two more examples,
+depending on how
+much room I have.
+OK, let's try this one.
+x to the n over n
+times 2 to the n.
+All right, so this is
+another power series we have.
+And we want to know if I want
+to plug in some value of x
+and I want to take the
+sum, will that converge
+for that particular value of x.
+We want to know what
+values of x can I plug in.
+All right?
+So again, we're going to find
+the radius of convergence
+based on the ratio test.
+So the n plus first term is x
+to the n plus 1 over n plus 1 2
+to the n plus 1.
+And then I have to
+multiply by the a sub n's,
+the a sub n term, or multiply
+by 1 over that, sorry.
+I'm dividing by a sub
+n, so I get n times 2
+to the n over x to the n.
+All right, this gives
+me an x n plus 1 over n.
+Let me just write out,
+actually, what we get here.
+2 to the n over
+2 to the n plus 1
+gives me an over 2, and
+then n over n plus 1.
+This is positive so I don't have
+to worry about anything there.
+The limit as n goes to
+infinity, absolute value of x
+over 2 time n over n plus 1.
+What's that equal to?
+Well this, as n goes to
+infinity, is equal to 1
+so it's absolute
+value of x over 2.
+OK
+Let me again remind
+you, what are we doing?
+We're saying I want to know
+the radius of convergence
+for this series, so I want
+to know so what values of x
+can I put in to make
+this series converge.
+I might miss the
+endpoints, but beyond
+that what values of x
+make this series converge?
+So I'm looking at
+the ratio test.
+I took the ratio test.
+I got it all the
+way to a place where
+I have something in terms of x.
+As long as that thing is less
+than 1, I'm golden, right?
+As long that this is less
+than 1 the series converges.
+So again, I actually get another
+thing where absolute value of x
+is less than 2.
+All right?
+I probably should've picked
+a different number there.
+What do you think would
+happen if this was a 7?
+Well, everything would have
+been the same except this would
+have been a 7, and the radius of
+convergence would have been 7.
+So I should have picked
+a different number there
+so we had a different
+radius of convergence,
+but you can see how that works.
+I have room, I'm
+going to do one more
+example, because this one's
+a good one to do also.
+
+OK, I'm actually going to do
+another series that we know.
+x to the 2n over 2n factorial.
+And I'm doing this one
+for a particular reason
+to help us deal with
+when something's,
+when the exponents
+and the factorials
+get a little more complicated.
+I want to also point
+out what series is this?
+You should know
+what series this is.
+And I know without thinking
+that it's either sine or cosine.
+I guess I should say it's
+starting at n equal 0
+to infinity.
+And then I might get nervous
+and say, well which one is it?
+Well what's the first term?
+x to the 0 is 1 over
+0 factorial is 1,
+so it looks like
+the first term is 1,
+so that makes me
+know it's cosine.
+Right?
+If the first term were
+x, I'd know it was sine.
+So where it converges
+is equal to cosine x.
+Let's look at this one.
+
+All right, we get-
+now this you have
+to be a little more careful
+because it's 2 times
+the quantity n plus 1
+over 2n plus 2 factorial.
+So that's n plus 1 times
+2 is 2n plus 2 times 2n
+factorial over x to the 2n.
+All right, this is where
+might get a little tricky.
+This is 2n plus 2 divided by 2n.
+So this is going to
+be the limit as n
+goes to infinity of x squared,
+absolute value of x squared,
+which is just x squared
+again, times this thing.
+So let's figure out
+what this thing is, OK?
+What is 2n factorial?
+I'm going to write out
+the first couple terms.
+OK there's going to be 2n
+times 2n minus 1 times, that's
+all the way down to 1.
+And then what's this?
+This is 2n plus 2 times
+2n plus 1 times 2n times
+all the way down to 1.
+So we see, this is what I
+was talking about earlier,
+actually, also, was that
+I've added 2 to this,
+so it's not surprising
+I get two more terms
+and then I'm down to
+2n factorial again.
+Right?
+So this is 2n factorial.
+This is 2n factorial.
+So the 2n factorial here divides
+with the 2n factorial here,
+and I'm left with these here.
+I get 1 over 2n plus
+2 times 2n plus 1.
+Now what happens as
+n goes to infinity?
+Obviously, this
+ratio goes to zero.
+So I'm actually in another
+case similar to the one
+I saw with e to the x,
+is that this goes to 0.
+So the limit is
+actually equal to 0,
+which is always less than 1.
+Any value of x I pick,
+it's less than 1.
+And so this series
+actually converges for any
+x that I pick.
+So this is another case where
+have the radius of convergence
+is actually infinite.
+OK, so we'll probably give
+you some problems where
+we have some other things
+happening, because you
+can actually get the radius
+of convergence is zero.
+You can actually get that
+the only place it converges
+is at x equals zero.
+So you might actually
+get the limit
+as n goes to
+infinity is infinity.
+I didn't give you
+an example of that,
+but that's a case where
+whatever x value you put in,
+your limit's still
+bigger than 1.
+Then you'd always get a
+diverges, except when x is 0.
+OK?
+So that's another thing
+that you can run into.
+But the point I want
+to make is that this
+is going to let us determine
+at least the radius over which
+these x values
+converge, and it also
+helps us if we know certain
+things about a function,
+to tell us where this function
+is actually equal to the series
+that we're dealing with.
+So I think that's
+where I'll stop,
+and I hope this was informative.
+
+────── 视频 5: 18013x-u10s3v4-MITx-en.txt ──────
+
+OK.
+So now I need to give
+you the basic facts
+and give you a few examples.
+
+So why are we looking
+at these series?
+
+Well, the answer is we're
+looking at these series
+because the role that
+they play is exactly
+the reverse of
+this equation here.
+That is, and this
+is a theme which
+I've tried to emphasize
+throughout this course,
+you can read equalities
+in two directions.
+Both are interesting typically.
+You can think, I don't know
+what the value of this is.
+Here's a way of evaluating it.
+In other words, the right side
+is a formula for the left side.
+Or you can think
+of the left side
+as being a formula
+for the right side.
+
+And the idea of series is
+that they're flexible enough
+to represent all
+of the functions
+that we've encountered
+in this course.
+This is the tool
+which is very much
+like the decimal
+expansion, which
+allows you to represent numbers
+like the square root of 2.
+Now we're going
+to be representing
+all the numbers, all the
+functions that we know,
+e to the x, arctangent, sine,
+cosine, all of those functions
+become completely flexible
+and completely available to us
+and computationally
+available to us directly.
+So that's what
+this is a tool for.
+And it's just like decimal
+expansion is giving you
+a handle on all real numbers.
+
+So here's how it works.
+The rules for
+convergent power series
+are just like polynomials.
+
+All of the manipulations
+that you do for power series
+are essentially the
+same as for polynomials.
+So what kinds of things
+do we do with polynomials?
+We add them.
+
+We multiply them together.
+
+We do substitutions.
+Right?
+We take one function
+of another function.
+We divide them.
+
+OK?
+And these are all really not
+very surprising operations.
+And we'll be able to do
+them with power series too.
+The ones that are interesting,
+really interesting
+for calculus, are the last two.
+We differentiate them,
+and we integrate them.
+
+And all of these
+operations we'll
+be able to do for
+power series as well.
+
+So now, let's explain
+the high points
+of this, which is mainly
+just the differentiation
+and the integration part.
+So if I take a series
+like this and so forth,
+the formula for its derivative
+is just like polynomials.
+That's what I just said.
+It's just like polynomials.
+So the derivative of
+the constant is 0.
+The derivative of
+this term is a_1.
+This one is plus 2, a_2 x.
+This one is 3 a_3 x
+squared plus et cetera.
+That's the formula.
+Similarly, if I
+integrate, well, there's
+an unknown constant, which
+I'm going to put first
+rather than last,
+which corresponds
+sort of to the a_0 term, which
+is going to get wiped out.
+That a_0 term suddenly
+becomes a_0 x.
+And the anti-derivative
+of this next term
+is a_1 x squared over 2.
+And the next term is a_2 x
+cubed over 3 and so forth.
+Yeah, question.
+Is that a series
+though or a polynomial?
+Is this a series
+or a polynomial?
+Good question.
+It's a polynomial if it ends.
+If it goes on infinitely
+far, then it's a series.
+They look practically the
+same, polynomials and series.
+There is this little
+dot, dot, dot here.
+Is this a series
+or a polynomial?
+It's the same rule.
+If it stops at a
+finite stage, this one
+stops at a finite stage.
+If it goes on forever,
+it goes on forever.
+So I thought that series
+add up finite numbers.
+You can add up
+terms of x and see?
+Oh.
+So an interesting question.
+So the question
+that was just asked
+is I thought that a series
+added up finite numbers.
+You could add up x?
+That was what you said, right?
+OK, now notice that
+I pulled that off
+on you by changing the
+letter a to the letter
+x at the very beginning
+of this commentary here.
+This is a series.
+For each individual value
+of x, it's a number.
+So in other words, if I
+plug in here, x equals 1/2,
+I'm going to add 1 plus
+1/2 plus a 1/4 plus 1/8,
+and I'll get a
+number, which is two.
+And I'll plug in a number
+over here, and I get a number.
+On the other hand, I can do
+this for each value of x.
+So the interpretation of this
+is that it's a function of x.
+And similarly, this
+is a function of x.
+It works when you plug
+in the possible values
+of x between minus 1 and 1.
+So there's-- so then there's
+really no distinction there.
+It's just I slipped it past you.
+These are functions of x.
+And the notion of a
+power series is this idea
+that you put
+coefficients on a series,
+but then you allow
+yourself the flexibility
+to stick powers here.
+And that's exactly
+what we're doing.
+OK?
+There are other
+kinds of series where
+you stick other interesting
+functions in here
+like sines and cosines.
+There are lots of other
+series that people study.
+And these are the simplest ones.
+And all of those
+examples are extremely
+helpful for
+representing functions.
+But we're only going to
+do this example here.
+────── 视频 6: 18013x-u10s3v5-MITx-en06.txt ──────
+
+The last thing that
+I have to do for you
+is explain to you something
+called Taylor's formula.
+
+Taylor's formula is the way
+you get from the representation
+that we're used to of
+functions to the representation
+in the form of
+these coefficients.
+When I gave you the
+function e to the x,
+it didn't look
+like a polynomial.
+And we have to figure
+out which of these guys
+it is, if it's going to
+fall into our category here.
+And here's the formula.
+I'll explain to you how
+it works in a second.
+So the formula is f of x.
+It turns out there's
+a formula in terms
+of the derivatives of f.
+Namely, you differentiate n
+times and you evaluate at 0,
+and you divide by n factorial
+and multiply by x to the n.
+So here's Taylor's formula.
+This tells you what
+the Taylor Series is.
+Now about half of our job
+for the next few minutes
+is going to be to
+give examples of this,
+but let me just explain
+to you why this has to be.
+If you pick out this number
+here, this is the a_n,
+the magic number a_n here.
+So lets just illustrate it.
+If f of x happens to be
+a_0 plus a_1 x plus a_2 x
+squared plus a_3 x cubed
+plus dot, dot, dot,
+and now I differentiate it, I
+get a1 plus 2 a_2 x plus 3 a_3
+x squared.
+If I differentiated
+another time,
+I get 2 a_2 plus 3--
+sorry-- 3 times 2 a_3 x
+plus dot dot, dot.
+And now a third time, I get
+3 times 2 a_3 plus et cetera.
+So this next term is really
+in disguise, 4 times 3 times
+2 x-- I'm sorry-- a_4 x.
+That's what it really
+comes down if I kept
+track of the fourth term there.
+So now here is my function.
+But now you see, if
+I plug-in x equals 0,
+I can pick off the third
+term, f triple prime of 0
+is equal to 3 times 2 times
+a_3, because all the rest
+of those terms when I
+plug in 0 are just 0.
+Here's the formula.
+And so with the
+pattern here is this.
+And what's really
+going on here is
+this is really 3
+times 2 times 1 a_3.
+And in general a_n is
+equal to f nth derivative
+divided by n factorial.
+And of course, n
+factorial, I remind you,
+is n times n minus 1 times n
+minus 2 all the way down to 1.
+
+Now there's one more
+crazy convention,
+which is always used, which
+is that there's something
+very strange here down at 0.
+Which is that 0
+factorial, it turns out,
+has to be set equal to 1.
+So that's what you do in order
+to make this formula work out.
+And that's one of the
+reasons for this convention.
+
+So my next goal is to
+give you some examples.
+
+Let's do a couple.
+
+Well, you know,
+I'm going to have
+to let you see a few
+of them next time.
+But let me just tell
+you this one, which
+is by far the most impressive.
+
+So what happens with e to
+the x if the function is
+f of x is e to the x is that its
+derivative is also e to the x.
+And its second derivative
+is also e to the x.
+And it just keeps
+on going that way.
+They're all the same.
+So that means that these
+numbers in Taylor's formula,
+in the numerator,
+the nth derivative
+is very easy to evaluate.
+It's just e to the x.
+And if I evaluate it at
+x equals 0, I just get 1.
+So all those numerators are 1.
+So the formula here
+is the sum n equals 0
+to infinity of 1 divided by
+n factorial next to the n.
+
+In particular, we now have
+an honest formula for e
+to the first power,
+which is just e.
+Which if I plug
+it in, x equals 1,
+I get 1-- this is the n
+equals 0 term-- plus 1-- this
+is the n equals 1 term--
+plus 1 over 2 factorial
+plus 1 over 3 factorial
+plus 1 over 4 factorial.
+
+So this is our first
+honest formula for e,
+and also this is how you compute
+the exponential function.
+
+Finally, if you take a function
+like sine x, what you'll
+discover is that we can complete
+this sort of strange business
+that we did at the
+beginning of the course
+or cosine x, but where we
+took the linear and quadratic
+approximations.
+Now we're going to get complete
+formulas for these functions.
+Sine x turns out
+to be equal to x
+minus x cubed over 3 factorial
+plus x the fifth over 5
+factorial minus x to the
+seventh over 7 factorial.
+
+And cosine x is equal
+to 1 minus x squared
+over 2 factorial-- that's
+the same as this 2 here--
+plus x to the fourth
+over 4 factorial minus x
+to the sixth over
+sixth factorial.
+
+Now these may feel like
+they're hard to memorize,
+because I've just pulled
+them out of a hat.
+I do expect you to know them.
+They're actually extremely
+similar formulas.
+The exponential here just has
+this collection of factorials.
+The sine is all the odd
+powers with alternating signs,
+and the cosine is all the even
+powers with alternating signs.
+So all three of them form
+part of the same family.
+So this will actually
+make it easier
+for you to remember
+rather than harder.
+
+────── 视频 7: 18013x-u10s3v6-MITx-en.txt ──────
+
+Welcome back to recitation.
+In this video, what
+I'd like us to do
+is practice Taylor series.
+So I want us to write
+the Taylor series
+for the following
+function f of x
+equals 3 x cubed plus 4 x
+squared minus 2x plus 1.
+So why don't you
+pause the video?
+Take some time to work
+on that, and then I'll
+come back and show
+you what I get.
+
+All right.
+Welcome back.
+Well, we want to find the Taylor
+series for this polynomial
+f of x equals 3 x cubed plus
+4 x squared minus 2x plus 1.
+So what I'm going
+to do is I'm just
+going to write down
+the expression we have
+for the sum, for the
+Taylor series, in general,
+and then I'm going to start
+computing what I need.
+And I'm going to see what I get.
+So what do I need to remember?
+Well, let's remind ourselves
+what the formula is.
+We should get f of x is equal
+to the sum from n equals
+0 to infinity of
+the nth derivative
+f at 0 over n factorial
+times x to the n.
+So that's what we want.
+So what I obviously
+need to start doing
+is figuring out
+derivatives of f at 0.
+And so what I'm going
+to do is I'm just going
+to make myself a little table.
+So let's see.
+We're going to say f0 at 0,
+f1 at 0, f2 at 0, f3 at 0,
+f4 at 0.
+And I'm getting tired of writing
+so I'm going to stop there.
+So let's take the function.
+The 0's derivative of f is
+just the function itself.
+So let's come back here.
+What is the function?
+If I evaluate it at x
+equals 0-- 0, 0, 0, 1.
+I get 1.
+
+What is the first derivative?
+So what I'm going to write
+out the first derivative,
+and then I'm going to say I'm
+evaluating it at x equals 0.
+So the first derivative looks
+like it's 9 x squared plus 8
+x minus 2.
+So I'm going to write this down.
+It's 9 x squared
+plus 8 x minus 2,
+evaluated at x equals 0--
+0, 0, I get negative 2.
+
+Well, let me take the
+second derivative.
+Let's see what I get here.
+I get 18x plus 8, and I'm going
+to evaluate that x equals 0.
+This is just a way
+to write I'm going
+to evaluate what's here
+at x equal this number,
+so if you haven't
+seen that before.
+So I get 8.
+
+And then the third derivative
+is 18-- oh, just 18--
+evaluated at x
+equals 0, I get 18.
+And then fourth
+derivative, what's
+the derivative of a
+constant function?
+It's 0.
+What do you think the fifth
+derivative is evaluated 0?
+It looks like it'll be 0.
+It looks like the
+sixth derivative.
+Looks like everything
+bigger than 3.
+So the nth derivative at 0 is
+equal to 0 for n bigger than 3.
+
+So looks like we should only
+have four terms in this.
+So that may be seems a little
+weird, but let's keep going
+and see what happens.
+Let's start plugging things in.
+So again, let's
+remember the formula.
+I'm going to walk over
+here to the right.
+And I'm going to start
+using that formula
+and using these numbers that
+I have and writing it out.
+So the first term is going to
+be the function evaluated at 0
+divided by 0 factorial times 1.
+0 factorial is 1.
+So it's just going to be
+the function evaluated
+at 0 times 1.
+The function evaluated
+at 0, we said was 1.
+So that's the first term
+in the Taylor series.
+What's the next term?
+The next term, remember,
+is the first derivative
+evaluated at 0 divided
+by 1 factorial--
+just still 1-- times x.
+So the first derivative,
+if I come back over here,
+evaluate it at 0,
+I get negative 2.
+So I'm going to get minus 2x.
+The next term, so I had 0th
+derivative, first derivative,
+now I'm at the
+second derivative.
+Now it's getting confusing.
+I'm going to start
+writing the things above.
+It's the second derivative,
+evaluated at 0 divided
+by 2 factorial times x squared.
+That's what I should have here.
+Let's come over here, second
+derivative evaluated at 0
+was 8.
+So it's going to be 8 over
+2-- because 2 factorial is
+2-- x squared.
+So it's going to
+be plus 4x squared.
+And then I have to have the
+third derivative evaluated
+at 0 divided by 3
+factorial times x cubed.
+What's 3 factorial?
+3 factorial is 6.
+What was the third
+derivative evaluated at 0?
+It was 18.
+18 divided by 6 is 3.
+So I get a plus 3x cubed.
+And all the other terms were 0.
+So I'll just stop writing them.
+Now if you watch the video
+all the way through, here,
+at some point, maybe you said,
+Christine, this is madness.
+Well, why is it madness?
+Because what is this?
+Well, this is the
+function, again.
+It's exactly were we start at.
+The orders opposite
+of what it was before,
+because now the powers
+go up, instead of down.
+But it's the same polynomial.
+We talked about this
+briefly, I think,
+when we were doing some
+quadratic approximations.
+And I mentioned way back
+that quadratic approximations
+of polynomials at x equals
+0 are just the polynomials.
+Again, this is the exact
+same kind of thing happening.
+Because what is a Taylor series?
+It's just better and
+better approximations
+as n gets larger and larger.
+So if I wanted to
+have a fourth order
+approximation of this
+function f of x at x equals 0,
+I would get the
+same function back.
+That's really the idea
+of what's happening here.
+So maybe you saw the sort
+of trick in this question.
+And when you solve this
+problem, you laughed at me.
+And you said, well,
+I'm just going
+to write down the function
+again, and I'll be done.
+Maybe you didn't
+see that right away.
+And if you didn't see that
+right away, that's OK.
+I bet you're in good company.
+And it's totally fine,
+because now you've seen this.
+You've seen this
+how it works out.
+And you know, hey, now any
+time I see a polynomial
+and I want to do the Taylor
+series, for this polynomial,
+I just have to write down
+the polynomial, again.
+So that was the main
+goal of this video.
+Took us a long time to get
+there, but I think we got it.
+So the answer to the ultimate
+answer to the question of
+write the Taylor series
+of this function,
+it's just this function again.
+All right, that's
+where I'll stop.
+────── 视频 8: 18013x-u10s3v7-MITx-en.txt ──────
+
+So Professor Jerison is relaxing
+in sunny London, Ontario today
+and sent me in as
+his substitute again.
+I'm glad to be here
+and see you all again.
+So our agenda today, he
+said that he'd already
+talked about power series
+and Taylor's formula,
+I guess on-- last
+week-- on Friday.
+And so I'm going to go a
+little further with that,
+show you some examples,
+show you some applications,
+and then I have this
+course evaluation survey
+that I'll hand out in the last
+10 minutes or so of the class.
+
+I also have this handout
+that he made that says
+1801 end of term 2007.
+If you didn't pick this up
+coming in, grab it going out.
+People tend not to pick it
+up when they walk in, I see.
+So grab this when
+you're going out.
+There's some things
+missing from it.
+He has not decided
+when his office hours
+will be at the end of term.
+He will have them, he
+just hasn't decided when.
+So check the website
+for that information.
+
+And we're looking forward to
+the final exam, which is --
+aren't we?
+
+Any questions about
+this technical stuff?
+
+All right, let's talk about
+power series for a little bit.
+So I thought I should
+review for you what
+the story with power series is.
+
+OK, could I have your
+attention, please?
+
+So a power series is a way of
+writing a function as a sum
+of integral powers of x.
+These a_0, a_1, and
+so on are numbers.
+An example of a power
+series is a polynomial.
+
+Not to be forgotten,
+one type of power series
+is one which goes on for
+a finite number of terms
+and then ends, so that all of
+the higher a sub i's are all 0.
+This is a perfectly good
+example of a power series.
+It's a very special
+kind of power series.
+And part of what I
+want to tell you today
+is that power series
+behave almost exactly
+like polynomials.
+There's just one
+thing that you have
+to be careful about when you're
+using power series that isn't
+a concern for polynomials,
+and I'll show you
+what that is in a minute.
+So you should think of them
+as generalized polynomials.
+The one thing that you
+have to be careful about
+is that there is a
+number-- so one caution.
+
+There's a number,
+which I'll call
+R, where R can be between 0
+and it can also be infinity.
+It's a number between 0
+and infinity inclusive
+so that when the absolute
+value of x is less than R,
+so when x is smaller than R
+in size, the sum converges.
+
+This sum, that sum,
+converges to a finite value.
+And when x is bigger
+than R in absolute value,
+the sum diverges.
+
+This R is called the
+radius of convergence.
+
+So we'll see some examples of
+what the radius of convergence
+is in various power
+series, as well,
+and how you find it, also.
+But let me go on and
+give you a few more
+of the properties
+about power series,
+which I think that Professor
+Jerison talked about earlier.
+So one of them is there's
+a radius of convergence.
+Here's another one.
+
+If you're inside of the
+radius of convergence,
+then the function has
+all its derivatives.
+Has all its derivatives
+just like a polynomial does.
+You can differentiate
+it over and over again,
+and in terms of those
+derivatives, the number
+a sub n in the power
+series can be expressed
+in terms of the value
+of the derivative at 0,
+and this is called
+Taylor's formula.
+
+So I'm saying that inside of
+this radius of convergence,
+the function that
+we're looking at,
+this f of x, can be written
+as the value of the function
+at zero, that's a sub 0, plus
+the value of the derivative.
+This bracket, n, means you
+take the derivative n times.
+So when n is 1, you take
+the derivative once at 0,
+divide it by 1 factorial,
+which is 1, and multiply by x.
+That's the linear term
+in the power series.
+And then the quadratic term is
+you take the second derivative,
+remember to divide by 2
+factorial, which is 2.
+Multiply that by x
+squared and so on out.
+
+The coefficients
+in the power series
+just record the values of the
+derivatives of the function
+at x equals zero, and they
+can be computed that way also.
+Let's see, I think that's the
+end of my summary of things
+that he talked about.
+I think he did one
+example, and I'll repeat
+that example of a power series.
+This example wasn't
+due to David Jerison.
+It was due to Leonhard
+Euler, and it's
+the example where the function
+is the exponential function,
+e to the x.
+So let's see.
+Let's compute what-- I will just
+repeat for you the computation
+of the power series for
+e to the x because it's
+such an important thing to do.
+So in order to do
+that, I have to know
+what the derivative
+of e to the x is,
+and what the second
+derivative of e to the x
+is and so on, because
+that comes into the Taylor
+formula for the coefficients.
+But we know what the
+derivative of e to the x
+is, it's just e to the x
+again, and it's that way
+all the way down.
+All the derivatives are e to
+the x over and over again.
+So when I evaluate
+this at x equals 0,
+well, the value of e to the x
+is 1, the value of e to the x
+is 1 at x equals 0.
+You get a value of
+1 all the way down.
+So all these derivatives
+at 0 have the value 1.
+And now when I plug into this
+formula I find e to the x
+is 1 plus 1 times x plus 1 over
+2 factorial times x squared
+plus 1 over 3 factorial
+times x cubed plus and so on.
+So all of these
+numbers are 1, and all
+you wind up with is the
+factorials in the denominator.
+That's the power series
+for e to of the x.
+This was a discovery of Leonhard
+Euler in 1740 or something.
+Yes ma'am?
+When you are writing
+down the power series,
+how far do you have
+to write it out?
+
+How far do you have to
+write the power series
+before it becomes well defined?
+Before it's a satisfactory
+solution to an exam problem,
+I suppose is another way
+to phrase the question.
+Until you can see
+what the pattern is.
+I can see what the
+pattern is, is there
+anyone who's in doubt about
+what the next term might be?
+Some people would
+tell you that you
+have to write the
+summation convention thing.
+Don't believe them.
+If you write out enough
+terms to make it clear
+that's good enough.
+OK.
+Is that an answer for you?
+Yes, thank you.
+OK, so that's a basic example.
+Let's do another basic
+example of a power series.
+Oh yes, and by the way, whenever
+you right out a power series,
+you should say what the
+radius of convergence is.
+And for now, I
+will just tell you
+that the radius of convergence
+of this power series
+is infinity.
+That is, this sum always
+converges for any value of x.
+And I'll say a little more
+about that in a few minutes.
+Yeah?
+So which functions can be
+written as power series?
+Which functions can be
+written as power series?
+That's an excellent question.
+Any function that has
+a reasonable expression
+can be written as
+a power series.
+I'm not giving you a very good
+answer because the true answer
+is a little bit
+complicated, but any
+of the functions that
+occur in calculus,
+like sines and cosines,
+tangents, they all
+have power series expansions.
+OK?
+We'll see more examples.
+
+Let's do another example.
+Here's another example.
+I guess this was example one.
+
+So this example, I think,
+was due to Newton, not Euler.
+
+Let's find the power
+series expansion
+of this function,
+1 over 1 plus x.
+Well, I think that
+somewhere along the line
+you learned about the
+geometric series, which
+tells you what the
+answer to this is,
+and I'll just write it out.
+The geometric series tells
+you that this function
+can be written as an
+alternating sum of powers of x.
+You may wonder where
+these minuses came from.
+Well, if you think about
+the geometric series,
+as you probably remember,
+there was a minus sign here.
+And that gets replaced
+by these minus signs.
+I think maybe Jerison
+talked about this, also.
+Anyway, here's
+another basic example.
+Remember with the graph of
+this function looks like.
+When x is equal to
+minus 1, then there's
+a little problem here because
+the denominator becomes 0.
+So the graph has a
+pole there, goes up
+to infinity at x equals minus 1.
+And that's an indication that
+the radius of convergence
+is not infinity,
+because if you try
+to converge to this
+infinite number
+by putting in x
+equals minus 1 here,
+you'll have a big problem.
+In fact, you see when you
+put in x equals minus 1
+you keep getting
+1 in every term,
+and it gets bigger and
+bigger and does not converge.
+In this example, the
+radius of convergence is 1.
+
+OK, so let's do a
+new example now.
+Oh and by the way,
+I should say you
+can calculate these numbers
+using Taylor's formula.
+If you haven't seen
+it, check it out.
+Calculate the iterated
+derivatives of this function
+and plug in x equals 0 and see
+that you get plus 1 minus 1
+plus 1 minus 1, and so on.
+Yes sir?
+I see that if you do
+minus 1 it will blow up.
+If you put it in one, though,
+it seems like it would be fine.
+Question is I can
+see that there's
+a problem at x equals minus 1.
+Why is there also a
+problem at x equals 1
+where the graph is
+perfectly smooth
+and innocuous and finite?
+That's another
+excellent question.
+The problem is that if you
+go off to a radius of 1
+in any direction and there's
+a problem, that's it.
+That's what the radius
+of convergence is.
+Here, what does happen if
+I put in x equals plus 1,
+so let's look at
+the partial sums.
+Pretend x equals plus
+1 in your mind here.
+So I'll get the partial
+sum 1, and then 0,
+and then 1, and
+then 0, and then 1.
+So even though it doesn't
+blow up to infinity,
+it still does not converge.
+And anything in between?
+And any of these
+other things will also
+fail to converge
+in this example.
+Well, that's the only two
+real numbers are at the edge.
+────── 视频 9: 18013x-u10s3v8-MITx-en.txt ──────
+
+OK, let's do a
+different example now.
+How about a trig function?
+
+The sine of x.
+We're going to compute
+the power series
+expansion for the
+sine of x, and I'm
+going to do it using
+Taylor's formula.
+So Taylor's formula
+says that I have
+to start computing
+derivatives of the sine of x.
+
+This sounds like it's
+going to be a lot of work.
+Let's see, the derivative
+of the sine is the cosine.
+
+And the derivative
+of the cosine,
+that's the second
+derivative of sine, is what?
+Remember the minus.
+It's minus sine of x.
+OK, now I want to take the third
+derivative of the sine, which
+is the derivative
+of sine prime prime,
+so it's the derivative of this.
+And we just decided the
+derivative of sine is cosine,
+so I get cosine but I have
+this minus sign in front.
+
+And now I want to
+differentiate again.
+So the cosine
+becomes a minus sine,
+and that minus sign cancels
+with this minus sign
+to give me sine of x.
+You follow that?
+A lot of minus ones
+canceling out there.
+So all of the sudden, I'm
+right back where I started.
+These two are the same
+and the pattern will now
+repeat forever and ever.
+Higher and higher
+derivatives of sines
+are just plus or minus
+sines and cosines.
+Now Taylor's formula
+says I should now
+substitute x equals 0 into
+this and see what happens.
+So let's do that.
+When x is equal to 0, the
+sine is 0, the cosine is 1.
+The sine is 0, so
+minus 0 is also 0.
+The cosine is 1, but
+now there's a minus 1.
+And now I'm back
+where I started.
+And so the pattern will repeat.
+OK?
+So the values of the derivatives
+are all 0's and plus and minus
+1's, and they go through that
+pattern, fourfold periodicity,
+over and over again.
+And so we can write
+out what the sine of x
+is using Taylor's formula.
+Using this formula.
+So I put in the value
+at 0, which is 0.
+Then I put in the derivative,
+which is 1 multiplied by x.
+Then I have the
+second derivative
+divided by 2 factorial, but
+the second derivative at 0
+is 0, so I'm going to
+drop that term out.
+Now I have the third
+derivative, which is minus 1,
+and remember the 3 factorial
+in the denominator,
+and that's the
+coefficient of x cubed.
+What's the fourth derivative?
+Well here we are.
+It's on the board; it's 0.
+So I dropped that term out.
+Go up to the fifth term,
+the fifth power of x.
+Its derivative is now 1.
+We've gone through the pattern.
+We're back at plus
+1 as the value
+of the integrated
+derivative, so now I
+get 1 over 5 factorial
+times x to the fifth.
+And now, you tell me, have
+we done enough terms to see
+what the pattern is?
+I guess the next term
+will be a minus 1
+over 7 factorial,
+x to the seventh.
+And so let me write
+this out again,
+just so we have-- x
+cubed over 3 factorial.
+So it's x minus x cubed
+over 3 factorial plus x
+to the fifth over 5 factorial,
+you guessed it, and so on.
+That's the power series
+expansion for the sine of x.
+OK?
+And so the signs alternate,
+and these denominators
+get very big, don't they?
+Exponentials grow very fast.
+Let me make a remark.
+R is infinity here.
+The radius of convergence
+of this power series,
+again, is infinity, and
+let me just say why.
+The reason is that the
+term x to the, well,
+the general term is going to be
+like x to the 2n plus 1 divided
+by 2n plus 1 factorial,
+an odd number I
+can write as 2n plus 1.
+And what I want to
+say is that the size
+of this-- what happens
+to the size of this as n
+goes to infinity?
+So let's just think
+about this for a fixed x.
+Let's fix a number x.
+Look at powers of x and
+think about the size
+of this expression when
+n gets to be large.
+So let's just do
+that for a second.
+So x to the 2n plus 1
+over 2n plus 1 factorial,
+I can write out like this.
+It's x over 1 times x
+over 2 times, sorry,
+times x over 3 times
+x over 2n plus 1.
+I've multiplied x by itself 2n
+plus 1 times in the numerator,
+and I've multiplied the
+numbers, 1, 2, 3, 4, and so
+on, by each other
+in the denominator,
+and that gives me the factorial.
+So I've just written
+this out like this.
+Now x is fixed.
+So maybe it's a million, OK?
+Big, but fixed.
+What happens to these numbers?
+Well, at first,
+they're pretty big.
+This is a million over 2,
+this is a million over 3,
+but when n gets to be,
+maybe, if n is a million,
+then this is about 1/2.
+If n is a billion, then
+this is about 1 over 2,000.
+Right?
+The denominators keep
+getting bigger and bigger,
+but the numerators
+stay the same.
+They're always x.
+So when they take the product,
+if I go far enough out,
+I'm going to be multiplying by
+very, very small numbers, more
+and more of them.
+And so, no matter what
+x is, these numbers
+will converge to 0.
+They'll get smaller and
+smaller as x gets to be bigger.
+That's the sign that x is inside
+of the radius of convergence.
+This is the sign for
+you that this series
+converges for that value of x.
+And because I could do this for
+any x, for any x, this works.
+This converges to
+0 for any fixed x.
+That's what tells you that
+the radius of convergence
+is infinity.
+Because in the
+formula, in the fact
+this property that the radius
+of convergence talks about,
+if R is equal to infinity,
+this is no condition on x.
+Every number is less than
+infinity in absolute value.
+So if this convergence
+to 0 of the general term
+works for every x, then
+the radius of convergence
+is infinity.
+Well that was kind
+of fast, but I
+think that you heard something
+about that earlier, as well.
+Anyway, so we've got the
+sine function, a new function
+with its own power series.
+It's a way of computing
+the sine of x.
+If you take enough terms,
+you'll get a good evaluation
+of the sine of x for any x.
+This tells you a lot about
+the function sine of x,
+but not everything at all.
+For example, from
+this formula, it's
+very hard to see that the
+sine of x is periodic.
+Not obvious at all.
+Somewhere hidden away
+in this expression
+is the number pi,
+the half the period.
+But that's not clear from
+the power series at all.
+So the power series are
+very good for some things,
+but they hide other
+properties of functions.

@@ -1,0 +1,59 @@
+Examples of series
+In all the series below, the subscripts and superscripts of the summation notation
+∞
+X
+X
+is suppressed. That is,
+is the abbreviation of
+for some N .
+n=N
+(
+X
+converges
+absolutely
+if |x| < 1
+xn
+(Geometric series)
+diverges
+if |x| ≥ 1
+(
+X 1
+converges if p > 1
+(p-series)
+p
+n
+diverges
+if p ≤ 1
+(
+X
+converges if p > 1
+1
+p
+n (ln(n))
+diverges
+if p ≤ 1
+(
+X ln(n)
+converges if p > 1
+np
+X xn
+n!
+X xn
+np
+X n!
+nn
+
+diverges
+
+if p ≤ 1
+
+converges absolutely for all x
+(
+converges absolutely for all p if |x| < 1
+diverges for all p
+if |x| > 1
+converges
+
+5
+
+

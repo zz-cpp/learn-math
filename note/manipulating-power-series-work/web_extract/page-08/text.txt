@@ -1,0 +1,103 @@
+We approximate by a Taylor polynomial of degree up to 2 and find an upper bound on the error of approximation.
+Recall the Taylor series of is
+(3.313)
+Since this series contains only odd power terms, the degree 1 and degree 2 Taylor polynomials are the same:
+(3.314)
+Hence, the approximation of by the Taylor polynomial of degree 2 is
+(3.315)
+Now, we find an upper bound on the error of approximation By the Taylor remainder theorem,
+(3.316)
+(3.317)
+Now, we compute :
+(3.318)
+(3.319)
+(3.320)
+(3.321)
+Since both and for we conclude that
+(3.322)
+In other words, is an upper bound of on the interval . This gives an upper bound on the error of approximation:
+(3.323)
+In other words, the error of the approximation of by is less than .
+### Approximating square root of two
+3 points possible (graded)
+Often, numerical tools such as graphing tools and calculators use Taylor polynomials to approximate numbers.
+Approximate by where is the degree Taylor polynomial of centered at .
+unanswered
+Use the Taylor remainder theorem to give an expression of in terms of where is some number between and . (Your answer should be a function of . Enter factorial(n) for . )
+unanswered
+Find the maximum over the interval of the absolute value of the expression you entered above. This gives an upper bound on .
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Approximating the number e
+3 points possible (graded)
+Let be the degree Taylor polynomial of . Then the approximation of the number by is
+(3.333)
+Follow the two steps below to find such that is accurate to 4 decimal places, that is, to within .
+First, use the Taylor remainder theorem to give an expression of the error of approximation, in terms of and where is some number between and . (Enter factorial(n) for .)
+unanswered
+Use the fact that for to find the smallest such that the expression for above is .
+unanswered
+Using the you found above, compute and check whether it is correct to 4 decimal places.
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

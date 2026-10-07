@@ -1,0 +1,62 @@
+$ -x $
+$ e^x $
+$ e^{-x} $
+$ 4 $
+$ 4! $
+$ 4 $
+$ e^{-x}\, = $
+$ \, R\, $
+$ R=\infty $
+$ R= $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \displaystyle \displaystyle \sinh (x) $
+$ \displaystyle = $
+$ \displaystyle \frac{e^x-e^{-x}}{2}. $
+$ \, \sinh (x)\, $
+$ 5 $
+$ a_0+a_1x+a_2x^2+a_3x^3+a_4x^4+a_5x^5.\, \, $
+$ n! $
+$ 5 $
+$ \sinh (x)\, = $
+$ \, R\, $
+$ \sinh (x) $
+$ R=\infty $
+$ R= $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \, S(x)\, $
+$ \, \sinh (x)\, $
+$ \, \displaystyle \frac{d}{dx}\, S(x)\, $
+$ 4 $
+$ n! $
+$ 4,\, $
+$ \, \displaystyle \frac{d}{dx}\, S(x)\, =\quad $
+$ \, \displaystyle \int S(x) \, dx\, $
+$ 4 $
+$ 4,\, $
+$ \, \displaystyle \int \, S(x)\, dx\, =\quad $

@@ -1,0 +1,50 @@
+
+So now again the idea is we're
+going to start with the top.
+
+The top block.
+
+We'll call that
+block number one.
+
+And then the farthest,
+if you like, to the right
+that you can put a
+block underneath it
+is exactly halfway.
+
+All right, well, that's
+the best job I can do.
+Now in order to make my
+units work out easily,
+I'm going to decide to call
+the length of the block 2.
+All right?
+And that means if I
+start at location 0 then
+the first place where I am
+is supposed to be halfway,
+and that will be 1.
+
+OK so the first
+step in the process,
+is one more to the right.
+Or if you like, if
+I were building up--
+which is what you would actually
+have to do in real life--
+it would be one to the left.
+OK now the next one--
+now here is the way
+that you start figuring
+out the arithmetic.
+The next one is based on a
+physical principle, which
+is that the farthest I can
+stick this next block underneath
+is at what's called the
+center of mass of these two,
+which is exactly halfway here.
+That is, there's a
+quarter of this guy
+and a quarter of that guy

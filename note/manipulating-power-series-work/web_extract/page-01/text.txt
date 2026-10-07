@@ -1,0 +1,283 @@
+So far, we have used Taylor's formula to obtain the following Taylor series:
+for .
+.
+We have also integrated the geometric series to obtain a power series for :
+.
+We will now obtain more Taylor series from the ones above by performing addition, multiplication, differentiation, and integration on them.
+### Review: multiply two polynomials
+1 point possible (graded)
+Find the coefficient of of , which is the product of the two polynomials and below:
+(3.214)
+(3.215)
+Coefficient of in the is
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### New series from old: multiplying series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Well, so I want to spend a few minutes telling you
+about what you can do with a power series
+once you have one to get new power series.
+So new power series from old.
+And this is also called operations on power series.
+So what are the things that we can do to a power series?
+Well, one of the things you can do is multiply.
+So for example, what if I want to compute a power series
+for x times the sine of x?
+Well I have a power series for the sine of x.
+I just did it.
+How about a power series for x?
+Actually, I did that here, too.
+x, the function x, is a very simple polynomial.
+It's the polynomial where that's 0, a1 is 1,
+all the other coefficients are 0.
+So x itself is a power series, a very simple one.
+The sine of x is a power series.
+And what I want to encourage you to do
+is treat power series just like polynomials
+and multiply them together.
+We'll see other operations, too.
+So to compute the power series for x
+times the sine of x, I just take this one and multiply it by x.
+So let's see if I do that right.
+It distributes through x squared minus x
+to the fourth over 3 factorial, plus x to the sixth over 5
+factorial, and so on.
+And again, the radius of convergence
+is going to be the smaller of the two radii of convergence
+here.
+So it's R equals infinity in this case.
+OK, you can multiply powers series together.
+It can be a pain if the power series are very long,
+but if one of them is x, it's pretty simple.
+OK, that's one thing I can do.
+Notice something, by the way, this
+is an odd-- do you know about even and odd functions?
+Huh?
+Yea.
+So sine is an odd function.
+x is an odd function.
+The product of two odd functions is an even function,
+and that's reflected in the fact that all the powers that occur
+in the power series are even.
+For an odd function like the sine, all the powers that occur
+are odd powers of x.
+That's always true.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Multiplying two power series
+We multiply two powers series using the same rule as when we multiply two polynomials.
+Consider the power series which converges for , and the power series , which converges for .
+The product of the two power series converges for , but it could have a larger radius of convergence.
+### Multiply two power series
+1 point possible (graded)
+Find the coefficient of of , which is the product of the two power series and below:
+(3.219)
+(3.220)
+(Hint: Does this look familiar? )
+Coefficient of is
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Multiply two series 2
+2 points possible (graded)
+Consider the power series of obtained by multiplying the Taylor series for and .
+Find its radius of convergence and the coefficient of . (Enter infty for infinity.)
+unanswered
+The coefficient of in the power series of is:
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+Consider the product of two exponential series:
+(3.228)
+Is the product of these two series the same as the Taylor series of ?
+We say that a term in this product has total degree 2 if the power of plus the power of is 2.
+If we look at the all total degree 2 term in and in this product we get:
+(3.229)
+(3.230)
+(3.231)
+Can the terms of total degree be expressed in terms of ?
+### See answer
+(3.232)
+(3.233)
+(3.234)
+Remark: The pattern above continues for all . This is consistent with . To verify that this holds from the series formulas requires use of the Binomial Theorem:
+(3.235)
+Here's the computation:
+(3.236)
+(3.237)
+(3.238)
+where in the last step we have used the Binomial Theorem.
+Hide

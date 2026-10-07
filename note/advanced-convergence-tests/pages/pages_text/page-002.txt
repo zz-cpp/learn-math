@@ -1,0 +1,79 @@
+More on limit comparison
+We can also use limit comparison in the following way.
+Suppose f (n), g(n) > 0 for all n ≥ N for some large N .
+If
+
+•
+
+f (n)
+→ 0 as n → ∞, that is, f (n) decays faster than g(n), then
+g(n)
+∞
+X
+
+g(n) converges implies
+
+n=N
+
+•
+
+∞
+X
+
+∞
+X
+
+f (n) converges,
+
+n=N
+
+f (n) diverges implies
+
+n=N
+
+∞
+X
+
+g(n) diverges.
+
+N
+
+Absolute convergence versus conditional convergence
+So far, we have focused on series whose terms are positive (with the exception of
+the geometric series and the divergence test). For general series, including series
+with both positive and negative terms, there are two notions of convergence.
+Consider the series
+S=
+
+∞
+X
+
+an
+
+(an can be positive or negative).
+
+n=1
+
+The series S is absolutely convergent if
+
+P∞
+
+n=1 |an | converges.
+
+The series S is conditionally convergent if it converges but is not absolutely convergent.
+For series with only positive terms, the two notions are the same.
+In general, absolute convergence of a series implies convergence.
+Because absolute convergence concerns the convergence of
+
+∞
+X
+
+|an | , we can
+
+n=1
+
+apply all of the techniques we have learned to determine absolute convergence.
+
+2
+
+

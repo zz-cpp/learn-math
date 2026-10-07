@@ -1,0 +1,470 @@
+### Taylor series of a polynomial
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Welcome back to recitation.
+In this video, what I'd like us to do
+is practice Taylor series.
+So I want us to write the Taylor series
+for the following function f of x
+equals 3 x cubed plus 4 x squared minus 2x plus 1.
+So why don't you pause the video?
+Take some time to work on that, and then I'll
+come back and show you what I get.
+All right.
+Welcome back.
+Well, we want to find the Taylor series for this polynomial
+f of x equals 3 x cubed plus 4 x squared minus 2x plus 1.
+So what I'm going to do is I'm just
+going to write down the expression we have
+for the sum, for the Taylor series, in general,
+and then I'm going to start computing what I need.
+And I'm going to see what I get.
+So what do I need to remember?
+Well, let's remind ourselves what the formula is.
+We should get f of x is equal to the sum from n equals
+0 to infinity of the nth derivative
+f at 0 over n factorial times x to the n.
+So that's what we want.
+So what I obviously need to start doing
+is figuring out derivatives of f at 0.
+And so what I'm going to do is I'm just going
+to make myself a little table.
+So let's see.
+We're going to say f0 at 0, f1 at 0, f2 at 0, f3 at 0,
+f4 at 0.
+And I'm getting tired of writing so I'm going to stop there.
+So let's take the function.
+The 0's derivative of f is just the function itself.
+So let's come back here.
+What is the function?
+If I evaluate it at x equals 0-- 0, 0, 0, 1.
+I get 1.
+What is the first derivative?
+So what I'm going to write out the first derivative,
+and then I'm going to say I'm evaluating it at x equals 0.
+So the first derivative looks like it's 9 x squared plus 8
+x minus 2.
+So I'm going to write this down.
+It's 9 x squared plus 8 x minus 2,
+evaluated at x equals 0-- 0, 0, I get negative 2.
+Well, let me take the second derivative.
+Let's see what I get here.
+I get 18x plus 8, and I'm going to evaluate that x equals 0.
+This is just a way to write I'm going
+to evaluate what's here at x equal this number,
+so if you haven't seen that before.
+So I get 8.
+And then the third derivative is 18-- oh, just 18--
+evaluated at x equals 0, I get 18.
+And then fourth derivative, what's
+the derivative of a constant function?
+It's 0.
+What do you think the fifth derivative is evaluated 0?
+It looks like it'll be 0.
+It looks like the sixth derivative.
+Looks like everything bigger than 3.
+So the nth derivative at 0 is equal to 0 for n bigger than 3.
+So looks like we should only have four terms in this.
+So that may be seems a little weird, but let's keep going
+and see what happens.
+Let's start plugging things in.
+So again, let's remember the formula.
+I'm going to walk over here to the right.
+And I'm going to start using that formula
+and using these numbers that I have and writing it out.
+So the first term is going to be the function evaluated at 0
+divided by 0 factorial times 1.
+0 factorial is 1.
+So it's just going to be the function evaluated
+at 0 times 1.
+The function evaluated at 0, we said was 1.
+So that's the first term in the Taylor series.
+What's the next term?
+The next term, remember, is the first derivative
+evaluated at 0 divided by 1 factorial--
+just still 1-- times x.
+So the first derivative, if I come back over here,
+evaluate it at 0, I get negative 2.
+So I'm going to get minus 2x.
+The next term, so I had 0th derivative, first derivative,
+now I'm at the second derivative.
+Now it's getting confusing.
+I'm going to start writing the things above.
+It's the second derivative, evaluated at 0 divided
+by 2 factorial times x squared.
+That's what I should have here.
+Let's come over here, second derivative evaluated at 0
+was 8.
+So it's going to be 8 over 2-- because 2 factorial is
+2-- x squared.
+So it's going to be plus 4x squared.
+And then I have to have the third derivative evaluated
+at 0 divided by 3 factorial times x cubed.
+What's 3 factorial?
+3 factorial is 6.
+What was the third derivative evaluated at 0?
+It was 18.
+18 divided by 6 is 3.
+So I get a plus 3x cubed.
+And all the other terms were 0.
+So I'll just stop writing them.
+Now if you watch the video all the way through, here,
+at some point, maybe you said, Christine, this is madness.
+Well, why is it madness?
+Because what is this?
+Well, this is the function, again.
+It's exactly were we start at.
+The orders opposite of what it was before,
+because now the powers go up, instead of down.
+But it's the same polynomial.
+We talked about this briefly, I think,
+when we were doing some quadratic approximations.
+And I mentioned way back that quadratic approximations
+of polynomials at x equals 0 are just the polynomials.
+Again, this is the exact same kind of thing happening.
+Because what is a Taylor series?
+It's just better and better approximations
+as n gets larger and larger.
+So if I wanted to have a fourth order
+approximation of this function f of x at x equals 0,
+I would get the same function back.
+That's really the idea of what's happening here.
+So maybe you saw the sort of trick in this question.
+And when you solve this problem, you laughed at me.
+And you said, well, I'm just going
+to write down the function again, and I'll be done.
+Maybe you didn't see that right away.
+And if you didn't see that right away, that's OK.
+I bet you're in good company.
+And it's totally fine, because now you've seen this.
+You've seen this how it works out.
+And you know, hey, now any time I see a polynomial
+and I want to do the Taylor series, for this polynomial,
+I just have to write down the polynomial, again.
+So that was the main goal of this video.
+Took us a long time to get there, but I think we got it.
+So the answer to the ultimate answer to the question of
+write the Taylor series of this function,
+it's just this function again.
+All right, that's where I'll stop.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+### Quiz
+1 point possible (graded)
+What is the radius of convergence of the Taylor's series of a polynomial of degree ? (Enter infty for infinity.)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+The following video summarizes what we have learned in this section so far by our substitute professor, Professor Miller. You can skip forward if you prefer.
+### Review: power series, Taylor series, radius of convergence
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+So Professor Jerison is relaxing in sunny London, Ontario today
+and sent me in as his substitute again.
+I'm glad to be here and see you all again.
+So our agenda today, he said that he'd already
+talked about power series and Taylor's formula,
+I guess on-- last week-- on Friday.
+And so I'm going to go a little further with that,
+show you some examples, show you some applications,
+and then I have this course evaluation survey
+that I'll hand out in the last 10 minutes or so of the class.
+I also have this handout that he made that says
+1801 end of term 2007.
+If you didn't pick this up coming in, grab it going out.
+People tend not to pick it up when they walk in, I see.
+So grab this when you're going out.
+There's some things missing from it.
+He has not decided when his office hours
+will be at the end of term.
+He will have them, he just hasn't decided when.
+So check the website for that information.
+And we're looking forward to the final exam, which is --
+aren't we?
+Any questions about this technical stuff?
+All right, let's talk about power series for a little bit.
+So I thought I should review for you what
+the story with power series is.
+OK, could I have your attention, please?
+So a power series is a way of writing a function as a sum
+of integral powers of x.
+These a_0, a_1, and so on are numbers.
+An example of a power series is a polynomial.
+Not to be forgotten, one type of power series
+is one which goes on for a finite number of terms
+and then ends, so that all of the higher a sub i's are all 0.
+This is a perfectly good example of a power series.
+It's a very special kind of power series.
+And part of what I want to tell you today
+is that power series behave almost exactly
+like polynomials.
+There's just one thing that you have
+to be careful about when you're using power series that isn't
+a concern for polynomials, and I'll show you
+what that is in a minute.
+So you should think of them as generalized polynomials.
+The one thing that you have to be careful about
+is that there is a number-- so one caution.
+There's a number, which I'll call
+R, where R can be between 0 and it can also be infinity.
+It's a number between 0 and infinity inclusive
+so that when the absolute value of x is less than R,
+so when x is smaller than R in size, the sum converges.
+This sum, that sum, converges to a finite value.
+And when x is bigger than R in absolute value,
+the sum diverges.
+This R is called the radius of convergence.
+So we'll see some examples of what the radius of convergence
+is in various power series, as well,
+and how you find it, also.
+But let me go on and give you a few more
+of the properties about power series,
+which I think that Professor Jerison talked about earlier.
+So one of them is there's a radius of convergence.
+Here's another one.
+If you're inside of the radius of convergence,
+then the function has all its derivatives.
+Has all its derivatives just like a polynomial does.
+You can differentiate it over and over again,
+and in terms of those derivatives, the number
+a sub n in the power series can be expressed
+in terms of the value of the derivative at 0,
+and this is called Taylor's formula.
+So I'm saying that inside of this radius of convergence,
+the function that we're looking at,
+this f of x, can be written as the value of the function
+at zero, that's a sub 0, plus the value of the derivative.
+This bracket, n, means you take the derivative n times.
+So when n is 1, you take the derivative once at 0,
+divide it by 1 factorial, which is 1, and multiply by x.
+That's the linear term in the power series.
+And then the quadratic term is you take the second derivative,
+remember to divide by 2 factorial, which is 2.
+Multiply that by x squared and so on out.
+The coefficients in the power series
+just record the values of the derivatives of the function
+at x equals zero, and they can be computed that way also.
+Let's see, I think that's the end of my summary of things
+that he talked about.
+I think he did one example, and I'll repeat
+that example of a power series.
+This example wasn't due to David Jerison.
+It was due to Leonhard Euler, and it's
+the example where the function is the exponential function,
+e to the x.
+So let's see.
+Let's compute what-- I will just repeat for you the computation
+of the power series for e to the x because it's
+such an important thing to do.
+So in order to do that, I have to know
+what the derivative of e to the x is,
+and what the second derivative of e to the x
+is and so on, because that comes into the Taylor
+formula for the coefficients.
+But we know what the derivative of e to the x
+is, it's just e to the x again, and it's that way
+all the way down.
+All the derivatives are e to the x over and over again.
+So when I evaluate this at x equals 0,
+well, the value of e to the x is 1, the value of e to the x
+is 1 at x equals 0.
+You get a value of 1 all the way down.
+So all these derivatives at 0 have the value 1.
+And now when I plug into this formula I find e to the x
+is 1 plus 1 times x plus 1 over 2 factorial times x squared
+plus 1 over 3 factorial times x cubed plus and so on.
+So all of these numbers are 1, and all
+you wind up with is the factorials in the denominator.
+That's the power series for e to of the x.
+This was a discovery of Leonhard Euler in 1740 or something.
+Yes ma'am?
+When you are writing down the power series,
+how far do you have to write it out?
+How far do you have to write the power series
+before it becomes well defined?
+Before it's a satisfactory solution to an exam problem,
+I suppose is another way to phrase the question.
+Until you can see what the pattern is.
+I can see what the pattern is, is there
+anyone who's in doubt about what the next term might be?
+Some people would tell you that you
+have to write the summation convention thing.
+Don't believe them.
+If you write out enough terms to make it clear
+that's good enough.
+OK.
+Is that an answer for you?
+Yes, thank you.
+OK, so that's a basic example.
+Let's do another basic example of a power series.
+Oh yes, and by the way, whenever you right out a power series,
+you should say what the radius of convergence is.
+And for now, I will just tell you
+that the radius of convergence of this power series
+is infinity.
+That is, this sum always converges for any value of x.
+And I'll say a little more about that in a few minutes.
+Yeah?
+So which functions can be written as power series?
+Which functions can be written as power series?
+That's an excellent question.
+Any function that has a reasonable expression
+can be written as a power series.
+I'm not giving you a very good answer because the true answer
+is a little bit complicated, but any
+of the functions that occur in calculus,
+like sines and cosines, tangents, they all
+have power series expansions.
+OK?
+We'll see more examples.
+Let's do another example.
+Here's another example.
+I guess this was example one.
+So this example, I think, was due to Newton, not Euler.
+Let's find the power series expansion
+of this function, 1 over 1 plus x.
+Well, I think that somewhere along the line
+you learned about the geometric series, which
+tells you what the answer to this is,
+and I'll just write it out.
+The geometric series tells you that this function
+can be written as an alternating sum of powers of x.
+You may wonder where these minuses came from.
+Well, if you think about the geometric series,
+as you probably remember, there was a minus sign here.
+And that gets replaced by these minus signs.
+I think maybe Jerison talked about this, also.
+Anyway, here's another basic example.
+Remember with the graph of this function looks like.
+When x is equal to minus 1, then there's
+a little problem here because the denominator becomes 0.
+So the graph has a pole there, goes up
+to infinity at x equals minus 1.
+And that's an indication that the radius of convergence
+is not infinity, because if you try
+to converge to this infinite number
+by putting in x equals minus 1 here,
+you'll have a big problem.
+In fact, you see when you put in x equals minus 1
+you keep getting 1 in every term,
+and it gets bigger and bigger and does not converge.
+In this example, the radius of convergence is 1.
+OK, so let's do a new example now.
+Oh and by the way, I should say you
+can calculate these numbers using Taylor's formula.
+If you haven't seen it, check it out.
+Calculate the iterated derivatives of this function
+and plug in x equals 0 and see that you get plus 1 minus 1
+plus 1 minus 1, and so on.
+Yes sir?
+I see that if you do minus 1 it will blow up.
+If you put it in one, though, it seems like it would be fine.
+Question is I can see that there's
+a problem at x equals minus 1.
+Why is there also a problem at x equals 1
+where the graph is perfectly smooth
+and innocuous and finite?
+That's another excellent question.
+The problem is that if you go off to a radius of 1
+in any direction and there's a problem, that's it.
+That's what the radius of convergence is.
+Here, what does happen if I put in x equals plus 1,
+so let's look at the partial sums.
+Pretend x equals plus 1 in your mind here.
+So I'll get the partial sum 1, and then 0,
+and then 1, and then 0, and then 1.
+So even though it doesn't blow up to infinity,
+it still does not converge.
+And anything in between?
+And any of these other things will also
+fail to converge in this example.
+Well, that's the only two real numbers are at the edge.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file

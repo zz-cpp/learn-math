@@ -1,0 +1,22 @@
+atom	status	evidence
+空间曲线的两种方程（参数方程与一般方程）	ok	importantbox 两种方程 + fig_03
+参数方程的"动点轨迹"理解（t 为时间）	ok	importantbox 参数方程
+一般方程（交面式）与"大部分题目以交线形式给出"	ok	importantbox + 正文
+例1：圆柱面与平面交线的识别与表述	ok	== 例1 + fig_04/fig_05 + importantbox 结论
+例1 的投影直观（xOy 面是单位圆、xOz 面是斜线段）	ok	knowledgebox + 正文
+GeoGebra 3D 计算器的用法	ok	knowledgebox 用法 + fig_06/fig_07
+例2：参数方程的"消参找关系"方法（三角恒等式）	ok	== 例2 + fig_08/fig_09
+螺旋线的两条特征（在柱面上 + 每 2π 升 2π）	ok	importantbox 螺旋线的两条特征 + cetz 图 + fig_10
+用 GeoGebra 画螺旋线与调参数	ok	fig_11 + 正文
+投影柱面与投影曲线的定义（"一束垂直的光"）	ok	importantbox + fig_12/fig_13
+投影柱面为什么一定过曲线（消元论证）	ok	knowledgebox + 正文
+"投影柱面不是投影本身"的辨析	ok	warningbox
+两步法与"往哪个面投就消哪个变量"	ok	importantbox + fig_14 + warningbox
+例3：单叶双曲面与平面交线在 xOy 面的投影	ok	== 例3 + fig_15/fig_16
+例3 的"身份转换"（平面上是曲线、空间中是柱面）	ok	knowledgebox
+终极 BOSS：两个立体公共部分的投影（不等式）	ok	== 终极 BOSS + fig_17 + warningbox
+BOSS 在 xOy 面的投影（圆域不等式）	ok	importantbox + fig_18
+BOSS 在 xOz 面的投影（需分别投影再取公共部分）	ok	importantbox + fig_19 + knowledgebox 通用方法
+本讲内容与后续用途对照表	ok	booktabs 表
+整个第八章的收官回顾表	ok	booktabs 表 + importantbox 一句话串起这一章
+与后续内容的接口（多元微分/重积分/曲线曲面积分/场论）	ok	importantbox + 开放问题

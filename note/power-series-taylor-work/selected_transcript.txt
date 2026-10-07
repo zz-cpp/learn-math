@@ -1,0 +1,1 @@
+<材料目录 9 个 txt 转录文件（与网页内嵌 Video transcript 一致，抽样 10%/50%/90% 对齐：block-1 转录=视频1.txt、block-3 转录=视频3.txt、block-8 转录=视频8.txt 逐段一致）

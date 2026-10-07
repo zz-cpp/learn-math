@@ -1,0 +1,364 @@
+### Recognizing power series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Welcome back to recitation.
+In this video, I'd like us to do some basic manipulation
+of some power series that you saw in the lecture.
+So I have four problems here.
+And what I'd like us to do is figure out
+what function each of these series represents.
+Now, you can assume that the x values that we
+are going to insert into this function
+are only x values that let the sums converge.
+So you don't have to worry about anything
+to do with convergence of these sums.
+Just assume the sums converge.
+That we've picked good x values.
+And what I'd like you to have in the end for A,
+B, C, and D is something like this sum is
+equal to a specific function.
+It should not include the sum anymore.
+So why don't you work on those for a bit pause the video
+and when you're done, restart the video
+and I'll come back and show you how I work with them.
+Welcome back.
+Hopefully, these were a little bit fun for you.
+I always like them the first time
+I saw them to see how one could manipulate these series.
+So again, what we're trying to do
+is figure out what function the series represent.
+We're assuming convergence, and we're
+going to try and manipulate them to look
+like things we already know.
+So I'm going to start.
+I'm just going to go straight through A, B, C, and D.
+I'm going to rewrite the problem each time, because I
+don't want to keep coming back.
+So A we had the sum n equals 0 to infinity.
+x to the n plus 2 over n factorial.
+Well, this looks very close to something we know.
+It looks a lot like the function e to the x.
+The difference is that e to the x just has a power x to the n.
+But the good news is that I am really close to that.
+What I really have in the numerator is x to the n times
+x squared.
+Because this x to the n plus 2, I
+can write as x to the n times x squared.
+So every term has an x squared.
+So as was mentioned in the lecture,
+you can treat this, really, like polynomials.
+In some way you can factor this out.
+So I can rewrite this as-- well, I'll rewrite it in two steps.
+0 to infinity of x squared.
+x to the n over n factorial.
+So x squared times x to the n gives me the x to the n plus 2.
+Because this belongs to every sum,
+I can pull that all the way out in front.
+if I move this out to the front, I
+have an x squared times this sum.
+Well, what is the sum?
+The sum is e to the x.
+It's n equals 0 to infinity of x to the n over n factorial.
+That's just e to the x.
+So this function is x squared e to the x.
+That's what A is.
+If you were worried about it, you
+could write e to the x as its series
+and then you can multiply through by x squared
+and see if that's what you get.
+But you'll see that is indeed how this problem works.
+OK.
+Let's look at B. B is equal to the sum.
+That's a weird summation sign.
+Sorry about that.
+B is equal to the sum n equals 2 to infinity.
+x to the n.
+That's what we wanted to look at.
+Well, this looks very close to the geometric series,
+but it's missing some terms.
+The geometric series starts with n equals 0 to infinity.
+But the point I want to make here
+is that I can rewrite this as the geometric series,
+and then I can take away what I've added in.
+So these do not agree right now.
+This equal sign is not true yet, but what do I notice?
+I notice this one has two more terms at the beginning
+than this one has.
+What are those terms?
+Those are when n equals 0, and when n equals 1.
+There is no n equals 0 or n equals 1 here.
+The formulas are exactly the same-- x to the n, x to the n.
+They both go to infinity, but one's
+starting at n equals 2 and one's starting at n equals 0.
+Again, want to remind you why did
+I bother to write this thing at all.
+It's because this is a function we know.
+But this equal sign is not true right now.
+I have to get rid of the extra stuff I added.
+What did I add?
+I added-- let me get this as a sum.
+What did I add on?
+I added on x to the 0.
+And x to the 1.
+So now I guess I should have written subtract here.
+I should subtract x to the 0 and I
+should subtract x to the first.
+I've already said it once, but I'm
+going to just to make sure everybody followed say it
+one more time.
+I've taken the summation I started with,
+which went from n equal 2 to infinity.
+I added two more terms to the sum.
+I made it go from 0 to infinity.
+So to keep equality, I subtracted off
+the two things I added in.
+I subtracted off x to the 0 and x to the 1.
+So now what was the point of this part of the exercise?
+Well, the point is that I know what the sum is.
+That's the geometric series that's 1 over 1 minus x.
+But this x of the 0 minus 1.
+x to the 1 minus x.
+So this I broke up into something
+I knew as a power series and then other pieces
+that I had added in to make it look like something I knew,
+I had to subtract those off.
+So that's the idea of that one.
+If you wanted to go on and simplify further
+you could do that, but I'm willing to leave it
+just as it is because the idea was really this part up here.
+And then translating it down to this.
+All right.
+Let me write C again.
+The sum and equals 0 to infinity.
+x to the n over n factorial plus x to the n.
+So is the sum n equals 0 to infinity,
+x to the n over n factorial plus x to the n.
+And the point to recognize here is again,
+as Professor Jerison mentioned, you're
+really treating these almost like polynomials.
+So you're taking a series, and you're adding these terms up,
+but really, what you can think about this as the two
+separate series added up.
+And so this is the sum from n equals 0
+to infinity of x to the n over n factorial, which we know,
+plus the sum from n equals 0 to infinity
+of x to the n, which we know.
+The first one is just e to the x,
+and the second one-- we've been dealing a lot with these
+already today-- is just 1 over 1 minus x.
+So the point I want to make is if you
+have this convergent series, you can split it up
+into two pieces over the sum.
+And these two are both convergent, we know,
+separately.
+And so we can write what they are.
+X to the n over n factorial from 0 to infinity is e to the x.
+x to the n from n equals 0 to infinity is 1 over 1 minus x.
+So now we just have one more.
+Let we write that one.
+D was summation n equals minus 1 to infinity x to the n plus 1.
+All right.
+This was not meant to scare you, but it
+was meant to test your understanding of sigma
+notation.
+So the problem is returning n equals minus 1,
+but x is starting the exponent on x is at n plus 1.
+So I want to write it in some form that I know.
+Well, let's try and get the subscript to be 0.
+So what I'm going to do is I'm going to change
+the name of the subscript.
+I'm going to let it be m equals 0 to infinity.
+And I want m to count up by one just the way n counts up.
+So notice what I did.
+When m equals 0, n equals negative 1.
+That's what we've set up as the first term.
+That means n plus 1 is equal to 0 when m equals 0.
+And since I'm going up by 1 every time
+in my summation, my iteration, here that
+means that for every m I have, I just have to take n plus one
+to figure out what m is.
+So I should have said it the other way.
+For every n I have, I just have to add 1 to get m.
+So here, if I start at negative 1, I start here at 0.
+The next term here is 0; n equals 0.
+But the next term here is m equals 1.
+The next term here would be n equals 1,
+and the next term here would be m equals 2.
+So they're just off by 1, but they're still
+catching every index.
+Now, I don't have to change what's
+up here, because infinity, if I add 1 to it,
+I'm still going off to infinity.
+So I don't have to change what's up here.
+But I do want to write the formula or the formula I have
+inside the sum in terms of m.
+But I've already got it.
+Because I know m is always equal to n plus 1.
+So I can replace this n plus 1 by an m.
+Whew.
+And now we know what that one is.
+m equals 0 to infinity of x to the m.
+That's a geometric series.
+Even though I wrote it in kind of a funny way,
+it was actually just still the geometric series.
+I just moved the indices a little bit
+to make sure we could play with those.
+The whole point of this exercise is just
+to recognize how you can manipulate
+the series a little bit so that if they're
+in a form that looks kind of like one of the functions
+you know, you can see if it actually
+is a product of something with a function you know,
+or the sum of two functions you know,
+or maybe one of the functions you know as a power series,
+and then you have to drop off a couple terms.
+So they each sort of demonstrate a different idea
+of how you can manipulate these convergent power series based
+on functions you already know.
+So I'll stop there.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+### Review: radius of convergence
+4 points possible (graded)
+Find the radius of convergence of the 4 power series presented in the video: (If enter infty.)
+For
+unanswered
+For
+unanswered
+For
+unanswered
+For
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Recognizing power series
+3 points possible (graded)
+Find the functions whose Taylor series are given below. (Recall that .) (Hint: You will need to recall the power series of the trigonometric and hyperbolic trigonometric functions, as well as how power series behave under differentiation/integration.)
+For :
+unanswered
+For :
+unanswered
+For :
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

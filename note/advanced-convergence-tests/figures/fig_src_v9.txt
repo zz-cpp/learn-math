@@ -1,0 +1,60 @@
+
+And now I have one
+last bit on comparisons
+that I need to tell you about.
+And this is very
+much like what we
+did with integrals, which is
+a so-called limit comparison.
+
+The limit comparison says
+the following, if f of n
+is similar to g of n.
+We'll recall that that
+means f of n over g of n
+turns to 1 as n
+goes to infinity.
+
+And we're in the positive
+case, so let's just
+say g(n) is positive.
+
+Then-- that doesn't
+even, well-- then,
+sum f(n), sum g(n)
+either both-- same thing
+as above-- either both
+converge or both diverge.
+
+All right.
+This is just saying
+that if they behave
+the same way in the tail, which
+is all we really care about,
+then they have similar behavior.
+Similar convergence properties.
+
+And let me give you
+a couple examples.
+
+So here's one example.
+If you take the sum, 1 over
+n squared plus 1 square root.
+
+This is going to be replaced
+by something simpler,
+which is the main
+term here, which
+is 1 over the square
+root of n squared,
+which we recognize as sum
+1 over n, which diverges.
+
+So this guy is one of the
+red guys on the red team.
+And now we have another
+example, which is, let's say,
+the square root of
+n, I don't know,
+to the 5th minus n squared.
+Now, if you have

@@ -1,0 +1,19 @@
+### Logic
+2 points possible (graded)
+Let and suppose converges.
+If for all , then
+Select an option converges. diverges. can either converge or diverge.
+unanswered
+On the other hand, if for all , then
+Select an option converges. diverges. can either converge or diverge.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

@@ -1,0 +1,334 @@
+### Worked examples: review and more on limit comparison
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Hi.
+Welcome back to recitation.
+In class, you've been learning about convergence tests
+for infinite series.
+I have here three examples of series that I happen to like.
+So the first one is the sum from n
+equals 0 to infinity of five n plus 2
+divided by n cubed plus 1.
+The second one is the sum from n equals 1
+to infinity of the quantity 1 plus the square root
+of 5 over 2, all that to the n-th power.
+And the third one is the sum from n
+equals 1 to infinity of the natural log of n
+divided by n squared.
+So what I'd like you to do for each of these three series
+is to figure out whether or not they converge.
+So whether they converge, or whether they diverge.
+So why don't you pause the video.
+Take some time to work that out, come back,
+and we can work on it together.
+Welcome back.
+Hopefully you had some luck working on these series.
+So let's talk about how we do them.
+So I'll start with the first one here.
+So this first one, the function that we're summing
+is this five n plus 2 divided by n cubed plus 3.
+And so you want to know, does that sum of that expression--
+as n goes from 1 to infinity-- does that converge?
+Does it reach some finite value?
+Or does it diverge?
+Does it either oscillate, or go to infinity,
+or something like that.
+So one thing you can always do is something like a comparison
+test.
+And so what you want to do there is you
+want to extract the information.
+From the expression for the summand,
+you want to figure out about how big this is.
+What are the important parts of it?
+So in this case, you have a ratio.
+And so when you have a ratio, what you want to do
+is you want to look at what's the magnitude of the top,
+and what's the magnitude of the bottom?
+So roughly speaking, the magnitude of the top
+is of the order of n, right?
+It's 5 n.
+The 5 is just a constant multiple.
+That's not going to make a whole big difference.
+And the plus 2 is just much, much, much smaller
+than the n, when n gets very, very large.
+So we can say that the order of magnitude at the top
+here is of the order of n.
+And similarly, the order of magnitude of the bottom
+is of the order of n cubed, right?
+The plus 1 is much, much, much smaller than the n cubed.
+So it's as almost insignificant.
+So roughly speaking, we should expect
+this to be of the same behavior as if we just
+had n over n cubed, which is 1 over n squared.
+And we know that 1 over n squared--
+the series 1 over n squared from n
+equals one to infinity-- converges.
+So that's just a way of thinking about this.
+And we can formalize it using the limit comparison test.
+So the idea here for part A is to use the limit comparison
+test.
+So what we want to compute-- so I'm going to put a 5 in.
+So I'm going to make it 5 over n squared
+because we had this 5 up here.
+So we have a_n is equal to 5 n plus two over n cubed plus 1.
+And I want to limit compare it with-- I'm
+going to compare my series with the series sum
+from n equals 1 to infinity of 5 over n squared.
+Now I'm talking about this 5, right?
+This 5 doesn't matter.
+If this series-- if 1 over n squared that sum converges,
+then 5 over n squared that sum converges
+to exactly five times as much.
+And if I wrote a divergent thing here, and then
+multiplied it by 5, the result multiplied by 5
+would still diverge.
+So this constant multiple isn't going to matter.
+And I'm just putting the 5 in there because of this 5
+we saw over here.
+So OK.
+So let's work it out, then.
+So the limit comparison test says, so we look at the limit
+as n goes to infinity of the ratio of the two things
+that we're interested in.
+So in this case, this is 5 n plus 2 over n cubed
+plus 1 divided by 5 over n squared.
+So this is a ratio of two ratios,
+so we can rewrite it by multiplying upstairs.
+And we get that this is equal to the limit
+as n goes to infinity of 5 n cubed plus 2 n squared
+over 5 n cubed plus 5.
+And so we've seen before when we were dealing with limits
+that when you have a ratio of two polynomials,
+as the variable goes to infinity,
+the limit is what you get just by comparing the leading terms.
+So in this case, we just have to look
+at 5 n cubed over 5 n cubed.
+And that's indeed 1.
+OK.
+So this is 1.
+So by the limit comparison test, our series,
+the sum of this a_n, converges if and only
+if this series converges.
+And we already said that we know some 1
+over n squared converges.
+So by the limit comparison test, since sum over n
+squared converges, our series converges.
+Great.
+OK.
+So that's the first one.
+Let's look at the second one.
+So the second one here is the sum from n
+equals 1 to infinity of 1 plus the square of 5 over 2,
+that whole thing to the n-th power.
+Now if you look at this, the thing
+you should recognize this as is just
+a particular geometric series, right?
+If you were to replace 1 plus the square root of 5 over 2
+with x, this is just x, plus x squared, plus x cubed,
+plus dot dot dot dot dot.
+It's just a geometric series with constant ratio--
+well, x, 1 plus square root of 5 over 2.
+So we know exactly when geometric series converge.
+They converge exactly when the constant ratio
+is between minus 1 and 1.
+So it's bigger than minus 1 and less than 1.
+So this series converges, then, if and only
+if 1 plus the square root of 5 over 2
+is between minus 1 and 1.
+So then we just have to think about is this number
+between minus 1 and 1.
+And OK, so this is not that hard to do.
+Square root of 5 is bigger than 2.
+So 1 plus the square root of 5 is bigger than 3.
+So 1 plus the square root of 5 over 2 is bigger than 3/2.
+So 3/2 is bigger than 1.
+So this common ratio in this series is bigger than 1.
+So the terms of this series are blowing up.
+As n gets bigger and bigger, you're
+adding larger and larger numbers here.
+This is blowing up.
+It's a divergent geometric series.
+So this series does not converge.
+So B-- I'll just write that here.
+B diverges because it's geometric with common ratio
+bigger than 1.
+So that's the reason that part B diverges.
+Finally, we're left with question C.
+So I'm going to come over and write it over
+here again so we can see it.
+So part C asks the sum for n equals 1
+to infinity of log n over n squared.
+So this one's a little trickier, and it requires
+a little bit more thought.
+So let's start just by-- it can't be solved just
+by a straightforward application of the limit comparison test
+that we've learned.
+So we need to think a little bit more
+about what ways could we solve it.
+So one thing to remember here is that we
+should think about what are the magnitudes of these things?
+So we know that sum 1 over n squared converges,
+but log n is a function that grows.
+So this individual term is bigger than 1 over n squared.
+So we can't just compare it to 1 over n squared.
+But log n grows very, very slowly.
+How slowly?
+Well, it grows more slowly than any power
+of x-- or any power of n in this case,
+because the variable is n.
+So if you remember, we know we've
+shown that the limit of ln x over x
+to the p as x goes to infinity is
+equal to 0 for any positive p.
+So ln, log n, ln n is going to infinity,
+but it's going to infinity much slower than any power of n,
+in this case.
+Or x down here.
+So OK.
+So what does that mean?
+Well, one thing you could do is you could say, OK.
+So ln n over n-- that's getting really small.
+And then what we're left with is 1 over n.
+So you can say, OK.
+So this is much smaller than 1 over n.
+The problem is that some 1 over n diverges.
+So that doesn't help us, really, right?
+So we've shown this is bigger than the sum over n
+squared, which converges.
+And it's smaller than the sum 1 over n, which diverges.
+But that still doesn't tell us-- it could be something
+that-- there's a lot of room bigger
+than a particular convergent series
+and smaller than a particular divergent series.
+And in particular, there are both convergent and divergent
+series in between.
+So we still need either something
+that converges that our thing is less than,
+or we need something that diverges that our thing is
+bigger than, right?
+If we can bound our series above by something convergent,
+then our series converges, because it only
+has positive terms.
+This is important.
+Or if we can bound it below by something that diverges,
+then we would know it diverges.
+And so far, we haven't been able to do that.
+But maybe we can think of a-- a second ago,
+I said we could write ln n over n squared
+is equal to ln n over n times 1 over n.
+So that was what we just said a minute ago, which
+we showed is eventually less than 1 over n.
+So this is true, but it wasn't useful because the sum 1
+over n diverges.
+But maybe we can do something even a little more tricky.
+Because here, we saw that we could use, in the base,
+we could use any power of the variable n.
+Any positive power.
+So here, we tried it with the power n to the 1.
+We tried to split this 2 as 1 plus 1,
+and we kept one of the n's to knock out the log n.
+And we kept the other n over here.
+But we don't need a whole power of n to knock out the log n.
+Any positive power of n would do.
+So in particular, we could split this using, say,
+just a small power of n, even smaller than the first power
+here, and leave more of it over here.
+So we also know that ln n over n squared
+is equal to, for example, ln n over-- well, for example,
+n to the 1/2 times 1 over n to the 3/2.
+And now we know that ln n over n to the 1/2
+goes to 0 as n gets large.
+So this thing is getting smaller and smaller and smaller.
+So as this gets smaller, we have that this has to be less than 1
+over n to the 3/2.
+So this thing that we're adding up here
+is smaller than 1 over n the 3/2.
+Well what's the significance of that?
+Well, we know 1 over n to the 3/2, that series converges.
+But we know the sum 1 over n to the 3/2 from n
+equals 1 to infinity converges, because 3/2 is bigger than 1.
+OK?
+So what does that mean?
+Well, we have our series, and we've
+shown that the terms of our series
+are eventually bounded below 1 over n the 3/2.
+And we know that the sum of 1 over n to the 3/2 converges,
+so our series is bounded above by a convergent series.
+So whenever you have a series bounded above,
+a series of non-negative terms bounded
+above by a convergent series, that means your series also
+has to converge.
+OK, so this converges.
+So it converges by a comparison to this other series
+using this cute trick that we can replace
+a log with any small positive power of n that
+happens to be convenient.
+And of course, if you wanted to, maybe you
+could have made this 1/2 a 1/10, and that would have been fine.
+Or you could have even made it a 9/10.
+And then you would here be left with n to the 11/10.
+And that would still be OK, because that would be 11/10,
+and 11/10 would still be bigger than 1.
+All right.
+So this is a nice use of a comparison test.
+We didn't use exactly the limit comparison
+test as it was described in lecture,
+but it's a very closely related process
+that we went through to show that this third series also
+converges.
+So I'll end there.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+More on limit comparison
+We can also use limit comparison in the following way.
+Suppose for all for some large .
+If as that is, decays faster than then
+converges implies converges;
+diverges implies diverges.
+### More practice on limit comparison
+1 point possible (graded)
+Use limit comparison to find all values of for which converges. (Check all that apply.)
+unanswered
+Show answer
+Submit
+You have used 0 of 2 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Using both direct and limit comparisons
+1 point possible (graded)
+Determine if the following series converges or diverges.
+Select an option converges. diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

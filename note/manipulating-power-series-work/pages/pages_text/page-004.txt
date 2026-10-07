@@ -1,0 +1,68 @@
+Taylor series centered at x = a
+Let g(t) = f (t + a). That is, g is the translation of f to the left by a.
+Recall the Taylor series of g(t) at t = 0 is
+g(t) =
+
+∞
+X
+g (n) (0)
+n=0
+
+n!
+
+tn
+
+(|t| < R).
+
+Then
+f (t + a) = g(t) =
+
+∞
+X
+g (n) (0)
+n=0
+
+n!
+
+tn
+
+(|t| < R)
+∞
+X
+f (n) (a)
+
+=
+
+n=0
+
+n!
+
+tn
+
+(|t| < R).
+
+Now let x = t + a. In terms of x, the above formula becomes
+f (x) =
+
+∞
+X
+f (n) (a)
+n=0
+
+n!
+
+(x − a)n
+
+(|x − a| < R).
+
+This is the Taylor series of f (x) at x = a.
+Note that the radius of convergence of the Taylor series of f (x) at x = a is
+the number R such that f (x) converges when |x − a| < R, and diverges when
+|x − a| > R.
+If a = 0, we get the formula for the Taylor series that we started with in this
+section. This special case of Taylor’s formula gives us a power series often referred
+to as the Maclaurin series.
+
+4
+
+

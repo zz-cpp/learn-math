@@ -1,0 +1,73 @@
+claim	value	source	in_notes
+超越函数定义	指数/三角是首批无法用有限过程描述的函数（transcendental）	转录 intro	yes
+指数函数定义	e^x = 微分方程 f'(x)=f(x)、f(0)=1 的解；类比 √2=x²+ 的正解	转录 intro	yes
+√2的无穷展开	√2=1.41421356... 用无穷十进制展开逼近	转录 intro	yes
+几何级数公式	Σxⁿ=1/(1-x)（|x|<1）	转录 v1	yes
+错位相减证明	设 S=Σxⁿ，乘 x、相减得 S(1-x)=1，尾部全消	转录 v1	yes
+证明缺陷	要求 S 存在；x=1 时 1+1+... ⇒ ∞-∞ 无意义	转录 v1 + web block-1	yes
+一般幂级数定义	Σ a_n xⁿ（n=0..∞），系数可为 0 ⇒ 可有限多项	转录 v2 + web block-2 + PDF p1	yes
+R定义	| x |<R 收敛；| x |>R 发散；| x |=R 可能收敛/发散（忽略端点）	转录 v2 + PDF p1 + block-2	yes
+指数级快速趋0	| x |<R 时项指数级趋 0；| x |>R 时项不趋 0	转录 v2	yes
+几何级数半径	Σxⁿ 的 R=1	PDF p1 + web block-2	yes
+多项式半径	多项式是幂级数，R=∞（对所有 x 收敛）	PDF p1 + block-2 + block-6 quiz	yes
+识别幂级数	3-x+x³/2 是；Σ_{n=-5}^{5} n xⁿ 不是（负幂）；Σ_{n=0}^{∞} n xⁿ 是	web block-2	yes
+比值法公式	lim |a_{n+1}/a_n| |x| < 1 ⇒ 收敛	PDF p2 + block-3	yes
+R三种可能	有限 R / R=∞ / R=0（仅 x=0 收敛）	PDF p2 + block-3	yes
+备选公式	lim |a_n/a_{n+1}| = R（与比值法相反）	PDF p2 + block-3 Remark	yes
+备选法例题	Σ2ⁿxⁿ ⇒ lim|2ⁿ/2ⁿ⁺¹|=1/2 ⇒ R=1/2	PDF p2 + block-3	yes
+根值法公式	lim root(n,|a_n xⁿ|) = lim root(n,|a_n|)|x| < 1 ⇒ 收敛	PDF p3 + block-3	yes
+根值法例题	Σ2ⁿxⁿ ⇒ 2|x|<1 ⇒ |x|<1/2 ⇒ R=1/2	PDF p3 + block-3	yes
+例1半径	Σ(x/2)ⁿ ⇒ 比值|x|/2 ⇒ R=2	转录 v3	yes
+例2半径	Σxⁿ/n! ⇒ 比值 |x|/(n+1)→0 ⇒ R=∞（e^x 级数）	转录 v3	yes
+例3半径	Σxⁿ/(n·2ⁿ) ⇒ 比值 |x|/2·n/(n+1)→|x|/2 ⇒ R=2	转录 v3	yes
+例4级数	Σx^(2n)/(2n)! ⇒ 比值 |x|²/((2n+2)(2n+1))→0 ⇒ R=∞；Christine 说成 cos x 是口误，真身 cosh x	转录 v3 + web block-3 Note	yes
+首项判断法	首项 1 ⇒ 偶幂族；首项 x ⇒ 奇幂族（还需符号区分 cos/cosh）	转录 v3	yes
+阶乘拆分	(n+1)!=(n+1)n!；(2n+2)!=(2n+2)(2n+1)(2n)!	转录 v3	yes
+官方练习R1	Σ_{n=1}^∞ xⁿ/n ⇒ R=1	web block-3 (3.141)	yes
+官方练习R2	1-x（多项式）⇒ R=∞	web block-3	yes
+官方练习R3	Σ n!xⁿ/nⁿ ⇒ lim|a_n/a_{n+1}|=lim(1+1/n)ⁿ=e ⇒ R=e	web block-3 (3.144)	yes
+官方练习R4	Σ nⁿxⁿ ⇒ 根值法 n|x|→∞ ⇒ R=0	web block-3 (3.153)	yes
+收敛题1	Σxⁿ 对 -1<x<1 收敛（x≠±1）；x=1 时无意义	web block-1	yes
+定义域题	g(x)=1/(1-x) 与 f(x)=Σxⁿ 定义域一致（-1<x<1）	web block-1	yes
+幂级数运算	加/减/乘/代换/除/微分/积分同多项式	转录 v4/v7 + PDF p3	yes
+逐项微分	d/dx Σa_nxⁿ = Σ n a_n x^(n-1)，同半径 |x|<A	PDF p3 + block-8	yes
+逐项积分	∫ Σa_nxⁿ dx = c + Σ a_n x^(n+1)/(n+1)，同半径 |x|<A	PDF p3 + block-8	yes
+相加半径	A≠B ⇒ min(A,B)；A=B ⇒ 至少 A（可能更大）	PDF p4 + block-8	yes
+官方求和练习	Σxⁿ/7ⁿ（R=7）+ Σnⁿxⁿ（R=0）⇒ 和半径 min(7,0)=0	web block-8	yes
+官方求导练习	1/(1-x) 逐项求导 ⇒ 1/(1-x)²=Σ n x^(n-1)（n=1 起），R=1	web block-8	yes
+官方积分练习	1/(1-x) 逐项积分 ⇒ -ln(1-x)=Σ xⁿ/n（n=1 起，c=0，a_n=1/n），R=1	web block-8 + PDF p5	yes
+等式两读	幂级数等式可左读（求值）右读（展开）	转录 v4	yes
+级数vs多项式	有限项结束=多项式，无限=级数	转录 v4/v7	yes
+级数是数也是函数	每个 x 处是数；对 x 整体是函数；x=1/2 ⇒ 1+1/2+1/4+1/8+...=2	转录 v4	yes
+Taylor公式	f(x)=Σ f^(n)(0)/n! xⁿ（|x|<R）	转录 v5 + PDF p4 + block-5	yes
+挑系数原理	逐阶求导代入 0：f(0)=a_0, f'(0)=a_1, f''(0)=2a_2, f'''(0)=3!a_3 ⇒ a_n=f^(n)(0)/n!	转录 v5	yes
+0!=1	约定使公式成立；递推 1!=1·0! 闭合	转录 v5 + block-5	yes
+线性近似	L(x)=f(0)+f'(0)x，在 x=0 与 f 函数值、一阶导一致	web block-4	yes
+二次近似	q(x)=f(0)+f'(0)x+f''(0)/2 x²，二阶导一致	web block-4	yes
+三次近似	最佳三次 = f(0)+f'(0)x+f''(0)/2 x²+f'''(0)/6 x³（除以 3!=6）	web block-4	yes
+e^x级数	e^x=Σxⁿ/n!=1+x+x²/2!+x³/3!+...	转录 v5 + PDF p4	yes
+e的级数	e=Σ1/n!=1+1+1/2!+1/3!+...（x=1 代入，快速收敛）	转录 v5 + PDF p5 + block-5	yes
+sin级数	sin x=x-x³/3!+x⁵/5!-x⁷/7!+...=Σ(-1)ⁿx^(2n+1)/(2n+1)!	转录 v5/v8 + PDF p4	yes
+cos级数	cos x=1-x²/2!+x⁴/4!-x⁶/6!+...=Σ(-1)ⁿx^(2n)/(2n)!	转录 v5 + PDF p4	yes
+三函数同族	e^x 全阶乘、sin 奇幂交替、cos 偶幂交替（分母都是阶乘）	转录 v5 + PDF p4 + block-5	yes
+三R练习	e^x、sin x、cos x 的 R 均 =∞	web block-5	yes
+奇偶性练习	sin(-x)=-sin x ⇒ -x+x³/3!-x⁵/5!+...（5 次止）；cos(-x)=cos x ⇒ 1-x²/2!+x⁴/4!（4 次止）	web block-5	yes
+1/(1+x)展开	1/(1+x)=1-x+x²-x³+...（|x|<1），因公比 -x	转录 v7	yes
+1/(1+x)验证	逐阶导 f^(n)(0)=(-1)ⁿn! ⇒ a_n=(-1)ⁿ ⇒ 与几何级数一致	web block-5 + 转录 v7	yes
+x=-1极点	1/(1+x) 在 x=-1 分母 0 有极点 ⇒ R 不可能 ∞（R=1）	转录 v7	yes
+x=+1行为	部分和 1,0,1,0,... 震荡不收敛（不爆炸也算发散）	转录 v7	yes
+半径判定道理	任一方向到 R 处有坏点即为止（R=到最近坏点距离）	转录 v7	yes
+e^x属Euler	1740 前后 Leonhard Euler 所发现	转录 v7	yes
+1/(1+x)属Newton	该例归于牛顿（I think this was due to Newton, not Euler）	转录 v7	yes
+写多少项	写到能看出模式为止；不必写求和约定	转录 v7	yes
+哪些函数可展开	有合理表达式的函数都可；真答案复杂（解析函数），本课函数均可	转录 v7	yes
+半径内性质	半径内函数有全部导数（像多项式），a_n 可由导数反解	转录 v7	yes
+sin导数循环	sin→cos→-sin→-cos→sin，四步循环；0 处值 0,1,0,-1	转录 v8	yes
+sin的R=∞(连乘积)	固定 x，|x|^(2n+1)/(2n+1)! = ∏ |x|/k，因子最终 <1 ⇒ R=∞（x=10⁶ 例：n=10⁶ 时因子≈1/2，n=10⁹ 时≈1/2000）	转录 v8	yes
+sin的R=∞(比值法)	lim |(-1)^(n+1)x^(2n+3)/(2n+3)!·(2n+1)!/(-1)ⁿx^(2n+1)| = |x|²·lim 1/((2n+2)(2n+3)) = 0 ⇒ R=∞；另可用交错级数判别法	web block-7	yes
+cos系数表	cos⁽ⁿ⁾(0)/n! 前 5 项: 1, 0, -1/2!, 0, 1/4!（即 cos',cos'',cos''',cos⁽⁴⁾ 在 0 处 0,-1,0,1 除以阶乘）	web block-7	yes
+x^18系数	cos x 展开中 x^18 的系数 = -1/18!（(-1)^9/18!）	web block-7	yes
+多项式Taylor级数	3x³+4x²-2x+1 的 Taylor 级数=自身（f(0)=1,f'(0)=-2,f''(0)=8,f'''(0)=18，≥4 阶为 0）	转录 v6	yes
+多项式quiz	次数 ≤200 的多项式的 Taylor 级数 R=∞	web block-6	yes
+隐藏性质	sin 级数难看出周期性，π 藏在级数深处但不可见	转录 v8	yes
+已知级数表	1/(1-x), e^x, sin x, cos x, -ln(1-x) 五条收敛半径与通项	PDF p5	yes

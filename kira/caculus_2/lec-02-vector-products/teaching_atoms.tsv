@@ -1,0 +1,43 @@
+atom	status	evidence
+从力做功抽象出数量积定义	ok	== 从"力做功"到数量积 + fig_01
+数量积的结果类型（数）	ok	开篇 importantbox + 正文
+投影的定义（|b|cosθ，是数不是向量）	ok	== 投影 importantbox + fig_02 + cetz 图
+投影的记号（Prj 与下标写法的读法）	ok	importantbox 投影的定义要点
+投影的两条运算法则（和的投影、数乘可提出）	ok	公式块两连 + knowledgebox 推导
+数量积 = 模 × 投影（两种读法）	ok	importantbox 第二种读法
+数量积的交换律	ok	公式块 + 正文（数的乘法可交换）
+数量积的分配律（用投影法则证明）	ok	公式块 + knowledgebox 证明
+数量积的数乘结合律	ok	公式块
+a·a = |a|²、|a| = √(a·a)、0·a = 0	ok	importantbox 三条基本结论 + fig_06
+由 i,j,k 的正交归一性推出坐标公式（九项剩三项）	ok	== 由基本单位向量推出坐标公式 + fig_07
+坐标公式 a·b = a_x b_x + a_y b_y + a_z b_z	ok	公式块
+坐标算例 a=(1,2,3), b=(1,0,1) 得 4	ok	== 由基本单位向量推出坐标公式 正文
+判垂直算例 a=(1,0,1), b=(0,1,0) 得 0	ok	== 数量积的两大应用 正文
+求夹角公式 cos<a,b> = a·b/(|a||b|)	ok	公式块 + fig_03
+判垂直 a⊥b ⟺ a·b = 0（含推导）	ok	公式块 + 正文推导（[0,π] 上 cos 为零只有 π/2）
+例题1：三点 M(1,1,1)、A(2,2,1)、B(2,1,2) 求 ∠AMB 的完整五步	ok	== 例题1 + fig_04/fig_08
+数量积小结（定义/两读法/运算律/坐标/两应用）	ok	== 本章小结（数量积）
+力矩的物理背景（切向力 + 力臂）	ok	importantbox 力矩大小的两个决定因素 + fig_09
+力矩的方向规定（右手螺旋、学术约定）	ok	== 从"力矩"到向量积 + fig_10
+向量积定义（模 sinθ、方向右手规则、同时垂直）	ok	公式块 + fig_11 + importantbox
+数量积与向量积的三点区别	ok	warningbox 三个易混点
+叉乘的几何意义（平行四边形面积、三角形面积）	ok	公式块 + cetz 图 + fig_12
+叉乘的分配律（注意顺序）	ok	公式块 + warningbox 顺序
+叉乘的数乘结合律	ok	公式块
+五条结论（自叉零、零叉乘、平行判据、反交换律、单位向量循环）	ok	importantbox 五条结论 + fig_14 + knowledgebox 记忆法
+三阶行列式与对角线法则（六项）	ok	knowledgebox 三阶行列式的对角线法则
+叉乘坐标公式与口算口诀（前上后下/掐头去尾/交叉相乘）	ok	importantbox 口算口诀 + fig_15
+例题2：a=(2,1,-1)、b=(1,-1,2) 求垂直单位向量（含正负两个方向）	ok	== 例题2 + fig_13/fig_16 + warningbox
+例题3：A(1,2,3)、B(3,4,5)、C(2,4,7) 求三角形面积	ok	== 例题3 + fig_17
+向量积小结（物理来源/定义/几何/运算律/五结论/坐标/应用）	ok	== 本章小结（向量积）
+混合积定义 [abc] = (a×b)·c 与结果类型	ok	== 定义：先叉后点 + 正文设问
+混合积的几何意义（底面积 × 高 = 平行六面体体积）	ok	importantbox + cetz 立体图 + 推导正文
+混合积的符号（右手系为正、左手系为负；绝对值才是体积）	ok	warningbox
+混合积坐标公式（三阶行列式）	ok	公式块 + 正文推导说明
+轮换对称性	ok	importantbox 两条核心性质 + fig_18
+对换变号（用行列式换行解释）	ok	importantbox + knowledgebox
+共面判据 [abc] = 0（等价线性相关）	ok	== 共面判据 + knowledgebox 现代视角
+例题4：考研题混合积恒等变形（结果 4）	ok	== 例题4 + fig_19 + importantbox 两条经验
+例题5：四点共面求关系式（三点式平面方程）	ok	== 例题5 + fig_20 + knowledgebox 选向量技巧
+三种积的一页对照表	ok	== 三种"积"的一页对照（booktabs 表）
+与后续内容的接口（平面法向量/直线方向/距离/曲面积分）	ok	== 与后续内容的接口 importantbox

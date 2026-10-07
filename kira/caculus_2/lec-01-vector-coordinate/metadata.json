@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV15A4m1G7zG",
+  "url": "https://www.bilibili.com/video/BV15A4m1G7zG",
+  "title": "【高数下】寒假预习第一课！一个视频搞定“向量与空间直角坐标系”！(8-1)",
+  "lecture_title_cn": "向量与空间直角坐标系",
+  "section": "8.1",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 2411.51,
+  "duration_min": 40.19,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

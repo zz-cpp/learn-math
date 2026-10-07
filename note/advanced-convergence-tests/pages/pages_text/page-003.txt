@@ -1,0 +1,56 @@
+Ratio test
+The ratio test is another way to determine convergence of a series.
+∞
+X
+Consider
+an .
+n=1
+
+Define
+L = lim
+
+n→∞
+
+an+1
+.
+an
+
+There are three cases:
+1. If L < 1, then the series absolutely converges;
+2. If L > 1, then the series diverges;
+3. If L = 1, then there is no conclusion.
+When we talk about Taylor series, we will use the ratio test to find what is
+known as the radius of convergence.
+
+Root test
+The root test is yet another test to determine the convergence of a series.
+∞
+X
+an .
+Consider
+n=1
+
+p
+1
+Define L = lim n |an | = lim |an | n . The conclusions are the same as for the
+n→∞
+n→∞
+ratio test, that is,
+1. If L < 1, then the series absolutely converges;
+2. If L > 1, then the series diverges;
+3. If L = 1, then there is no conclusion.
+When using the root test, we often need to evaluate the n-th root of expression.
+Here are some examples.
+1
+
+A. For any constant b > 0, lim b n = 1
+n→∞
+
+1
+
+B. For any power p > 0, lim (np ) n = 1
+n→∞
+
+3
+
+

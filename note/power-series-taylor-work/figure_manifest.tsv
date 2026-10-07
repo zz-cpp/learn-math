@@ -1,0 +1,8 @@
+figure	page	source	paragraph	caption
+fig01-shift-subtract.png	-	CeTZ 重绘：转录 v1 几何级数证明段	"There's a very, very substantial cancellation. This whole tail here gets canceled off. And the only thing that's left is the 1."	两行错位级数、划消尾部、只剩 1 与 S(1-x)=1
+fig02-radius-numberline.png	-	CeTZ 重绘：转录 v1/v2 收敛半径段 + PDF p1	"minus R less than x less than R where there's convergence... x equals R is a very delicate borderline"	数轴三区段|-R<R 绿色收敛|R 外红色发散|端点空心
+fig03-partials-to-2.png	-	CeTZ 重绘：转录 v4 x=1/2 段	"if I plug in x equals 1/2... I'll get a number, which is two... it's a function of x"	几何级数部分和 1、1+x/2、…曲线向 y=2 逐点靠拢
+fig04-sin-approx.png	-	CeTZ 重绘：转录 v4/v8 sin 级数段	"If you take enough terms, you'll get a good evaluation of the sine of x for any x"	sin 曲线与三次近似 x-x³/3! 在原点贴合
+fig05-pole-1over1plusx.png	-	CeTZ 重绘：转录 v7 pole 段与课堂问答	"The graph has a pole there, goes up to infinity at x equals minus 1"	y=1/(1+x) 曲线、x=-1 极点虚竖线、+1 处光滑但 R=1 标注
+fig06-three-families.png	-	CeTZ 重绘：转录 v5 三函数家族段	"The sine is all the odd powers with alternating signs, and the cosine is all the even powers with alternating signs..."	e^x/sin/cos 各自部分和曲线对比
+fig07-poly-partials.png	-	CeTZ 重绘：转录 v6 多项式例题	"This is the function, again. It's exactly were we start at"	多项式 1-2x+4x²+3x³ 的 0/1/2/3 阶部分和曲线，三次部分和与原曲线重合

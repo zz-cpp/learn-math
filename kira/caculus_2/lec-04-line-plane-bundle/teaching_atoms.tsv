@@ -1,0 +1,33 @@
+atom	status	evidence
+确定直线的要素（一点一方向）	ok	importantbox + fig_01
+对称式方程及其成立理由（M0M 与 s 共线）	ok	公式块 + 正文
+分母可以为零的约定	ok	warningbox
+例1：两点确定直线与两点式方程	ok	== 例1 + fig_02
+参数方程与"t 的系数=方向向量、常数项=点"	ok	importantbox + fig_02
+向量方程 r = r0 + t·s（三角形法则解释）	ok	公式块 + knowledgebox
+一般方程（两平面交线）及其优缺点	ok	importantbox + fig_03
+方向向量 = 两平面法向量叉乘（结论）	ok	importantbox + fig_04
+例2：一般方程化对称式与参数式（找点+叉乘）	ok	== 例2 + fig_05/fig_06
+对称式化一般方程（拆两组等号）	ok	knowledgebox
+四种直线方程对照表	ok	booktabs 表
+两直线夹角公式（取绝对值）	ok	公式块 + fig_07
+例3：两直线夹角（含特例法参数化）	ok	== 两直线夹角 + fig_08
+先算分子再算分母的铁律	ok	warningbox
+两直线位置关系（垂直/平行/重合）	ok	== 两直线的位置关系
+直线与平面夹角定义与公式（用 sin）	ok	公式块 + fig_09
+为什么用 sin（互余角分析）	ok	knowledgebox
+直线与平面位置关系（反着说）	ok	importantbox + fig_10
+例4：过点且与已知直线垂直的平面	ok	== 例题4 + fig_11/fig_12
+平面束方程的定义与验证	ok	== 从"烤饼"到平面束方程 + fig_15
+平面束为什么表示所有过 L 的平面（法向量线性组合）	ok	importantbox + fig_16
+平面束漏掉一张平面的问题与检验策略	ok	warningbox
+例5：过一点且与已知直线垂直相交的直线（三步曲）	ok	== 题型4 + fig_13/fig_14
+直线与平面交点的最方便求法（参数方程代入）	ok	warningbox
+例6：包含已知直线的平面（平面束实战）	ok	== 题型5 + fig_17/fig_18
+投影平面与投影直线的概念	ok	== 题型6 术语厘清
+例7：求直线在平面上的投影（平面束+垂直条件）	ok	== 题型6 + fig_19
+平面束的更多发育形态（过直线且平行另一条直线）	ok	=== 平面束的更多"发育形态"
+点到直线的距离公式与推导（平行四边形面积/底）	ok	公式块 + cetz 图 + fig_20
+例8：求点到直线的距离（取点+叉乘+套公式）	ok	== 例题8 + fig_21/fig_22
+全讲七种题型地图	ok	== 本讲的题型地图 booktabs 表
+与平面一讲的对照表	ok	== 与"平面"一讲的对照 booktabs 表

@@ -1,0 +1,97 @@
+The root test is yet another test to determine the convergence of a series.
+Consider where for all .
+Define
+(3.54)
+The conclusions are the same as for the ratio test, that is,
+If then the series converges;
+If then the series diverges;
+If then there is no conclusion, that is, the series can either diverge or converge.
+The root test can also be used for series whose tail consist of negative terms. You will see this shortly.
+We are not going to discuss the proof of the root test.
+### Review: limits
+2 points possible (graded)
+When using the root test, we often need to evaluate the -th root of expression. Here are some examples.
+Evaluate the following limits. (Enter infty if the limit is infinite.)
+unanswered
+unanswered
+Hint: Recall that since is continuous,
+(3.55)
+provided the is positive or .
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+A more difficult limit
+When using the root test, you may also encounter This limit is harder to evaluate. In fact,
+(3.64)
+We leave the evaluation of this limit as an exercise for you. Try it out and take a look at our computation in the tab below.
+Hint: Obtain a lower bound on by comparing it with .
+### Computation of the limit
+As in the previous problem, will first compute of the limit and then exponentiate.
+(3.65)
+(3.66)
+To show the limit is infinite, we can compare with a smaller function whose limit is infinite. Let us proceed. The partial sum is the right Riemann sum of with Since is an increasing function,
+(3.67)
+Now, we evaluate the integral using integration by parts:
+(3.68)
+(3.69)
+(3.70)
+Therefore, we have a lower bound for :
+(3.71)
+Let us get back to evaluating the limit.
+(3.72)
+(3.73)
+(3.74)
+(3.75)
+This implies
+(3.76)
+Hide

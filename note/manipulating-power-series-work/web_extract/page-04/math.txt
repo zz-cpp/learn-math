@@ -1,0 +1,33 @@
+$ \, f(g(x))\, $
+$ p(x) $
+$ f(x) $
+$ \, f(x)\, $
+$ \, R,\, $
+$ \, f(p(x))\, $
+$ \, |p(x)|<R\, $
+$ \ f(x)\, $
+$ x=0 $
+$ p(x) = ax^n $
+$ x $
+$ n\geq 1 $
+$ \, \sin (x)\, $
+$ \, \sinh (x)\, $
+$ \, \displaystyle \sin \left(2x^5\right)+ \sinh \left(2x^5\right) $
+$ x $
+$ 0 $
+$ n! $
+$ \, \displaystyle \sin \left(2x^5\right)+ \sinh \left(2x^5\right)\, =\quad $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $

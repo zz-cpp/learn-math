@@ -1,0 +1,15 @@
+fig_01_2d_vs_3d.png	f_0005	01:00
+fig_02_right_hand.png	f_0010	02:15
+fig_03_octants.png	f_0029	07:00
+fig_04_practice_position.png	f_0033	08:00
+fig_05_box_diagonal.png	f_0038	09:15
+fig_06_norm_notation.png	f_0057	14:00
+fig_07_angle.png	f_0063	15:30
+fig_08_addition.png	f_0075	18:30
+fig_09_subtraction.png	f_0085	21:00
+fig_10_unit_vector.png	f_0095	23:30
+fig_11_parallelogram.png	f_0106	26:15
+fig_12_decomposition.png	f_0113	28:00
+fig_13_parallel_coords.png	f_0133	33:00
+fig_14_direction_cosine.png	f_0150	37:15
+fig_15_practice_direction.png	f_0157	39:00

@@ -1,0 +1,61 @@
+$ \sin (x) $
+$ \infty $
+$ \sin (x)\, $
+$ \displaystyle \displaystyle \sin x $
+$ \displaystyle = $
+$ \displaystyle x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots $
+$ \displaystyle = $
+$ \displaystyle \sum _{n=0}^{\infty } \frac{(-1)^n x^{2n+1}}{(2n+1)!}\qquad (|x|<R). $
+$ R $
+$ \displaystyle \lim _{n\rightarrow \infty } \left|\frac{(-1)^{n+1} x^{2(n+1)+1}}{\left(2(n+1)+1\right)!}\right| \, \left| \frac{(2n+1)!}{(-1)^n x^{2n+1}}\right| $
+$ \displaystyle = $
+$ \displaystyle |x|^2 \, \lim _{n\rightarrow \infty } \frac{1}{(2n+2)(2n+3)} $
+$ \displaystyle = $
+$ \displaystyle |x|^2\, (0)\, =\, 0 \qquad \text{for all }\, x. $
+$ \, x\, $
+$ \, R=\infty $
+$ \, x\, $
+$ \, \sin (x)\, $
+$ \, x.\, \, $
+$ x $
+$ \displaystyle \lim _{n\rightarrow \infty } \left| \frac{(-1)^n x^{2n+1}}{(2n+1)!}\right|=0\, $
+$ \left| \frac{(-1)^n x^{2n+1}}{(2n+1)!}\right| $
+$ \, n\, $
+$ \, \displaystyle \sum _{n=0}^{\infty } \frac{(-1)^n x^{2n+1}}{(2n+1)!}\, $
+$ \, x $
+$ \displaystyle \, \cos (x). $
+$ \, \cos ^{(n)} (x) $
+$ \, \displaystyle \frac{\cos ^{(n)} (x)}{n!}\, $
+$ \, n=0\, $
+$ \, 4 $
+$ \cos ^{(n)}(x)\, $
+$ \, n^{\text{th}}\, $
+$ \, \displaystyle n^{\text{th}}\, $
+$ \cos (x) $
+$ n! $
+$ \displaystyle \cos '(x) \, =\, $
+$ \qquad \displaystyle \frac{\cos '(0)}{1!} \, =\, $
+$ \displaystyle \cos ^{\prime \prime }(x) \, =\, $
+$ \qquad \displaystyle \frac{\cos ^{\prime \prime }(0) }{2!} \, =\, $
+$ \displaystyle \cos ^{(3)} (x) \, =\, $
+$ \qquad \displaystyle \frac{\cos ^{(3)}(0) }{3!} \, =\, $
+$ \displaystyle \cos ^{(4)} (x) \, =\, $
+$ \qquad \displaystyle \frac{\cos ^{(4)}(0) }{4!} \, =\, $
+$ x^{18} $
+$ \, \cos (x)\, $
+$ n! $
+$ \displaystyle \text{Coefficient of }\, x^{18} \, =\, $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $

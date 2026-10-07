@@ -1,0 +1,59 @@
+If the radius of convergence of the power series f (x) is R, then the power
+series f (p(x)) converges whenever |p(x)| < R .
+In particular, we can find a Taylor series for a function f (x) at x = 0 and
+then substitute in polynomial of the form p(x) = axn for x since p(0) = 0.
+
+Error function
+Recall the error function is defined by the following integral formula:
+Z x
+2
+2
+e−t dt,
+erf(x) = √
+π 0
+and cannot be expressed in terms of functions that we already know with algebraic
+operations such that addition and multiplication.
+2
+
+To obtain the Taylor series of the error function, we replace the integrand e−t
+with its Taylor series:
+Z x
+2
+2
+erf(x) = √
+e−t dt
+π 0
+!
+Z x X
+∞
+(−1)n t2n
+2
+dt
+=√
+n!
+π 0
+n=0
+!
+∞
+X
+2
+(−1)n x2n+1
+=√
+.
+π n=0 (2n + 1)n!
+
+Taylor polynomials
+If the Taylor series of f (x) is
+f (x) = a0 + a1 x + a2 x2 + a3 x3 + · · ·
+
+(for |x| < R),
+
+then the polynomial
+Pn (x) = a0 + a1 x + a2 x2 + a3 x3 + · · · an xn
+is called the Taylor polynomial of degree n of f (x). In other words, a Taylor
+polynomial is the polynomial obtained by truncating the Taylor series to degree
+n.
+
+2
+
+

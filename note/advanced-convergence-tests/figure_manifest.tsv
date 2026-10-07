@@ -1,0 +1,11 @@
+figure	page	source	paragraph	caption
+figures/fig_src_intro.txt	-	转录稿 intro	积木悬挑实验：顶部积木完全悬出底部积木之外、从下往上搭失败、自顶向下的诀窍	图 1：积木悬挑示意图（CeTZ 重绘，悬挑增量 1/2,1/4,1/6,…）
+figures/fig_src_pdf_p5.png	pages/page-5.png	PDF p.5 速查表第 1 行	几何级数 Σxⁿ：|x|<1 绝对收敛、|x|≥1 发散	图 2：几何级数部分和（r=1/2 收敛到 2、r=2 爆炸）
+figures/fig_src_v9.txt	-	转录稿 v9 例一	Σ1/√(n²+1) 主项 1/n，与调和级数极限比较同发散	图 3：直接比较判别法 a_n ≤ b_n 柱状示意
+figures/fig_src_v10.txt	-	转录稿 v10 例 C	ln n 比任意正幂慢：lim ln x/x^p=0；拆分 (ln n/n^(1/2))·(1/n^(3/2))	图 4：ln n 与 √n、n 的增长对比
+figures/fig_src_v11.txt	-	转录稿 v11 比值证明	L<1：取 r∈(L,1)，a_n/r^n 递减，a_n<k·r^n 被几何级数压住	图 5：比值判别法证明的"被几何级数压住"示意
+figures/fig_src_pdf_p3.png	pages/page-3.png	PDF p.3 + block17 例二	根值判别 L=lim(a_n)^(1/n)；Σn²/2ⁿ：L=(1/2)·lim(n²)^(1/n)=1/2	图 6：((n²)/(2ⁿ))^(1/n) 趋近 1/2
+figures/fig_src_pdf_p4.png	pages/page-4.png	PDF p.4 + block19 (3.114)	交错级数 ±Σ(−1)ⁿc_n；Σ(−1)^(n−1)/n=1−1/2+1/3−…条件收敛	图 7：交错调和级数部分和从两侧逼近 ln 2
+figures/fig_src_v13.txt	-	转录稿 v13	质心加权平均 c_(n+1)=(n·c_n+(c_n+1))/(n+1)=c_n+1/(n+1)	图 8：质心递推示意图（新块中心 c_n+1、右端对齐 c_n）
+figures/fig_src_v14.txt	-	转录稿 v14	log n < S_n < log n + 1；S_n→∞ 即悬挑无极限	图 9：调和部分和 S_n 与 ln n 的比较
+figures/fig_src_pdf_p5.png	pages/page-5.png	PDF p.5 速查表 + block20 目标	七行基准级数、通项检验打头、按形态分流的判别流程	图 10：判别法决策流程图

@@ -1,0 +1,85 @@
+$$ \displaystyle c + \sum _{n=1}^{\infty }a_n x^n. $$
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n, $
+$ |x|< A $
+$ \displaystyle \frac{d}{dx} \sum _{n=0}^{\infty } a_n x^n = \sum _{n=1}^{\infty } n \, a_n x^{n-1} $
+$ |x| < A $
+$ \displaystyle \int \left( \sum _{n=0}^{\infty } a_n x^n \right) \, dx = c + \sum _{n=0}^{\infty } a_n \frac{x^{n+1}}{n+1} $
+$ |x| < A $
+$ c $
+$ \displaystyle \sum _{n=0}^{\infty } b_n x^n $
+$ |x|<B $
+$ A \neq B $
+$ \displaystyle \left( \sum _{n=0}^{\infty } a_n x^n\right) \pm \left( \sum _{n=0}^{\infty } b_n x^n\right) = \sum _{n=0}^{\infty } (a_n \pm b_n) x^n $
+$ |x|< \textrm{min}(A,B) $
+$ A = B $
+$ \displaystyle \left( \sum _{n=0}^{\infty } a_n x^n\right) \pm \left( \sum _{n=0}^{\infty } b_n x^n\right) = \sum _{n=0}^{\infty } (a_n \pm b_n) x^n $
+$ A $
+$ \displaystyle \sum _{n=1}^{\infty } \frac{x^n}{7^n} $
+$ \displaystyle \sum _{n=1}^{\infty } n^n x^n $
+$ R $
+$ \displaystyle \Large \sum _{n=1}^{\infty } $
+$ 0 $
+$ x $
+$ \infty $
+$ R= $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \displaystyle \frac{1}{1-x} $
+$ \displaystyle \frac{1}{(1-x)^2} $
+$ n=1 $
+$ \displaystyle \Large \sum _{n=1}^{\infty } $
+$ R $
+$ 0 $
+$ x $
+$ \infty $
+$ R= $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \displaystyle \frac{1}{1-x} $
+$ \ -\ln (1-x) $
+$ n=1 $
+$ c= $
+$ a_n = $
+$ R $
+$ 0 $
+$ x $
+$ \infty $
+$ R= $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $

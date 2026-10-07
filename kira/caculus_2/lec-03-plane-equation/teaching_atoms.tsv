@@ -1,0 +1,29 @@
+atom	status	evidence
+平面无处不在与"写出方程"的含义	ok	== 开篇 + fig_01
+法向量的定义与"方向只有两个"	ok	importantbox 法向量的定义
+一点一法（法向量+点确定平面）	ok	importantbox 本讲的中心思想
+点法式方程与推导（M0M·n=0）	ok	公式块 + fig_02/fig_03 + cetz 图
+平面外点不满足方程的论证（一一对应）	ok	importantbox + 正文
+例题1：过(2,-3,0)以 n=(1,-2,3) 为法向量	ok	== 例题1 + fig_04/fig_05
+一般式方程 Ax+By+Cz+D=0 与法向量	ok	公式块 + fig_06
+一般式里抠信息（法向量、用"令两个为零"找点）	ok	importantbox 两类信息
+一般式一定是平面吗（相减消 D 的证明）	ok	knowledgebox + importantbox
+例题2：D=0 过原点、缺项平行轴、缺两项平行坐标面	ok	== 例题2 + fig_07/fig_08
+"缺谁平行谁"口诀与 D=0 的特殊性	ok	importantbox 缺谁平行谁
+例题3：包含 x 轴与点(4,-3,-1) 求平面	ok	== 例题3 + fig_09/fig_10 + knowledgebox 兜底解法
+用词纠正："通过"改为"包含"	ok	knowledgebox 用词纠正
+例题4：不共线三点确定平面（叉乘求法向量+点法式）	ok	== 例题4 + fig_11/fig_12
+法向量不唯一且不影响方程	ok	warningbox 法向量不唯一
+三点式方程与混合积解释	ok	公式块 + fig_13 + importantbox
+补充方程：已知一点与两个不共线向量	ok	公式块
+截距式方程	ok	公式块 + fig_14
+四种方程知识结构表	ok	booktabs 表 + fig_15
+两平面的夹角公式（含两个竖线的区别）	ok	importantbox + fig_16
+例题5：两平面夹角 cosθ=1/2 → π/3	ok	== 两平面的夹角 + fig_16
+两平面的特殊位置关系（垂直/平行/重合）	ok	importantbox + fig_17
+例题6：过两点且垂直于已知平面	ok	== 例题6 + fig_18 + warningbox
+点到平面的距离公式（分子绝对值/分母模）	ok	公式块 + fig_19
+例题7：点(2,1,1) 到平面 x+y+z-1=0 的距离	ok	== 公式 + fig_19
+距离公式的推导（直角三角形+内积展开）	ok	== 距离公式的推导 + cetz 图
+一步到位的投影看法	ok	importantbox 一步到位
+本讲内容速览表	ok	== 本讲内容速览 booktabs 表

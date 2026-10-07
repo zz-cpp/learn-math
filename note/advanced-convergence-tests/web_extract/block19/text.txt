@@ -1,0 +1,91 @@
+An alternating series is a series whose terms alternate in signs. That is, an alternating series takes the form
+(3.113)
+The alternating series test
+There is a simple test for convergence of an alternating series.
+If for all large enough,
+,
+decreases as increases,
+then converges.
+Example: a conditionally convergent series
+The alternating series
+(3.114)
+is conditionally convergent (and not absolutely convergent).
+To show this, first check for absolute convergence. The series is not absolutely convergent since
+(3.115)
+diverges (by integral comparison as discussed before).
+Since the series is not absolutely convergent, we need to check for conditional convergence. The series satisfies both conditions of the alternating series test:
+,
+decreases as increases.
+Hence, converges. Since the series converges but is not absolutely convergent, it is conditionally convergent. The same reasoning applies to for .
+### Alternating series 1
+1 point possible (graded)
+Determine whether the series below converges absolutely, conditionally, or diverges.
+(3.116)
+The series converges absolutely.
+The series converges conditionally.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Alternating series 2
+1 point possible (graded)
+Determine whether the series below converges absolutely, conditionally, or diverges.
+(3.120)
+The series converges absolutely.
+The series converges conditionally.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Alternating series 3
+1 point possible (graded)
+Determine whether the series below converges absolutely, conditionally, or diverges.
+(3.122)
+The series converges absolutely.
+The series converges conditionally.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Alternating series 4
+1 point possible (graded)
+Determine whether the series below converges absolutely, conditionally, or diverges.
+(3.127)
+The series converges absolutely.
+The series converges conditionally.
+The series diverges.
+unanswered
+Show answer
+Submit
+You have used 0 of 1 attempt.
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

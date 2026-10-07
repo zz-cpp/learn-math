@@ -1,0 +1,44 @@
+Summary: Manipulating Taylor Series
+
+Multiplying two power series
+We multiply two powers series using the same rule as when we multiply two polynomials.
+Consider the power series
+series
+
+∞
+X
+
+∞
+X
+
+an xn , which converges for |x| < A, and the power
+
+n=0
+
+bn xn , which converges for |x| < B.
+
+n=0
+
+• The product of the two power series converges for |x| < min(A, B), but it
+could have a larger radius of convergence.
+
+Dividing two power series
+If
+F (x) =
+
+G(x)
+H(x)
+
+where F (x), G(x), H(x) are all power series, then we can find F (x) by solving
+the following equation of power series degree by degree:
+F (x)H(x) = G(x).
+The radius of convergence of F (x) is more difficult to track, since F (x) diverges whenever H(x) = 0 and G(x) 6= 0.
+
+Substitution and Taylor series
+We can find the composition of two power series f (g(x)) by using similar rules as
+composition of polynomials. In this course, we will only substitute a polynomial
+p(x) into a power series f (x).
+
+1
+
+

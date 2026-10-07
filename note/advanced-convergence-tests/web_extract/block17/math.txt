@@ -1,0 +1,43 @@
+$ \displaystyle \displaystyle \sum _{n=1}^{\infty } x^n \qquad \text{where} \, \, x>0. $
+$ \, \displaystyle L $
+$ \displaystyle \displaystyle $
+$ \displaystyle L $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \sqrt[n]{x^n}\, $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } x $
+$ \displaystyle = $
+$ \displaystyle x \qquad (x>0). $
+$ \, \displaystyle \sum _{n=1}^{\infty } x^n\, \, (x>0)\, $
+$ \, L=x<1 $
+$ L=x>1 $
+$ L=x=1,\, $
+$ \, \displaystyle \sum _{n=1}^{\infty } 1^n\, $
+$ \displaystyle \displaystyle \sum _{n=1}^{\infty } \frac{ n^2 }{2^n} $
+$ \, \displaystyle L=\lim _{n\rightarrow \infty } (a_n)^{\frac{1}{n}} $
+$ \displaystyle \displaystyle L $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \left(\frac{ n^2 }{2^n}\right)^{\frac{1}{n}} $
+$ \displaystyle = $
+$ \displaystyle \lim _{n\rightarrow \infty } \frac{ \left(n^2\right)^{\frac{1}{n}} }{2} $
+$ \displaystyle = $
+$ \displaystyle \frac{1}{2} \, \lim _{n\rightarrow \infty } \left(n^2\right)^{\frac{1}{n}} $
+$ \displaystyle = $
+$ \displaystyle \frac{1}{2} \qquad \left( \lim _{n\rightarrow \infty } \left(n^2\right)^{\frac{1}{n}}=1\, \, \text{from previous page}\right). $
+$ \, \displaystyle L<1,\, $
+$ \, \displaystyle \sum _{n=1}^{\infty } \frac{ n^2 }{2^n}\, $
+$ \displaystyle \displaystyle \sum _{n=1}^{\infty } \frac{3^n (n)^4 }{4^n} $
+$ \, \displaystyle \, L=\lim _{n\rightarrow \infty } (a_n)^{\frac{1}{n}} $
+$ L\, =\, \quad $
+$ \, L\, $
+$ \, \displaystyle \infty $
+$ \, x>0\, $
+$ \displaystyle \displaystyle \sum _{n=1}^{\infty } \left(\frac{x}{n}\right)^n $
+$ \, \displaystyle \, L=\lim _{n\rightarrow \infty } (a_n)^{\frac{1}{n}} $
+$ L\, =\, \quad $
+$ \, x>0\, $
+$ 0<x<1 $
+$ x=1 $
+$ x>1 $
+$ \, \displaystyle \sum _{n=1}^{\infty } \left(\frac{n-2}{n}\right)^n\, \qquad $
+$ \, \displaystyle \sum _{n=1}^{\infty } \left(\frac{n-2}{n}\right)^{n^2}\, \qquad $

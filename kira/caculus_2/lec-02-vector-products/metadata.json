@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV1SJ4m1W73g",
+  "url": "https://www.bilibili.com/video/BV1SJ4m1W73g",
+  "title": "超详细生动！数量积、向量积、混合积，看这一个视频就够了！(8-2)",
+  "lecture_title_cn": "数量积、向量积与混合积",
+  "section": "8.2",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 3110.69,
+  "duration_min": 51.84,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

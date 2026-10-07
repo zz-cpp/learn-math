@@ -1,0 +1,22 @@
+$ \, \displaystyle \frac{f(n)}{g(n)}\rightarrow c\, $
+$ \, \, c\neq 0\, $
+$ \, \displaystyle g(n)>0\, $
+$ \, n>N\, $
+$ \, N>0 $
+$ \, \displaystyle \sum _{n=1}^{\infty } f(n)\, $
+$ \, \displaystyle \sum _{n=1}^{\infty } g(n)\, $
+$ \, f(n)\, $
+$ \, g(n)\, $
+$ \, n\, $
+$ \, \infty ,\, $
+$ \, \displaystyle \sum _{n=1}^{\infty } f(n)\, $
+$ \, \displaystyle \sum _{n=1}^{\infty } g(n)\, $
+$ \, \displaystyle \frac{f(n)}{g(n)}\longrightarrow c\neq 0\, $
+$ \, \displaystyle n \longrightarrow \, \infty \, $
+$ \displaystyle \displaystyle f(n)\sim c\, g(n),\qquad \text{that is,}\quad \frac{f(n)}{c\, g(n)}\longrightarrow 1\, \, \text{as }\, \, n\, \longrightarrow \, \infty . $
+$ \displaystyle \displaystyle \sum _{k=1}^{\infty }\frac{3k^6-2}{5k^7+3k^6+2k^3+k^2+4} $
+$ \, \displaystyle \infty $
+$ \displaystyle \displaystyle \sum _{k=5}^{\infty }\frac{1}{\sqrt{2k^3+10}} $
+$ \, \displaystyle \infty $
+$ \displaystyle \displaystyle \sum _{n=10}^{\infty }\sin \left(\frac{1}{n^2}\right) $
+$ \, \displaystyle \infty $

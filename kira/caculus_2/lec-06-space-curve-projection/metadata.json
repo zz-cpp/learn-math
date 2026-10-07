@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV1VzRGYTEdq",
+  "url": "https://www.bilibili.com/video/BV1VzRGYTEdq",
+  "title": "投影曲线不会？空间画图头疼？20min拿捏空间曲线方程！|高数下",
+  "lecture_title_cn": "空间曲线方程与投影曲线",
+  "section": "8.6",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 1211.43,
+  "duration_min": 20.19,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

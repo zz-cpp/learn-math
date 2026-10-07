@@ -1,0 +1,85 @@
+Summary: Convergence Tests for Series
+
+Direct comparison test
+Let 0 ≤ an ≤ bn for all n ≥ N .
+Then
+∞
+∞
+X
+X
+•
+bn converges implies
+an converges;
+n=N
+
+•
+
+∞
+X
+
+n=N
+
+an diverges implies
+
+n=N
+
+∞
+X
+
+bn diverges.
+
+n=N
+
+Limit comparison
+If
+1.
+
+f (n)
+→ c where c 6= 0 is finite,
+g(n)
+
+2. g(n) > 0 for all n > N for some N > 0
+then
+
+∞
+X
+
+f (n) and
+
+n=1
+
+∞
+X
+
+g(n) either both converge or both diverge.
+
+n=1
+
+In other words, if f (n) and g(n) decay at the same rate as n tends to ∞,
+∞
+∞
+X
+X
+then the series
+f (n) and
+g(n) converge or diverge together.
+n=1
+
+n=1
+
+This is analogous to limit comparison for improper integrals.
+Note: The condition
+
+f (n)
+→ c 6= 0 is equivalent to
+g(n)
+
+f (n) ∼ cg(n), that is,
+
+f (n)
+→ 1 as n → ∞.
+cg(n)
+
+1
+
+

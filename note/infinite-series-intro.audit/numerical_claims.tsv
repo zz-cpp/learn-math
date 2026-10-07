@@ -1,0 +1,45 @@
+claim	value	source	in_notes
+几何级数特例和	1 + 1/2 + 1/4 + ... = 2	转录 v1	yes
+数轴第一段步长	0→1→3/2→7/4→2 每次走一半	转录 v1	yes
+芝诺悖论结论	时间不存在（非连续时间观）	转录 v1	yes
+一般几何级数	1 + a + a^2 + ... = 1/(1-a)	转录 v1	yes
+收敛条件	|a| < 1	转录 v1	yes
+a=1 情形	1+1+1+... 对应 1/0 发散（红框）	转录 v2	yes
+a=-1 情形	1-1+1-1+... 振荡，公式给 1/2 是 0 与 1 中点	转录 v2	yes
+a=2 情形	1+2+4+... 公式给 -1 完全错误	转录 v2	yes
+数论奇怪系统	可令 1+2+4+...=-1 成立，须扔掉 0<1 与负数	转录 v2	yes
+部分和记号	S_N = sum n=0..N a_n	转录 v3	yes
+级数记号	S = sum n=0..∞ a_n = lim S_N	转录 v3	yes
+收敛定义	lim S_N 存在即收敛；不存在即发散	转录 v3	yes
+例题级数	sum 1/(n(n+1)) n=1..∞	转录 v4	yes
+前五项	1/2, 1/6, 1/12, 1/20, 1/30	转录 v4	yes
+部分和序列	1/2, 2/3, 3/4, 4/5, 5/6	转录 v4	yes
+猜测公式	S_n = n/(n+1)	转录 v4	yes
+部分分式	1/((n+1)(n+2)) = 1/(n+1) - 1/(n+2)	转录 v4	yes
+归纳步	S_{n+1} = (n+1)/(n+2)	转录 v4	yes
+级数极限	sum 1/(n(n+1)) = 1	转录 v4	yes
+1/n^2 级数	sum 1/n^2 收敛 = π^2/6（Euler）	转录 v5	yes
+1/n^3 级数	收敛，值无初等形式，曾不知是否有理数，现证无理	转录 v5	yes
+1/n 级数	sum 1/n 发散（与 ∫dx/x 对应）	转录 v5	yes
+Riemann sum 关键	Δx = 1 的 Riemann sum 建立联系（Δx→0 才相等）	转录 v5	yes
+上 Riemann sum	1 + 1/2 + ... + 1/(N-1) > ∫_1^N dx/x	转录 v5	yes
+下 Riemann sum	1/2 + ... + 1/N = S_N - 1 < ∫_1^N dx/x	转录 v5	yes
+夹逼结论	log N < S_N < log N + 1	转录 v5	yes
+积分比较定理	sum f(n) - ∫_1^∞ f < f(1)，f 正且递减则同敛散	转录 v6	yes
+扩展例子1	sum 1/(n ln n) n=2..∞ 发散（换元 u=ln x）	转录 v7	yes
+扩展例子2	sum 1/(n (ln n)^2) 收敛 = ln 2	转录 v7	yes
+条件检查	n≥2 时 1/(n ln n) 正且递减	转录 v7	yes
+估计问题	sum (ln n)/n 从 n=3 起，问多久到 5000	转录 v8	yes
+发散验证	∫_3^∞ (ln x)/x dx = 1/2 (ln x)^2 → ∞ 发散	转录 v8	yes
+函数图象	ln x/x：x=1 为 0，峰值略小于 0.4，x=6 仍 > 1/4	转录 v8	yes
+部分和夹逼	1/2(ln(N+1))^2 - 1/2(ln3)^2 < S_N < ln3/3 + 同式	转录 v8	yes
+近似	S_N ≈ 1/2 (ln(N+1))^2	转录 v8	yes
+反解 N	N ≈ e^(√(2 S_N))	转录 v8	yes
+代入 5000	√10000=100, N ≈ e^100 ≈ 2×10^43	转录 v8	yes
+时间估计	2×10^43 项 × 10^-20 s = 2×10^23 s	转录 v8	yes
+宇宙年龄比较	2×10^23 s ≈ 5 万倍宇宙年龄；全地球算力也要几十亿年	转录 v8	yes
+几何级数部分和公式	(1-a^(N+1))/(1-a)	PDF p2	yes
+发散检验	lim a_n ≠ 0 ⇒ sum 发散（很直观）	PDF p2	yes
+数学归纳法	base case + induction step，多米诺类比	PDF p3	yes
+积分比较不等式	sum f(n) - ∫ f < f(1)，等价两对不等式	PDF p4	yes
+缩写记号	sum_0^∞ a_n / sum_N^∞ a_n	PDF p1	yes

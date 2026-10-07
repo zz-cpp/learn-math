@@ -1,0 +1,444 @@
+### New series from old: differentiating a series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+OK, we can multiply.
+I can also differentiate.
+So let's just do a case of that and use
+the process of differentiation to find out
+what the power series for the cosine of x
+is by writing the cosine of x as the derivative of the sine
+and differentiating term by term.
+So I'll take this expression for the power series of the sine
+and differentiate it term by term,
+and I'll get the power series for cosine.
+So let's see.
+The derivative of x is 1.
+Now, the derivative of x cubed is 3x squared,
+and then there's a 3 factorial in the denominator.
+And the derivative of x to the fifth is 5x to the fourth,
+and there's a 5 factorial on the denominator,
+and so on and so on.
+And now some cancellation happens.
+So this is 1 minus, well the 3 cancels
+with the last factor in this 3 factorial
+and leaves you with 2 factorial.
+And the 5 cancels with the last factor in the 5 factorial
+and leaves you with a 4 factorial in the denominator.
+And so there you go.
+There's the power series expansion for the cosine.
+It's got all even powers of x.
+They alternate.
+You have the factorials in the denominator.
+And of course, you could derive that expression
+by using Taylor's formula by the same kind of calculation
+we did here, taking higher and higher derivatives
+of the cosine, you get the same periodic pattern
+of derivatives and values of derivatives at x equals zero.
+But here's a cleaner way to do it, simpler way
+to do it because we already knew the derivative of the sine.
+When you differentiate you keep the same radius of convergence.
+So we can multiply.
+I can add, too, and multiply by a constant, things like that.
+How about integrating?
+That's what half this course was about, isn't it?
+So let's integrate something.
+So the integration I'm going to do is this one.
+The integral from 0 to x of dt over 1 plus t.
+What is that integral as a function?
+[INAUDIBLE]
+So when I find the anti-derivative of this,
+I get the natural log of 1 plus t,
+and then when I evaluate that at t equals x,
+I get the natural log of 1 plus x.
+And when I evaluate the natural log at 0,
+I get the natural log of 1, which is 0.
+So this is what you get.
+OK?
+This is really valid, by the way, for x bigger than minus 1.
+But don't want to think about this quite like this
+when x is smaller than that.
+OK, now, I'm going to try to apply power series methods here
+and use this integral to find a power
+series for the natural log.
+And I'll do it by plugging in to this expression what the power
+series for 1 over 1 plus t was.
+And I know what that is because I wrote it down on the board
+up here.
+Change the variable from x to t there,
+and so 1 over 1 plus t is 1 minus t plus t squared
+minus t cubed, and so on.
+So that's the thing in the inside of the integral,
+and now it's legal to integrate that term by term.
+So let's do that.
+I'm going to get something which I will then
+evaluate at x and at 0.
+So when I integrate 1, I get x.
+When I integrate t, whoops, I get t.
+I'm sorry.
+When I integrate t, I get t squared over 2.
+t squared gives me t cubed over 3, and so on and so on.
+And then I when I put in t equals x,
+well I just replace all the t's by x's.
+And when I put in t equals zero, I get zero.
+So this equals x.
+So I've discovered that the natural log of 1 plus x
+is x minus x squared over 2 plus x cubed over 3 minus x
+to the fourth over 4, and so on and so There's
+the power series expansion for the natural log of 1 plus x.
+And because I began with a power series
+whose radius of convergence was just 1,
+I began with this power series, the radius
+of convergence of this is also going to be 1.
+Also, because this function, as I just pointed out,
+this function goes bad when x becomes less than minus 1,
+so some problem happens and that's reflected
+in the radius of convergence.
+Cool.
+So you can integrate.
+That is the correct power series expansion
+for the natural log of x and another victory of Euler's was
+to use this kind of power series expansion
+to calculate natural logarithms in a much more efficient way
+than people had done before.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+### Preparation: exponential of negative x
+2 points possible (graded)
+Substitute into the Taylor series for to get a power series for . Also find the radius of convergence of the resulting power series.
+(Enter the series up to degree . Type factorial(4) for .)
+Up to degree :
+unanswered
+Find the radius of convergence of the series you obtained. ( If , type infty.)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Taylor series of Hyperbolic sine
+2 points possible (graded)
+Recall that the hyperbolic sine function is defined as
+(3.252)
+Find the Taylor series of up to degree .
+(Your answer should be of the form Enter factorial(n) for .)
+Up to degree :
+unanswered
+Find the radius of convergence of the Taylor series of . ( If , type infty.)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Differentiate and integrate the Taylor series of hyperbolic sine
+2 points possible (graded)
+Let be the Taylor series for that you obtained in the previous problem.
+Compute up to degree . (Enter factorial(n) for .)
+Up to degree
+unanswered
+Compute up to degree . (Enter C as the constant of integration.)
+Up to degree
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Integration of Taylor series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Hi.
+Welcome back to recitation.
+We've been talking about power series and different sorts
+of manipulations you can do with them
+and different examples of power series.
+So I have an example here that I don't
+think you've seen in lecture.
+So this is the power series 1 plus 2x plus 3x
+squared plus 4x cubed plus 5x to the fourth and so on.
+So I'm going to tell you that this is a Taylor series
+for a fairly nice function.
+And what I'd like you to do is try and figure out
+what that function is.
+Now, I'm kind of sending you off on to this task
+without giving you much guidance.
+So let me give you a little bit of a hint, which
+is that the thing to do here, is you have
+a bunch of different tools that you know how
+to manipulate Taylor series by.
+So you know how to do calculus on Taylor series.
+You can take derivatives and integrals.
+You know how to add and multiply and perform
+these sorts of manipulations.
+So you might think of a manipulation
+you could perform on this power series that
+will make it a simpler expression or something
+you're already familiar with or so on.
+So let me give you some time to work on that,
+think about it for a while, try and come up
+with the expression for this power series and come back.
+And we can work on it together.
+So hopefully you had some luck working on this problem
+and figured out what the right manipulation to use is.
+I kind of tossed it at you without a whole lot
+of guidance.
+And I don't think you've done a lot of examples like this
+before.
+So it's a little tricky.
+So what I suggested was you think about things
+that you know how to do that could be used to simplify this.
+So looking at it, it's just one Taylor series.
+So it's not clear that sort of power series arithmetic
+is going to help you very much.
+It's not obviously a substitution
+of some value into some other Taylor series
+that you're familiar with.
+It's not obviously, say, a sum of two Taylor series
+that you already know very well.
+So those things aren't immediately-- it's not clear
+where to go with them.
+One thing that does pop out-- well, OK.
+So let's talk about some of the other tools I mentioned.
+We have calculus on power series.
+So we have differentiation.
+So we see here that the coefficients are
+sort of a linear polynomial.
+If you take a derivative, what happens
+is this becomes 2 plus 6x plus 12x squared plus 20x cubed.
+And those coefficients 2, 6, 12, 20,
+those are given by a quadratic polynomial.
+So that makes our life kind of more complicated somehow.
+But if we look at this, we see that integrating this power
+series is really easy to do.
+This power series has a really nice antiderivative.
+So what I'm going to do is I'm going to call this power
+series by the name f of x.
+And then what I'd like you to notice
+is that the antiderivative of f of x, dx--
+well, we can integrate power series term-wise.
+And so what we get is-- well, so all right.
+So I'm going to put the constant of integration first.
+So the antiderivative of this is c plus-- well,
+1 you take its integral and you get x.
+And 2x you take its integral and you just get plus x squared.
+And 3x squared you take its integral,
+and you get plus x cubed and plus x
+to the fourth from the next one, and plus x to the fifth
+and so on.
+So I put the c here, right?
+So any power series of this form is an antiderivative
+of the power series that we started with.
+Any power series of this form has the derivative equal
+to the thing that we're interested in.
+And since we really care about what f is
+and not what it's antiderivative is,
+we can choose c to be any convenient value.
+So I'm going to, in particular, look at the power series where
+c is equal to 1.
+Now, why am I going to make that choice?
+Well, because we've seen a power series
+that looks very much like this before with the 1 there.
+So we know 1 plus x plus x squared plus x cubed plus x
+to the fourth and so on, we know that this is equal to 1 over 1
+minus x.
+So since we know that this is the case,
+that means that our power series, f of x,
+is just the derivative of this.
+That's what we just showed here.
+So f of x is equal to d over dx of 1
+over-- that should be 1 over 1 minus x.
+And notice that if I had chosen a different choice of constant
+here, it would be killed off by this differentiation.
+So it really was irrelevant.
+So d over dx of 1 over 1 minus x.
+So d over dx of 1 over 1 minus x and, OK.
+Well, this is an easy derivative to compute.
+This is 1 minus x to the minus 1.
+So you do a little chain rule thing,
+and I think what you get out is that this is 1 over 1
+minus x squared.
+So this gives me a nice formula for this function f of x.
+If you wanted to check, one thing you could do
+is you could set about computing a few terms of the power series
+for this function for 1 over 1 minus x squared-- 1 over 1
+minus x quantity squared, I should say.
+So you could do that either by using your derivative formula,
+which is easy enough to do.
+Another thing you could do is you
+could realize that this is 1 over 1 minus x times 1 over 1
+minus x.
+So you could try multiplying that polynomial by itself
+and that power series by itself and see
+if it's easy to get back this formula that we had.
+But any of those ways is a good way
+to double check that this is really
+true, that this function, that this power series here, f of x,
+has this functional form.
+Now, of course, I haven't said anything
+about the radius of convergence, but the thing
+to remember when you're doing calculus on power series
+is that when you take a derivative or an antiderivative
+of a power series, you don't change
+the radius of convergence.
+Sometimes you can fiddle with what happens at the end points,
+but the radius of convergence stays the same.
+So this is going to be true whenever
+x is between negative 1 and 1.
+And, in fact, this series diverges at its end points.
+That's pretty easy to check.
+So there we go.
+So this is the functional form for this power series.
+It's valid whenever x is between negative 1 and 1.
+That's it's range of convergence.
+And so here we have a cute little trick for figuring out
+some forms of power series.
+And, of course, if you were interested-- so like I said,
+now you could look at the derivative
+of this, which I mentioned had some coefficients that
+were given by some quadratic polynomial.
+Now that you have a functional form,
+you could figure out what is the function whose power
+series has that quadratic polynomial as coefficients.
+And you can do a whole bunch of other stuff
+by similarly taking derivatives of other power series
+that you're familiar with or integrals.
+So I'll stop there.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file

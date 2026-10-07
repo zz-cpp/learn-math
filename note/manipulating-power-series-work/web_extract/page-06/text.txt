@@ -1,0 +1,168 @@
+### New series from old: error function
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 1.25x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+Four substitute.
+Very appropriate for me as a substitute teacher
+to tell you about substitution.
+So I'm going to try to find the power series expansion of e
+to the minus t squared.
+And the way I'll do that is by taking the power series
+expansion for e to the x, which we have up there,
+and make the substitution x equals
+minus t squared in the expansion for e to the x.
+So what's the power series expansion for this?
+The power series expansion of this
+is going to be a function of t, right?
+Because the variable here is t.
+And I get it by taking my expansion for e to the x
+and putting in what x is in terms of t,
+and so on and so on.
+I just put in minus t squared in place of x there in the series
+expansion for e to the x.
+So I can work this out a little bit better.
+Minus t squared is what it is.
+This is going to give me a t to the fourth.
+And the minus squared is going to give me a plus.
+So I get t to the fourth over 2 factorial.
+Then I get minus t quantity cubed.
+So there will be a minus sign and a t to the sixth,
+and the denominator is 3 factorial.
+So the sines are going to alternate,
+the powers are all even, and the denominators
+are these factorials.
+Several times as this course has gone on,
+the error function has made an appearance.
+The error function was-- I guess it
+gets normalized by putting a 2 over the square root of pi
+in front.
+And it's the integral of e to the minus t squared dt
+from 0 to x.
+And this normalization is here because as x gets to be large,
+the value becomes 1.
+So this error function is very important in the theory
+of probability.
+And I think you calculated this fact at some point
+in the course.
+So this is the standard definition
+of the error function to put a 2 over the square root of pi
+in front.
+Let's calculate its power series expansion.
+So there's a 2 over the square root of pi
+that hurts nobody here in the front.
+And now I want to integrate e to the minus t squared.
+And I'm going to use this power series expansion
+for that to see what you get.
+So I'm just going to write this out, I think.
+I did it out carefully in another example over there,
+so I'll do it a little quicker now.
+Integrate this term by term.
+You're just integrating powers of t, so it's pretty simple.
+And then I'm evaluating at x and at 0.
+So I get x minus x cubed over 3 plus x
+to the fifth over 5 times 2 factorial.
+5 from integrating the t to the fourth and the 2
+factorial from this denominator that we already had.
+And then there's a minus x to the seventh over 7 times 3
+factorial and plus and so on.
+And you can imagine how they go on from there.
+I guess to get this exactly in the form
+that we began talking about, I should multiply through.
+So the coefficient of x is 2 over the square of pi,
+and the coefficient of x cubed is
+minus 2 over 3 times the square root of pi and so on.
+But this is a perfectly good way to write this power series
+expansion as well.
+And this is a very good way to compute the value of the error
+function.
+It's a new function in our experience.
+Your calculator probably calculates it,
+and your calculator probably does it by this method.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Error function
+Recall the error function is defined by the following integral formula:
+(3.287)
+and cannot be expressed in terms of functions that we already know with algebraic operations such as addition and multiplication.
+To obtain the Taylor series of the error function, we replace the integrand with its Taylor series:
+(3.288)
+(3.289)
+(3.290)
+### Taylor series of Fresnel integral
+2 points possible (graded)
+Find the first three non-zero terms of Taylor series of the Fresnel integral . Recall that there is no formula for this integral.
+(Type factorial(n) for .)
+The first three non-zero terms of the Taylor series of
+unanswered
+Also find the radius of convergence of the Taylor series. (If enter infty.)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

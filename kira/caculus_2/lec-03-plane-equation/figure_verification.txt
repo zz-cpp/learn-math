@@ -1,0 +1,361 @@
+=== 1. figures/fig_01_plane_everywhere.png ===
+  page:       f_0004.png
+  source:     00:45
+  paragraph:  平面是无处不在的：金字塔的面、Windows 的标志、手掌的平面，在数学中平面都是可以无限延展的
+  caption:    平面无处不在的日常例子：金字塔的斜面、Windows 标志的平面、手掌——数学中的平面都无限延展
+  [OK]   figure file: figures/fig_01_plane_everywhere.png
+  [OK]   source page: frames/f_0004.png
+  --- material context around this figure ---
+  >>> [0:45] 我就能写出这个平面上任意点XYZ
+  >>> [0:42] 而且给我一个空间直角坐标系
+      [0:39] 平面都是可以无限延展的
+      [0:51] 始终满足的方程
+      [0:37] 又增加了在数学中
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. figures/fig_02_point_normal.png ===
+  page:       f_0013.png
+  source:     03:00
+  paragraph:  已知平面上一点 M0(x0,y0,z0) 和一个法向量 n=(A,B,C)，则平面的方程为 A(x-x0)+B(y-y0)+C(z-z0)=0
+  caption:    点法式方程：给定一点 $M_0$ 与法向量 $n = (A,B,C)$，平面方程为 $A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$
+  [OK]   figure file: figures/fig_02_point_normal.png
+  [OK]   source page: frames/f_0013.png
+  --- material context around this figure ---
+  >>> [2:58] 方程命名可以类比中学的点斜式啊
+  >>> [3:02] 两点式啊等等
+  >>> [3:03] 已知一个平面上一点坐标M0和法向量NABC
+      [2:54] 这样构造的方程我们称为点法式
+      [3:09] 我们利用平面上一点M的坐标
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. figures/fig_03_point_normal_derivation.png ===
+  page:       f_0014.png
+  source:     03:15
+  paragraph:  在平面上随便取一点 M(x,y,z)，M0M 这个向量和平面的法向量 n 永远垂直，两个向量垂直做内积等于零
+  caption:    点法式的推导：$arrow(M_0 M) dot n = 0$，其中 $arrow(M_0 M) = (x-x_0, y-y_0, z-z_0)$
+  [OK]   figure file: figures/fig_03_point_normal_derivation.png
+  [OK]   source page: frames/f_0014.png
+  --- material context around this figure ---
+  >>> [3:16] 就能写出平面上任何一点XYZ满足的关系
+  >>> [3:13] 以及法向量的坐标
+      [3:20] 也就是方程了
+      [3:09] 我们利用平面上一点M的坐标
+      [3:22] 这个等式是啥意思呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. figures/fig_04_ex1_statement.png ===
+  page:       f_0019.png
+  source:     04:30
+  paragraph:  【例1】平面方程练习（同济八版 高数下 8-3）：求过点 (2,-3,0) 且以 n=(1,-2,3) 为法向量的平面方程
+  caption:    【例1】求过点 $(2,-3,0)$ 且以 $n = (1,-2,3)$ 为法向量的平面方程
+  [OK]   figure file: figures/fig_04_ex1_statement.png
+  [OK]   source page: frames/f_0019.png
+  --- material context around this figure ---
+  >>> [4:30] 向量垂直了
+  >>> [4:31] 那说白了你不在平面上
+  >>> [4:28] 它就一定不合法
+  >>> [4:27] 对应的向量
+  >>> [4:33] 这样就确定了这个点法式
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. figures/fig_05_ex1_solution.png ===
+  page:       f_0020.png
+  source:     04:45
+  paragraph:  整理一下就得到 x - 2y + 3z - 8 = 0
+  caption:    【例1】解答：$1(x-2) + (-2)(y+3) + 3(z-0) = 0$，整理得 $x - 2y + 3z - 8 = 0$
+  [OK]   figure file: figures/fig_05_ex1_solution.png
+  [OK]   source page: frames/f_0020.png
+  --- material context around this figure ---
+  >>> [4:44] 反过来你满足这个方程一定在这个平面上
+  >>> [4:43] 他一定满足这个方程
+  >>> [4:47] 好记住这句话
+  >>> [4:49] 后面要考例一
+      [4:40] 只要XYZ在这个平面上
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. figures/fig_06_general_form.png ===
+  page:       f_0021.png
+  source:     05:00
+  paragraph:  把点法式的常数项合并后得到的三元一次方程，就是平面的一般方程 Ax+By+Cz+D=0
+  caption:    平面的一般方程 $A x + B y + C z + D = 0$；$x,y,z$ 的系数就是该平面的一个法向量 $n = (A,B,C)$ 的坐标
+  [OK]   figure file: figures/fig_06_general_form.png
+  [OK]   source page: frames/f_0021.png
+  --- material context around this figure ---
+  >>> [4:58] 是不是法向量ABC在前面做系数
+  >>> [4:56] 点法式怎么写来着
+  >>> [5:04] 那就是1×1个括号
+      [5:06] 再加上-2×1个括号
+      [4:52] 已知平面上一点一法好够了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. figures/fig_07_ex2_statement.png ===
+  page:       f_0039.png
+  source:     09:30
+  paragraph:  【例2】自学成才：指出下列各平面的图形特点 ① D=0: x+2y-3z=0 ② A,B,C 中一个为 0: x+y=1 ③ A,B,C 中两个为 0: z=3
+  caption:    【例2】判断特殊位置平面：$D = 0$ 时 $x + 2y - 3z = 0$；系数缺一个时 $x + y = 1$；系数缺两个时 $z = 3$
+  [OK]   figure file: figures/fig_07_ex2_statement.png
+  [OK]   source page: frames/f_0039.png
+  --- material context around this figure ---
+  >>> [9:30] 它是过原点的诶
+  >>> [9:32] 那它的图像怎么画
+  >>> [9:26] 也就是这个平面我们如果记作派的话
+  >>> [9:34] 你知道吗
+      [9:35] 这个其实是平面中最不好画图的一种
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. figures/fig_08_ex2_solution.png ===
+  page:       f_0045.png
+  source:     11:00
+  paragraph:  ① D=0 过原点；② 缺项（A=0，缺 x）平行于 z 轴；③ 缺两个系数则平行于坐标面
+  caption:    【例2】解答：$D = 0$ 过原点；缺哪个字母就平行于哪个轴（$x + y = 1$ 平行于 $z$ 轴）；缺两个字母则平行于坐标面（$z = 3$ 平行于 $xOy$ 面）
+  [OK]   figure file: figures/fig_08_ex2_solution.png
+  [OK]   source page: frames/f_0045.png
+  --- material context around this figure ---
+  >>> [11:00] 那在三次元视角下又要怎么理解呢
+  >>> [11:04] 那说白了还是XY始终满足
+      [10:55] 哎但注意现在是在三维空间里面研究问题
+      [11:07] X加Y等于一的关系
+      [10:52] X加Y等于一
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 9. figures/fig_09_ex3_statement.png ===
+  page:       f_0052.png
+  source:     12:45
+  paragraph:  【例3】平面方程练习（同济八版 8-3）：求包含 $x$ 轴和点 $(4,-3,-1)$ 的平面方程
+  caption:    【例3】求包含 $x$ 轴和点 $(4,-3,-1)$ 的平面方程
+  [OK]   figure file: figures/fig_09_ex3_statement.png
+  [OK]   source page: frames/f_0052.png
+  --- material context around this figure ---
+  >>> [12:45] 一会儿马上考再看全三
+  >>> [12:44] 记住这个事儿
+  >>> [12:47] 如果ABC其中两个为零
+  >>> [12:42] 你就包含了Z轴
+  >>> [12:41] 你要过原点了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 10. figures/fig_10_ex3_solution.png ===
+  page:       f_0062.png
+  source:     15:15
+  paragraph:  解：$D = 0$、缺 $x$ 项（$A = 0$），故方程可设为 $B y + C z = 0$；代入 $(4,-3,-1)$ 得 $-3B - C = 0$，即 $C = -3B$，所以 $y - 3z = 0$
+  caption:    【例3】解答：包含 $x$ 轴 ⟹ $D = 0$ 且缺 $x$ 项，设 $B y + C z = 0$，代入点得 $C = -3B$，约去 $B$ 得 $y - 3z = 0$
+  [OK]   figure file: figures/fig_10_ex3_solution.png
+  [OK]   source page: frames/f_0062.png
+  --- material context around this figure ---
+  >>> [15:12] 代入四负三负一得到BY就是三倍的
+  >>> [15:19] BY是三
+      [15:10] 是把这个点带进去就行了
+      [15:20] 然后Z呢是一
+      [15:08] 那我要最终确定平面方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 11. figures/fig_11_ex4_statement.png ===
+  page:       f_0067.png
+  source:     16:30
+  paragraph:  例4：由不共线三点 $M_1(2,-1,4)$、$M_2(-1,3,-2)$、$M_3(0,2,3)$ 确定一个平面，求它的方程
+  caption:    【例4】求过不共线三点 $M_1 (2,-1,4)$、$M_2 (-1,3,-2)$、$M_3 (0,2,3)$ 的平面方程
+  [OK]   figure file: figures/fig_11_ex4_statement.png
+  [OK]   source page: frames/f_0067.png
+  --- material context around this figure ---
+  >>> [16:29] 比方说你把整条X轴都包含了
+  >>> [16:32] 那上面随便取个点
+  >>> [16:26] 啊那无非就是你再多带个点呗
+  >>> [16:34] 你像100
+      [16:25] 这个还是把它用起来吧
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 12. figures/fig_12_ex4_solution.png ===
+  page:       f_0077.png
+  source:     19:00
+  paragraph:  $arrow(M_1 M_2) times arrow(M_1 M_3) = (14, 9, -1)$，点法式整理得 $14x + 9y - z - 15 = 0$
+  caption:    【例4】解答：叉乘得法向量 $(14,9,-1)$，点法式整理得 $14 x + 9 y - z - 15 = 0$
+  [OK]   figure file: figures/fig_12_ex4_solution.png
+  [OK]   source page: frames/f_0077.png
+  --- material context around this figure ---
+  >>> [18:58] 再减去负的三六十八好
+  >>> [19:02] 这第一个分量
+  >>> [18:57] 这个是四
+  >>> [19:04] 第二个分量在这儿
+      [19:05] 二六十二再减去三好
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 13. figures/fig_13_three_point_form.png ===
+  page:       f_0086.png
+  source:     21:15
+  paragraph:  平面的三点式方程：过空间不共线三点 $M_1, M_2, M_3$ 的平面方程为三行行列式等于零
+  caption:    三点式方程：三行分别是 $arrow(M_1 M)$、$arrow(M_1 M_2)$、$arrow(M_1 M_3)$，行列式为零（本质是三向量混合积为零、共面）
+  [OK]   figure file: figures/fig_13_three_point_form.png
+  [OK]   source page: frames/f_0086.png
+  --- material context around this figure ---
+  >>> [21:14] 我就直接以知识点的形式给了叫三点式方程
+  >>> [21:11] 那刚才的例四还有一个法二
+  >>> [21:19] 已知空间不贡献三点的坐标
+      [21:08] 这是一个出题的套路
+      [21:22] 它的平面方程就是这个来弹幕比一比啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 14. figures/fig_14_intercept_form.png ===
+  page:       f_0093.png
+  source:     23:00
+  paragraph:  过 $P(a,0,0)$、$Q(0,b,0)$、$R(0,0,c)$（$a b c != 0$）的平面方程为 $x/a + y/b + z/c = 1$
+  caption:    平面的截距式方程 $x/a + y/b + z/c = 1$，其中 $a, b, c$ 分别是平面在三条坐标轴上的截距
+  [OK]   figure file: figures/fig_14_intercept_form.png
+  [OK]   source page: frames/f_0093.png
+  --- material context around this figure ---
+  >>> [23:01] 你可以把M123的坐标呢
+  >>> [22:58] 所以刚才那个例四我们就不重新算了
+  >>> [23:03] 具体那个数字带进来
+      [22:55] 就是IM坐标始终满足的等式
+      [23:05] 把这个行列式对角线法则算一算
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 15. figures/fig_15_knowledge_map.png ===
+  page:       f_0095.png
+  source:     23:30
+  paragraph:  小盘点：平面及其方程——4 种常用方程（点法式、一般式、三点式、截距式）、两平面的夹角与位置关系、点到平面的距离公式
+  caption:    本讲知识结构图：平面及其方程 = 4 种常用方程 + 两平面的夹角/位置关系 + 点到平面的距离公式
+  [OK]   figure file: figures/fig_15_knowledge_map.png
+  [OK]   source page: frames/f_0095.png
+  --- material context around this figure ---
+  >>> [23:30] 我也能写方程呢
+  >>> [23:29] 再给我什么
+  >>> [23:31] 就是平面上两个不共线的向量
+  >>> [23:27] 你给了我一点坐标
+  >>> [23:26] 那除了这个之外
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 16. figures/fig_16_ex5_angle.png ===
+  page:       f_0110.png
+  source:     27:15
+  paragraph:  两平面 $x-y+2z-6=0$ 与 $2x+y+z-5=0$ 的夹角：$cos theta = abs(3)/(sqrt(6) sqrt(6)) = 1/2$，即 $pi/3$
+  caption:    【例5】解答：$n_1 = (1,-1,2)$、$n_2 = (2,1,1)$，内积为 $3$，模都是 $sqrt(6)$，$cos theta = 1/2$，夹角 $pi/3$
+  [OK]   figure file: figures/fig_16_ex5_angle.png
+  [OK]   source page: frames/f_0110.png
+  --- material context around this figure ---
+  >>> [27:12] 第二个平面的法向量呢是211
+  >>> [27:18] 那要求夹角
+  >>> [27:19] 先把夹角的余弦写出来
+      [27:09] 一负一二
+      [27:22] 也就是N1N2啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 17. figures/fig_17_relative_position.png ===
+  page:       f_0114.png
+  source:     28:15
+  paragraph:  两平面平行的充要条件 $A_1/A_2 = B_1/B_2 = C_1/C_2$（两向量平行）；两平面垂直的充要条件 $A_1 A_2 + B_1 B_2 + C_1 C_2 = 0$
+  caption:    两平面的位置关系：平行或重合 ⟺ 法向量平行（对应分量成比例）；垂直 ⟺ 法向量垂直（对应分量乘积之和为零）
+  [OK]   figure file: figures/fig_17_relative_position.png
+  [OK]   source page: frames/f_0114.png
+  --- material context around this figure ---
+  >>> [28:16] 那两平面既然能研究夹角
+  >>> [28:13] 这就是空间基锡几何
+  >>> [28:18] 就会出一些特殊的位置关系
+  >>> [28:11] 但是夹角已经出来了
+      [28:20] 比如说甲90度
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 18. figures/fig_18_ex6_solution.png ===
+  page:       f_0125.png
+  source:     31:00
+  paragraph:  已知平面法向量 $n_1 = (1,1,1)$，$arrow(M_1 M_2) = (-1,0,-2)$，叉乘得所求平面法向量 $(2,-1,-1)$
+  caption:    【例6】解答：$n = arrow(M_1 M_2) times n_1 = (2,-1,-1)$，点法式整理得 $2x - y - z = 0$
+  [OK]   figure file: figures/fig_18_ex6_solution.png
+  [OK]   source page: frames/f_0125.png
+  --- material context around this figure ---
+  >>> [31:00] 等于另一平面啊
+  >>> [31:01] 它的法向量是N1N和N1
+  >>> [30:56] 那如果我们设已知的这个X加Y加Z
+      [31:05] 他俩也垂直好了
+      [30:53] 两个代言人之间是垂直的
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 19. figures/fig_19_ex7_distance.png ===
+  page:       f_0144.png
+  source:     36:00
+  paragraph:  点 $(2,1,1)$ 到平面 $x+y+z-1=0$ 的距离：$d = abs(2+1+1-1)/sqrt(3) = 3/sqrt(3) = sqrt(3)$
+  caption:    【例7】解答：$d = abs(A x_0 + B y_0 + C z_0 + D)/sqrt(A^2+B^2+C^2)$，代入得 $3/sqrt(3) = sqrt(3)$
+  [OK]   figure file: figures/fig_19_ex7_distance.png
+  [OK]   source page: frames/f_0144.png
+  --- material context around this figure ---
+  >>> [36:00] 我怎么没看出来
+  >>> [36:01] 那下面呢我可以带着这部分的同学
+  >>> [35:57] 唉这个距离公式是怎么来的
+      [35:55] 唉但是呢如果你有点好奇
+      [36:05] 我们一起来推一下啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 20. figures/fig_20_distance_proof.png ===
+  page:       f_0153.png
+  source:     38:15
+  paragraph:  距离公式的推导：$d = abs(arrow(P_1 P_0) dot n)/abs(n)$，用投影一步到位
+  caption:    距离公式的推导：把 $d$ 看作 $arrow(P_1 P_0)$ 在法向量上的投影的绝对值，并由 $P_1$ 在平面上导出常数项 $-D$
+  [OK]   figure file: figures/fig_20_distance_proof.png
+  [OK]   source page: frames/f_0153.png
+  --- material context around this figure ---
+  >>> [38:14] 而剩下的是什么东西呢
+  >>> [38:17] 分子上法向量N啊
+      [38:10] 好
+      [38:10] 那这个时候你会发现咦这个模上下可以约一个
+      [38:20] 也就是AABC抽出来和P1P0做内积好
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 20 figures, 0 file problems

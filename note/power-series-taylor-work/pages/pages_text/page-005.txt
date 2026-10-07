@@ -1,0 +1,73 @@
+We will use Taylor’s formula to derive the series for sin(x) and cos(x) on the
+next page.
+Notice that the factorial appears in the denominator of all terms in all three
+power series above.
+Using the Taylor series of ex , we find a formula for the number e as the rapidly
+converging series:
+e=
+
+∞
+X
+1
+
+n!
+n=0
+
+.
+
+Known Maclaurin series
+So far, we have used Taylor’s formula to obtain the following Taylor series:
+∞
+X
+1
+•
+=
+xn for |x| < 1.
+1 − x n=0
+x
+
+• e =
+
+∞
+X
+xn
+n=0
+
+• sin x =
+
+n!
+
+∞
+X
+(−1)n x2n+1
+n=0
+
+• cos x =
+
+(2n + 1)!
+
+∞
+X
+(−1)n x2n
+n=0
+
+(2n)!
+
+.
+
+We have also integrated the geometric series to obtain a power series for ln(1 −
+x):
+• − ln(1 − x) =
+
+∞
+X
+xn
+
+n
+n=1
+
+.
+
+5
+
+

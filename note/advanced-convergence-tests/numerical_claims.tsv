@@ -1,0 +1,65 @@
+claim	value	source	in_notes
+积木长度	2	转录 v12	yes
+第一步悬挑	1（半块）	转录 v12	yes
+第二步悬挑	1/2（共 3/2）	转录 v12	yes
+c_1（第一块质心）	1	转录 v14	yes
+c_2	1+1/2=3/2	转录 v14	yes
+c_n 通项	1+1/2+1/3+…+1/n=S_n	转录 v14	yes
+质心递推	c_(n+1)=c_n+1/(n+1)	转录 v13	yes
+调和级数估计	log n < S_n < (log n)+1	转录 v14	yes
+跨两张实验桌	13 块=26 单位	转录 v14	yes
+需要 log n	24 → n=e^24	转录 v14	yes
+积木高度	3cm×e^24≈8×10^8 m≈2 倍地月距离	转录 v14	yes
+30 英尺墙对应高度	约可观测宇宙直径	转录 v14	yes
+直接比较前提	0≤a_n≤b_n (n≥N)	PDF p.1	yes
+直接比较结论	Σb_n 收敛⇒Σa_n 收敛；Σa_n 发散⇒Σb_n 发散	PDF p.1	yes
+极限比较条件	f(n)/g(n)→c≠0 有限；g(n)>0 (n>N)	PDF p.1	yes
+极限比较结论	Σf(n) 与 Σg(n) 同敛散	PDF p.1	yes
+等价写法	f(n)∼c·g(n)（f/(cg)→1）	PDF p.1	yes
+f/g→0 变体	Σg 收敛⇒Σf 收敛；Σf 发散⇒Σg 发散	PDF p.2	yes
+v9 例一	Σ1/√(n²+1)~Σ1/n 发散	转录 v9	yes
+v9 例二	Σ1/√(n⁵−n²)~Σ1/n^(5/2) 收敛，起点 n=2	转录 v9	yes
+p=1 分界	1 是分界线且恰好不成立	转录 v9	yes
+recitation A 量级	n/n³=1/n²；与 5/n² 比较	转录 v10	yes
+recitation A 极限	(5n³+2n²)/(5n³+5)→1	转录 v10	yes
+常数倍无关	5×收敛仍收敛，5×发散仍发散	转录 v10	yes
+recitation B 比值	(1+√5)/2>3/2>1	转录 v10	yes
+√5 大小	√5>2	转录 v10	yes
+recitation C 拆分	(ln n/n^(1/2))·(1/n^(3/2))<1/n^(3/2) 最终成立	转录 v10	yes
+ln 增长率	lim ln x/x^p=0（任意 p>0）	转录 v10	yes
+比值判别法	L=lim a_(n+1)/a_n；L<1 收敛，L>1 发散，L=1 无结论	PDF p.3	yes
+L=1 反例	Σ1/n 发散、Σ1/n² 收敛	转录 v11	yes
+比值证明夹逼数	r∈(L,1)；a_n/r^n 递减；a_n<k·r^n	转录 v11	yes
+Σ4ⁿ/(n·3ⁿ)	L=4/3>1 发散	转录 v11	yes
+Σn¹⁰/10ⁿ	L=1/10<1 收敛；(n+1)¹⁰/n¹⁰→1	转录 v11	yes
+根值判别法	L=lim|a_n|^(1/n)；三情形同比值	PDF p.3	yes
+n 次根极限	b^(1/n)→1；(n^p)^(1/n)→1；(n!)^(1/n)→∞	block16	yes
+ln 技巧	ln(lim b(n))=lim ln b(n)（极限为正或+∞）	block16	yes
+根值几何级数	L=x；x=1 时无信息	block17	yes
+Σn²/2ⁿ	L=1/2<1 收敛	block17	yes
+Σ3ⁿn⁴/4ⁿ	L=3/4<1 收敛	block17	yes
+绝对收敛定义	Σ|a_n| 收敛	PDF p.2	yes
+条件收敛定义	本身收敛但 Σ|a_n| 发散	PDF p.2	yes
+绝对收敛⇒收敛	|Σa_n|≤Σ|a_n|→0（Cauchy 片段）	block18	yes
+交错级数形式	±Σ(−1)ⁿc_n（c_n>0）	PDF p.4	yes
+交错级数条件	lim c_n=0 且 c_n 递减 ⇒ 收敛	PDF p.4	yes
+Σ(−1)^(n−1)/n	1−1/2+1/3−1/4+… 条件收敛	block19	yes
+Σ(−1)ⁿ/n^p	p>1 绝对收敛	block18	yes
+速查：几何级数	Σxⁿ：|x|<1 绝对收敛，|x|≥1 发散	PDF p.5	yes
+速查：p 级数	Σ1/n^p：p>1 收敛，p≤1 发散	PDF p.5	yes
+速查：Σ1/(n(ln n)^p)	p>1 收敛，p≤1 发散	PDF p.5	yes
+速查：Σ(ln n)/n^p	p>1 收敛，p≤1 发散	PDF p.5	yes
+速查：Σxⁿ/n!	任意 x 绝对收敛	PDF p.5	yes
+速查：Σxⁿ/n^p	|x|<1 任意 p 绝对收敛；|x|>1 任意 p 发散	PDF p.5	yes
+速查：Σn!/nⁿ	收敛	PDF p.5	yes
+单元规模	13 页、7 视频 56 分钟、21 题	block20	yes
+网页推导·对数搬移	ln(lim (n!)^(1/n)) = lim ln(n!)/n	网页 series2-tab8 Computation of the limit	yes
+网页推导·阶乘对数展开	ln(n!) = Σ_(k=2)^n ln k（ln1=0）	网页 series2-tab8	yes
+网页推导·右Riemann和≥积分	Σ_(k=2)^n ln k ≥ ∫_1^n ln x dx（ln x 递增）	网页 series2-tab8	yes
+网页推导·分部积分	∫_1^n ln x dx = n ln n − n + 1	网页 series2-tab8	yes
+网页推导·下界极限	(n ln n − n + 1)/n = ln n − 1 + 1/n → ∞	网页 series2-tab8	yes
+网页推导·结论	lim (n!)^(1/n) = e^∞ = ∞	网页 series2-tab8	yes
+比值/根值·绝对值版L	L=cases(lim|a_(n+1)/a_n|（比值）, lim|a_n|^(1/n)（根值）)	网页 series2-tab10-text2	yes
+绝对值版三结论	L<1 绝对收敛；L>1 发散；L=1 无结论	网页 series2-tab10-text2	yes
+L>1 附加信息	L>1 ⇒ lim a_n≠0 ⇒ 通项检验判 Σa_n 发散	网页 series2-tab10-text2	yes
+绝对值版用途	泰勒级数求收敛半径	网页 series2-tab10-text2	yes

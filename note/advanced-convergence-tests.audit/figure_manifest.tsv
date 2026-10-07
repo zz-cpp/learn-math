@@ -1,0 +1,8 @@
+figure	source	paragraph	caption
+fig-blocks-stack	transcript intro/v12 积木实验	从上往下贪心建，顶块悬空探出	一列积木第1块在左、第2块在右下方、每层依次右移，顶块完全超出底块左端，标注贪心步长 1/2、1/4
+fig-com-experiment	transcript v13 质心思想实验	前 n 块质心 c_n，新块中心 c_n+1，加权平均得 c_{n+1}	白色 n 块堆其质心 c_n，下方粉色新块中心 c_n+1，标 n 与 1 的加权平均公式
+fig-recurrence	transcript v14 调和级数	c_n=1+1/2+...+1/n，ln n < S_n < ln n+1	阶梯条带逐层增 1/(n+1)，两侧 ln n 与 ln n+1 曲线夹逼，阶梯发散箭头
+fig-lnx-growth	transcript v14 对数曲线	堆叠轮廓侧看是对数曲线，倒立看是指数曲线	log x 曲线缓升与 2^x 指数曲线对称对比，标"到月球高度才越过桌宽"
+fig-mainterm	transcript v9 limit comparison	1/√(n²+1)~1/n 发散；1/√(n^5-n²)~1/n^(5/2) 收敛	两条曲线 f/g→1 的尾部贴合示意，主项替换箭头
+fig-ratio-geom	transcript v11 比值证明	取 r∈(L,1)，a_n < K r^n	几何级数 K r^n 快速衰减包络 a_n 折线，r<1 压缩示意
+fig-abs-cond	PDF p2 绝对/条件收敛	two notions	Σa_n 与 Σ|a_n| 两条柱带，条件收敛=收敛但绝对值发散

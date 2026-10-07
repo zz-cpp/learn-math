@@ -1,0 +1,25 @@
+$ \displaystyle \sum _{n=0}^{\infty } x^n $
+$ \displaystyle = $
+$ \displaystyle \lim _{N\rightarrow \infty }\sum _{n=0}^{N} x^n. $
+$ x $
+$ \displaystyle \sum _{n=0}^{\infty } x^n $
+$ x \neq 1 $
+$ x\neq \pm 1 $
+$ x<1 $
+$ -1 < x < 1 $
+$ x $
+$ \ f $
+$ \displaystyle \displaystyle f(x)= \sum _{n=0}^{\infty } x^n\, $
+$ \ g(x) = \displaystyle \frac{1}{1-x} $
+$ \, \displaystyle f(x) $
+$ \, \displaystyle g(x) $
+$ x \neq 1 $
+$ x\neq \pm 1 $
+$ x<1 $
+$ -1 < x < 1 $
+$ x $
+$ x \neq 1 $
+$ x\neq \pm 1 $
+$ x<1 $
+$ -1 < x < 1 $
+$ x $

@@ -1,0 +1,6 @@
+Objectives
+Use direct comparison, limit comparison, the ratio test, the root test to determine if a positive series is convergent or divergent when possible.
+Know the difference between absolute convergence and conditional convergence.
+For alternating series, use the alternating series test to determine convergence.
+Contents: 13 pages
+7 videos (56 minutes 1x speed) 21 questions

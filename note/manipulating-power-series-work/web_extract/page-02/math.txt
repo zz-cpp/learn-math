@@ -1,0 +1,34 @@
+$ \displaystyle \displaystyle F(x) $
+$ \displaystyle = $
+$ \displaystyle \frac{G(x)}{H(x)} $
+$ \, F(x), \, G(x),\, H(x)\, $
+$ \, F(x)\, $
+$ \displaystyle \displaystyle F(x)H(x) $
+$ \displaystyle = $
+$ \displaystyle G(x). $
+$ \, F(x)\, $
+$ \, F(x)\, $
+$ \, H(x)\, =\, 0\, $
+$ \, G(x)\neq 0 $
+$ \displaystyle \, \tan (x)\, $
+$ 5 $
+$ \displaystyle \, \displaystyle \tan (x)\cos (x)\, =\, \sin (x). $
+$ a_0+a_1x+a_2 x^2+a_3x^3+a_4 x^4+a_5 x^5 $
+$ \, 5\, : $
+$ \, \tan (x)\, =\quad $
+$ R $
+$ R\leq $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $

@@ -1,0 +1,60 @@
+
+Welcome back to recitation.
+In this video, I
+want to talk to you
+about another test for
+convergence we have for series
+that you haven't really
+spent any time looking
+at this particular one.
+And it's pretty
+helpful, and it also
+will help us
+understand something
+about Taylor series, which
+I'll do in another video.
+So this is the ratio test.
+And you'll understand the
+name of this test momentarily.
+So we're going to
+start with a series
+that we'll just say-- we'll
+call each term a sub n.
+And I'm not going to
+tell you where n starts,
+because it doesn't matter.
+It's really going to
+only matter what's
+happening out at infinity.
+And to make things
+simpler, we're
+going to let all the
+terms be positive.
+
+If they're not positive, you
+can take the absolute value
+of all the terms and still
+make some conclusions in terms
+of absolute convergence.
+So that's just a
+little side bar,
+but let's just deal
+with all the terms
+positive so we don't have
+to worry about anything.
+And now what does
+the ratio test say?
+Well, the ratio test
+says that first, we
+consider a certain
+ratio-- the limit
+as n goes to infinity of a
+sub n plus 1 over a sub n.
+So we consider this limit.
+Well, that's your ratio.
+What is this doing?
+This is taking a term, and it's
+dividing by the previous term.
+You do that for all of
+the values for n as n
+goes to infinity, and you look

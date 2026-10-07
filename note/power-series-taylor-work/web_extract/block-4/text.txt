@@ -1,0 +1,36 @@
+### Review linear and quadratic approximations
+2 points possible (graded)
+Compare the function and its linear approximation through the point :
+Which of the following are necessarily true?
+(Check all that apply.)
+unanswered
+Compare the function and its quadratic approximation through the point :
+Which of the following are necessarily true?
+(Check all that apply.)
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+Food for thought
+Now we can imagine coming up with a best fit cubic function to our function at , the best fit 4th degree polynomial, 5th degree polynomial etc. If we continue this process to infinitely many terms, we end up with a power series whose derivatives all agree with the derivatives of our original function at the point .
+### Cubic approximations
+1 point possible (graded)
+Find the best cubic approximation to a function at the point .
+unanswered
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

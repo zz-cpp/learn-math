@@ -1,0 +1,8 @@
+{
+  "mode": "technical-slide",
+  "audience": "capable first-time reader",
+  "central_question": "一个函数（如 e^x、sin x、1/(1+x)）为什么、以及如何能被写成幂级数；这个级数在哪些 x 上才作数（收敛半径 R），以及具体怎么算 R、怎么造新级数？",
+  "reader_outcome": "能独立写出 Taylor 公式并用它推导 e^x/sin/cos 级数；能对任意给定幂级数用比值/根值法求出 R（包括 R=∞ 与 R=0 两种极端）；知道逐项微积分与级数加减的半径规则并举出官方练习实例；能识别 1/(1+x)、Σ x^n/n、Σ n!x^n/n^n、Σ n^n x^n 的半径分别是 1、1、e、0。",
+  "visual_teaching_atoms": 7,
+  "formula_teaching_atoms": 70
+}

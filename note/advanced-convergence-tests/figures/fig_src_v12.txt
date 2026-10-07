@@ -1,0 +1,50 @@
+
+Last time, we left
+off with a question
+having to do with
+playing with blocks.
+And this is supposed to give us
+a visceral feel for something
+anyway, having to
+do with series.
+And the question was whether
+I could stack these blocks.
+Build a stack, so that
+I'm going to try here up.
+I'm already off balance here.
+See?
+The question is,
+can I build this
+so that-- let's draw
+a picture of it.
+So that the first
+block is like this.
+The next block is like this.
+And maybe the next
+block is like this.
+And notice, there
+is no visible means
+of support for this block.
+It's completely to the
+left of the first block.
+And the question is,
+will this fall down?
+
+Or more precisely, eventually,
+we'll ask how far can we go?
+Now, before you
+answer this question,
+the claim is that this is a
+natural, physical question,
+which involves some
+important answer.
+No matter whether the answer
+is you can do it or you can't.
+So this is the good kind
+of math question, where
+no matter what the answer is, if
+when you figure out the answer,
+you're going to get something
+interesting out of it.
+Because there are
+two possibilities.

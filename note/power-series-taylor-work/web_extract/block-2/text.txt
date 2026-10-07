@@ -1,0 +1,112 @@
+### General power series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+So here is the general setup.
+The general setup is that we have
+not just the coefficients 1 all the time, but any numbers here.
+And we abbreviate that with this summation notation.
+This is the sum a_n x to the n, n equals 0 to infinity.
+And that's what's known as a power series.
+Fortunately, there is a very simple rule
+about how power series converge.
+And it's the following, there's a magic number R, which
+depends on these numbers here.
+And this thing is known as a radius of convergence.
+In the problem that we had, it's this number 1 here.
+This thing works for x less than 1.
+In our case, it's maybe x less than R. So that's
+some symmetric interval.
+That's the same as minus R less than x less than R
+where there's convergence, where the series converges.
+And then there is the region where
+every computation that you give will give you nonsense.
+So x greater than R is the sum a_n x to the n diverges.
+And x equals R is a very delicate borderline
+and will not be used by us.
+We're going to stick inside the radius of convergence.
+Now the way you'll be able to recognize
+this is the following, what always happens
+is that these numbers tend to 0 exponentially fast,
+fast for x less than R and doesn't even
+tend to 0 at all for x greater than R.
+It'll be totally obvious.
+When you look at this series here,
+what's happening when x less than R
+is that the numbers are getting smaller and smaller, less
+than 1.
+When x is bigger than 1, the numbers
+are getting bigger and bigger.
+There is no chance that the series converges.
+So that's going to be the case with all power series.
+There is going to be a cutoff, and it
+will be one particular number.
+And below that, it will be obvious
+that you have convergence and you'll
+be able to do computations.
+And above that, every formula will be wrong
+and won't make sense.
+So it's a very clean thing.
+There is this very subtle borderline,
+but we're not going to discuss that in this class.
+And It's actually not used in direct studies of power series.
+How do you tell when the numbers are declining exponentially
+fast versus just-- in other words, 1 over x--
+So the question is why was I able to tell you
+this word here?
+Why I was able to tell you not only is it going to 0,
+but it's going exponentially fast?
+I'm telling you extra information.
+I'm telling you it always goes exponentially fast.
+You can identify it.
+In other words, you will see it.
+And it will happen every single time.
+I'm just promising you that it works that way.
+And it's really for the same reason
+that it works that way here, that these are powers.
+And what's going on over here is it's close to powers with these
+a_n's.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+For simplicity, we will start with power series centered at the point In the following text, the term “power series" is short for such a power series.
+A power series is a series involving only non-negative powers of a variable :
+(3.139)
+Note that the coefficients can be zero, and therefore a power series may have finitely many non-zero terms.
+The radius of convergence of the power series , is a real number such that
+for , the power series converges (to a finite number);
+for , the power series diverges;
+for , the power series may converge or diverge. But we will mostly ignore what happens at the end points of the interval of convergence.
+Examples:
+Geometric series: , radius of convergence is .
+Polynomials are power series, because polynomials can be written as infinite series where for all . The radius of convergence for any polynomial is . In other words, the sum converges for all .
+### Identify the power series
+1 point possible (graded)
+Which of the following expressions are power series? (Check all that apply.)
+unanswered
+Show answer
+Submit
+You have used 0 of 2 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

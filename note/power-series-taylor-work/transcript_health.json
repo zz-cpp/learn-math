@@ -1,0 +1,17 @@
+{
+  "healthy": true,
+  "mode": "txt",
+  "entry_count": 2158,
+  "word_count": 10187,
+  "first_timestamp": null,
+  "last_timestamp": null,
+  "coverage": 1.0,
+  "repetition_ratio": 0.0,
+  "windows": {
+    "start": true,
+    "middle": true,
+    "end": true
+  },
+  "estimated_duration_minutes": 67.9,
+  "reasons": []
+}

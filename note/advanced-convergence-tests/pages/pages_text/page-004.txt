@@ -1,0 +1,44 @@
+1
+
+C. lim (n!) n = ∞
+n→∞
+
+To evaluate these limits, we use
+
+
+ln lim b(n) = lim ln(b(n))
+n→∞
+
+n→∞
+
+provided lim b(n) is positive or +∞.
+n→∞
+
+Alternating series
+An alternating series is a series whose terms alternate in signs. That is, an
+alternating series takes the form
+±
+
+∞
+X
+(−1)n cn
+
+where cn ≥ 0.
+
+n=1
+
+There is a simple test for convergence of an alternating series.
+(
+lim cn = 0,
+n→∞
+If for all n large enough,
+cn decreases as n increases,
+∞
+X
+(−1)n cn , where cn ≥ 0, converges.
+then ±
+n=1
+
+4
+
+

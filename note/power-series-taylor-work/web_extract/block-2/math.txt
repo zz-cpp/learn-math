@@ -1,0 +1,30 @@
+$ x=0.\, $
+$ x $
+$ \displaystyle \displaystyle f(x) $
+$ \displaystyle = $
+$ \displaystyle a_0+a_1x + a_2 x^2 + a_3 x^3 + \dotsb $
+$ \displaystyle = $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n. $
+$ a_i $
+$ R $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n $
+$ 0 \leq R < \infty $
+$ |x|<R $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n $
+$ |x|>R $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n $
+$ |x| = R $
+$ \displaystyle 1+ x + x^2 + x^3 + \dotsb = \sum _{n=0}^{\infty } x^n $
+$ 1 $
+$ \displaystyle a_0 + a_1x + a_2x^2 + \dotsb a_N x^N = \sum _{n=0}^{N} a_n x^n $
+$ \displaystyle \sum _{n=0}^{\infty } a_n x^n $
+$ a_m=0 $
+$ m>N $
+$ \infty $
+$ x $
+$ 1 $
+$ x $
+$ 1/x $
+$ \displaystyle 3-x+\frac{x^3}{2} $
+$ \displaystyle \sum _{n=-5}^{5} n\, x^n $
+$ \displaystyle \sum _{n=0}^{\infty } n\, x^n $

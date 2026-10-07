@@ -1,0 +1,158 @@
+Consider another power series
+
+∞
+X
+
+bn xn , which converges for |x| < B.
+
+n=0
+
+• If A 6= B, then
+
+∞
+X
+
+!
+an x n
+
+∞
+X
+
+±
+
+!
+bn x n
+
+=
+
+(an ± bn )xn converges for
+
+n=0
+
+n=0
+
+n=0
+
+∞
+X
+
+|x| < min(A, B).
+• If A = B , then
+
+∞
+X
+
+!
+an x n
+
+±
+
+∞
+X
+
+!
+bn x n
+
+n=0
+
+n=0
+
+=
+
+∞
+X
+(an ± bn )xn has a radius
+n=0
+
+of convergence which is at least A, but it could have a larger radius of
+convergence.
+
+Taylor’s formula
+Recall that n! = n(n − 1)(n − 2) · · · (3)(2)(1) for all integers n ≥ 1 .
+We define 0! = 1 . This is a very valuable convention that simplifies many
+formulas.
+Taylor’s formula says that
+x2
+x3
++ f 000 (0) + · · ·
+2
+6
+0
+00
+000
+f (0) 2 f (0) 3
+f (0) 0 f (0)
+x +
+x+
+x +
+x + ···
+=
+0!
+1!
+2!
+3!
+∞
+X
+f (n) (0) n
+=
+x
+n!
+n=0
+
+f (x) = f (0) + f 0 (0)x + f 00 (0)
+
+when |x| < R where R is the radius of convergence of the power series above.
+The power series in Taylor’s formula is called the Taylor series of f (x) .
+Important examples
+• ex =
+
+∞
+X
+xn
+n=0
+
+• sin x =
+
+n!
+
+∞
+X
+(−1)n x2n+1
+n=0
+
+• cos x =
+
+= 1+x+
+
+(2n + 1)!
+
+∞
+X
+(−1)n x2n
+n=0
+
+(2n)!
+
+x2 x3
++
++ ···
+2!
+3!
+= x−
+
+= 1−
+
+x3 x 5
++
++ ···
+3!
+5!
+
+x2 x4
++
++ ···
+2!
+4!
+4
+
+

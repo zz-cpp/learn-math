@@ -1,0 +1,19 @@
+{
+  "platform": "bilibili",
+  "bvid": "BV1yy421z7C6",
+  "url": "https://www.bilibili.com/video/BV1yy421z7C6",
+  "title": "从入门到高手！空间平面方程40min彻底通透！|高数下 考研数一专项",
+  "lecture_title_cn": "空间平面方程",
+  "section": "8.3",
+  "uploader": "一高数",
+  "uploader_mid": 1035929235,
+  "season": "高等数学（下）全集！从入门到精通",
+  "duration": 2415.85,
+  "duration_min": 40.26,
+  "subtitle_source": "bilibili ai-zh (CC, downloaded via yt-dlp --cookies-from-browser chrome)",
+  "download": {
+    "video": "video.mp4 (bestvideo[height<=1080]+bestaudio)",
+    "cover": "video.jpg",
+    "subtitle": "video.ai-zh.srt"
+  }
+}

@@ -1,0 +1,334 @@
+### Facts about power series
+#### No playable video sources found.
+#### Your browser does not support this video format. Try using a different browser.
+(Caption will be displayed when you start playing the video.)
+0:00 / 0:00
+Press UP to enter the speed menu then use the UP and DOWN arrow keys to navigate the different speeds, then press ENTER to change to the selected speed.
+Speed 2.0x
+2.0x
+1.50x
+1.25x
+1.0x
+0.75x
+Click on this button to mute or unmute this video or press UP or DOWN buttons to increase or decrease volume level.
+Maximum Volume.
+### Video transcript
+Start of transcript. Skip to the end.
+OK.
+So now I need to give you the basic facts
+and give you a few examples.
+So why are we looking at these series?
+Well, the answer is we're looking at these series
+because the role that they play is exactly
+the reverse of this equation here.
+That is, and this is a theme which
+I've tried to emphasize throughout this course,
+you can read equalities in two directions.
+Both are interesting typically.
+You can think, I don't know what the value of this is.
+Here's a way of evaluating it.
+In other words, the right side is a formula for the left side.
+Or you can think of the left side
+as being a formula for the right side.
+And the idea of series is that they're flexible enough
+to represent all of the functions
+that we've encountered in this course.
+This is the tool which is very much
+like the decimal expansion, which
+allows you to represent numbers like the square root of 2.
+Now we're going to be representing
+all the numbers, all the functions that we know,
+e to the x, arctangent, sine, cosine, all of those functions
+become completely flexible and completely available to us
+and computationally available to us directly.
+So that's what this is a tool for.
+And it's just like decimal expansion is giving you
+a handle on all real numbers.
+So here's how it works.
+The rules for convergent power series
+are just like polynomials.
+All of the manipulations that you do for power series
+are essentially the same as for polynomials.
+So what kinds of things do we do with polynomials?
+We add them.
+We multiply them together.
+We do substitutions.
+Right?
+We take one function of another function.
+We divide them.
+OK?
+And these are all really not very surprising operations.
+And we'll be able to do them with power series too.
+The ones that are interesting, really interesting
+for calculus, are the last two.
+We differentiate them, and we integrate them.
+And all of these operations we'll
+be able to do for power series as well.
+So now, let's explain the high points
+of this, which is mainly just the differentiation
+and the integration part.
+So if I take a series like this and so forth,
+the formula for its derivative is just like polynomials.
+That's what I just said.
+It's just like polynomials.
+So the derivative of the constant is 0.
+The derivative of this term is a_1.
+This one is plus 2, a_2 x.
+This one is 3 a_3 x squared plus et cetera.
+That's the formula.
+Similarly, if I integrate, well, there's
+an unknown constant, which I'm going to put first
+rather than last, which corresponds
+sort of to the a_0 term, which is going to get wiped out.
+That a_0 term suddenly becomes a_0 x.
+And the anti-derivative of this next term
+is a_1 x squared over 2.
+And the next term is a_2 x cubed over 3 and so forth.
+Yeah, question.
+Is that a series though or a polynomial?
+Is this a series or a polynomial?
+Good question.
+It's a polynomial if it ends.
+If it goes on infinitely far, then it's a series.
+They look practically the same, polynomials and series.
+There is this little dot, dot, dot here.
+Is this a series or a polynomial?
+It's the same rule.
+If it stops at a finite stage, this one
+stops at a finite stage.
+If it goes on forever, it goes on forever.
+So I thought that series add up finite numbers.
+You can add up terms of x and see?
+Oh.
+So an interesting question.
+So the question that was just asked
+is I thought that a series added up finite numbers.
+You could add up x?
+That was what you said, right?
+OK, now notice that I pulled that off
+on you by changing the letter a to the letter
+x at the very beginning of this commentary here.
+This is a series.
+For each individual value of x, it's a number.
+So in other words, if I plug in here, x equals 1/2,
+I'm going to add 1 plus 1/2 plus a 1/4 plus 1/8,
+and I'll get a number, which is two.
+And I'll plug in a number over here, and I get a number.
+On the other hand, I can do this for each value of x.
+So the interpretation of this is that it's a function of x.
+And similarly, this is a function of x.
+It works when you plug in the possible values
+of x between minus 1 and 1.
+So there's-- so then there's really no distinction there.
+It's just I slipped it past you.
+These are functions of x.
+And the notion of a power series is this idea
+that you put coefficients on a series,
+but then you allow yourself the flexibility
+to stick powers here.
+And that's exactly what we're doing.
+OK?
+There are other kinds of series where
+you stick other interesting functions in here
+like sines and cosines.
+There are lots of other series that people study.
+And these are the simplest ones.
+And all of those examples are extremely
+helpful for representing functions.
+But we're only going to do this example here.
+End of transcript. Skip to the start.
+### Downloads and transcripts
+#### Video
+Download video file
+#### Transcripts
+Download SubRip (.srt) file
+Download Text (.txt) file
+Add, subtract, multiply, divide, differentiate, and integrate convergent power series as one does for polynomials. We will discuss multiplication and division at a later time.
+Consider the power series which converges for .
+The derivative also converges for .
+The integral also converges for . Note that is the constant of integration.
+Consider another power series , which converges for .
+If , then converges for .
+If , then has a radius of convergence which is at least , but it could have a larger radius of convergence.
+### Adding power series
+2 points possible (graded)
+Consider the sum of the two power series and .
+Find the power series, and find its radius of convergence .
+unanswered
+(If the power series does not converge, type . If it converges for all type infty for .)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Differentiating power series
+2 points possible (graded)
+Differentiate the power series for to find the power series for . (Note the summation index starts at .)
+unanswered
+What is the radius of convergence for this series?
+(If the power series does not converge, type . If it converges for all type infty for .)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review
+### Integrating power series
+3 points possible (graded)
+Use power series integration on the power series for to find the power series for of the form
+(Note the summation index starts at .)
+unanswered
+unanswered
+What is the radius of convergence for this series?
+(If the power series does not converge, type . If it converges for all type infty for .)
+unanswered
+?FORMULA INPUT HELP
+Formula Input Guide×
+Allowable Entries
+Descriptions
+Example Entries
+Numbers
+Integers
+2520
+Fractions
+2/3
+Decimals
+3.14, .98
+Operators
++ - * / (add, subtract, multiply, divide)
+Enter (x+2*y)/(x-1) for
+^ (raise to a power)
+Enter x^(n+1) for
+_ (add a subscript)
+Enter v_0 for
+Use ( ) to clarify order of operations
+Enter (2+3)*2 for 10 Enter 2+3*2 for 8
+Greek letters
+Enter (english) name of letter
+Enter alpha for Enter lambda for
+Mathematical constants
+e, pi
+Enter e^x for Enter 2*pi for
+Basic functions
+abs, ln, log, log_2, sqrt
+Enter abs(x+y) for Enter sqrt(x^2-y) for
+Trigonometric functions
+sin, cos, tan, sec, csc, cot
+Enter sin(4*x+y)^2 for
+arcsin, arccos, arctan, etc.
+Enter arctan(x^2/3) for
+sinh, cosh, arcsinh, etc.
+Enter cosh(4*x+y) for
+Differentials
+dx, dy
+Enter a function followed by differential. You must multiply by the differential.
+Enter e^x*dx for
+Enter (2*pi+y)*dy for
+Close Guide
+Show answer
+Submit
+You have used 0 of 3 attempts
+Grading method: Last Score
+Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+Review
+None
+Review
+Answers are displayed within the problem
+Review

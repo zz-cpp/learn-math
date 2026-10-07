@@ -1,0 +1,365 @@
+=== 1. fig01-shift-subtract.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v1 几何级数证明段
+  paragraph:  "There's a very, very substantial cancellation. This whole tail here gets canceled off. And the only thing that's left is the 1."
+  caption:    两行错位级数、划消尾部、只剩 1 与 S(1-x)=1
+  [OK]   figure file: figures/fig01-shift-subtract.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. fig02-radius-numberline.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v1/v2 收敛半径段 + PDF p1
+  paragraph:  "minus R less than x less than R where there's convergence... x equals R is a very delicate borderline"
+  caption:    数轴三区段|-R<R 绿色收敛|R 外红色发散|端点空心
+  [OK]   figure file: figures/fig02-radius-numberline.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. fig03-partials-to-2.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v4 x=1/2 段
+  paragraph:  "if I plug in x equals 1/2... I'll get a number, which is two... it's a function of x"
+  caption:    几何级数部分和 1、1+x/2、…曲线向 y=2 逐点靠拢
+  [OK]   figure file: figures/fig03-partials-to-2.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. fig04-sin-approx.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v4/v8 sin 级数段
+  paragraph:  "If you take enough terms, you'll get a good evaluation of the sine of x for any x"
+  caption:    sin 曲线与三次近似 x-x³/3! 在原点贴合
+  [OK]   figure file: figures/fig04-sin-approx.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. fig05-pole-1over1plusx.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v7 pole 段与课堂问答
+  paragraph:  "The graph has a pole there, goes up to infinity at x equals minus 1"
+  caption:    y=1/(1+x) 曲线、x=-1 极点虚竖线、+1 处光滑但 R=1 标注
+  [OK]   figure file: figures/fig05-pole-1over1plusx.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. fig06-three-families.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v5 三函数家族段
+  paragraph:  "The sine is all the odd powers with alternating signs, and the cosine is all the even powers with alternating signs..."
+  caption:    e^x/sin/cos 各自部分和曲线对比
+  [OK]   figure file: figures/fig06-three-families.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. fig07-poly-partials.png ===
+  page:       -
+  source:     CeTZ 重绘：转录 v6 多项式例题
+  paragraph:  "This is the function, again. It's exactly were we start at"
+  caption:    多项式 1-2x+4x²+3x³ 的 0/1/2/3 阶部分和曲线，三次部分和与原曲线重合
+  [OK]   figure file: figures/fig07-poly-partials.png
+  --- material context around this figure ---
+  [line 1059] 1/2 plus a 1/4 plus 1/8,
+  [line 1060] and I'll get a
+  [line 1061] number, which is two.
+  [line 1062] And I'll plug in a number
+  [line 1063] over here, and I get a number.
+  [line 1064] On the other hand, I can do
+  [line 1065] this for each value of x.
+  [line 1066] So the interpretation of this
+  [line 1067] is that it's a function of x.
+  [line 1068] And similarly, this
+  [line 1069] is a function of x.
+  [line 1070] It works when you plug
+  [line 1071] in the possible values
+  [line 1072] of x between minus 1 and 1.
+  [line 1073] So there's-- so then there's
+  [line 1074] really no distinction there.
+  [line 1075] It's just I slipped it past you.
+  [line 1076] These are functions of x.
+  [line 1077] And the notion of a
+  [line 1078] power series is this idea
+  [line 1079] that you put
+  [line 1080] coefficients on a series,
+  [line 1081] but then you allow
+  [line 1082] yourself the flexibility
+  [line 1083] to stick powers here.
+  [line 1084] And that's exactly
+  [line 1085] what we're doing.
+  [line 1086] There are other
+  [line 1087] kinds of series where
+  [line 1088] you stick other interesting
+  [line 1089] functions in here
+  [line 1090] like sines and cosines.
+  [line 1091] There are lots of other
+  [line 1092] series that people study.
+  [line 1093] And these are the simplest ones.
+  [line 1094] And all of those
+  [line 1095] examples are extremely
+  [line 1096] helpful for
+  [line 1097] representing functions.
+  [line 1098] But we're only going to
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 7 figures, 0 file problems

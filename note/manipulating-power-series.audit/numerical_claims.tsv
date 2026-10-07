@@ -1,0 +1,55 @@
+claim	value	source	in_notes
+旧级数造新级数	可加、乘、代换、逐项微分/积分、除法，规则同多项式	web p1 开篇 + PDF p1	yes
+x·sin x 乘法	x·sin x = x² - x⁴/3! + x⁶/5! - ...；R=min(∞,∞)=∞	转录 v9	yes
+奇偶性观察	x（奇）×sin x（奇）=偶函数：级数全为偶次幂	转录 v9	yes
+多项式乘积系数	p(x)=1+x-2x²+(2/3)x³-3x⁴+9x⁶ 与 q(x)=3-2x+x²+x³+(4/3)x⁵ 的 x³ 系数 = 8	web p1 (3.214/3.215)	yes
+幂级数乘积系数	同 p,q 的 x³ 系数用卷积仍 = 8（"Does this look familiar?"）	web p1 (3.219/3.220)	yes
+乘积半径规则	两幂级数乘积收敛于 |x|<min(A,B)，但半径可能更大	PDF p1 + web p1	yes
+e^x·cos x	乘积的 R=∞；x⁴ 系数 = 1/24 - 1/4 + 1/24 = -1/3	web p1	yes
+e^a e^b 定理	总次数 2 项=(a+b)²/2!、次数 3 项=(a+b)³/3!、n 项用二项定理=(a+b)^n/n! ⇒ e^a e^b=e^{a+b}	web p1 (3.228-3.238)	yes
+除法规则	F=G/H ⇒ F·H=G 逐次幂解系数；F 发散当 H=0 且 G≠0；半径难追踪	PDF p1 + web p2	yes
+sec x 直接法	f(0)=1, f'(0)=0（sec'tan 在 0 为 0）, f''(0)=1 ⇒ sec x = 1 + x²/2 + ...	转录 v10	yes
+sec x 奇偶	sec 是偶函数（cos 偶）⇒ 所有奇次幂系数 0（x³ 项 = 0）	转录 v10	yes
+sec x 乘积法	sec·cos=1 ⇒ 逐次幂解出 a_4=5、a_6=61（1/24-1/4+a_4/24=0）	转录 v10	yes
+幂级数长除法	从最低阶项开始（与多项式从最高阶相反），与乘积法等价	转录 v10	yes
+tan 官方练习	tan·cos=sin 逐度解出 tan 到 5 次项；半径上界 R≤π/2（tan 在 π/2 有极点）	web p2 (3.241)	yes
+逐项求导例	sin x 逐项求导得 cos x（3!/3→2!、5!/5→4! 消去）	转录 v11	yes
+积分保半径	逐项微分/积分不改变半径（端点可能变）	转录 v11/v12 + PDF	yes
+ln(1+x) 级数	∫₀^x dt/(1+t) = ln(1+x) = x - x²/2 + x³/3 - x⁴/4 + ...；R=1	转录 v11	yes
+Euler 用级数算对数	Euler 用幂级数大幅提高对数计算效率	转录 v11	yes
+识别级数法	f(x)=1+2x+3x²+4x³+5x⁴+...：积分→c+x+x²+x³+...，取 c=1 得 1/(1-x)，⇒ f=1/(1-x)²（x∈(-1,1)，端点发散）	转录 v12	yes
+e^{-x} 级数	代入 -x：e^{-x} = 1 - x + x²/2! - x³/3! + x⁴/4!...；R=∞	web p3	yes
+sinh 定义与级数	sinh x=(e^x-e^{-x})/2；奇数项保留：sinh x = x + x³/3! + x⁵/5! + ...；R=∞	web p3 (3.252)	yes
+cosh 微积分一结论	d/dx sinh = cosh；∫sinh = cosh + C（逐项到 4 次）	web p3	yes
+cosh 三例	cosh x=(e^x+e^{-x})/2 ⇒ Σ x^{2n}/(2n)!（奇项死掉、偶数项翻倍）；与 cos 的"巧合"	转录 v13	yes
+2 sin x cos x=sin 2x	用三角恒等式代入 2x：Σ(-1)^n 2^{2n+1}x^{2n+1}/(2n+1)!	转录 v13	yes
+x ln(1-x³) 级数	ln(1+x) 代 -x³ 得 -x³-x⁶/2-x⁹/3-...，乘 x 得 -x⁴-x⁷/2-x^10/3-x^13/4-...	转录 v13	yes
+代换规则	f(p(x)) 收敛当 |p(x)|<R；本课只代多项式（尤其 p(x)=axⁿ，p(0)=0）	PDF p2 + web p4	yes
+sin(2x⁵)+sinh(2x⁵) 练习	前三个非零项：2x⁵ + (2x⁵)³/3! + (2x⁵)⁵/5! = 2x⁵ + 8x^15/6 + 32x^25/120？即 sin u+sinh u=2Σu^{4n+1}/(4n+1)!，u=2x⁵	web p4	yes
+识别 A	Σ x^{n+2}/n! = x²·Σxⁿ/n! = x² e^x；R=∞	转录 v14 + web p5	yes
+识别 B	Σ_{n=2}^∞ xⁿ = 1/(1-x) - 1 - x；R=1	转录 v14 + web p5	yes
+识别 C	Σ(xⁿ/n! + xⁿ) = e^x + 1/(1-x)；R=min(∞,1)=1	转录 v14 + web p5	yes
+识别 D	Σ_{n=-1}^∞ x^{n+1} 换下标 m=n+1 ⇒ Σ x^m = 1/(1-x)；R=1	转录 v14 + web p5	yes
+识别级数 1	Σ x^{n+2}/n! 的 R=∞；Σ_{n=2}^∞ xⁿ 的 R=1；Σ(xⁿ/n!+xⁿ) 的 R=1；Σ_{n=-1}^∞ x^{n+1} 的 R=1	web p5（4 级数 R 表）	yes
+sin(x²) 识别	x² - x⁶/3! + x^10/5! - x^14/7! + ... = sin(x²)（u=sin x 代入 u=x²）；|x|<∞	web p5	yes
+Σ(n+2)(n+1)xⁿ 识别	= 2/(1-x)³（n=0 项 2, n=1 项 6, n=2 项 12, n=3 项 20；∫ 得 Σxⁿ·...）|x|<1	web p5	yes
+Σ(-x)^{6n+1}/(2n)! 识别	= -x·cosh(x³)（或 -x cosh(x³) 型，无交错符号）（待核对转录/答案）	web p5	yes
+erf 定义	erf(x)=2/√π ∫₀^x e^{-t²}dt；归一使 x→∞ 值→1；概率论重要；无法用已知函数代数表示	web p6 + 转录 v15	yes
+e^{-t²} 级数	代入 -t²：1 - t² + t⁴/2! - t⁶/3! + ...（符号交替、全偶幂）	转录 v15	yes
+erf 级数	2/√π (x - x³/3 + x⁵/(5·2!) - x⁷/(7·3!) + ...) = 2/√π Σ(-1)^n x^{2n+1}/((2n+1)n!)	web p6 + 转录 v15	yes
+Fresnel 练习	∫₀^x sin(t²)dt = x³/3 - x⁷/(3!·7) + x^11/(5!·11) - ...；R=∞	web p6	yes
+Taylor 多项式定义	P_n(x)=a_0+a_1x+...+a_n xⁿ（截断到 n 次）；P_1 线性近似、P_2 二次近似	web p7 + PDF p2-3	yes
+最佳拟合性质	P_n^{(k)}(0)=f^{(k)}(0)（0<k≤n）；P_n 是 f 在 0 的 n 阶最佳多项式	web p7	yes
+余项定理	若 f 在 (0,x) n+1 阶可导、f^{(n)} 在 [0,x] 连续，则存在 c∈(0,x)：R_n(x)=f(x)-P_n(x)=f^{(n+1)}(c)/(n+1)! x^{n+1}	web p7 + PDF p3	yes
+n=0 特例	余项定理 n=0 就是中值定理（MVT）	web p7 + PDF p3	yes
+余项半径外成立	R_n 公式对半径外 x 也真；|x|<R 时 lim R_n=0 ⇒ 任意精度	web p7	yes
+余项证明思想	取 a=R_n(x)/x^{n+1}，F_n(t)=R_n(t)-a t^{n+1}；F_n(x)=F_n(0)=...=F_n^{(n)}(0)=0；Rolle 迭代 n+1 次得 c，F_n^{(n+1)}(c)=f^{(n+1)}(c)-(n+1)!a=0	web p7 (3.300-3.312)	yes
+erf 误差示例	errf 导数：erf'=2/√π e^{-x²}、erf''=2/√π(-2x)e^{-x²}、erf'''=4/√π e^{-x²}(2x²-1)；|erf'''(c)|<4/√π（0<c<1）⇒ |erf(1)-P_2(1)| < (4/√π)/3! = (1/3)(2/√π)	web p8	yes
+√2 练习	f(x)=√(1+x)，P_3(1)=1+1/2-1/8+1/16=23/16≈1.4375；误差 R_3(1)=f^{(4)}(c)/4!=(-15/16)(1+c)^{-7/2}/24 = -5/32(1+c)^{-7/2}；max|·|于[0,1] = 5/32≈0.15625	web p8	yes
+e 练习	|R_n|=e^c/(n+1)!≤3/(n+1)!（c∈(0,1)）；最小 n 使 3/(n+1)!<5×10⁻⁵ ⇒ n=8；P_8(1)≈2.7182788→2.7183（4 位小数正确）	web p8	yes
+无特殊点说法	在 a 点展开无任何本质特殊；可用平移 g(t)=f(t+a) 从 Maclaurin 得到	web p9/10 + PDF p4	yes
+a 点线性/二次	T_1(x)=f(a)+f'(a)(x-a)；T_2(x)=f(a)+f'(a)(x-a)+f''(a)/2!(x-a)²	web p9	yes
+x=a 处 Taylor 公式	f(x)=Σf^{(n)}(a)/n!(x-a)ⁿ（|x-a|<R）；a=0 回到 Maclaurin	web p10 + PDF p4	yes
+多项式在 a 展开	f(x)=3x³+4x²-2x-1 在 x=-1：a_0=2, a_1=-1, a_2=-5, a_3=3（f(-1)=2, f'(-1)=-1, f''(-1)=-10, f'''=18）	web p10	yes
+e^x 在 a 的 n 阶项	e^a (x-a)^n / n!	web p10	yes
+1/(1-x) 在 x=2	前 4 非零项：-1+(x-2)-(x-2)²+(x-2)³；|x-2|<1（f(2)=-1, f'(2)=1, f''(2)=-2, f'''(2)=6）	web p10	yes

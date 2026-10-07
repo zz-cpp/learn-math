@@ -1,0 +1,52 @@
+claim	value	source	in_notes
+积木问题设定	能否让顶块完全位于底块左边且不倒塌	transcript intro/v12	yes
+两种可能前景	有限极限（有趣数字）或无限远（也有趣）	transcript intro/v12	yes
+倒着装策略	从上往下构建，每步贪心最优	transcript intro/v12	yes
+硬件限制	顶块最左边伸出不超过半块长度	transcript intro/v12	yes
+块长单位	令块长=2，中心在1	transcript v13	yes
+第一步偏移	第1块中心 c_1=1，接第2块伸出1	transcript v13	yes
+质心原理	新块底部放在前n块质心 c_n 处	transcript v13	yes
+第二步偏移	第2块质心 3/2，c_2=3/2	transcript v13	yes
+新块质心位置	第n+1块中心为 c_n+1（块长2）	transcript v13	yes
+加权平均公式	c_{n+1} = (n c_n + (c_n+1))/(n+1)	transcript v13	yes
+递推化简	c_{n+1} = c_n + 1/(n+1)	transcript v13	yes
+c_n 公式	c_n = 1 + 1/2 + 1/3 + ... + 1/n（调和级数）	transcript v14	yes
+调和级数估计	ln n < S_n < ln n + 1	transcript v14	yes
+发散结论	S_n→∞，可任意远（块数足够）	transcript v14	yes
+e^24 计算	需 ln n=24，即 n=e^24	transcript v14	yes
+月球距离	3cm×e^24 ≈ 8×10^8 m ≈ 2倍地月距离	transcript v14	yes
+30英尺墙	可观测宇宙直径量级	transcript v14	yes
+对数曲线比喻	侧看堆叠轮廓是对数曲线，倒立看是指数曲线	transcript v14	yes
+视频页数	13块=26单位，需24单位（减首块2）	transcript v14	yes
+limit comparison 主公式	f(n)/g(n)→1（或c≠0），g>0，则同敛散	transcript v9 + PDF p1	yes
+例1	1/√(n²+1) ~ 1/n，发散	transcript v9	yes
+例2	1/√(n^5-n²) ~ 1/n^(5/2)，收敛（n从2起）	transcript v9	yes
+直接比较定理	0≤a_n≤b_n：b收敛则a收敛；a发散则b发散	PDF p1	yes
+limit comparison 退化版	f/g→0 则 g收敛 ⇒ f收敛；f发散 ⇒ g发散	PDF p2	yes
+绝对收敛定义	Σ|a_n| 收敛	PDF p2	yes
+条件收敛定义	Σa_n 收敛但非绝对收敛	PDF p2	yes
+绝对收敛定理	绝对收敛 ⇒ 收敛	PDF p2	yes
+正项级数	正项时两概念相同	PDF p2	yes
+比值判别法 L	L = lim |a_{n+1}/a_n|	transcript v11 + PDF p3	yes
+比值判别法结论	L<1 收敛；L>1 发散；L=1 无结论	transcript v11 + PDF p3	yes
+比值判别法证明	取 r∈(L,1)，a_n < Kr^n，与几何级数比较	transcript v11	yes
+例3 1/n	比值极限=1，无结论（但发散）	transcript v11	yes
+例4 1/n²	比值极限=1，无结论（但收敛）	transcript v11	yes
+例5 4^n/(n·3^n)	比值=4/3>1，发散	transcript v11	yes
+例6 n^10/10^n	比值=1/10<1，收敛	transcript v11	yes
+根值判别法 L	L = lim |a_n|^(1/n)	PDF p3	yes
+根值判别法结论	L<1 收敛；L>1 发散；L=1 无结论	PDF p3	yes
+根值极限例A	lim b^(1/n)=1（b>0）	PDF p3	yes
+根值极限例B	lim (n^p)^(1/n)=1（p>0）	PDF p3	yes
+根值极限例C	lim (n!)^(1/n)=∞	PDF p3	yes
+取对数技巧	ln lim b(n) = lim ln b(n)	PDF p3	yes
+交错级数形式	±Σ(-1)^n c_n，c_n≥0	PDF p4	yes
+莱布尼茨判别法	c_n→0 且递减 ⇒ 收敛	PDF p4	yes
+级数速查表x^n	|x|<1 绝对收敛，|x|≥1 发散	PDF p5	yes
+级数速查表1/n^p	p>1收敛，p≤1发散	PDF p5	yes
+级数速查表1/(n(ln n)^p)	p>1收敛，p≤1发散	PDF p5	yes
+级数速查表ln n/n^p	p>1收敛，p≤1发散	PDF p5	yes
+级数速查表x^n/n!	对所有x绝对收敛	PDF p5	yes
+级数速查表x^n/n^p	|x|<1 全p收敛，|x|>1 全p发散	PDF p5	yes
+级数速查表n!/n^n	收敛	PDF p5	yes
+比值判别预告	用于Taylor级数收敛半径	transcript v11 + PDF p3	yes

@@ -1,0 +1,1856 @@
+
+────── 视频 9-1: 18013x-u10s3v9-MITx-en.txt ──────
+
+Well, so I want to spend
+a few minutes telling you
+about what you can do
+with a power series
+once you have one to
+get new power series.
+So new power series from old.
+
+And this is also called
+operations on power series.
+So what are the things that
+we can do to a power series?
+Well, one of the things
+you can do is multiply.
+So for example, what if I
+want to compute a power series
+for x times the sine of x?
+Well I have a power
+series for the sine of x.
+I just did it.
+How about a power series for x?
+
+Actually, I did that here, too.
+x, the function x, is a
+very simple polynomial.
+It's the polynomial
+where that's 0, a1 is 1,
+all the other
+coefficients are 0.
+So x itself is a power
+series, a very simple one.
+The sine of x is a power series.
+And what I want to
+encourage you to do
+is treat power series
+just like polynomials
+and multiply them together.
+We'll see other operations, too.
+So to compute the
+power series for x
+times the sine of x, I just take
+this one and multiply it by x.
+So let's see if I do that right.
+It distributes through
+x squared minus x
+to the fourth over 3 factorial,
+plus x to the sixth over 5
+factorial, and so on.
+And again, the
+radius of convergence
+is going to be the smaller of
+the two radii of convergence
+here.
+So it's R equals
+infinity in this case.
+OK, you can multiply
+powers series together.
+It can be a pain if the
+power series are very long,
+but if one of them is
+x, it's pretty simple.
+OK, that's one thing I can do.
+Notice something,
+by the way, this
+is an odd-- do you know
+about even and odd functions?
+Huh?
+Yea.
+So sine is an odd function.
+x is an odd function.
+The product of two odd
+functions is an even function,
+and that's reflected in the fact
+that all the powers that occur
+in the power series are even.
+For an odd function like the
+sine, all the powers that occur
+are odd powers of x.
+That's always true.
+────── 视频 9-2: 18013x-u10s3v10-MITx-en.txt ──────
+
+Hi.
+Welcome back to recitation.
+We've been talking
+about Taylor series
+for a number of
+functions and rules
+by which you can
+compute Taylor series.
+I have here an example that I
+don't think we did in lecture.
+So this is the function f
+of x equals secant of x.
+Now, unlike some of the
+other ones you've seen,
+there's not a really simple
+formula for the whole Taylor
+series of secant x.
+So what I'd like
+you to do is not
+to find the formula
+for the general term
+but rather just to
+use some of the tools
+that we've learned to
+compute the first few terms
+of the Taylor series for
+f of x equals secant x,
+say up through the x to the
+fourth term, if you wanted,
+or even a little further, if
+you were feeling ambitious.
+So why don't you pause the
+video, have a go at that.
+Come back and we
+can do it together.
+
+So welcome back.
+I asked you to compute the first
+few terms of a Taylor series.
+One thing you can always do
+in this case is you can go
+and you can apply the
+general formula that we
+have for Taylor
+series and use it
+to compute the series that way.
+So in order to do
+that, you just need
+to compute a few derivatives
+of your function.
+So remember that the general
+formula for a Taylor Series
+is the Taylor series for f of
+x is equal to the sum from n
+equals 0 to infinity
+of the nth derivative
+of f taken at 0 divided by n
+factorial times x to the n.
+And since we're only interested
+in the first few terms,
+this is f of 0
+plus f prime of 0 x
+plus f double prime of 0 over
+2 x squared plus dot dot dot.
+I'm not going to write
+out the next few terms.
+And if you wanted to apply
+this formula to secant
+of x, what you
+would have to do is
+you would have to compute
+these derivatives.
+And so we could try doing that.
+So in our case, f of x is
+equal to secant of x, so f of 0
+is secant of 0, which is just 1.
+So then we need to
+know f prime of x.
+So that's the derivative
+of secant of x.
+So this is one you
+should remember.
+This is equal to
+secant x times tan x.
+And when you plug in x equal
+to 0, well, the tan x is 0.
+So f prime of 0 is equal to 0.
+And then you could keep going.
+So you could compute
+f double prime of x.
+So we would have to compute the
+derivative of secant x tan x,
+and you would do that
+by the product rule.
+You take the derivative of
+secant of x, and that gives you
+secant x tan x
+times tan x plus--
+and then so you
+leave secant of x,
+and you multiply it by the
+derivative of the tangent,
+which is secant squared x.
+And now when you put
+in 0 here, you've
+got f double prime times 0.
+Well, OK, so this
+has a tan x in it,
+so that part's
+going to give you 0.
+And here we end up with secant
+of 0 times secant squared of 0.
+So that's 1 times 1 times 1.
+So that's just 1.
+So f double prime of 0 is 1.
+And you could keep doing this.
+Now, one thing you'll notice
+is that this is getting
+more and more complicated.
+We can simplify this
+expression a little bit.
+We could write it
+as secant x, tan
+squared x plus secant
+cubed x, and there
+are all sorts of
+trig manipulations
+you could do if you
+wanted to try and rewrite
+that in some simpler form.
+
+But fundamentally,
+it's more complicated
+than the first derivative
+was, and that's
+more complicated
+than the function.
+And it'll keep getting
+more complicated as you
+compute more derivatives.
+So we can do this.
+So far this shows us, by the
+way, that this is equal to 1
+plus 0 x plus x squared
+over 2 plus dot dot dot.
+And if you wanted to compute up
+through the fourth-degree term
+or something like this, that's
+something that's manageable.
+But I want to suggest that
+there are maybe some nicer ways
+to do it.
+So one thing to notice
+is that secant of x
+is closely related to
+the function cosine of x.
+And you know the Taylor
+series for cosine of x.
+So one thing you
+could think to do
+is to leverage the information
+that you have about cosine
+of x in order to use it to get
+some information about secant
+of x.
+So one simple way to do that is
+that you know that cosine of x
+is even.
+It's an even function.
+Cosine of minus x is
+equal to cosine of x.
+So that means secant
+of x is also even.
+
+Secant of x is an even function.
+And you've seen that even
+functions, their Taylor
+series, all the odd
+powers have coefficient 0.
+So what that means is
+without ever computing
+the third derivative,
+we can know already
+that the next term
+in this Taylor series
+is going to be 0 x cubed over 6.
+So that's nice.
+So the odd terms of the Taylor
+series for secant of x are 0.
+OK.
+So that's one thing
+you can get right away.
+If you like, that gives you
+half of the terms of the Taylor
+series.
+It's a little bit
+of a joke, but--
+
+So then you only need to
+figure out the even terms.
+That's one way we can leverage
+the relationship between secant
+and cosine.
+The other way is
+that we can remember
+that Taylor series multiply
+just like polynomials do.
+So if secant is 1
+over cosine, that
+means secant times
+cosine is equal to 1.
+OK?
+
+Idea: secant of x times
+cosine of x is equal to 1.
+Now, that means that
+the Taylor series
+for secant of x times the
+Taylor series for cosine of x
+has to simplify just to 1.
+So we can write
+down that product
+as a product of two
+infinite polynomials,
+and we can start
+multiplying term by term.
+And that will allow us to
+solve for a bunch of terms
+just by solving some
+simple linear equations.
+So let me show you what I mean.
+Let me write it is as
+cosine times secant.
+So we know that cosine of x is
+1 minus x squared over 2 plus x
+to the fourth over 24--
+that's 4 factorial-- minus x
+to the sixth over 720-- which is
+6 factorial-- plus dot dot dot.
+And so we know that
+if we multiply this
+by the series for
+secant of x-- well,
+what is the series
+for secant of x?
+Well, we've already
+computed a few terms.
+We know that it's 1
+plus x squared over 2.
+We computed that already, and we
+know that the third-degree term
+is 0.
+So there is some fourth-degree
+coefficient a_4 x
+to the fourth over 4 factorial.
+And there's some--
+well, we said it's even,
+so we know the fifth-degree
+coefficient is 0.
+So then the sixth-degree
+coefficient we don't know yet.
+So this is plus a sub 6 times
+x to the sixth over 6 factorial
+plus dot dot dot.
+So we know that when we multiply
+these two things together,
+it has to give us just 1.
+All the higher order
+terms have to cancel,
+because over here we have 1.
+So what you can do is
+you can actually try
+multiplying these things out.
+So it's easy to
+see, for example,
+that the constant term of this
+product is just 1 times 1,
+which is 1, which is good.
+So that's a check on
+what we've done so far.
+And there is no x term,
+because there are no x's.
+The x squared term
+here is 1 times
+x squared over 2 minus x
+squared over 2 times 1.
+Well, that gives us 0.
+So that's good.
+So this product
+is equal to 1 plus
+we saw 0 x plus 0 x squared.
+How about the x cubed term?
+Well, there are no odd
+terms in this product,
+so there's no x cubed.
+How about the x to the 4th term?
+Well, OK, so how do we
+get an x to the fourth?
+We could have an x to the
+4th here times a constant.
+So that's x to the
+fourth over 24.
+Or we could have an x
+squared times an x squared.
+So in this case, that gives us
+minus x squared over 2 times
+x squared over 2, which is
+minus x to the fourth over 4.
+Or we could have a constant
+times an x to the fourth.
+So this is plus a_4 x
+to the fourth over 24.
+And then we'll have a
+sixth-degree term and so on.
+Notice that there is
+never any involvement
+from the higher order terms in
+the fourth power here, right?
+If you ever took an
+x to the sixth here,
+well then everything
+you multiply it by
+has at least the next
+to the sixth power.
+So we don't have to worry
+about that showing up
+in x to the fourth term.
+We know this is
+actually equal to 1.
+So we know that this
+thing has to be 0.
+This is the x to
+the fourth term.
+It has to be 0.
+So that means that 1 over 24
+minus 1 over 4 plus a_4 over 24
+equals 0.
+
+So now you can multiply
+everything through by 24
+and rearrange to figure
+out that a_4 is equal to 5
+if I've done that correctly.
+And if then if you
+wanted, it would
+be fairly easy to
+go back up and then
+you look at the x
+to the sixth term.
+And from there, you
+could figure out
+that a_6 was equal to, say,
+61 or something like that.
+I think 61.
+And you could keep doing this.
+So this is one way
+to compute more terms
+of the series for secant of x.
+Another thing you
+could do, which
+I'll just mention
+very briefly-- I'm
+not going to show you how to
+do it-- is that you can do
+long division on power series.
+So it actually it works
+out just like this.
+It's mathematically equivalent.
+The way you actually
+do it looks different.
+It looks like long division.
+When you do long division
+with polynomials,
+you start with the
+highest order term.
+Of course, power series don't
+have highest order terms.
+What you actually do
+with a power series
+is you start with the
+lowest order term.
+So to divide this
+into 1, you'd say, oh,
+you mean the factor of 1, and
+then you subtract off 1 times
+this.
+And that gives you an x
+squared plus 2 and so, OK,
+so you say I need a plus x
+squared plus 2 and so on.
+So that was too brief for you
+to understand it properly,
+but you can go and look
+up somewhere the method
+of long division
+on power series.
+So just to recap, we
+talked about three methods
+for computing the coefficients
+of a power series.
+There is the formula that
+you were given, which works
+and which you could use.
+In this case, it's a
+little complicated.
+Then there's the method
+of using a relationship
+between your power series
+and other known power series.
+In this case, we can
+use the relationship
+that we know our power series
+satisfies a certain product.
+We know that our power series
+times cosine of x equals to 1.
+And we can use that to solve
+for some of the coefficients.
+Or you can also, similarly,
+when you have that situation,
+you can also use long division
+to compute the coefficients.
+I'll end there.
+────── 视频 9-3: 18013x-u10s3v11-MITx-en.txt ──────
+
+OK, we can multiply.
+I can also differentiate.
+
+So let's just do a
+case of that and use
+the process of
+differentiation to find out
+what the power series
+for the cosine of x
+is by writing the cosine of x
+as the derivative of the sine
+and differentiating
+term by term.
+So I'll take this expression
+for the power series of the sine
+and differentiate
+it term by term,
+and I'll get the power
+series for cosine.
+So let's see.
+The derivative of x is 1.
+Now, the derivative of
+x cubed is 3x squared,
+and then there's a 3
+factorial in the denominator.
+And the derivative of x to
+the fifth is 5x to the fourth,
+and there's a 5 factorial
+on the denominator,
+and so on and so on.
+And now some
+cancellation happens.
+So this is 1 minus,
+well the 3 cancels
+with the last factor
+in this 3 factorial
+and leaves you with 2 factorial.
+
+And the 5 cancels with the
+last factor in the 5 factorial
+and leaves you with a 4
+factorial in the denominator.
+And so there you go.
+There's the power series
+expansion for the cosine.
+It's got all even powers of x.
+They alternate.
+You have the factorials
+in the denominator.
+And of course, you could
+derive that expression
+by using Taylor's formula by
+the same kind of calculation
+we did here, taking higher
+and higher derivatives
+of the cosine, you get
+the same periodic pattern
+of derivatives and values of
+derivatives at x equals zero.
+But here's a cleaner way
+to do it, simpler way
+to do it because we already
+knew the derivative of the sine.
+When you differentiate you keep
+the same radius of convergence.
+
+So we can multiply.
+I can add, too, and multiply by
+a constant, things like that.
+How about integrating?
+That's what half this
+course was about, isn't it?
+So let's integrate something.
+
+So the integration I'm
+going to do is this one.
+
+The integral from 0 to
+x of dt over 1 plus t.
+What is that integral
+as a function?
+
+[INAUDIBLE]
+
+So when I find the
+anti-derivative of this,
+I get the natural
+log of 1 plus t,
+and then when I evaluate
+that at t equals x,
+I get the natural
+log of 1 plus x.
+And when I evaluate
+the natural log at 0,
+I get the natural
+log of 1, which is 0.
+So this is what you get.
+OK?
+This is really valid, by the
+way, for x bigger than minus 1.
+But don't want to think
+about this quite like this
+when x is smaller than that.
+OK, now, I'm going to try to
+apply power series methods here
+and use this integral
+to find a power
+series for the natural log.
+And I'll do it by plugging in to
+this expression what the power
+series for 1 over 1 plus t was.
+And I know what that is because
+I wrote it down on the board
+up here.
+Change the variable
+from x to t there,
+and so 1 over 1 plus t is
+1 minus t plus t squared
+minus t cubed, and so on.
+
+So that's the thing in the
+inside of the integral,
+and now it's legal to
+integrate that term by term.
+So let's do that.
+I'm going to get something
+which I will then
+evaluate at x and at 0.
+So when I integrate 1, I get x.
+When I integrate
+t, whoops, I get t.
+I'm sorry.
+
+When I integrate t, I
+get t squared over 2.
+t squared gives me t cubed
+over 3, and so on and so on.
+And then I when I
+put in t equals x,
+well I just replace
+all the t's by x's.
+And when I put in t
+equals zero, I get zero.
+So this equals x.
+So I've discovered that
+the natural log of 1 plus x
+is x minus x squared over 2
+plus x cubed over 3 minus x
+to the fourth over 4,
+and so on and so There's
+the power series expansion for
+the natural log of 1 plus x.
+And because I began
+with a power series
+whose radius of
+convergence was just 1,
+I began with this power
+series, the radius
+of convergence of this
+is also going to be 1.
+
+Also, because this function,
+as I just pointed out,
+this function goes bad when
+x becomes less than minus 1,
+so some problem happens
+and that's reflected
+in the radius of convergence.
+Cool.
+
+So you can integrate.
+That is the correct
+power series expansion
+for the natural log of x and
+another victory of Euler's was
+to use this kind of
+power series expansion
+to calculate natural logarithms
+in a much more efficient way
+than people had done before.
+────── 视频 9-4: 18013x-u10s3v12-MITx-en.txt ──────
+
+Hi.
+Welcome back to recitation.
+We've been talking about power
+series and different sorts
+of manipulations
+you can do with them
+and different examples
+of power series.
+So I have an example
+here that I don't
+think you've seen in lecture.
+So this is the power
+series 1 plus 2x plus 3x
+squared plus 4x cubed plus
+5x to the fourth and so on.
+So I'm going to tell you
+that this is a Taylor series
+for a fairly nice function.
+And what I'd like you to
+do is try and figure out
+what that function is.
+Now, I'm kind of sending
+you off on to this task
+without giving
+you much guidance.
+So let me give you a
+little bit of a hint, which
+is that the thing to
+do here, is you have
+a bunch of different
+tools that you know how
+to manipulate Taylor series by.
+So you know how to do
+calculus on Taylor series.
+You can take derivatives
+and integrals.
+You know how to add and
+multiply and perform
+these sorts of manipulations.
+So you might think
+of a manipulation
+you could perform on
+this power series that
+will make it a simpler
+expression or something
+you're already
+familiar with or so on.
+So let me give you some
+time to work on that,
+think about it for a
+while, try and come up
+with the expression for this
+power series and come back.
+And we can work on it together.
+
+So hopefully you had some
+luck working on this problem
+and figured out what the
+right manipulation to use is.
+I kind of tossed it at
+you without a whole lot
+of guidance.
+And I don't think you've done
+a lot of examples like this
+before.
+So it's a little tricky.
+So what I suggested was
+you think about things
+that you know how to do that
+could be used to simplify this.
+So looking at it, it's
+just one Taylor series.
+So it's not clear that sort
+of power series arithmetic
+is going to help you very much.
+It's not obviously
+a substitution
+of some value into some
+other Taylor series
+that you're familiar with.
+It's not obviously, say,
+a sum of two Taylor series
+that you already know very well.
+
+So those things aren't
+immediately-- it's not clear
+where to go with them.
+One thing that does
+pop out-- well, OK.
+So let's talk about some of
+the other tools I mentioned.
+We have calculus
+on power series.
+So we have differentiation.
+So we see here that
+the coefficients are
+sort of a linear polynomial.
+If you take a
+derivative, what happens
+is this becomes 2 plus 6x plus
+12x squared plus 20x cubed.
+And those coefficients
+2, 6, 12, 20,
+those are given by a
+quadratic polynomial.
+So that makes our life kind
+of more complicated somehow.
+But if we look at this, we see
+that integrating this power
+series is really easy to do.
+This power series has a
+really nice antiderivative.
+So what I'm going to do is
+I'm going to call this power
+series by the name f of x.
+And then what I'd
+like you to notice
+is that the antiderivative
+of f of x, dx--
+well, we can integrate
+power series term-wise.
+And so what we get is--
+well, so all right.
+So I'm going to put the
+constant of integration first.
+So the antiderivative of
+this is c plus-- well,
+1 you take its
+integral and you get x.
+And 2x you take its integral
+and you just get plus x squared.
+And 3x squared you
+take its integral,
+and you get plus
+x cubed and plus x
+to the fourth from the next
+one, and plus x to the fifth
+and so on.
+So I put the c here, right?
+So any power series of this
+form is an antiderivative
+of the power series
+that we started with.
+Any power series of this
+form has the derivative equal
+to the thing that
+we're interested in.
+And since we really
+care about what f is
+and not what it's
+antiderivative is,
+we can choose c to be
+any convenient value.
+So I'm going to, in particular,
+look at the power series where
+c is equal to 1.
+Now, why am I going
+to make that choice?
+Well, because we've
+seen a power series
+that looks very much like
+this before with the 1 there.
+So we know 1 plus x plus x
+squared plus x cubed plus x
+to the fourth and so on, we know
+that this is equal to 1 over 1
+minus x.
+So since we know that
+this is the case,
+that means that our
+power series, f of x,
+is just the derivative of this.
+That's what we just showed here.
+So f of x is equal
+to d over dx of 1
+over-- that should
+be 1 over 1 minus x.
+And notice that if I had chosen
+a different choice of constant
+here, it would be killed
+off by this differentiation.
+So it really was irrelevant.
+So d over dx of
+1 over 1 minus x.
+So d over dx of 1 over
+1 minus x and, OK.
+Well, this is an easy
+derivative to compute.
+This is 1 minus
+x to the minus 1.
+So you do a little
+chain rule thing,
+and I think what you get
+out is that this is 1 over 1
+minus x squared.
+
+So this gives me a nice formula
+for this function f of x.
+If you wanted to check,
+one thing you could do
+is you could set about computing
+a few terms of the power series
+for this function for 1 over
+1 minus x squared-- 1 over 1
+minus x quantity
+squared, I should say.
+So you could do that either by
+using your derivative formula,
+which is easy enough to do.
+Another thing you
+could do is you
+could realize that this is 1
+over 1 minus x times 1 over 1
+minus x.
+So you could try multiplying
+that polynomial by itself
+and that power series
+by itself and see
+if it's easy to get back
+this formula that we had.
+But any of those
+ways is a good way
+to double check
+that this is really
+true, that this function, that
+this power series here, f of x,
+has this functional form.
+Now, of course, I
+haven't said anything
+about the radius of
+convergence, but the thing
+to remember when you're doing
+calculus on power series
+is that when you take a
+derivative or an antiderivative
+of a power series,
+you don't change
+the radius of convergence.
+Sometimes you can fiddle with
+what happens at the end points,
+but the radius of
+convergence stays the same.
+So this is going
+to be true whenever
+x is between negative 1 and 1.
+And, in fact, this series
+diverges at its end points.
+That's pretty easy to check.
+So there we go.
+So this is the functional
+form for this power series.
+It's valid whenever x is
+between negative 1 and 1.
+That's it's range
+of convergence.
+And so here we have a cute
+little trick for figuring out
+some forms of power series.
+And, of course, if you were
+interested-- so like I said,
+now you could look
+at the derivative
+of this, which I mentioned
+had some coefficients that
+were given by some
+quadratic polynomial.
+Now that you have
+a functional form,
+you could figure out what
+is the function whose power
+series has that quadratic
+polynomial as coefficients.
+And you can do a whole
+bunch of other stuff
+by similarly taking derivatives
+of other power series
+that you're familiar
+with or integrals.
+So I'll stop there.
+────── 视频 9-5: 18013x-u10s3v13-MITx-en.txt ──────
+
+Hi.
+Welcome back to recitation.
+In class, Professor Jerison
+and Professor Miller
+have taught you a little
+bit about Taylor series
+and some of the manipulations
+you can do with them
+and have computed a bunch
+of examples for you.
+So I have three
+more examples here
+of functions whose Taylor
+series are nice to compute.
+So the first one is cosh x.
+That's the hyperbolic cosine.
+So just to remind
+you this can be
+written in terms of the
+exponential function as e the x
+plus e to the minus x over 2.
+The second one is
+the function 2 time
+sine of x times cosine of x.
+Just your regular
+sine and cosine here.
+And the third one is x times
+the logarithm of the quantity 1
+minus x cubed.
+So why don't you
+pause the video,
+take some time to work out the
+Taylor series for these three
+functions.
+Come back and we can
+work them out together.
+
+So here we have three
+functions whose Taylor series
+we're trying to compute.
+Let's start with the first
+one and go from there.
+So this first one is
+the hyperbolic cosine.
+It's given by the formula e
+to the x plus e to the minus
+x over 2.
+So there are a
+couple different ways
+you could go about this one.
+The hyperbolic cosine is very
+susceptible to the method
+of just using the
+formula that you have.
+So if you remember,
+the derivative
+of the hyperbolic cosine
+is the hyperbolic sine.
+The derivative of the hyperbolic
+sine is the hyperbolic cosine.
+Again, so this function
+has very easy to understand
+derivatives, which you can see
+just by looking at its formula.
+It's easy to understand, because
+the exponential function has
+very simple derivatives,
+and e to the minus
+x also has very
+simple derivatives.
+So you could do it like that.
+The other thing you could
+do is that you already
+know the Taylor
+series for e to the x,
+and I believe you've also
+seen the Taylor series for e
+to the minus x, and even if you
+haven't, you can figure it out
+just by substitution.
+So if you're remember
+so e to the x.
+This is e to the x
+is given by the sum
+from n equals 0 to infinity of
+x to the n over n factorial.
+I'm to pull the
+1/2 out in front.
+And e to the minus x is
+given by the same thing
+if you put in minus x for x.
+So it's n equals 0 to infinity.
+So that works out to minus
+1 to the n x to the n
+over n factorial.
+Now, when you add these
+two series together,
+what you see is
+that what n is even,
+over here you have x to
+the n over n factorial,
+and over here you have x
+to the n over n factorial.
+So what you get is you get
+2x the n over n factorial
+and then you multiply by 1/2.
+So you just get x to
+the n over n factorial.
+When n is odd, here you have
+x to the n over n factorial,
+and here you have minus 1 x
+to the n over n factorial.
+So you add them and you get 0.
+So what happens is that
+this series looks just
+like the series for e to the
+x, except the odd terms have
+died off.
+So we're left with
+just one plus x squared
+over 2 factorial plus x to
+the 4 over 4 factorial plus x
+to the 6 over 6 factorial.
+And so on.
+And if you wanted to write
+this in summation notation,
+you could write it
+as the sum from n
+equals 0 to infinity of x
+to the 2n over 2n factorial.
+So this is the Taylor series for
+the hyperbolic cosine function.
+Also, if you wanted say the
+hyperbolic sine function,
+you could do something
+very similar,
+or you could remember that
+the hyperbolic sine is
+the derivative of
+the hyperbolic cosine
+and just take a derivative
+right from this expression.
+One other thing that
+you should notice
+is that this looks very similar
+to the expression of the Taylor
+series for cosine of x.
+So more of our sort
+of funny coincidences
+between regular trig functions
+and hyperbolic trig functions.
+That's the first one.
+How about this second one?
+Here we have just some
+regular trig functions.
+We have 2 sine x cosine x.
+Let me see where
+I've got some space.
+I can do it right here.
+So let me box off a
+little space for myself.
+So 2 sine x cosine x.
+There are a couple
+different ways
+you could proceed
+with this function.
+So one is you know the Taylor
+series for sine x and cosine x
+already.
+So all you wanted was a few
+terms of this Taylor series,
+one natural thing to do would be
+to take the series for sine x,
+take the series for cosine
+x, multiply them together
+like you would
+multiply polynomials,
+and what you would get
+is the Taylor series
+for this function.
+That's one way to proceed
+that works perfectly well.
+Another thing you
+could do is you
+could try taking derivatives.
+You could have a situation
+where every time you
+take a derivative, you
+apply product rule.
+It's going to get more
+and more complicated.
+It still works.
+It's a little
+complicated to do it
+that way if you wanted
+more than just a few terms.
+The other thing you could do
+is you can remember your trig
+identities.
+So if you look at
+this expression,
+this should be familiar to you,
+because it's just sine of 2x.
+
+So once you realize
+that this is sine of 2x,
+there's a much,
+much shorter path
+available to you, which is that
+you already know the Taylor
+series for sine of x.
+So what you can do
+is you can just plug
+in 2x into that Taylor series.
+
+So sine of x is x.
+So in this case,
+that's going to be 2x.
+Then minus-- so in sine of x, we
+have x cubed over 3 factorial,
+so here we're going to have 2x
+cubed over 3 factorial plus.
+So then and so on.
+So here we'll have 2x to the 5
+over 5 factorial minus so on.
+If you wanted to write
+this in summation notation,
+you can write it as the sum
+from n equals 0 to infinity.
+Well, the denominator has got
+to be 2n plus 1 factorial,
+because we want it to
+go through the odds.
+And then we've got minus 1 to
+the n times 2 to the 2n plus 1
+times x to the 2n plus 1.
+So this is 2x.
+What we've got here if you
+didn't have the 2s there
+that would just be the
+series for the regular sine.
+So this is the series for this
+function 2 sine x cosine x,
+and I'll go over here
+to do the third one.
+So what is the third one?
+It's x ln 1 minus x cubed.
+Well, what can we
+do with this series?
+The x out front is just
+multiplying this logarithm
+part.
+That's something we
+can save till the end.
+If we can figure out what the
+Taylor series for the ln of 1
+minus x cubed part is, then
+we just multiply x into it
+and that will give us the Taylor
+series for this whole thing.
+So that x out front
+is pretty simple.
+So now what about this ln
+of 1 minus x cubed stuff?
+Well, the thing to remember
+is does it remind you
+of anything we've done before?
+Well, we have a Taylor series
+for a logarithm function.
+We've already seen
+in lecture-- I
+believe we've seen
+that ln of 1 plus x
+is equal to x minus
+x squared over 2
+plus x cubed over 3 minus x to
+the fourth over 4 and so on.
+Alternating signs.
+Notice that the denominator
+is when you have a logarithm--
+these are not factorials.
+These are just the integer 2,
+the integer 3, the integer 4.
+Unlike for exponentials
+and trig functions.
+
+This is the Taylor series
+for log of 1 plus x.
+Well, how does that help us?
+Well, log of 1
+minus x cubed we can
+get from log of 1 plus x with
+the appropriate substitution.
+So in particular,
+we just have to put
+minus x cubed in for x here.
+So what does that give us?
+It gives us that ln of 1 minus x
+cubed, is equal to, well, minus
+x cubed minus so we put
+minus x cubed in here.
+We square and we just
+get x to the sixth.
+So x to the sixth over 2.
+So minus x cubed quantity
+cubed is minus x to the ninth.
+So minus x to the ninth over
+3 minus x to the 12th over 4
+and so on.
+And so finally x ln
+of 1 minus x cubed
+we just get by multiplying this
+whole expression through by x.
+So this is equal to
+minus x to the fourth
+minus x to the seventh
+over 2 minus x to the 10th
+over 3 minus x to the
+13 over 4 and so on.
+And I'll leave it as
+an exercise for you
+to figure out how to write
+this in summation notation
+if you wanted.
+So just quickly to summarize,
+we had these three functions
+that we started out with.
+And we used a bunch of
+different techniques
+that we've learned in order
+to compute their power series.
+So over here, we took the
+function that we'd seen
+and we knew a formula for it
+in terms of other functions
+that we already knew.
+And so we plugged in
+those power series
+and used our addition
+rule for power series.
+We could have also done this
+one directly from the definition
+if we had wanted to.
+For the second one, for
+the 2 sine x cosine x,
+we recognize that
+as something that's
+susceptible to a substitution.
+Although, also with a
+little more work, we could
+have done it by a couple of
+different methods, for example,
+by multiplying two
+power series together.
+And finally, for this
+third one, for the x ln
+of 1 minus x cubed, we first
+saw the substitution here
+that we could make and then
+we just did a multiplicative
+by a polynomial, which is
+a relatively easy thing
+to do for power series.
+So that's what we did
+in this recitation,
+and I'll leave it at that.
+────── 视频 9-6: 18013x-u10s3v14-MITx-en.txt ──────
+
+Welcome back to recitation.
+In this video, I'd like us
+to do some basic manipulation
+of some power series that
+you saw in the lecture.
+So I have four problems here.
+And what I'd like us
+to do is figure out
+what function each of
+these series represents.
+Now, you can assume that
+the x values that we
+are going to insert
+into this function
+are only x values that
+let the sums converge.
+So you don't have to
+worry about anything
+to do with convergence
+of these sums.
+Just assume the sums converge.
+That we've picked good x values.
+And what I'd like you to
+have in the end for A,
+B, C, and D is something
+like this sum is
+equal to a specific function.
+It should not include
+the sum anymore.
+So why don't you work on those
+for a bit pause the video
+and when you're done,
+restart the video
+and I'll come back and show
+you how I work with them.
+
+Welcome back.
+Hopefully, these were a
+little bit fun for you.
+I always like them
+the first time
+I saw them to see how one
+could manipulate these series.
+So again, what
+we're trying to do
+is figure out what function
+the series represent.
+We're assuming
+convergence, and we're
+going to try and
+manipulate them to look
+like things we already know.
+So I'm going to start.
+I'm just going to go straight
+through A, B, C, and D.
+I'm going to rewrite the
+problem each time, because I
+don't want to keep coming back.
+So A we had the sum n
+equals 0 to infinity.
+x to the n plus 2
+over n factorial.
+Well, this looks very
+close to something we know.
+It looks a lot like the
+function e to the x.
+The difference is that e to the
+x just has a power x to the n.
+But the good news is that
+I am really close to that.
+What I really have in the
+numerator is x to the n times
+x squared.
+Because this x to
+the n plus 2, I
+can write as x to the
+n times x squared.
+So every term has an x squared.
+So as was mentioned
+in the lecture,
+you can treat this,
+really, like polynomials.
+In some way you can
+factor this out.
+So I can rewrite this as-- well,
+I'll rewrite it in two steps.
+0 to infinity of x squared.
+x to the n over n factorial.
+So x squared times x to the n
+gives me the x to the n plus 2.
+
+Because this belongs
+to every sum,
+I can pull that all
+the way out in front.
+
+if I move this out
+to the front, I
+have an x squared
+times this sum.
+Well, what is the sum?
+The sum is e to the x.
+It's n equals 0 to infinity of
+x to the n over n factorial.
+That's just e to the x.
+So this function is
+x squared e to the x.
+That's what A is.
+If you were worried
+about it, you
+could write e to
+the x as its series
+and then you can multiply
+through by x squared
+and see if that's what you get.
+But you'll see that is indeed
+how this problem works.
+OK.
+Let's look at B. B
+is equal to the sum.
+That's a weird summation sign.
+Sorry about that.
+B is equal to the sum
+n equals 2 to infinity.
+x to the n.
+That's what we
+wanted to look at.
+Well, this looks very close
+to the geometric series,
+but it's missing some terms.
+The geometric series starts
+with n equals 0 to infinity.
+But the point I
+want to make here
+is that I can rewrite this
+as the geometric series,
+and then I can take
+away what I've added in.
+So these do not agree right now.
+This equal sign is not true
+yet, but what do I notice?
+I notice this one has two
+more terms at the beginning
+than this one has.
+What are those terms?
+Those are when n equals
+0, and when n equals 1.
+There is no n equals
+0 or n equals 1 here.
+The formulas are exactly the
+same-- x to the n, x to the n.
+They both go to
+infinity, but one's
+starting at n equals 2 and
+one's starting at n equals 0.
+Again, want to
+remind you why did
+I bother to write
+this thing at all.
+It's because this is
+a function we know.
+But this equal sign
+is not true right now.
+I have to get rid of
+the extra stuff I added.
+What did I add?
+I added-- let me
+get this as a sum.
+What did I add on?
+I added on x to the 0.
+And x to the 1.
+So now I guess I should
+have written subtract here.
+I should subtract
+x to the 0 and I
+should subtract x to the first.
+I've already said
+it once, but I'm
+going to just to make sure
+everybody followed say it
+one more time.
+I've taken the summation
+I started with,
+which went from n
+equal 2 to infinity.
+I added two more
+terms to the sum.
+I made it go from 0 to infinity.
+So to keep equality,
+I subtracted off
+the two things I added in.
+I subtracted off x to
+the 0 and x to the 1.
+So now what was the point of
+this part of the exercise?
+Well, the point is that
+I know what the sum is.
+That's the geometric series
+that's 1 over 1 minus x.
+But this x of the 0 minus 1.
+x to the 1 minus x.
+So this I broke
+up into something
+I knew as a power series
+and then other pieces
+that I had added in to make
+it look like something I knew,
+I had to subtract those off.
+So that's the idea of that one.
+If you wanted to go on
+and simplify further
+you could do that, but
+I'm willing to leave it
+just as it is because the idea
+was really this part up here.
+And then translating
+it down to this.
+All right.
+Let me write C again.
+The sum and equals
+0 to infinity.
+x to the n over n
+factorial plus x to the n.
+So is the sum n
+equals 0 to infinity,
+x to the n over n
+factorial plus x to the n.
+And the point to
+recognize here is again,
+as Professor Jerison
+mentioned, you're
+really treating these
+almost like polynomials.
+So you're taking a series, and
+you're adding these terms up,
+but really, what you can
+think about this as the two
+separate series added up.
+And so this is the
+sum from n equals 0
+to infinity of x to the n over
+n factorial, which we know,
+plus the sum from n
+equals 0 to infinity
+of x to the n, which we know.
+The first one is
+just e to the x,
+and the second one-- we've
+been dealing a lot with these
+already today-- is
+just 1 over 1 minus x.
+So the point I want
+to make is if you
+have this convergent
+series, you can split it up
+into two pieces over the sum.
+And these two are both
+convergent, we know,
+separately.
+And so we can write
+what they are.
+X to the n over n factorial from
+0 to infinity is e to the x.
+x to the n from n equals 0 to
+infinity is 1 over 1 minus x.
+So now we just have one more.
+Let we write that one.
+D was summation n equals minus
+1 to infinity x to the n plus 1.
+All right.
+This was not meant
+to scare you, but it
+was meant to test your
+understanding of sigma
+notation.
+So the problem is
+returning n equals minus 1,
+but x is starting the
+exponent on x is at n plus 1.
+So I want to write it in
+some form that I know.
+Well, let's try and get
+the subscript to be 0.
+So what I'm going to do
+is I'm going to change
+the name of the subscript.
+I'm going to let it be
+m equals 0 to infinity.
+And I want m to count up by
+one just the way n counts up.
+So notice what I did.
+When m equals 0, n
+equals negative 1.
+That's what we've set
+up as the first term.
+That means n plus 1 is
+equal to 0 when m equals 0.
+And since I'm going
+up by 1 every time
+in my summation, my
+iteration, here that
+means that for every m I have,
+I just have to take n plus one
+to figure out what m is.
+So I should have said
+it the other way.
+For every n I have, I just
+have to add 1 to get m.
+So here, if I start at
+negative 1, I start here at 0.
+The next term here
+is 0; n equals 0.
+But the next term
+here is m equals 1.
+The next term here
+would be n equals 1,
+and the next term here
+would be m equals 2.
+So they're just off by
+1, but they're still
+catching every index.
+Now, I don't have
+to change what's
+up here, because infinity,
+if I add 1 to it,
+I'm still going off to infinity.
+So I don't have to
+change what's up here.
+But I do want to write the
+formula or the formula I have
+inside the sum in terms of m.
+But I've already got it.
+Because I know m is
+always equal to n plus 1.
+So I can replace this
+n plus 1 by an m.
+Whew.
+And now we know
+what that one is.
+m equals 0 to infinity
+of x to the m.
+That's a geometric series.
+Even though I wrote it
+in kind of a funny way,
+it was actually just still
+the geometric series.
+I just moved the
+indices a little bit
+to make sure we could
+play with those.
+
+The whole point of
+this exercise is just
+to recognize how
+you can manipulate
+the series a little
+bit so that if they're
+in a form that looks kind
+of like one of the functions
+you know, you can
+see if it actually
+is a product of something
+with a function you know,
+or the sum of two
+functions you know,
+or maybe one of the functions
+you know as a power series,
+and then you have to
+drop off a couple terms.
+So they each sort of
+demonstrate a different idea
+of how you can manipulate these
+convergent power series based
+on functions you already know.
+So I'll stop there.
+────── 视频 9-7: 18013x-u10s3v15-MITx-en.txt ──────
+
+Four substitute.
+
+Very appropriate for me
+as a substitute teacher
+to tell you about substitution.
+
+So I'm going to try to find
+the power series expansion of e
+to the minus t squared.
+
+And the way I'll do that is
+by taking the power series
+expansion for e to the x,
+which we have up there,
+and make the
+substitution x equals
+minus t squared in the
+expansion for e to the x.
+So what's the power
+series expansion for this?
+The power series
+expansion of this
+is going to be a
+function of t, right?
+Because the variable here is t.
+And I get it by taking my
+expansion for e to the x
+and putting in what
+x is in terms of t,
+and so on and so on.
+I just put in minus t squared in
+place of x there in the series
+expansion for e to the x.
+So I can work this out
+a little bit better.
+Minus t squared is what it is.
+This is going to give
+me a t to the fourth.
+And the minus squared is
+going to give me a plus.
+So I get t to the
+fourth over 2 factorial.
+Then I get minus
+t quantity cubed.
+So there will be a minus
+sign and a t to the sixth,
+and the denominator
+is 3 factorial.
+So the sines are
+going to alternate,
+the powers are all even,
+and the denominators
+are these factorials.
+
+Several times as this
+course has gone on,
+the error function has
+made an appearance.
+The error function
+was-- I guess it
+gets normalized by putting a
+2 over the square root of pi
+in front.
+
+And it's the integral of e
+to the minus t squared dt
+from 0 to x.
+And this normalization is here
+because as x gets to be large,
+the value becomes 1.
+So this error function is
+very important in the theory
+of probability.
+And I think you calculated
+this fact at some point
+in the course.
+So this is the
+standard definition
+of the error function to put
+a 2 over the square root of pi
+in front.
+Let's calculate its
+power series expansion.
+
+So there's a 2 over
+the square root of pi
+that hurts nobody
+here in the front.
+And now I want to integrate
+e to the minus t squared.
+And I'm going to use this
+power series expansion
+for that to see what you get.
+So I'm just going to
+write this out, I think.
+I did it out carefully in
+another example over there,
+so I'll do it a
+little quicker now.
+Integrate this term by term.
+You're just integrating powers
+of t, so it's pretty simple.
+And then I'm evaluating
+at x and at 0.
+So I get x minus x
+cubed over 3 plus x
+to the fifth over 5
+times 2 factorial.
+5 from integrating the t
+to the fourth and the 2
+factorial from this denominator
+that we already had.
+And then there's a minus x
+to the seventh over 7 times 3
+factorial and plus and so on.
+And you can imagine how
+they go on from there.
+
+I guess to get this
+exactly in the form
+that we began talking about,
+I should multiply through.
+So the coefficient of x is
+2 over the square of pi,
+and the coefficient
+of x cubed is
+minus 2 over 3 times the
+square root of pi and so on.
+But this is a perfectly good
+way to write this power series
+expansion as well.
+And this is a very good way to
+compute the value of the error
+function.
+It's a new function
+in our experience.
+Your calculator
+probably calculates it,
+and your calculator probably
+does it by this method.

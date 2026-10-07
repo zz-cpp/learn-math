@@ -1,0 +1,8 @@
+{
+  "mode": "technical-slide",
+  "audience": "capable first-time reader",
+  "central_question": "已知一批基本函数的 Taylor 级数后，如何用乘、除、代换、逐项微分/积分把这些旧级数改造成新级数（并识别一个陌生级数对应哪个函数）；以及 Taylor 多项式逼近有多准（余项定理）？",
+  "reader_outcome": "能用多项式法则完成幂级数的乘/除/代换/逐项微积分并保持半径；能一眼认出 Σ x^{n+2}/n!、Σ_{n=2}^∞ x^n、sin(x²)、x ln(1-x³) 等对应函数；能写下 cosh、sec x、erf 的级数；会用 Taylor 余项定理给 P_2(1)、√2、e 的近似误差定上界；会在任意点 a 展开 Taylor 级数。",
+  "visual_teaching_atoms": 7,
+  "formula_teaching_atoms": 55
+}

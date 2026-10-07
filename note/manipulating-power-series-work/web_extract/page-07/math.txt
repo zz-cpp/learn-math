@@ -1,0 +1,121 @@
+$ \, f(x)\, $
+$ \displaystyle \displaystyle f(x)=a_0+a_1x +a_2 x^2 +a_3 x^3 + \cdots \qquad (\text{for }|x|<R), $
+$ \displaystyle \displaystyle P_n(x)=a_0+a_1x +a_2 x^2 +a_3 x^3 + \cdots a_n x^n $
+$ \, n\, $
+$ \, f(x) $
+$ \, f(x)\, $
+$ \, f(x)\, $
+$ x=0 $
+$ P_n(x)\, $
+$ \, f(x)\, $
+$ \, x=0,\, \, $
+$ \displaystyle \, \displaystyle P_n^{(k)}(0) = f^{(k)}(0)\qquad \text{for } 0<k\leq n. $
+$ x=0 $
+$ P_n $
+$ f $
+$ \, P_n(x)\, =a_0+a_1x +a_2 x^2 + \cdots +a_n x^n\, $
+$ n $
+$ \, f(x) $
+$ \, f\, $
+$ n+1 $
+$ \, (0,x),\, $
+$ \, f',\, f^{\prime \prime },\, \ldots ,f^{(n)},\, f^{(n+1)} $
+$ \, (0,x),\, $
+$ \, f',\, f^{\prime \prime },\, \ldots ,\, f^{(n)} $
+$ \, [0,x],\, $
+$ \, c $
+$ \, (0,x)\, $
+$ \displaystyle \displaystyle R_{n}(x)\, =\, f(x)-P_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!} x^{n+1} \qquad (0<c<x). $
+$ \, \displaystyle R_n(x)\, $
+$ \, n=0\, $
+$ \, c\, $
+$ \, R_n $
+$ x $
+$ \, R\, $
+$ |x|<R,\, $
+$ \displaystyle \, \displaystyle \lim _{n\rightarrow \infty } R_n(x)=0\qquad (|x|<R). $
+$ c $
+$ (0,x)\, $
+$ \displaystyle \displaystyle R_{n}(x)\, =\, f(x)-P_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!} x^{n+1} \qquad (0<c<x). $
+$ \, F\, $
+$ \, (0,x)\, $
+$ \, [0,x]\, $
+$ \, F(0)=F(x),\, $
+$ c $
+$ (0,x)\, $
+$ F'(c)=0 $
+$ n $
+$ \, x\, $
+$ x\neq 0\, $
+$ \displaystyle \displaystyle a $
+$ \displaystyle = $
+$ \displaystyle \frac{R_n(x)}{x^{n+1}} \qquad (\text{such that }\, R_n(x)=ax^{n+1}). $
+$ a $
+$ F_n(t) $
+$ \, 0\leq t\leq x $
+$ \displaystyle \displaystyle F_n(t)=R_n(t)-a t^{n+1} $
+$ \displaystyle = $
+$ \displaystyle \left(f(t)-P_n(t)\right)-a t^{n+1} $
+$ \displaystyle = $
+$ \displaystyle f(t)-\left(f(0)+f'(0)\, t+\frac{f^{\prime \prime }(0)}{2} \, t^2+\cdots + \frac{f^{(n)}(0)}{n!}t^n\right) - a t^{n+1}. $
+$ \displaystyle \displaystyle F_n(x) $
+$ \displaystyle = $
+$ \displaystyle 0 $
+$ \displaystyle F_n(0)\, =\, F_n^{\prime }(0)\, =\, F_n^{\prime \prime }(0)\, =\, \cdots \, =F_n^{(n)}(0) $
+$ \displaystyle = $
+$ \displaystyle 0\qquad (\text{check this}). $
+$ \, F_n\, $
+$ n+1 $
+$ \, (0,x)\, $
+$ n $
+$ \, [0,x],\, $
+$ \, f\, $
+$ \, n+1\, $
+$ \, (0,x)\, $
+$ n $
+$ \, [0,x],\, $
+$ \, P_n+at^{n+1}\, $
+$ a $
+$ \, F_n\, $
+$ \, [0,x],\, $
+$ \, (0,x),\, $
+$ \, F_n(x)=F_n(0)=0,\, $
+$ \, c_0,\, $
+$ \, 0<c_0<x\, $
+$ \displaystyle \, \displaystyle F_n^{\prime }\left(c_0\right)=0\qquad (0<c_0<x) . $
+$ \, F_n^{\prime }(0)=0\, $
+$ \, F_n'\, $
+$ \, [0,c_0]\, $
+$ \, (0,c_0),\, $
+$ \, F_n^{\prime } $
+$ \, [0,c_0]\, $
+$ \, c_1\, $
+$ 0<c_1<c_0<x\, $
+$ \displaystyle \, \displaystyle F_n^{\prime \prime }\left(c_1\right)=0 \qquad (0<c_1<c_0). $
+$ F_n^{\prime \prime }(0)=0,\, $
+$ F_n^{\prime \prime } $
+$ \, F_n^{\prime \prime }\, $
+$ c_2\, $
+$ \, 0<c_2<c_1<c_0<x\, $
+$ \displaystyle \, \displaystyle F_n^{(3)}\left(c_2\right)=0\qquad (0<c_2<c_1). $
+$ \, F_n\, $
+$ F_n^{(n)} $
+$ c_n $
+$ \displaystyle \displaystyle \, 0<c_n<c_{n-1}<\cdots <c_2<c_1<c_0<x,\, $
+$ \displaystyle \, \displaystyle F_n^{(n+1)}\left(c_n\right)=0\qquad (0<c_n<x) . $
+$ a $
+$ \, c=c_n.\, \, $
+$ \displaystyle \, \displaystyle F_n^{(n+1)}\left(c\right) $
+$ \displaystyle = $
+$ \displaystyle \left.\frac{d^{n+1}}{(dt)^{n+1}}\left( f(t)-\left(f(0)+f'(0)t+\frac{f^{\prime \prime }(0)}{2} \, t^2+\cdots + \frac{f^{(n)}(0)}{n!}t^n \right) - a t^{n+1}\right)\right|_{t=c} $
+$ \displaystyle = $
+$ \displaystyle f^{(n+1)}(c)- (n+1)! \, a\, =\, 0. $
+$ \, \displaystyle a=\frac{f^{(n+1)}(c)}{(n+1)!}\, $
+$ 0<c<x $
+$ n $
+$ x \, (x\neq 0) $
+$ \, c $
+$ (0,x)\, $
+$ \displaystyle \displaystyle R_n(x) $
+$ \displaystyle = $
+$ \displaystyle \frac{f^{(n+1)}(c)}{(n+1)!} x^{n+1}. $

@@ -1,0 +1,397 @@
+=== 1. figures/fig_01_symmetric_form.png ===
+  page:       f_0008.png
+  source:     01:45
+  paragraph:  设直线 L 上一点 M0(x0,y0,z0) 和它的一个方向向量 s=(m,n,p)，则 (x-x0)/m = (y-y0)/n = (z-z0)/p 为空间直线的对称式方程
+  caption:    直线的对称式（点向式、标准）方程：分子是变量减去已知点，分母是方向向量的三个分量
+  [OK]   figure file: figures/fig_01_symmetric_form.png
+  [OK]   source page: frames/f_0008.png
+  --- material context around this figure ---
+  >>> [1:42] 唉猜得对就叫啊对称式方程啊
+  >>> [1:48] 喂这谁能想得到啊
+      [1:40] 你猜叫什么名字
+      [1:50] 但是马后炮的说
+      [1:38] 那用它们建立的方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 2. figures/fig_02_parametric.png ===
+  page:       f_0024.png
+  source:     04:45
+  paragraph:  令对称式等于 t 并把分母乘过去，得到 x = x0 + mt、y = y0 + nt、z = z0 + pt，这就是直线的参数方程
+  caption:    直线的参数方程：t 的系数是方向向量，常数项是直线上的已知点
+  [OK]   figure file: figures/fig_02_parametric.png
+  [OK]   source page: frames/f_0024.png
+  --- material context around this figure ---
+  >>> [4:46] 要一个点啊
+  >>> [4:47] 那直线上的点你别说一个了
+  >>> [4:42] 那我们知道要确定一个直线的方程
+  >>> [4:49] 两个都有好
+      [4:50] 随便选一个做点
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 3. figures/fig_03_general_form.png ===
+  page:       f_0034.png
+  source:     08:15
+  paragraph:  空间直线可以看作两个平面的交线：A1x+B1y+C1z+D1=0，A2x+B2y+C2z+D2=0
+  caption:    直线的一般方程 = 两个相交平面方程联立；画面右下角提问「你知道 L 的方向向量怎么求吗」
+  [OK]   figure file: figures/fig_03_general_form.png
+  [OK]   source page: frames/f_0034.png
+  --- material context around this figure ---
+  >>> [8:16] 不需要任何化简
+  >>> [8:13] 它就叫直线的一般方程
+  >>> [8:18] 那一条直线能写出多少种不同的一般方程呢
+      [8:09] 把两个平面方程粗暴地扩在一起
+      [8:22] 唉你也能发现
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 4. figures/fig_04_direction_cross.png ===
+  page:       f_0043.png
+  source:     10:30
+  paragraph:  结论：两平面的交线，其方向向量就是两个平面法向量的叉乘 s = n1 × n2
+  caption:    结论（重要）：已知一般方程时，直线的方向向量 s = n1 × n2；同理「平行于两平面交线」的直线，方向向量也用它算
+  [OK]   figure file: figures/fig_04_direction_cross.png
+  [OK]   source page: frames/f_0043.png
+  --- material context around this figure ---
+  >>> [10:32] 你看看这个矫情的表述啊
+  >>> [10:26] 就他会说哎某条直线它平行于两平面的交线
+  >>> [10:34] 那你那我和两个平面交线平行的直线
+      [10:22] 另外还有一种提示我放在这一起讲了
+      [10:39] 它的方向是不是和交线的方向是一样的
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 5. figures/fig_05_ex2_statement.png ===
+  page:       f_0046.png
+  source:     11:15
+  paragraph:  【例2】题型1：一般方程、对称式、参数方程的互相转化——用对称式方程及参数方程表示直线 {x+y+z+1=0; 2x-y+3z+4=0}
+  caption:    【例2】用对称式方程及参数方程表示直线 $x + y + z + 1 = 0$ 与 $2x - y + 3z + 4 = 0$ 的交线
+  [OK]   figure file: figures/fig_05_ex2_statement.png
+  [OK]   source page: frames/f_0046.png
+  --- material context around this figure ---
+  >>> [11:13] 那已知一般式方程我们要写对称式
+  >>> [11:18] 也就是点向式要解决两个问题
+  >>> [11:11] 你暂停自己写一下
+      [11:10] 作为练习
+      [11:08] 这道题刚才就算讲过了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 6. figures/fig_06_ex2_solution.png ===
+  page:       f_0063.png
+  source:     15:30
+  paragraph:  例2 解答：s = n1 × n2 = (4,-1,-3)，M0(1,0,-2)，对称式 (x-1)/4 = y/(-1) = (z+2)/(-3)，参数式 x=4t+1、y=-t、z=-3t-2
+  caption:    【例2】解答：叉乘得方向向量 $(4,-1,-3)$，令 $y=0$ 解出点 $(1,0,-2)$，于是对称式为 $(x-1)/4 = y/(-1) = (z+2)/(-3)$
+  [OK]   figure file: figures/fig_06_ex2_solution.png
+  [OK]   source page: frames/f_0063.png
+  --- material context around this figure ---
+  >>> [15:29] 你想想缺Z意味着这个平面有什么特点来着
+  >>> [15:33] 那么第二个方程也是-3Y等于负的C加二
+  >>> [15:26] 等于4Y这就是个平面方程
+      [15:24] 负的X减一交叉相乘啊
+      [15:38] 你把这俩平面扩在一起
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 7. figures/fig_07_ex3_statement.png ===
+  page:       f_0069.png
+  source:     17:00
+  paragraph:  【例3】题型2：求两直线夹角——直线 L1 与 L2 已给出
+  caption:    【例3】求两条直线的夹角：一条用对称式给出（方向向量直接抓分母），另一条用一般方程给出（方向向量要叉乘）
+  [OK]   figure file: figures/fig_07_ex3_statement.png
+  [OK]   source page: frames/f_0069.png
+  --- material context around this figure ---
+  >>> [17:00] 外面套个绝对值啊
+  >>> [17:01] 就这个符号也是绝对值的意思
+  >>> [16:58] 再比上模长相乘
+  >>> [16:57] 两个方向向量做内积
+  >>> [17:04] 再去算就行了
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 8. figures/fig_08_ex3_cross.png ===
+  page:       f_0073.png
+  source:     18:00
+  paragraph:  s2 = n1 × n2 = (1,-1,0) × (0,1,2) = (-1,-1,2)
+  caption:    【例3】中 $arrow(s)_2$ 的计算：把两个平面方程的法向量叉乘，得到 $(-1,-1,2)$（与参数化方法得到的向量方向相反，但不影响结果）
+  [OK]   figure file: figures/fig_08_ex3_cross.png
+  [OK]   source page: frames/f_0073.png
+  --- material context around this figure ---
+  >>> [18:01] 第二个平面法向量看XYZ系数零二
+      [17:55] 好那么第一个平面的法向量看XYZ系数一负一零
+      [18:06] 一套起来好
+      [17:53] 就是你就已经知道要这样去做了啊
+      [18:08] 开始算行列式啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 9. figures/fig_09_line_plane_angle.png ===
+  page:       f_0090.png
+  source:     22:15
+  paragraph:  直线与平面的夹角定义：即直线和它在平面上的投影直线的夹角 φ
+  caption:    直线与平面夹角：$sin phi = abs(A m + B n + C p) / (sqrt(A^2+B^2+C^2) sqrt(m^2+n^2+p^2))$——注意是 *sin* 而不是 cos
+  [OK]   figure file: figures/fig_09_line_plane_angle.png
+  [OK]   source page: frames/f_0090.png
+  --- material context around this figure ---
+  >>> [22:15] 和中学一样
+  >>> [22:16] 研究完面面线线
+  >>> [22:12] 哎这两个图能看明白是怎么回事啊
+  >>> [22:18] 还可以再研究一下线面关系
+      [22:09] 说白了你们的每一个点啊都是公共点啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 10. figures/fig_10_line_plane_position.png ===
+  page:       f_0096.png
+  source:     23:45
+  paragraph:  直线与平面平行或在平面上 ⟺ Am+Bn+Cp = 0；直线与平面垂直 ⟺ A/m = B/n = C/p
+  caption:    直线与平面的位置关系：方向向量与法向量*垂直* ⟺ 直线与平面*平行*或在平面上（反着说）；方向向量与法向量*平行* ⟺ 直线与平面*垂直*
+  [OK]   figure file: figures/fig_10_line_plane_position.png
+  [OK]   source page: frames/f_0096.png
+  --- material context around this figure ---
+  >>> [23:45] 你可以把它放到同一个直角三角形当中
+  >>> [23:44] 比方说呢
+  >>> [23:48] 哎这样内错角西塔跑这儿
+      [23:50] 那当我们求向量夹角余弦啊
+      [23:39] 其实five的正弦是不就是这个theta它的余弦啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 11. figures/fig_11_ex4_statement.png ===
+  page:       f_0103.png
+  source:     25:30
+  paragraph:  【例4】题型3：直线与平面位置关系——过点 M(1,2,-1) 且与直线 {x=-t+2; y=3t-4; z=t-1} 垂直的平面方程
+  caption:    【例4】过点 $M(1,2,-1)$ 且与直线 $x = -t+2$、$y = 3t-4$、$z = t-1$ 垂直的平面方程
+  [OK]   figure file: figures/fig_11_ex4_statement.png
+  [OK]   source page: frames/f_0103.png
+  --- material context around this figure ---
+  >>> [25:32] 好要求平面方程
+  >>> [25:34] 那要锁定一点一法好点
+      [25:25] 过已知一点和已知直线垂直的平面方程哈
+      [25:36] 有了是吧
+      [25:23] 自己写一下
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 12. figures/fig_12_ex4_solution.png ===
+  page:       f_0105.png
+  source:     26:00
+  paragraph:  例4 解答：s = (-1,3,1) 即为平面的法向量，平面方程 -1(x-1) + 3(y-2) + 1(z+1) = 0，即 -x+3y+z-4=0
+  caption:    【例4】解答：直线的方向向量 $(-1,3,1)$ 直接当作平面的法向量，点法式整理得 $-x + 3y + z - 4 = 0$
+  [OK]   figure file: figures/fig_12_ex4_solution.png
+  [OK]   source page: frames/f_0105.png
+  --- material context around this figure ---
+  >>> [26:00] 即为平面的法向量
+  >>> [25:58] 行云流水啊
+  >>> [26:02] 现在点有了法
+  >>> [26:04] 有了平面方程就有了
+      [25:55] 谁呀T的系数负131啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 13. figures/fig_13_ex5_statement.png ===
+  page:       f_0107.png
+  source:     26:15
+  paragraph:  【例5】题型4：求过一点 M0 且与已知直线垂直相交的直线方程
+  caption:    【例5】求过点 $M_0$ 且与已知直线*垂直相交*的直线方程——「垂直」与「相交」是两个要素
+  [OK]   figure file: figures/fig_13_ex5_statement.png
+  [OK]   source page: frames/f_0107.png
+  --- material context around this figure ---
+  >>> [26:15] 加一乘上个什么东西啊
+  >>> [26:13] 加三乘上个什么东西
+  >>> [26:18] 我们上一节都说的很多了好
+  >>> [26:11] 一乘上个什么东西
+      [26:20] 那么X呢就开始减去这个点
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 14. figures/fig_14_ex5_plan.png ===
+  page:       f_0115.png
+  source:     28:45
+  paragraph:  例5 三步：① 作平面过 M0 且与直线垂直；② 求 L 与该平面的交点；③ 两点确定所求直线
+  caption:    【例5】解题三步曲：作垂直平面 ⟹ 求直线与平面的交点（参数方程代入最方便）⟹ 两点确定直线
+  [OK]   figure file: figures/fig_14_ex5_plan.png
+  [OK]   source page: frames/f_0115.png
+  --- material context around this figure ---
+  >>> [28:45] 减一一乘上个呃
+  >>> [28:43] 再加上一啊
+  >>> [28:47] 什么东西等于零
+  >>> [28:42] 加二乘个什么东西
+  >>> [28:48] 什么东西呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 15. figures/fig_15_bundle_def.png ===
+  page:       f_0134.png
+  source:     33:30
+  paragraph:  平面束方程：设直线 L 的一般方程为两张平面，则过 L 的所有平面的全体的方程可写成平面束 A1x+B1y+C1z+D1 + λ(A2x+B2y+C2z+D2) = 0
+  caption:    平面束方程：过已知直线 L 的全部平面的集合 $A_1 x + B_1 y + C_1 z + D_1 + lambda (A_2 x + B_2 y + C_2 z + D_2) = 0$（漏掉 λ 后面那张平面）
+  [OK]   figure file: figures/fig_15_bundle_def.png
+  [OK]   source page: frames/f_0134.png
+  --- material context around this figure ---
+  >>> [33:30] 你在这里面再选一个过M0的
+  >>> [33:28] 它其实就是无数个平面
+  >>> [33:26] 是不是你转过无数个方向
+  >>> [33:34] 你想想要怎么做不好做对吧
+      [33:25] 你转呀转呀转呀
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 16. figures/fig_16_bundle_normal.png ===
+  page:       f_0150.png
+  source:     37:15
+  paragraph:  平面束的法向量是原来两张平面法向量的线性组合 n = n1 + λn2
+  caption:    平面束的几何解释：法向量 $arrow(n) = arrow(n)_1 + lambda arrow(n)_2$——改变 $lambda$ 就能生成各个方向的法向量，从而扫出过 L 的所有平面
+  [OK]   figure file: figures/fig_16_bundle_normal.png
+  [OK]   source page: frames/f_0150.png
+  --- material context around this figure ---
+  >>> [37:15] 哎因为你是平面法向量
+  >>> [37:17] 哎L在这个平面上
+  >>> [37:12] 它肯定和L是垂直的吧
+  >>> [37:19] 那你肯定跟这个平面上任何直线都是垂直的咯
+      [37:10] 它会有一个什么特点呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 17. figures/fig_17_ex6_solution.png ===
+  page:       f_0166.png
+  source:     41:15
+  paragraph:  例6 解答：先写一般式 { (x-4)/5 = (y+3)/2 ; (y+3)/2 = z }，用过直线 L 的平面束方程 (x-4)/5 - (y+3)/2 + λ(y+3-2z) = 0
+  caption:    【例6】解答第一步：把对称式改写成两组平面方程，写出过直线 L 的平面束方程，再把已知点 $(3,1,-2)$ 代入解出 $lambda$
+  [OK]   figure file: figures/fig_17_ex6_solution.png
+  [OK]   source page: frames/f_0166.png
+  --- material context around this figure ---
+  >>> [41:15] 比上五等于Y加32啊
+  >>> [41:12] 比方说第一组X减四
+  >>> [41:18] 那么第二组呢可以写一个Y加三啊
+  >>> [41:11] 构成个方程组
+      [41:09] 就随便呢取两个等号啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 18. figures/fig_18_ex6_result.png ===
+  page:       f_0175.png
+  source:     43:30
+  paragraph:  代入点 (3,1,-2) 解得 λ = 11/40，化简后得平面方程 8x - 9y - 22z - 59 = 0
+  caption:    【例6】结果：$lambda = 11/40$，去分母化简得 $8x - 9y - 22z - 59 = 0$
+  [OK]   figure file: figures/fig_18_ex6_result.png
+  [OK]   source page: frames/f_0175.png
+  --- material context around this figure ---
+  >>> [43:31] 是没有涉及到拉姆达后面这张平面的好
+  >>> [43:28] 因为我们研究的这个平面当中呢
+  >>> [43:27] 是怕丢解了
+      [43:24] 哎你肯定觉得这题没做完吧
+      [43:36] 那需不需要检验呢
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 19. figures/fig_19_ex7_result.png ===
+  page:       f_0199.png
+  source:     49:30
+  paragraph:  例7 解答：由 λ = -1 得投影平面 y - z - 1 = 0，与原平面联立即为投影直线
+  caption:    【例7】投影直线的结果：$lambda = -1$ 给出投影平面 $y - z - 1 = 0$，与已知平面 $x + y + z = 0$ 联立即为投影直线方程
+  [OK]   figure file: figures/fig_19_ex7_result.png
+  [OK]   source page: frames/f_0199.png
+  --- material context around this figure ---
+  >>> [49:30] 拿大括号摆在一起就行了呀
+  >>> [49:29] 怎么求
+  >>> [49:28] 怎么求来着
+  >>> [49:26] 然后两个平面的交线哎
+  >>> [49:34] 故投影直线方程
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 20. figures/fig_20_point_line_distance.png ===
+  page:       f_0202.png
+  source:     50:15
+  paragraph:  点到直线的距离公式：d = abs(P0P × s) / abs(s)
+  caption:    点到直线的距离公式：以 $arrow(P_0 P)$ 与方向向量 $arrow(s)$ 为邻边作平行四边形，面积 $abs(arrow(P_0 P) times arrow(s))$ 除以底边 $abs(arrow(s))$ 就是高 $d$
+  [OK]   figure file: figures/fig_20_point_line_distance.png
+  [OK]   source page: frames/f_0202.png
+  --- material context around this figure ---
+  >>> [50:15] 我们来到本节的最后一个考点
+  >>> [50:18] 点到直线的距离公式
+  >>> [50:11] 你完全可以自己举一反三哒哒
+      [50:09] 这种题我觉得我就不用讲了
+      [50:22] 这个比起点到平面的距离公式来说
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 21. figures/fig_21_ex8_statement.png ===
+  page:       f_0212.png
+  source:     53:00
+  paragraph:  【例8】题型7：求点 (3,-1,2) 到直线 {x+y-z+1=0; 2x-y+z-4=0} 的距离
+  caption:    【例8】求点 $(3,-1,2)$ 到直线 $x + y - z + 1 = 0$、$2x - y + z - 4 = 0$ 的距离
+  [OK]   figure file: figures/fig_21_ex8_statement.png
+  [OK]   source page: frames/f_0212.png
+  --- material context around this figure ---
+  >>> [53:01] 然后这个时候呢你可以两式相加消元吗
+  >>> [52:57] 比方说令Y0等于零好
+  >>> [52:56] 那先找简单的
+      [52:55] 解这个方程组
+      [53:05] 3XZ就消了啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+=== 22. figures/fig_22_ex8_result.png ===
+  page:       f_0223.png
+  source:     55:30
+  paragraph:  例8 结果：P0P = (-2,1,0)、s = (0,1,1)，叉乘得 (1,2,-2)，d = 3/sqrt(2) = 3 sqrt(2)/2
+  caption:    【例8】结果：$d = abs(arrow(P_0 P) times arrow(s)) / abs(arrow(s)) = 3/sqrt(2) = 3 sqrt(2)/2$
+  [OK]   figure file: figures/fig_22_ex8_result.png
+  [OK]   source page: frames/f_0223.png
+  --- material context around this figure ---
+  >>> [55:29] 你可以分开步骤一步步求都行啊
+  >>> [55:32] 好那么方向向量
+  >>> [55:26] 当然你怕自己符号写乱了
+      [55:35] 它的模呢等于根号下零的平方加一的平方
+      [55:24] 再套竖线叫什么叫膜啊
+  --- three-way checklist (agent reads the page at full resolution) ---
+  [ ] 1. 图中实际内容 == caption 描述
+  [ ] 2. 图中实际内容 == 材料对应段落
+  [ ] 3. caption == 材料对应段落
+
+audit: 22 figures, 0 file problems

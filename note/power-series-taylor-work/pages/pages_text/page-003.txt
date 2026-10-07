@@ -1,0 +1,101 @@
+Root test for radius of convergence
+Given a power series
+
+∞
+X
+
+an xn , the root test implies that the power series converges
+
+n=0
+
+if
+p
+p
+lim n |an xn | = lim n |an ||x| < 1.
+n→∞
+
+n→∞
+
+There are 3 possibilities:
+1. There is a finite number R such that
+p
+• |x| < R =⇒ lim n |an ||x| < 1,
+n→∞
+p
+• |x| > R =⇒ lim n |an ||x| > 1.
+n→∞
+
+We say the radius of convergence is R.
+p
+2. For all x
+lim n |an ||x| < 1. We say the radius of convergence is ∞.
+n→∞
+
+(All x satisfy |x| < ∞.)
+p
+3. lim n |an ||x| > 1 for all x 6= 0. We say the radius of convergence is 0.
+n→∞
+
+Example
+Consider
+
+∞
+X
+
+p
+2n xn , then lim n |2n xn | = 2|x| < 1 when |x| < 21 . This implies that
+n→∞
+
+n=0
+
+the radius of convergence is R = 12 .
+
+Properties of power series
+Add, subtract, multiply, divide, differentiate, and integrate convergent power series
+as one does for polynomials. We will discuss multiplication and division at a later
+time.
+∞
+X
+Consider the power series
+an xn , which converges for |x| < A.
+n=0
+
+• The derivative
+Z
+• The integral
+
+∞
+∞
+X
+d X
+an x n =
+n an xn−1 also converges for |x| < A.
+dx n=0
+n=1
+∞
+X
+
+!
+an x
+
+n
+
+dx = c +
+
+n=0
+
+∞
+X
+
+an
+
+n=0
+
+Note that c is the constant of integration.
+3
+
+xn+1
+also converges for |x| < A.
+n+1
+
+

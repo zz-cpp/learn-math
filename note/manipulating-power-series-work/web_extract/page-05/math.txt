@@ -1,0 +1,45 @@
+$ \, R\, $
+$ \, R=\infty ,\, $
+$ \, \displaystyle \sum _{n=0}^{\infty }\, \frac{x^{n+2}}{n!},\, $
+$ R=\, $
+$ \, \displaystyle \sum _{n=2}^{\infty }\, x^n,\, $
+$ R=\, $
+$ \, \displaystyle \sum _{n=0}^{\infty }\left(\frac{x^n}{n!}+x^n\right),\, $
+$ R=\, $
+$ \, \displaystyle \sum _{n=-1}^{\infty } x^{n+1},\, $
+$ R=\, $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
+$ \, 0!=1 $
+$ \, |x|<\infty $
+$ \displaystyle x^2-\frac{x^6}{3!}+\frac{x^{10}}{5!}-\frac{x^{14}}{7!}+\cdots \, =\quad $
+$ \, |x|<1 $
+$ \, \displaystyle \sum _{n=0}^{\infty } (n+2)(n+1)x^{n}\, =\quad $
+$ \, |x|<\infty $
+$ \, \displaystyle \sum _{n=0}^{\infty }\, \frac{(-x)^{6n+1}}{(2n)!}\, =\quad $
+$ \displaystyle \frac{x+2y}{x-1} $
+$ x^{n+1} $
+$ v_0 $
+$ \alpha $
+$ \lambda $
+$ e^x $
+$ 2\pi $
+$ \left|x+y \right| $
+$ \sqrt{x^2-y} $
+$ \sin^2(4x+y) $
+$ \tan^{-1}\left(\frac{x^2}{3}\right) $
+$ \cosh(4x+y) $
+$ e^xdx $
+$ (2\pi+y)dy $
