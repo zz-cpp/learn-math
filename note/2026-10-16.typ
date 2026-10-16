@@ -1,0 +1,175 @@
+// ═══════════════════════════════════════════════════════════════
+// answer-note · 按日归档问答记录
+// 结构：每个独立问题 = 一个一级标题（=），子问题用（== / ===）
+// 轨道：数学轨（承接 18.02.3x 球面记号问答；本日主题待记录）
+// 规范：answer-note（无 practicebox/无自测框；三色判断框
+//       + titledbox + subfigure/plotline/unnumbered；公式编号全局关闭）
+// ═══════════════════════════════════════════════════════════════
+#import "@preview/ilm:2.1.1": *
+#import "@preview/cetz:0.5.2"
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
+#import "@preview/cetz-plot:0.1.4": chart, plot
+
+// ═══ 判断框体系（与课程笔记同构）═══
+#let importantbox(body) = block(
+  width: 100%,
+  breakable: true,
+  fill: rgb("#eef3fb"),
+  stroke: (left: 3pt + rgb("#2f6fd0")),
+  inset: (x: 11pt, y: 8pt),
+  radius: 4pt,
+)[*📌 核心要点*  #body]
+
+#let knowledgebox(body) = block(
+  width: 100%,
+  breakable: true,
+  fill: rgb("#eefaf1"),
+  stroke: (left: 3pt + rgb("#2e9e5b")),
+  inset: (x: 11pt, y: 8pt),
+  radius: 4pt,
+)[*💡 背景与类比*  #body]
+
+#let warningbox(body) = block(
+  width: 100%,
+  breakable: true,
+  fill: rgb("#fdf1ef"),
+  stroke: (left: 3pt + rgb("#d64541")),
+  inset: (x: 11pt, y: 8pt),
+  radius: 4pt,
+)[*⚠️ 陷阱预警*  #body]
+
+// ═══ 标题栏框（tcolorbox attach 标题栏近似）═══
+#let titledbox(
+  title,
+  body,
+  bg: rgb("#eefaf1"),
+  title-bg: rgb("#2e9e5b"),
+  title-fg: white,
+  stroke: 1pt + luma(70),
+) = block(
+  width: 100%,
+  breakable: true,
+  radius: 0pt,
+  fill: bg,
+  stroke: stroke,
+  inset: 0pt,
+)[
+  #block(width: 100%, fill: title-bg, inset: (x: 8pt, y: 3pt), radius: 0pt)[
+    #text(fill: title-fg, weight: "bold")[#title]
+  ]
+  #block(width: 100%, inset: (x: 9pt, y: 7pt))[#body]
+]
+
+// ═══ 行内 raw（机器符号 `...`）样式：等宽 + 淡底、保持内联 ═══
+// 注意：不要用全局 #show raw.line —— 它会把行内反引号也渲染成带行号的整行方块
+#show raw.where(block: false): it => box(
+  fill: luma(243),
+  inset: (x: 1.6pt, y: 0.3pt),
+  radius: 1.5pt,
+)[#text(font: "DejaVu Sans Mono", size: 0.88em)[#it.text]]
+
+// ═══ codelisting（CS 轨用）═══
+#let codelisting(code, lang: "typst", caption: none) = figure(caption: caption, block(
+  width: 100%,
+  breakable: true,
+  stroke: 0.8pt + luma(200),
+  inset: 8pt,
+)[
+  // 行号规则只在 codelisting 内部局部生效
+  #show raw.line: line => box(width: 100%)[
+    #box(width: 2.4em)[#text(fill: luma(150), size: 0.72em)[#str(line.number)]]
+    #line.body
+  ]
+  #set text(size: 0.9em)   // 对应 listings 的 \small；raw 无自动折行，长行手动折
+  #raw(code, lang: lang, block: true)
+])
+
+// ═══ booktabs-table ═══
+#let booktabs-table(columns: (), ..rows) = block(width: 100%, breakable: true)[
+  #table(
+    columns: columns,
+    stroke: (top: 1.2pt + black, bottom: 1.2pt + black, x: none, y: 0.5pt + luma(160)),
+    fill: none,
+    inset: (x: 8pt, y: 5pt),
+    ..rows,
+  )
+]
+
+// ═══ 子图助手（对应 lecture-to-notes 的 subcaption）═══
+#let subfigure(items, caption: none, columns: (1fr, 1fr), gutter: 0.6cm) = figure(
+  grid(
+    columns: columns,
+    gutter: gutter,
+    ..(for i in range(items.len()) {
+        let item = items.at(i)
+        let body = item.at(0)
+        let label = item.at(1, default: none)
+        let letters = ("a", "b", "c", "d", "e", "f", "g", "h")
+        (
+          [
+            #align(center)[#body]
+            #if label != none [
+              #align(center)[*（#letters.at(calc.min(i, letters.len() - 1))）#label*]
+            ]
+          ],
+        )
+      }),
+  ),
+  caption: caption,
+)
+
+// ═══ 折线助手（CeTZ 0.5.2 无 plot）═══
+#let plotline(points, stroke: 1pt + black) = cetz.draw.line(..points, stroke: stroke)
+
+// ═══ 图内公式编号助手（本文件全局关闭编号，此处备用）═══
+#let unnumbered(body) = {
+  set math.equation(numbering: none)
+  body
+}
+
+#show: ilm.with(
+  title: [数学与 CS 问答记录],
+  authors: ("answer-note",),
+  date: datetime(year: 2026, month: 10, day: 16),
+  abstract: [按日归档的问答记录：每个独立问题一个一级标题（=），子问题用（== / ===）；三问反思法（关键点/变式/同类归类）+ 讲课叙事流 + 判断框，结构与课程笔记同构。本日主题：待记录（上一条为 10-15 的问题 139 · 为什么单位圆被视为"一维单位球面"（$S^n$ 的下标 = 内蕴维数，已五模块完整收口）；本日问答自问题 140 起逐条追加。仍未收口的是 10-08 的问题 134 · 半球面平均距离（仍在"引导轮"状态）与 10-14 的问题 136 第 1 卷 · 线积分六道回忆题待答）],
+  bibliography: none,
+  figure-index: (enabled: true),
+  table-index: (enabled: true),
+  listing-index: (enabled: true),
+)
+
+// 关闭 ilm 模板默认的公式自动编号 (1),(2),……
+#set math.equation(numbering: none)
+
+= 📌 本日起点
+
+新的一天，档案已按 answer-note 规范建好：今日所有问答按 `= 主题` 追加在本节之后，一条问答一个一级标题（本日编号自 *问题 140* 起）。
+
+#importantbox[
+  *上一次记录（10-15）* 见 `note/2026-10-15.typ`——那一日有*一条*记录：
+
+  #booktabs-table(
+    columns: (1fr, 2.6fr, 2.6fr),
+    table.header([*编号*], [*主题*], [*状态*]),
+    [问题 139],
+    [为什么单位圆被视为"一维单位球面"——$S^n$ 的下标数的是*内蕴维数*，不是它被摆放的空间维数],
+    [*已收口*：直接解答（三条判据：参数个数 $slash$ 约束方程数 $slash$ 局部形状）$+$ 关键点 $+$ 变式检验 $+$ 同类归类 $+$ 易错点；顺带辨析 sphere/ball，接通问题 134 的根源],
+  )
+]
+
+#warningbox[
+  *待办清单（更新于 10-16，承接 10-15）*：
+
+  #enum(
+    numbering: "1.",
+    [*问题 136 的第 1 卷*——线积分复习的六道回忆题，随时可答；答完进入批改环节（10-15 未作答，仍挂起）],
+    [*问题 134 的引导尚未收口*——等读者回答三层入口（$H$ 是曲面还是实体？$abs(O P)$ 在 $H$ 上取哪些值？被平均量 $f$ 是什么？）并给出选择题选项截图，随后补齐五模块],
+    [格林公式的*补线法*——仍未展开（考研高频技巧：边界不闭合时补线，再套格林公式）],
+    [考纲第八章「常微分方程」在工作区*仍无*对应笔记材料（张宇 30 讲含此章，可作主材）],
+    [18.02.3x 的*符号就地注释*：目前只覆盖 `lec01` 样板段——读到卡壳处随时报位置，按同一模式补（问题 139 正是"即时报卡壳"模式的一次实例）],
+  )
+]
+
+// ══════════════════════════════════════════════════════════════════════
+// 本日问答自下方开始追加：一条问答一个一级标题（= 主题）
+// ══════════════════════════════════════════════════════════════════════
